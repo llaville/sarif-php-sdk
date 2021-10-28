@@ -1,0 +1,36 @@
+{
+    "name": "bartlett/phpsarif",
+    "description": "PHP library to create and manipulate SARIF logs",
+    "keywords": ["sarif"],
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "source": "https://github.com/llaville/sarif-php-sdk",
+        "issues": "https://github.com/llaville/sarif-php-sdk/issues"
+    },
+    "require": {
+        "php": "^7.1|^8.0",
+        "ext-json": "*",
+        "ext-pcre": "*",
+        "ext-spl": "*"
+    },
+    "authors": [
+        {
+            "name": "Laurent Laville",
+            "email": "pear@laurent-laville.org",
+            "homepage": "https://github.com/llaville",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bartlett\\Sarif\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
