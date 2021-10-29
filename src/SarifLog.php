@@ -20,7 +20,6 @@ use DomainException;
 use function array_merge;
 use function json_encode;
 use function sprintf;
-use const JSON_NUMERIC_CHECK;
 use const JSON_PRETTY_PRINT;
 
 /**
@@ -89,7 +88,7 @@ final class SarifLog extends JsonSerializable
         if (empty($this->runs)) {
             throw new DomainException('"runs" are required. None provided.');
         }
-        return json_encode($this,JSON_PRETTY_PRINT| JSON_NUMERIC_CHECK );
+        return json_encode($this,JSON_PRETTY_PRINT);
     }
 
     /**
