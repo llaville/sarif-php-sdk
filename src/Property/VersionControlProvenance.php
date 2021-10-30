@@ -15,15 +15,19 @@ use Bartlett\Sarif\Definition\VersionControlDetails;
 trait VersionControlProvenance
 {
     /**
-     * @var VersionControlDetails
+     * @var VersionControlDetails[]
      */
     protected $versionControlProvenance;
 
     /**
-     * @param VersionControlDetails $versionControlProvenance
+     * @param VersionControlDetails[] $versionControlDetails
      */
-    public function setVersionControlProvenance(VersionControlDetails $versionControlProvenance): void
+    public function addVersionControlDetails(array $versionControlDetails): void
     {
-        $this->versionControlProvenance = $versionControlProvenance;
+        foreach ($versionControlDetails as $versionControlDetail) {
+            if ($versionControlDetail instanceof VersionControlDetails) {
+                $this->versionControlProvenance[] = $versionControlDetail;
+            }
+        }
     }
 }
