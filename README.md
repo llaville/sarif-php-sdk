@@ -7,8 +7,8 @@ It is a powerful and sophisticated format suited to the needs of a wide variety 
 
 ## Specifications
 
-The specification document for the Static Analysis Results Interchange Format (SARIF), in HTML format
-is always available [here](https://rawgit.com/sarif-standard/sarif-spec/master/Static%20Analysis%20Results%20Interchange%20Format%20(SARIF).html)
+The specification document for the Static Analysis Results Interchange Format (SARIF) version 2.1.0, in HTML format
+is available [here](http://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html).
 
 ## View and validate your SARIF files
 
