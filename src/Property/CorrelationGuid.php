@@ -13,22 +13,22 @@ use function preg_match_all;
 /**
  * @author Laurent Laville
  */
-trait Guid
+trait CorrelationGuid
 {
     /**
      * @var string
      */
-    protected $guid;
+    protected $correlationGuid;
 
     /**
-     * @param string $guid
+     * @param string $correlationGuid
      */
-    public function setGuid(string $guid): void
+    public function setCorrelationGuid(string $correlationGuid): void
     {
         $pattern = "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$";
-        if (preg_match_all("/$pattern/", $guid) === false) {
-            throw new DomainException('"guid" does not satisfy pattern "' . $pattern . '"');
+        if (preg_match_all("/$pattern/", $correlationGuid) === false) {
+            throw new DomainException('"correlationGuid" does not satisfy pattern "' . $pattern . '"');
         }
-        $this->guid = $guid;
+        $this->correlationGuid = $correlationGuid;
     }
 }
