@@ -9,21 +9,28 @@ namespace Bartlett\Sarif\Property;
 
 use Bartlett\Sarif\Definition\ArtifactLocation;
 
+use function is_string;
+
 /**
  * @author Laurent Laville
  */
 trait OriginalUriBaseIds
 {
     /**
-     * @var ArtifactLocation
+     * @var array<string, ArtifactLocation>
      */
     protected $originalUriBaseIds;
 
     /**
-     * @param ArtifactLocation $originalUriBaseIds
+     * @param array<string, ArtifactLocation> $additionalProperties
+     * @see http://json-schema.org/understanding-json-schema/reference/object.html#additional-properties
      */
-    public function setOriginalUriBaseIds(ArtifactLocation $originalUriBaseIds): void
+    public function addAdditionalProperties(array $additionalProperties): void
     {
-        $this->originalUriBaseIds = $originalUriBaseIds;
+        foreach ($additionalProperties as $key => $additionalProperty) {
+            if (is_string($key) && $additionalProperty instanceof ArtifactLocation) {
+                $this->originalUriBaseIds[$key] = $additionalProperty;
+            }
+        }
     }
 }

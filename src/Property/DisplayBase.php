@@ -7,23 +7,23 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use Bartlett\Sarif\Definition\SpecialLocations;
+use Bartlett\Sarif\Definition\ArtifactLocation;
 
 /**
  * @author Laurent Laville
  */
-trait SpecialSignificanceLocations
+trait DisplayBase
 {
     /**
-     * @var SpecialLocations
+     * @var ArtifactLocation
      */
-    protected $specialLocations;
+    protected $displayBase;
 
     /**
-     * @param SpecialLocations $specialLocations
+     * @param ArtifactLocation $displayBase
      */
-    public function setSpecialLocations(SpecialLocations $specialLocations): void
+    public function setDisplayBase(ArtifactLocation $displayBase): void
     {
-        $this->specialLocations = $specialLocations;
+        $this->displayBase = $displayBase;
     }
 }
