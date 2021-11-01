@@ -13,7 +13,6 @@ namespace Bartlett\Sarif\Property;
 trait InformationUri
 {
     /**
-     * The absolute URI at which information about this version of the tool component can be found.
      * @var string
      */
     protected $informationUri;
