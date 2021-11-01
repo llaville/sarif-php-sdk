@@ -7,23 +7,23 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use Bartlett\Sarif\Definition\Message;
+use Bartlett\Sarif\Definition\Region;
 
 /**
  * @author Laurent Laville
  */
-trait MessageString
+trait RegionArtifact
 {
     /**
-     * @var Message
+     * @var Region
      */
-    protected $message;
+    protected $region;
 
     /**
-     * @param Message $message
+     * @param Region $region
      */
-    public function setMessage(Message $message): void
+    public function setRegion(Region $region): void
     {
-        $this->message = $message;
+        $this->region = $region;
     }
 }

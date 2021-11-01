@@ -7,23 +7,27 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use Bartlett\Sarif\Definition\Message;
+use function is_string;
 
 /**
  * @author Laurent Laville
  */
-trait MessageString
+trait Kinds
 {
     /**
-     * @var Message
+     * @var string[]
      */
-    protected $message;
+    protected $kinds;
 
     /**
-     * @param Message $message
+     * @param string[] $kinds
      */
-    public function setMessage(Message $message): void
+    public function addKinds(array $kinds): void
     {
-        $this->message = $message;
+        foreach ($kinds as $kind) {
+            if (is_string($kind)) {
+                $this->kinds[] = $kind;
+            }
+        }
     }
 }

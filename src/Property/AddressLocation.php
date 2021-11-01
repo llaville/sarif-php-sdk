@@ -7,23 +7,23 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use Bartlett\Sarif\Definition\Message;
+use Bartlett\Sarif\Definition\Address;
 
 /**
  * @author Laurent Laville
  */
-trait MessageString
+trait AddressLocation
 {
     /**
-     * @var Message
+     * @var Address;
      */
-    protected $message;
+    protected $address;
 
     /**
-     * @param Message $message
+     * @param Address $address
      */
-    public function setMessage(Message $message): void
+    public function setAddress(Address $address): void
     {
-        $this->message = $message;
+        $this->address = $address;
     }
 }

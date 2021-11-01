@@ -7,23 +7,26 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use Bartlett\Sarif\Definition\Message;
+use DomainException;
 
 /**
  * @author Laurent Laville
  */
-trait MessageString
+trait IdLocation
 {
     /**
-     * @var Message
+     * @var int
      */
-    protected $message;
+    protected $id;
 
     /**
-     * @param Message $message
+     * @param int $id
      */
-    public function setMessage(Message $message): void
+    public function setId(int $id = -1): void
     {
-        $this->message = $message;
+        if ($id < -1) {
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $id);
+        }
+        $this->id = $id;
     }
 }

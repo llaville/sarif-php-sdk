@@ -7,23 +7,23 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use Bartlett\Sarif\Definition\Message;
+use Bartlett\Sarif\Definition\PhysicalLocation;
 
 /**
  * @author Laurent Laville
  */
-trait MessageString
+trait PhysicalArtifactLocation
 {
     /**
-     * @var Message
+     * @var PhysicalLocation
      */
-    protected $message;
+    protected $physicalLocation;
 
     /**
-     * @param Message $message
+     * @param PhysicalLocation $physicalLocation
      */
-    public function setMessage(Message $message): void
+    public function setPhysicalLocation(PhysicalLocation $physicalLocation): void
     {
-        $this->message = $message;
+        $this->physicalLocation = $physicalLocation;
     }
 }
