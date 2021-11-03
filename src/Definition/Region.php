@@ -8,8 +8,13 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
+use Bartlett\Sarif\Property\ByteLength;
+use Bartlett\Sarif\Property\ByteOffset;
+use Bartlett\Sarif\Property\CharLength;
+use Bartlett\Sarif\Property\CharOffset;
 use Bartlett\Sarif\Property\MessageString;
 use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property\Snippet;
 use Bartlett\Sarif\Property\SourceLanguage;
 
 /**
@@ -46,27 +51,27 @@ final class Region extends JsonSerializable
     /**
      * The zero-based offset from the beginning of the artifact of the first character in the region.
      */
-    // charoffset
+    use CharOffset;
 
     /**
      * The length of the region in characters.
      */
-    // charlength
+    use CharLength;
 
     /**
      * The zero-based offset from the beginning of the artifact of the first byte in the region.
      */
-    // byteoffset
+    use ByteOffset;
 
     /**
      * The length of the region in bytes.
      */
-    // bytelength
+    use ByteLength;
 
     /**
      * The portion of the artifact contents within the specified region.
      */
-    // snippet
+    use Snippet;
 
     /**
      * A message relevant to the region.
@@ -84,16 +89,16 @@ final class Region extends JsonSerializable
     use Properties;
 
     /**
-     * @param int $startLine
-     * @param int $startColumn
-     * @param int $endLine
-     * @param int $endColumn
+     * @param int|null $startLine
+     * @param int|null $startColumn
+     * @param int|null $endLine
+     * @param int|null $endColumn
      */
     public function __construct(
-        int $startLine = 0,
-        int $startColumn = 0,
-        int $endLine = 0,
-        int $endColumn = 0
+        ?int $startLine = null,
+        ?int $startColumn = null,
+        ?int $endLine = null,
+        ?int $endColumn = null
     ) {
         $this->startLine = $startLine;
         $this->startColumn = $startColumn;
