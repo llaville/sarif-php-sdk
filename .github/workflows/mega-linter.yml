@@ -11,18 +11,11 @@ on:
         branches:
             - master
 
-jobs:
-    # Cancel duplicate jobs: https://github.com/fkirc/skip-duplicate-actions#option-3-cancellation-only
-    cancel_duplicates:
-        name: Cancel duplicate jobs
-        runs-on: ubuntu-latest
-        steps:
-            -   # Cancellation of previous workflow runs
-                uses: fkirc/skip-duplicate-actions@master
-                with:
-                    github_token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
-                    cancel_others: true
+concurrency:
+    group: ${{ github.ref }}-${{ github.workflow }}
+    cancel-in-progress: true
 
+jobs:
     lint_files:
         name: Lint Code Base
         runs-on: ubuntu-latest
