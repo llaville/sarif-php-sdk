@@ -7,7 +7,7 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use function array_push;
+use function is_string;
 
 /**
  * @author Laurent Laville
@@ -24,6 +24,10 @@ trait DeprecatedIds
      */
     public function addDeprecatedIds(array $deprecatedIds): void
     {
-        array_push($this->deprecatedIds, $deprecatedIds);
+        foreach ($deprecatedIds as $deprecatedId) {
+            if (is_string($deprecatedId)) {
+                $this->deprecatedIds[] = $deprecatedId;
+            }
+        }
     }
 }
