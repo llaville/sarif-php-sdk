@@ -8,13 +8,10 @@
  * @author Laurent Laville
  */
 
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Attachment;
 use Bartlett\Sarif\Definition\Edge;
 use Bartlett\Sarif\Definition\Graph;
 use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\Node;
-use Bartlett\Sarif\Definition\Rectangle;
 use Bartlett\Sarif\Definition\Result;
 use Bartlett\Sarif\Definition\Run;
 use Bartlett\Sarif\Definition\Tool;
