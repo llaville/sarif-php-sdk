@@ -34,7 +34,7 @@ $driver->addRules([$rule]);
 
 $tool = new Tool($driver);
 
-$message = new Message('', "'x' is assigned a value but never used.");
+$message = new Message("'x' is assigned a value but never used.");
 $result = new Result($message);
 $result->setLevel('error');
 $result->setRuleId('no-unused-vars');

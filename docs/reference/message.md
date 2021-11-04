@@ -40,7 +40,7 @@ See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1
             "results": [
                 {
                     "message": {
-                        "id": "'x' is assigned a value but never used."
+                        "text": "'x' is assigned a value but never used."
                     },
                     "ruleId": "no-unused-vars",
                     "ruleIndex": 0,
@@ -85,7 +85,7 @@ $driver->addRules([$rule]);
 
 $tool = new Tool($driver);
 
-$message = new Message('', "'x' is assigned a value but never used.");
+$message = new Message("'x' is assigned a value but never used.");
 $result = new Result($message);
 $result->setLevel('error');
 $result->setRuleId('no-unused-vars');
