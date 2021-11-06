@@ -8,7 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\AssociateRule;
+use Bartlett\Sarif\Property\AssociatedRule;
 use Bartlett\Sarif\Property\Descriptor;
 use Bartlett\Sarif\Property\Level;
 use Bartlett\Sarif\Property\Locations;
@@ -63,7 +63,7 @@ final class Notification extends JsonSerializable
     /**
      * A reference used to locate the rule descriptor associated with this notification.
      */
-    use AssociateRule;
+    use AssociatedRule;
 
     /**
      * Key/value pairs that provide additional information about the notification.

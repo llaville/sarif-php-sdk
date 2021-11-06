@@ -12,18 +12,18 @@ use Bartlett\Sarif\Definition\ReportingDescriptorReference;
 /**
  * @author Laurent Laville
  */
-trait AssociateRule
+trait AssociatedRule
 {
     /**
      * @var ReportingDescriptorReference
      */
-    protected $associateRule;
+    protected $associatedRule;
 
     /**
-     * @param ReportingDescriptorReference $associateRule
+     * @param ReportingDescriptorReference $associatedRule
      */
-    public function setAssociateRule(ReportingDescriptorReference $associateRule): void
+    public function setAssociatedRule(ReportingDescriptorReference $associatedRule): void
     {
-        $this->associateRule = $associateRule;
+        $this->associatedRule = $associatedRule;
     }
 }
