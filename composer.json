@@ -1,5 +1,5 @@
 {
-    "name": "bartlett/phpsarif",
+    "name": "bartlett/sarif-php-sdk",
     "description": "PHP library to create and manipulate SARIF logs",
     "keywords": ["sarif"],
     "type": "library",
