@@ -16,6 +16,7 @@ use Bartlett\Sarif\Property\Text;
 /**
  * Represents the contents of an artifact.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317422
  * @author Laurent Laville
  */
 final class ArtifactContent extends JsonSerializable

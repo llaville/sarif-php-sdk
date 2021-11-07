@@ -19,6 +19,7 @@ use DomainException;
 /**
  * Encapsulates a message intended to be read by the end user.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317459
  * @author Laurent Laville
  */
 final class Message extends JsonSerializable

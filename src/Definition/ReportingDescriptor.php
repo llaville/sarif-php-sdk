@@ -27,6 +27,7 @@ use Bartlett\Sarif\Property\ShortDescription;
  * Metadata that describes a specific report produced by the tool,
  * as part of the analysis it provides or its runtime reporting.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317836
  * @author Laurent Laville
  */
 final class ReportingDescriptor extends JsonSerializable

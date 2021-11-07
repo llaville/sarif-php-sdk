@@ -15,6 +15,7 @@ use Bartlett\Sarif\Property\Properties;
 /**
  * Information about the relation of one location to another.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317728
  * @author Laurent Laville
  */
 final class LocationRelationship extends JsonSerializable

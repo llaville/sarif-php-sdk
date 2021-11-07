@@ -22,6 +22,7 @@ use Bartlett\Sarif\Property\Version;
 /**
  * Describes an HTTP request.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317808
  * @author Laurent Laville
  */
 final class WebRequest extends JsonSerializable

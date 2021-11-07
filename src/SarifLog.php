@@ -27,7 +27,7 @@ use const JSON_PRETTY_PRINT;
  *
  * A SarifLog object specifies the version of the file format and contains the output from one or more runs.
  *
- * @link https://rawgit.com/sarif-standard/sarif-spec/master/Static%20Analysis%20Results%20Interchange%20Format%20(SARIF).html#sariflog
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317478
  * @author Laurent Laville
  */
 final class SarifLog extends JsonSerializable

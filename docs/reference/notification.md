@@ -4,7 +4,7 @@ A `notification` object describes a condition encountered during the execution o
 which is relevant to the operation of the tool itself, as opposed to being relevant to an artifact being analyzed by the tool.
 Conditions relevant to artifacts being analyzed by a tool are represented by `result` objects.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#).
+See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317894).
 
 ## Example
 

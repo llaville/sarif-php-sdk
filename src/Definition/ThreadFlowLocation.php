@@ -26,6 +26,7 @@ use Bartlett\Sarif\Property\WebResponseDetails;
 /**
  * A location visited by an analysis tool while simulating or monitoring the execution of a program.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317751
  * @author Laurent Laville
  */
 final class ThreadFlowLocation extends JsonSerializable

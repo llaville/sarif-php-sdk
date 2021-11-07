@@ -14,6 +14,7 @@ use Bartlett\Sarif\Property\Properties;
 /**
  * Defines locations of special significance to SARIF consumers.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317627
  * @author Laurent Laville
  */
 final class SpecialLocations extends JsonSerializable

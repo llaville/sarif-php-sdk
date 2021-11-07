@@ -17,6 +17,7 @@ use Bartlett\Sarif\Property\Properties;
 /**
  * Information that describes a run's identity and role within an engineering system process.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317523
  * @author Laurent Laville
  */
 final class RunAutomationDetails extends JsonSerializable

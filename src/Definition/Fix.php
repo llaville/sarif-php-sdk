@@ -17,6 +17,7 @@ use Bartlett\Sarif\Property\Properties;
  * A fix specifies a set of artifacts to modify.
  * For each artifact, it specifies a set of bytes to remove, and provides a set of new bytes to replace them.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317881
  * @author Laurent Laville
  */
 final class Fix extends JsonSerializable

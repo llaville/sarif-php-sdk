@@ -22,6 +22,7 @@ use Bartlett\Sarif\Property\RelativeAddress;
 /**
  * A physical or virtual address, or a range of addresses, in an 'addressable region' (memory or a binary file).
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317705
  * @author Laurent Laville
  */
 final class Address extends JsonSerializable

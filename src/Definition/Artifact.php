@@ -24,6 +24,7 @@ use Bartlett\Sarif\Property\SourceLanguage;
 /**
  * A single artifact. In some cases, this artifact might be nested within another artifact.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317611
  * @author Laurent Laville
  */
 final class Artifact extends JsonSerializable

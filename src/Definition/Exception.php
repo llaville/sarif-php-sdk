@@ -15,6 +15,9 @@ use Bartlett\Sarif\Property\MessageStringNative;
 use Bartlett\Sarif\Property\Properties;
 
 /**
+ * An exception object describes a runtime exception encountered during the execution of an analysis tool.
+ *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317904
  * @author Laurent Laville
  */
 final class Exception extends JsonSerializable

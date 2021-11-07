@@ -14,6 +14,7 @@ use Bartlett\Sarif\Property\Replacements;
 /**
  * A change to a single artifact.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317885
  * @author Laurent Laville
  */
 final class ArtifactChange extends JsonSerializable

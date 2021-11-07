@@ -19,6 +19,7 @@ use Bartlett\Sarif\Property\Properties;
 /**
  * Contains information about how and when a result was detected.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317828
  * @author Laurent Laville
  */
 final class ResultProvenance extends JsonSerializable

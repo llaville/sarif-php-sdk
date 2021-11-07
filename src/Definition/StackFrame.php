@@ -17,6 +17,7 @@ use Bartlett\Sarif\Property\ThreadId;
 /**
  * A function call within a stack trace.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317802
  * @author Laurent Laville
  */
 final class StackFrame extends JsonSerializable

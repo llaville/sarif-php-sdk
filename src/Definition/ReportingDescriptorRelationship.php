@@ -15,6 +15,7 @@ use Bartlett\Sarif\Property\RelationshipKinds;
 /**
  * Information about the relation of one reporting descriptor to another.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317870
  * @author Laurent Laville
  */
 final class ReportingDescriptorRelationship extends JsonSerializable

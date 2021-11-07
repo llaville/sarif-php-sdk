@@ -43,6 +43,7 @@ use Bartlett\Sarif\Property\WorkItemUris;
 /**
  * A result produced by an analysis tool.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317638
  * @author Laurent Laville
  */
 final class Result extends JsonSerializable

@@ -17,6 +17,7 @@ use DomainException;
 /**
  * Information about how to locate a relevant reporting descriptor.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317862
  * @author Laurent Laville
  */
 final class ReportingDescriptorReference extends JsonSerializable

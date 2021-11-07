@@ -18,6 +18,7 @@ use LogicException;
  * A physical location relevant to a result.
  * Specifies a reference to a programming artifact together with a range of bytes or characters within that artifact.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317678
  * @author Laurent Laville
  */
 final class PhysicalLocation extends JsonSerializable

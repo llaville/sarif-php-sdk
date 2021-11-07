@@ -15,6 +15,7 @@ use Bartlett\Sarif\Property\ThreadFlows;
 /**
  * A set of threadFlows which together describe a pattern of code execution relevant to detecting a result.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317740
  * @author Laurent Laville
  */
 final class CodeFlow extends JsonSerializable

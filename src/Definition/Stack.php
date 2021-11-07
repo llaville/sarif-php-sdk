@@ -15,6 +15,7 @@ use Bartlett\Sarif\Property\Properties;
 /**
  * A call stack that is relevant to a result.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317798
  * @author Laurent Laville
  */
 final class Stack extends JsonSerializable

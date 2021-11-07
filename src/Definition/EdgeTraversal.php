@@ -16,6 +16,7 @@ use Bartlett\Sarif\Property\StepOverEdgeCount;
 /**
  * Represents the traversal of a single edge during a graph traversal.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317792
  * @author Laurent Laville
  */
 final class EdgeTraversal extends JsonSerializable

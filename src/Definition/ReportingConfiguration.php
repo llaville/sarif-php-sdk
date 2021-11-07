@@ -18,6 +18,7 @@ use Bartlett\Sarif\Property\Rank;
 /**
  * Information about a rule or notification that can be configured at runtime.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317852
  * @author Laurent Laville
  */
 final class ReportingConfiguration extends JsonSerializable

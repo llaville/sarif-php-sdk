@@ -27,6 +27,10 @@ use Bartlett\Sarif\Property\ExternalPropertyFileReferenceTranslations;
 use Bartlett\Sarif\Property\Properties;
 
 /**
+ * An externalPropertyFileReferences object contains information that enables a SARIF consumer
+ * to locate the external property files that contain the values of all externalized properties associated with theRun.
+ *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317513
  * @author Laurent Laville
  */
 final class ExternalPropertyFileReferences extends JsonSerializable

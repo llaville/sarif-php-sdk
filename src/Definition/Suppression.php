@@ -18,6 +18,7 @@ use Bartlett\Sarif\Property\StatusSuppression;
 /**
  * A suppression that is relevant to a result.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317733
  * @author Laurent Laville
  */
 final class Suppression extends JsonSerializable

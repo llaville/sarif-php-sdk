@@ -2,8 +2,7 @@
 
 An sarifLog object specifies the version of the file format and contains the output from one or more runs.
 
-See [specification](https://rawgit.com/sarif-standard/sarif-spec/master/Static%20Analysis%20Results%20Interchange%20Format%20(SARIF).html#sariflog).
-
+See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317478).
 
 ## Example
 

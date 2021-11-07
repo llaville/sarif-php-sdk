@@ -19,6 +19,7 @@ use Bartlett\Sarif\Property\RevisionTag;
 /**
  * Specifies the information necessary to retrieve a desired revision from a version control system.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317602
  * @author Laurent Laville
  */
 final class VersionControlDetails extends JsonSerializable

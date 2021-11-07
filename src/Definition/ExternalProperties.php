@@ -35,6 +35,7 @@ use function sprintf;
 /**
  * The top-level element of an external property file.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317913
  * @author Laurent Laville
  */
 final class ExternalProperties extends JsonSerializable

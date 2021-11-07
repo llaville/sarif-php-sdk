@@ -16,6 +16,7 @@ use Bartlett\Sarif\Property\Properties;
 /**
  * A network of nodes and directed edges that describes some aspect of the structure of the code (for example, a call graph).
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317766
  * @author Laurent Laville
  */
 final class Graph extends JsonSerializable

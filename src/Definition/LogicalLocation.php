@@ -19,6 +19,7 @@ use Bartlett\Sarif\Property\Properties;
 /**
  * A logical location of a construct that produced a result.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317719
  * @author Laurent Laville
  */
 final class LogicalLocation extends JsonSerializable

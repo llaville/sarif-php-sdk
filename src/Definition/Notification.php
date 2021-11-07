@@ -21,6 +21,7 @@ use Bartlett\Sarif\Property\TimeUtc;
 /**
  * Describes a condition relevant to the tool itself, as opposed to being relevant to a target being analyzed by the tool.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317894
  * @author Laurent Laville
  */
 final class Notification extends JsonSerializable

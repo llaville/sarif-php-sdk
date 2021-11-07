@@ -56,7 +56,7 @@ See `examples/specialLocations.php` script.
 
 ```php
 <?php declare(strict_types=1);
-/
+
 use Bartlett\Sarif\Definition\ArtifactLocation;
 use Bartlett\Sarif\Definition\Run;
 use Bartlett\Sarif\Definition\SpecialLocations;

@@ -17,6 +17,7 @@ use Bartlett\Sarif\Property\ToolPipeline;
  * Describes how a converter transformed the output of a static analysis tool
  * from the analysis tool's native output format into the SARIF format.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317597
  * @author Laurent Laville
  */
 final class Conversion extends JsonSerializable

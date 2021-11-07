@@ -37,6 +37,7 @@ use Bartlett\Sarif\Property\WorkingDirectory;
 /**
  * The runtime environment of the analysis tool run.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317567
  * @author Laurent Laville
  */
 final class Invocation extends JsonSerializable

@@ -41,7 +41,7 @@ use function array_merge;
 /**
  * Describes a single run of an analysis tool, and contains the reported output of that run.
  *
- * @link https://rawgit.com/sarif-standard/sarif-spec/master/Static%20Analysis%20Results%20Interchange%20Format%20(SARIF).html#run
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317484
  * @author Laurent Laville
  */
 final class Run extends JsonSerializable

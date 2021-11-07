@@ -21,6 +21,7 @@ use Bartlett\Sarif\Property\Version;
 /**
  * Describes the response to an HTTP request.
  *
+ * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317818
  * @author Laurent Laville
  */
 final class WebResponse extends JsonSerializable
