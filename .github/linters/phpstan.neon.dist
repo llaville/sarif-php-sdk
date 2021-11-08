@@ -3,6 +3,7 @@ parameters:
     paths:
         - ../../src/
         - ../../examples/
+    treatPhpDocTypesAsCertain: false
     ignoreErrors:
         -   # @see https://github.com/phpstan/phpstan/issues/5952
             message: "#^Dead catch \\- Exception is never thrown in the try block\\.$#"
