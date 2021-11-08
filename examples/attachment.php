@@ -29,7 +29,9 @@ $tool = new Tool($driver);
 
 $attachment = new Attachment();
 $attachment->setDescription(new Message('Screen shot'));
-$attachment->setArtifactLocation(new ArtifactLocation('file:///C:/ScanOutput/image001.png'));
+$artifactLocation = new ArtifactLocation();
+$artifactLocation->setUri('file:///C:/ScanOutput/image001.png');
+$attachment->setArtifactLocation($artifactLocation);
 
 $result = new Result(new Message('Have a look on screen shot provided'));
 $result->addAttachments([$attachment]);

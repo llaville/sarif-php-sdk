@@ -26,7 +26,7 @@ trait BaselineGuid
     public function setBaselineGuid(string $baselineGuid): void
     {
         $pattern = "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$";
-        if (preg_match_all($pattern, $baselineGuid) === false) {
+        if (preg_match_all("/$pattern/", $baselineGuid) === false) {
             throw new DomainException('"baselineGuid" does not satisfy pattern "' . $pattern . '"');
         }
         $this->baselineGuid = $baselineGuid;

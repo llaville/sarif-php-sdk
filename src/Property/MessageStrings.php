@@ -20,7 +20,7 @@ trait MessageStrings
     protected $messageStrings;
 
     /**
-     * @param array $messageStrings
+     * @param array<string, MultiformatMessageString> $messageStrings
      */
     public function addMessageStrings(array $messageStrings): void
     {

@@ -21,7 +21,7 @@ trait RunGuid
     protected $runGuid;
 
     /**
-     * @param string $guid
+     * @param string $runGuid
      */
     public function setRunGuid(string $runGuid): void
     {

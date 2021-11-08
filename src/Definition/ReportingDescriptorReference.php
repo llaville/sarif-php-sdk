@@ -31,7 +31,6 @@ final class ReportingDescriptorReference extends JsonSerializable
      * The index into an array of descriptors in
      * toolComponent.ruleDescriptors, toolComponent.notificationDescriptors, or toolComponent.taxonomyDescriptors,
      * depending on context.
-     * @var int
      */
     use Index;
 

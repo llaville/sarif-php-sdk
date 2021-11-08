@@ -15,7 +15,7 @@ use Bartlett\Sarif\Definition\Message;
 trait Label
 {
     /**
-     * @var MessageString
+     * @var Message
      */
     protected $label;
 

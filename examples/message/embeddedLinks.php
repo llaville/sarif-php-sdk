@@ -30,7 +30,7 @@ $message = new Message('Tainted data was used. The data came from [here](3).');
 $result = new Result($message);
 $result->setRuleId('TNT0001');
 $location = new Location();
-$location->setId('3');
+$location->setId(3);
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('file:///C:/code/input.c');
 $physicalLocation = new PhysicalLocation($artifactLocation);

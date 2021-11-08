@@ -27,7 +27,7 @@ trait Kind
     {
         $enum = ["notApplicable", "pass", "fail", "review", "open", "informational"];
         if (!in_array($kind, $enum)) {
-            throw new DomainException($enum . ' "kind" is not allowed.');
+            throw new DomainException($kind . ' "kind" is not allowed.');
         }
         $this->kind = $kind;
     }
