@@ -71,6 +71,5 @@ final class ThreadFlow extends JsonSerializable
             'immutableState',
             'properties'
         ];
-
     }
 }

@@ -25,7 +25,7 @@ trait RuleIndex
     public function setRuleIndex(int $ruleIndex = -1): void
     {
         if ($ruleIndex < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $ruleIndex);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $ruleIndex);
         }
         $this->ruleIndex = $ruleIndex;
     }

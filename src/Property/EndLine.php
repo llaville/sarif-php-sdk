@@ -7,26 +7,21 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use DomainException;
-
 /**
  * @author Laurent Laville
  */
-trait Length
+trait EndLine
 {
     /**
      * @var int
      */
-    protected $length;
+    protected $endLine;
 
     /**
-     * @param int $length
+     * @param int $endLine
      */
-    public function setLength(int $length = -1): void
+    public function setEndLine(int $endLine): void
     {
-        if ($length < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $length);
-        }
-        $this->length = $length;
+        $this->endLine = $endLine;
     }
 }

@@ -11,6 +11,7 @@ use Bartlett\Sarif\Internal\JsonSerializable;
 use Bartlett\Sarif\Property\Description;
 use Bartlett\Sarif\Property\Properties;
 use Bartlett\Sarif\Property\RelationshipKinds;
+use Bartlett\Sarif\Property\ReportingDescriptorTarget;
 
 /**
  * Information about the relation of one reporting descriptor to another.
@@ -22,9 +23,8 @@ final class ReportingDescriptorRelationship extends JsonSerializable
 {
     /**
      * A reference to the related reporting descriptor.
-     * @var ReportingDescriptorReference
      */
-    protected $target;
+    use ReportingDescriptorTarget;
 
     /**
      * A set of distinct strings that categorize the relationship.

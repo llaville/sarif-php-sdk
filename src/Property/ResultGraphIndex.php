@@ -25,7 +25,7 @@ trait ResultGraphIndex
     public function setResultGraphIndex(int $resultGraphIndex = -1): void
     {
         if ($resultGraphIndex < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $resultGraphIndex);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $resultGraphIndex);
         }
         $this->resultGraphIndex = $resultGraphIndex;
     }

@@ -11,6 +11,7 @@ use Bartlett\Sarif\Internal\JsonSerializable;
 use Bartlett\Sarif\Property\Description;
 use Bartlett\Sarif\Property\Kinds;
 use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property\TargetLocation;
 
 /**
  * Information about the relation of one location to another.
@@ -22,9 +23,8 @@ final class LocationRelationship extends JsonSerializable
 {
     /**
      * A reference to the related location.
-     * @var int
      */
-    protected $target;
+    use TargetLocation;
 
     /**
      * A set of distinct strings that categorize the relationship.
@@ -50,7 +50,7 @@ final class LocationRelationship extends JsonSerializable
         $this->target = $target;
 
         $this->required = ['target'];
-        $this->optional =[
+        $this->optional = [
             'kinds',
             'description',
             'properties',

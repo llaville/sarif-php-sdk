@@ -8,6 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
+use Bartlett\Sarif\Property\EdgeId;
 use Bartlett\Sarif\Property\FinalState;
 use Bartlett\Sarif\Property\MessageString;
 use Bartlett\Sarif\Property\Properties;
@@ -23,9 +24,8 @@ final class EdgeTraversal extends JsonSerializable
 {
     /**
      * Identifies the edge being traversed.
-     * @var string
      */
-    protected $edgeId;
+    use EdgeId;
 
     /**
      * A message to display to the user as the edge is traversed.

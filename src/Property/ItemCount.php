@@ -25,7 +25,7 @@ trait ItemCount
     public function setItemCount(int $itemCount = -1): void
     {
         if ($itemCount < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $itemCount);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $itemCount);
         }
         $this->itemCount = $itemCount;
     }

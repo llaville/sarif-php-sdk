@@ -25,7 +25,7 @@ trait CharOffset
     public function setCharOffset(int $charOffset = -1): void
     {
         if ($charOffset < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $charOffset);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $charOffset);
         }
         $this->charOffset = $charOffset;
     }

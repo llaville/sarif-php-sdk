@@ -25,7 +25,7 @@ trait OccurrenceCount
     public function setOccurrenceCount(int $occurrenceCount): void
     {
         if ($occurrenceCount < 1) {
-            throw new DomainException('Minimum value is 1. Expect to be greater, but have '. $occurrenceCount);
+            throw new DomainException('Minimum value is 1. Expect to be greater, but have ' . $occurrenceCount);
         }
         $this->occurrenceCount = $occurrenceCount;
     }

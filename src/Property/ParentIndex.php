@@ -25,7 +25,7 @@ trait ParentIndex
     public function setParentIndex(int $parentIndex = -1): void
     {
         if ($parentIndex < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $parentIndex);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $parentIndex);
         }
         $this->parentIndex = $parentIndex;
     }

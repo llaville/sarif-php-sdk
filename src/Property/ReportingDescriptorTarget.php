@@ -7,26 +7,23 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use DomainException;
+use Bartlett\Sarif\Definition\ReportingDescriptorReference;
 
 /**
  * @author Laurent Laville
  */
-trait Length
+trait ReportingDescriptorTarget
 {
     /**
-     * @var int
+     * @var ReportingDescriptorReference
      */
-    protected $length;
+    protected $target;
 
     /**
-     * @param int $length
+     * @param ReportingDescriptorReference $target
      */
-    public function setLength(int $length = -1): void
+    public function setTarget(ReportingDescriptorReference $target): void
     {
-        if ($length < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $length);
-        }
-        $this->length = $length;
+        $this->target = $target;
     }
 }

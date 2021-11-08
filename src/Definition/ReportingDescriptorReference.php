@@ -9,10 +9,10 @@ namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
 use Bartlett\Sarif\Property\Guid;
+use Bartlett\Sarif\Property\Id;
+use Bartlett\Sarif\Property\Index;
 use Bartlett\Sarif\Property\Properties;
 use Bartlett\Sarif\Property\ToolComponentRef;
-
-use DomainException;
 
 /**
  * Information about how to locate a relevant reporting descriptor.
@@ -24,9 +24,8 @@ final class ReportingDescriptorReference extends JsonSerializable
 {
     /**
      * The id of the descriptor.
-     * @var string
      */
-    protected $id;
+    use Id;
 
     /**
      * The index into an array of descriptors in
@@ -34,7 +33,7 @@ final class ReportingDescriptorReference extends JsonSerializable
      * depending on context.
      * @var int
      */
-    protected $index;
+    use Index;
 
     /**
      * A guid that uniquely identifies the descriptor.
@@ -58,10 +57,7 @@ final class ReportingDescriptorReference extends JsonSerializable
      */
     public function __construct(int $index = -1, string $id = '', string $guid = '')
     {
-        if ($index < -1) {
-            throw new DomainException('"index" minimum value is -1');
-        }
-        $this->index = $index;
+        $this->setIndex($index);
         $this->id = $id;
         $this->guid = $guid;
 

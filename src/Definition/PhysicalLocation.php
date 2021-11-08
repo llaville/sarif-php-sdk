@@ -8,7 +8,9 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
+use Bartlett\Sarif\Property\AddressLocation;
 use Bartlett\Sarif\Property\ContextRegion;
+use Bartlett\Sarif\Property\LocationArtifact;
 use Bartlett\Sarif\Property\Properties;
 use Bartlett\Sarif\Property\RegionArtifact;
 
@@ -25,15 +27,13 @@ final class PhysicalLocation extends JsonSerializable
 {
     /**
      * The address of the location.
-     * @var Address
      */
-    protected $address;
+    use AddressLocation;
 
     /**
      * The location of the artifact.
-     * @var ArtifactLocation
      */
-    protected $artifactLocation;
+    use LocationArtifact;
 
     /**
      * Specifies a portion of the artifact.

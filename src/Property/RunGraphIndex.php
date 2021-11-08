@@ -25,7 +25,7 @@ trait RunGraphIndex
     public function setRunGraphIndex(int $runGraphIndex = -1): void
     {
         if ($runGraphIndex < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $runGraphIndex);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $runGraphIndex);
         }
         $this->runGraphIndex = $runGraphIndex;
     }

@@ -28,7 +28,7 @@ $tool = new Tool($driver);
 $automationDetails = new RunAutomationDetails();
 
 $text = "This is the {0} nightly run of the Credential Scanner tool on" .
-    " all product binaries in the '{1}' branch of the '{2}' repo.".
+    " all product binaries in the '{1}' branch of the '{2}' repo." .
     " The scanned binaries are architecture '{3}' and build type '{4}'.";
 $description = new Message($text);
 $description->addArguments([

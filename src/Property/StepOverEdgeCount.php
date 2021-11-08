@@ -25,7 +25,7 @@ trait StepOverEdgeCount
     public function setStepOverEdgeCount(int $stepOverEdgeCount): void
     {
         if ($stepOverEdgeCount < 0) {
-            throw new DomainException('Minimum value is 0. Expect to be greater, but have '. $stepOverEdgeCount);
+            throw new DomainException('Minimum value is 0. Expect to be greater, but have ' . $stepOverEdgeCount);
         }
         $this->stepOverEdgeCount = $stepOverEdgeCount;
     }

@@ -25,7 +25,7 @@ trait IdLocation
     public function setId(int $id = -1): void
     {
         if ($id < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $id);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $id);
         }
         $this->id = $id;
     }

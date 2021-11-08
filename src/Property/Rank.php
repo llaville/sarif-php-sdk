@@ -25,10 +25,10 @@ trait Rank
     public function setRank(float $rank = -1): void
     {
         if ($rank < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $rank);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $rank);
         }
         if ($rank > 100) {
-            throw new DomainException('Maximum value is 100. Expect to be lower, but have '. $rank);
+            throw new DomainException('Maximum value is 100. Expect to be lower, but have ' . $rank);
         }
         $this->rank = $rank;
     }

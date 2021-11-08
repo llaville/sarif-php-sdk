@@ -35,7 +35,7 @@ final class ReportingDescriptor extends JsonSerializable
     /**
      * A stable, opaque identifier for the report.
      */
-    Use Id;
+    use Id;
 
     /**
      * An array of stable, opaque identifiers by which this report was known in some previous version of the analysis tool.

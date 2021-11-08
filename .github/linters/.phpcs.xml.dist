@@ -6,6 +6,7 @@
     <description>My custom coding standard.</description>
 
     <file>../../src</file>
+    <file>../../examples</file>
 
     <rule ref="PSR12">
         <exclude name="PSR12.Files.FileHeader" />

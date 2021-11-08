@@ -25,7 +25,7 @@ trait ExecutionOrder
     public function setExecutionOrder(int $executionOrder = -1): void
     {
         if ($executionOrder < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $executionOrder);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $executionOrder);
         }
         $this->executionOrder = $executionOrder;
     }

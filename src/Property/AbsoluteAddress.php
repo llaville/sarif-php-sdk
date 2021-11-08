@@ -25,7 +25,7 @@ trait AbsoluteAddress
     public function setAbsoluteAddress(int $absoluteAddress = -1): void
     {
         if ($absoluteAddress < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $absoluteAddress);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $absoluteAddress);
         }
         $this->absoluteAddress = $absoluteAddress;
     }

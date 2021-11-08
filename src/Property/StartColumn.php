@@ -7,26 +7,21 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use DomainException;
-
 /**
  * @author Laurent Laville
  */
-trait Length
+trait StartColumn
 {
     /**
      * @var int
      */
-    protected $length;
+    protected $startColumn;
 
     /**
-     * @param int $length
+     * @param int $startColumn
      */
-    public function setLength(int $length = -1): void
+    public function setStartColumn(int $startColumn): void
     {
-        if ($length < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $length);
-        }
-        $this->length = $length;
+        $this->startColumn = $startColumn;
     }
 }

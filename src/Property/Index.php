@@ -25,7 +25,7 @@ trait Index
     public function setIndex(int $index = -1): void
     {
         if ($index < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $index);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $index);
         }
         $this->index = $index;
     }

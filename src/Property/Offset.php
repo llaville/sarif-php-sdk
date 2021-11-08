@@ -25,7 +25,7 @@ trait Offset
     public function setOffset(int $offset): void
     {
         if ($offset < 0) {
-            throw new DomainException('Minimum value is 0. Expect to be greater, but have '. $offset);
+            throw new DomainException('Minimum value is 0. Expect to be greater, but have ' . $offset);
         }
         $this->offset = $offset;
     }

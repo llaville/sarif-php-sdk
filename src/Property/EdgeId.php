@@ -7,26 +7,21 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use DomainException;
-
 /**
  * @author Laurent Laville
  */
-trait Length
+trait EdgeId
 {
     /**
-     * @var int
+     * @var string
      */
-    protected $length;
+    protected $edgeId;
 
     /**
-     * @param int $length
+     * @param string $edgeId
      */
-    public function setLength(int $length = -1): void
+    public function setEdgeId(string $edgeId): void
     {
-        if ($length < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $length);
-        }
-        $this->length = $length;
+        $this->edgeId = $edgeId;
     }
 }

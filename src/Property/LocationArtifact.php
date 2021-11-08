@@ -20,10 +20,24 @@ trait LocationArtifact
     protected $location;
 
     /**
+     * Alias for PhysicalLocation definition
+     * @var ArtifactLocation
+     */
+    protected $artifactLocation;
+
+    /**
      * @param ArtifactLocation $location
      */
     public function setLocation(ArtifactLocation $location): void
     {
         $this->location = $location;
+    }
+
+    /**
+     * @param ArtifactLocation $artifactLocation
+     */
+    public function setArtifactLocation(ArtifactLocation $artifactLocation): void
+    {
+        $this->artifactLocation = $artifactLocation;
     }
 }

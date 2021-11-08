@@ -7,26 +7,21 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use DomainException;
-
 /**
  * @author Laurent Laville
  */
-trait Length
+trait TargetLocation
 {
     /**
      * @var int
      */
-    protected $length;
+    protected $target;
 
     /**
-     * @param int $length
+     * @param int $target
      */
-    public function setLength(int $length = -1): void
+    public function setTarget(int $target): void
     {
-        if ($length < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $length);
-        }
-        $this->length = $length;
+        $this->target = $target;
     }
 }

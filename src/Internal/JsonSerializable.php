@@ -37,7 +37,7 @@ abstract class JsonSerializable implements \JsonSerializable
         $properties = [];
         foreach ($this->required as $requirement) {
             if (!isset($this->$requirement)) {
-                throw new LogicException('"' . $requirement .'" is required, but not defined.');
+                throw new LogicException('"' . $requirement . '" is required, but not defined.');
             }
             $properties[$requirement] = $this->$requirement;
         }

@@ -25,7 +25,7 @@ trait CharLength
     public function setCharLength(int $charLength): void
     {
         if ($charLength < 0) {
-            throw new DomainException('Minimum value is 0. Expect to be greater, but have '. $charLength);
+            throw new DomainException('Minimum value is 0. Expect to be greater, but have ' . $charLength);
         }
         $this->charLength = $charLength;
     }

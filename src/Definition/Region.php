@@ -12,10 +12,14 @@ use Bartlett\Sarif\Property\ByteLength;
 use Bartlett\Sarif\Property\ByteOffset;
 use Bartlett\Sarif\Property\CharLength;
 use Bartlett\Sarif\Property\CharOffset;
+use Bartlett\Sarif\Property\EndColumn;
+use Bartlett\Sarif\Property\EndLine;
 use Bartlett\Sarif\Property\MessageString;
 use Bartlett\Sarif\Property\Properties;
 use Bartlett\Sarif\Property\Snippet;
 use Bartlett\Sarif\Property\SourceLanguage;
+use Bartlett\Sarif\Property\StartColumn;
+use Bartlett\Sarif\Property\StartLine;
 
 /**
  * A region within an artifact where a result was detected.
@@ -26,27 +30,23 @@ final class Region extends JsonSerializable
 {
     /**
      * The line number of the first character in the region.
-     * @var int
      */
-    protected $startLine;
+    use StartLine;
 
     /**
      * The column number of the first character in the region.
-     * @var int
      */
-    protected $startColumn;
+    use StartColumn;
 
     /**
      * The line number of the last character in the region.
-     * @var int
      */
-    protected $endLine;
+    use EndLine;
 
     /**
      * The column number of the character following the end of the region.
-     * @var int
      */
-    protected $endColumn;
+    use EndColumn;
 
     /**
      * The zero-based offset from the beginning of the artifact of the first character in the region.

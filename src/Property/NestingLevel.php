@@ -25,7 +25,7 @@ trait NestingLevel
     public function setNestingLevel(int $nestingLevel): void
     {
         if ($nestingLevel < 0) {
-            throw new DomainException('Minimum value is 0. Expect to be greater, but have '. $nestingLevel);
+            throw new DomainException('Minimum value is 0. Expect to be greater, but have ' . $nestingLevel);
         }
         $this->nestingLevel = $nestingLevel;
     }

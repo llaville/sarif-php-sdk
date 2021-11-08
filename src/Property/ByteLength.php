@@ -25,7 +25,7 @@ trait ByteLength
     public function setByteLength(int $byteLength): void
     {
         if ($byteLength < 0) {
-            throw new DomainException('Minimum value is 0. Expect to be greater, but have '. $byteLength);
+            throw new DomainException('Minimum value is 0. Expect to be greater, but have ' . $byteLength);
         }
         $this->byteLength = $byteLength;
     }

@@ -25,7 +25,7 @@ trait InvocationIndex
     public function setInvocationIndex(int $invocationIndex = -1): void
     {
         if ($invocationIndex < -1) {
-            throw new DomainException('Minimum value is -1. Expect to be greater, but have '. $invocationIndex);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $invocationIndex);
         }
         $this->invocationIndex = $invocationIndex;
     }
