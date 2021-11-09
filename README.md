@@ -14,8 +14,19 @@ It is a powerful and sophisticated format suited to the needs of a wide variety 
 ## Specifications
 
 The specification document for the Static Analysis Results Interchange Format (SARIF) version 2.1.0, in HTML format
-is available [here](http://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html).
+is available [here](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html).
 
 ## View and validate your SARIF files
 
 - [Upload and explore your SARIF file](https://sarifweb.azurewebsites.net/Validation)
+
+## Documentation
+
+All the documentation is available on [website](https://llaville.github.io/sarif-php-sdk),
+generated from the [docs](https://github.com/llaville/sarif-php-sdk/tree/master/docs) folder.
+
+- [Getting Started](https://llaville.github.io/sarif-php-sdk/getting-started/).
+- API [Reference](https://llaville.github.io/sarif-php-sdk/reference/address/) describes all SARIF objects with examples.
+
+And also
+- [Study the tutorials](https://github.com/microsoft/sarif-tutorials) from GitHub's Microsoft account.
