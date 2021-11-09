@@ -1,10 +1,11 @@
 # SARIF PHP SDK
 
-| Stable | Upcoming |
-|:------:|:--------:|
-|  | [![Unstable Version](https://img.shields.io/packagist/vpre/bartlett/sarif-php-sdk)](https://packagist.org/packages/bartlett/sarif-php-sdk) |
-|  | [![Minimum PHP Version)](https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk/1.0.x-dev?color=orange)](https://www.php.net/supported-versions.php) |
-|  | [![Branch master](https://img.shields.io/badge/branch-master-orange)](https://github.com/llaville/sarif-php-sdk) |
+| Stable |
+|:------:|
+| [![Latest Stable Version](https://img.shields.io/packagist/v/bartlett/sarif-php-sdk)](https://packagist.org/packages/bartlett/sarif-php-sdk) |
+| [![Minimum PHP Version)](https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk)](https://www.php.net/supported-versions.php) |
+| [![Branch master](https://img.shields.io/badge/branch-master-blue)](https://github.com/llaville/sarif-php-sdk) |
+| [![Linters](https://github.com/llaville/sarif-php-sdk/actions/workflows/mega-linter.yml/badge.svg)](https://github.com/llaville/sarif-php-sdk/actions/workflows/mega-linter.yml) |
 
 ## Introduction
 
