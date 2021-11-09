@@ -16,11 +16,14 @@ use Bartlett\Sarif\Property\Schema;
 use Bartlett\Sarif\Property\Version;
 
 use DomainException;
-
+use Throwable;
 use function array_merge;
 use function json_encode;
 use function sprintf;
+use function trigger_error;
+use const E_USER_ERROR;
 use const JSON_PRETTY_PRINT;
+use const PHP_VERSION_ID;
 
 /**
  * Static Analysis Results Format (SARIF)
@@ -85,10 +88,20 @@ final class SarifLog extends JsonSerializable
      */
     public function __toString(): string
     {
-        if (empty($this->runs)) {
-            throw new DomainException('"runs" are required. None provided.');
+        try {
+            if (empty($this->runs)) {
+                throw new DomainException('"runs" are required. None provided.');
+            }
+            return json_encode($this, JSON_PRETTY_PRINT);
+        } catch (Throwable $e) {
+            if (PHP_VERSION_ID >= 70400) {
+                throw $e;
+            }
+            trigger_error(
+                sprintf('%s::__toString exception: %s', self::class, (string) $e), E_USER_ERROR
+            );
+            return '';
         }
-        return json_encode($this, JSON_PRETTY_PRINT);
     }
 
     /**
