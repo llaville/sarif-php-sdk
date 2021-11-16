@@ -1,15 +1,17 @@
 ---
 # Mega-Linter GitHub Action configuration file
-# More info at https://nvuillam.github.io/mega-linter
+# More info at https://github.com/megalinter/megalinter
 name: Mega-Linter
 
 on:
-    push:
-        branches:
-            - master
+    # Trigger mega-linter at every push. Action will also be visible from Pull Requests to master
+    push: # Comment this line to trigger action only on pull-requests (not recommended if you don't pay for GH Actions)
+        paths-ignore:
+            - 'docs/**'
     pull_request:
-        branches:
-            - master
+        branches: [master]
+        paths-ignore:
+            - 'docs/**'
 
 concurrency:
     group: ${{ github.ref }}-${{ github.workflow }}
@@ -18,7 +20,17 @@ concurrency:
 jobs:
     lint_files:
         name: Lint Code Base
-        runs-on: ubuntu-latest
+
+        runs-on: ${{ matrix.os }}
+
+        strategy:
+            fail-fast: false
+            matrix:
+                os:
+                    - ubuntu-latest
+                php:
+                    - 7.4
+
         steps:
             -   # Git Checkout
                 name: Checkout Code
@@ -26,6 +38,12 @@ jobs:
                 with:
                     token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
                     fetch-depth: 0
+
+            -   # Setup PHP runtime
+                name: Setup PHP runtime
+                uses: "shivammathur/setup-php@v2"
+                with:
+                    php-version: ${{ matrix.php }}
 
             -   # Install Composer dependencies
                 name: Install Composer dependencies
