@@ -49,18 +49,17 @@ jobs:
                 name: Install Composer dependencies
                 uses: "ramsey/composer-install@v1"
                 with:
-                    dependency-versions: "highest"
                     composer-options: "--prefer-dist"
 
             -   # Mega-Linter
                 name: Mega-Linter
                 id: ml
                     # You can override Mega-Linter flavor used to have faster performances
-                    # More info at https://nvuillam.github.io/mega-linter/flavors/
-                uses: nvuillam/mega-linter/flavors/php@v5
+                    # More info at https://megalinter.github.io/latest/flavors/
+                uses: megalinter/megalinter/flavors/php@v5
                 env:
                     # All available variables are described in documentation
-                    # https://nvuillam.github.io/mega-linter/configuration/
+                    # https://megalinter.github.io/latest/configuration/
                     # Validates all source when push on master, else just the git diff with master. Override with true if you always want to lint all sources
                     VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
