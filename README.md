@@ -26,8 +26,8 @@ is available [here](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.
 All the documentation is available on [website](https://llaville.github.io/sarif-php-sdk),
 generated from the [docs](https://github.com/llaville/sarif-php-sdk/tree/master/docs) folder.
 
-- [Getting Started](https://llaville.github.io/sarif-php-sdk/getting-started/).
-- API [Reference](https://llaville.github.io/sarif-php-sdk/reference/address/) describes all SARIF objects with examples.
+- [Getting Started](docs/getting-started.md).
+- API [Reference](docs/reference/) describes all SARIF objects with examples.
 
 And also
 - [Study the tutorials](https://github.com/microsoft/sarif-tutorials) from GitHub's Microsoft account.

@@ -1,8 +1,19 @@
 # Getting started
 
+## Requirements
+
+* PHP 7.1 or greater
+* ext-json
+* ext-pcre
+* ext-spl
+
+![GraPHP Composer](./graph-composer.svg)
+
+Generated with [clue/graph-composer](https://github.com/clue/graph-composer)
+
 ## Installation
 
-### With Composer <small>recommended</small>
+### With Composer
 
 Install the SARIF PHP SDK with [Composer](https://getcomposer.org/).
 
