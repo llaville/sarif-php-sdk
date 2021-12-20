@@ -1,4 +1,4 @@
-# What is the SARIF PHP SDK ?
+# About
 
 This PHP SDK produces the SARIF output, which is a JSON file formatted
 in accordance with the latest [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html).

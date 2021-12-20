@@ -8,7 +8,6 @@
 namespace Bartlett\Sarif\Definition;
 
 use JsonSerializable;
-use function array_unique;
 
 /**
  * Key/value pairs that provide additional information about the object.
@@ -42,6 +41,6 @@ final class PropertyBag implements JsonSerializable
      */
     public function jsonSerialize(): array
     {
-        return array_unique($this->tags);
+        return $this->tags;
     }
 }
