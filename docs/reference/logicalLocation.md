@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # logicalLocation object
 
 A `logicalLocation` object describes a logical location.

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # artifactContent object
 
 Certain properties in this document represent the contents of portions of artifacts external to the log file,

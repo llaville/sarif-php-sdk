@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # conversion object
 
 A `conversion` object describes how a converter transformed the output of an analysis tool

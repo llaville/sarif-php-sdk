@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # artifactChange object
 
 An `artifactChange` object represents a change to a single artifact.

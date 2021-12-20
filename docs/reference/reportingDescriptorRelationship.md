@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # reportingDescriptorRelationship object
 
 A `reportingDescriptorRelationship` object specifies one or more directed relationships

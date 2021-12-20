@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # replacement object
 
 A `replacement` object represents the replacement of a single region of an artifact.

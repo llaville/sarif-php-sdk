@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # webRequest object
 
 A `webRequest` object describes an HTTP request (RFC7230).

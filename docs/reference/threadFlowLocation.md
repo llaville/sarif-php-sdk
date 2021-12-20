@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # threadFlowLocation object
 
 A `threadFlowLocation` object represents a location visited by an analysis tool

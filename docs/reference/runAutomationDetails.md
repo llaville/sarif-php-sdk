@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # runAutomationDetails object
 
 A `runAutomationDetails` object contains information that specifies theRun’s identity and role within an engineering system.

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # stackFrame object
 
 A `stackFrame` object describes a single stack frame within a call stack.

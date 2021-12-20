@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # graphTraversal object
 
 A `graphTraversal` object represents a "graph traversal", that is, a path through

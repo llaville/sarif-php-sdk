@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # SARIF PHP SDK
 
 | Stable |
@@ -30,4 +31,5 @@ generated from the [docs](https://github.com/llaville/sarif-php-sdk/tree/master/
 - API [Reference](docs/reference/) describes all SARIF objects with examples.
 
 And also
+
 - [Study the tutorials](https://github.com/microsoft/sarif-tutorials) from GitHub's Microsoft account.

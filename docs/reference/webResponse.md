@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # webResponse object
 
 A `webResponse` object describes the response to an HTTP request (RFC7230)

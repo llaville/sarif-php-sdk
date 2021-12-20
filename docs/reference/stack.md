@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # stack object
 
 A `stack` object describes a single call stack.

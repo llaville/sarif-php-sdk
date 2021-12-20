@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # configurationOverride object
 
 A `configurationOverride` object modifies the effective runtime configuration of a specified `reportingDescriptor` object,

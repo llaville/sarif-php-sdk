@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # message object
 
 Certain objects in this document define messages intended to be viewed by a user.

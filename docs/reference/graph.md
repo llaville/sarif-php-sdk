@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # graph object
 
 A `graph` object represents a directed graph, a network of nodes and directed edges

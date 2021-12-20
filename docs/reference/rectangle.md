@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # rectangle object
 
 A `rectangle` object specifies a rectangular area within an image.

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # edgeTraversal object
 
 An `edgeTraversal` object represents the traversal of a single edge during a graph traversal.

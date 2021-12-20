@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # result object
 
 A `result` object describes a single result detected by an analysis tool.

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # physicalLocation object
 
 A `physicalLocation` object represents the physical location where a result was detected.

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # externalProperties object
 
 The top-level element of an external property file SHALL be an object which we refer to as an `externalProperties` object.

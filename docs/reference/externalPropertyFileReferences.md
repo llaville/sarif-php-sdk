@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # externalPropertyFileReferences object
 
 An `externalPropertyFileReferences` object contains information that enables a SARIF consumer

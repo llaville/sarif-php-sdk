@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # node object
 
 A `node` object represents a node in the graph represented by the containing graph object, which we refer to as theGraph.

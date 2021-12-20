@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # reportingDescriptorReference object
 
 A `reportingDescriptorReference` object identifies a particular `reportingDescriptor` object,

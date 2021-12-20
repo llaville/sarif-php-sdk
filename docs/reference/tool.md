@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # tool object
 
 A `tool` object describes the analysis tool or converter that was run.

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # specialLocations object
 
 A `specialLocations` object defines locations of special significance to SARIF consumers.

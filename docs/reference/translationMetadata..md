@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # translationMetadata object
 
 A `translationMetadata` object defines locations of special significance to SARIF consumers.

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # artifact object
 
 An `artifact` object represents a single artifact.

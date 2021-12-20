@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # notification object
 
 A `notification` object describes a condition encountered during the execution of an analysis tool

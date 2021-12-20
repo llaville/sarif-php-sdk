@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # exception object
 
 An `exception` object describes a runtime exception encountered during the execution of an analysis tool.

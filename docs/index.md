@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # About
 
 This PHP SDK produces the SARIF output, which is a JSON file formatted

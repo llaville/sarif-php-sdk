@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # reportingConfiguration object
 
 A `reportingConfiguration` object contains the information in a `reportingDescriptor` that a SARIF producer can modify

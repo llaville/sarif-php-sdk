@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # resultProvenance object
 
 A `resultProvenance` object contains information about the how and when theResult was detected.

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # sariflog object
 
 An sarifLog object specifies the version of the file format and contains the output from one or more runs.

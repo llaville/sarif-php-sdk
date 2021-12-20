@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # edge object
 
 A `edge` object represents a directed edge in the graph represented by theGraph.

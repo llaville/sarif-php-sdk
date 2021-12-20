@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # address object
 
 An `address` object describes a physical or virtual address,

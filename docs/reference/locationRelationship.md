@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # locationRelationship object
 
 A `locationRelationship` object specifies one or more directed relationships from one location object,

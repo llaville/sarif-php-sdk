@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # versionControlDetails object
 
 A `versionControlDetails` object specifies the information necessary to retrieve from a version control system (VCS)

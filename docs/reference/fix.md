@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # fix object
 
 A `fix` object represents a proposed fix for the problem indicated by theResult. It specifies a set of artifacts to modify.

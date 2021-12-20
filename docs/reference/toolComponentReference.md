@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # toolComponentReference object
 
 A `toolComponentReference` object identifies a particular `toolComponent` object,

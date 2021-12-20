@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # suppression object
 
 A `suppression` object describes a request to suppress a result.

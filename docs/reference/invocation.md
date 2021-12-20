@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # invocation object
 
 An `invocation` object describes the invocation of the analysis tool that was run.

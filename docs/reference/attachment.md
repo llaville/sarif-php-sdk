@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # attachment object
 
 An `attachment` object describes an artifact relevant to the detection of a result.

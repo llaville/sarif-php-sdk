@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # threadFlow object
 
 A `threadFlow` object is a sequence of code locations that specify a possible path through a single thread of execution
