@@ -9,14 +9,11 @@ parameters:
             message: "#^Dead catch \\- Exception is never thrown in the try block\\.$#"
             paths:
                 - ../../examples/
-        -
-            message: "#^Array \\(array\\<Bartlett\\\\Sarif\\\\Definition\\\\ToolComponent\\>\\) does not accept array\\<Bartlett\\\\Sarif\\\\Definition\\\\ToolComponent\\>\\.$#"
-            path: ../../src/Definition/ExternalProperties.php
 
         -
             message: "#^Cannot access an offset on Bartlett\\\\Sarif\\\\Definition\\\\PhysicalLocation\\.$#"
             path: ../../src/Definition/ResultProvenance.php
 
         -
-            message: "#^Array \\(array\\<Bartlett\\\\Sarif\\\\Definition\\\\ToolComponent\\>\\) does not accept array\\<Bartlett\\\\Sarif\\\\Definition\\\\ToolComponent\\>\\.$#"
-            path: ../../src/Definition/Run.php
+            message: "#^Unreachable statement \\- code above always terminates\\.$#"
+            path: ../../src/SarifLog.php
