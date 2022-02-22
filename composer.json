@@ -9,7 +9,7 @@
         "issues": "https://github.com/llaville/sarif-php-sdk/issues"
     },
     "require": {
-        "php": "^7.1|^8.0",
+        "php": "^7.1 || ^8.0",
         "ext-json": "*",
         "ext-pcre": "*",
         "ext-spl": "*"
@@ -17,7 +17,6 @@
     "authors": [
         {
             "name": "Laurent Laville",
-            "email": "pear@laurent-laville.org",
             "homepage": "https://github.com/llaville",
             "role": "Lead"
         }
