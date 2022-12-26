@@ -1,11 +1,8 @@
 ---
-# Mega-Linter GitHub Action configuration file
-# More info at https://github.com/megalinter/megalinter
 name: Mega-Linter
 
 on:
-    # Trigger mega-linter at every push. Action will also be visible from Pull Requests to master
-    push: # Comment this line to trigger action only on pull-requests (not recommended if you don't pay for GH Actions)
+    push:
         paths-ignore:
             - 'docs/**'
     pull_request:
@@ -19,3 +16,4 @@ jobs:
         uses: llaville/.github/.github/workflows/mega-linter.yml@master
         with:
             repository: ${{ github.repository }}
+            php-version: "8.0"
