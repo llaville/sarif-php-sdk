@@ -15,3 +15,4 @@ jobs:
         uses: llaville/.github/.github/workflows/gh-pages.yml@master
         with:
             destination-dir: ''
+            php-version: "8.1"
