@@ -16,5 +16,5 @@ jobs:
         uses: llaville/.github/.github/workflows/gh-pages.yml@uml
         with:
             destination-dir: "1.0"
-            force-orphan: true
+            force-orphan: false
             php-version: "8.1"
