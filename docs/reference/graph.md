@@ -4,8 +4,6 @@
 A `graph` object represents a directed graph, a network of nodes and directed edges
 that describes some aspect of the structure of the code (for example, a call graph).
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317766).
-
 ## Example
 
 ```json

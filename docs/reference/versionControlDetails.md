@@ -4,8 +4,6 @@
 A `versionControlDetails` object specifies the information necessary to retrieve from a version control system (VCS)
 the correct revision of the files that were scanned during the run.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317602).
-
 ## Example
 
 ```json

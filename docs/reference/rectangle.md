@@ -5,8 +5,6 @@ A `rectangle` object specifies a rectangular area within an image.
 When a SARIF viewer displays an image, it MAY indicate the presence of these areas,
 for example, by highlighting them or surrounding them with a border.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317701).
-
 ## Example
 
 ```json

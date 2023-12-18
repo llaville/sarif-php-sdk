@@ -4,8 +4,6 @@
 A `stack` object describes a single call stack.
 A call stack is a sequence of nested function calls, each of which is referred to as a stack frame.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317798).
-
 ## Example
 
 ```json

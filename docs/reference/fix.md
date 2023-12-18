@@ -4,8 +4,6 @@
 A `fix` object represents a proposed fix for the problem indicated by theResult. It specifies a set of artifacts to modify.
 For each artifact, it specifies regions to remove, and provides new content to insert.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317881).
-
 ## Example
 
 ```json

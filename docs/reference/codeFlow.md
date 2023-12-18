@@ -4,8 +4,6 @@
 A `codeFlow` object describes the progress of one or more programs through one or more thread flows,
 which together lead to the detection of a problem in the system being analyzed.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317740).
-
 ## Example
 
 ```json

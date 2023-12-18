@@ -3,8 +3,6 @@
 
 An `invocation` object describes the invocation of the analysis tool that was run.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317567).
-
 ## Example
 
 ```json

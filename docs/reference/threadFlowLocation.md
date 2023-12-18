@@ -4,8 +4,6 @@
 A `threadFlowLocation` object represents a location visited by an analysis tool
 in the course of simulating or monitoring the execution of a program.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317751).
-
 ## Example
 
 ```json

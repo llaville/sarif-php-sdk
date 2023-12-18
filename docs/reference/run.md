@@ -3,8 +3,6 @@
 
 An sarifLog object specifies the version of the file format and contains the output from one or more runs.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317484).
-
 ## Example
 
 ```json

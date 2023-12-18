@@ -1,12 +1,20 @@
 <!-- markdownlint-disable MD013 -->
 # SARIF PHP SDK
 
-| Stable |
-|:------:|
-| [![Latest Stable Version](https://img.shields.io/packagist/v/bartlett/sarif-php-sdk)](https://packagist.org/packages/bartlett/sarif-php-sdk) |
-| [![Minimum PHP Version)](https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk)](https://www.php.net/supported-versions.php) |
-| [![Branch master](https://img.shields.io/badge/branch-master-blue)](https://github.com/llaville/sarif-php-sdk) |
-| [![Linters](https://github.com/llaville/sarif-php-sdk/actions/workflows/mega-linter.yml/badge.svg)](https://github.com/llaville/sarif-php-sdk/actions/workflows/mega-linter.yml) |
+| Releases      |                    Branch                     |                               PHP                               |                          Packagist                          |                     License                      |                           Documentation                            |
+|:--------------|:---------------------------------------------:|:---------------------------------------------------------------:|:-----------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------------------------:|
+| Stable v1.0.x | [![Branch 1.0][Branch_100x-img]][Branch_100x] | [![Minimum PHP Version)][PHPVersion_100x-img]][PHPVersion_100x] | [![Stable Version 1.0][Packagist_100x-img]][Packagist_100x] | [![License 1.0][License_100x-img]][License_100x] | [![Documentation 1.0][Documentation_100x-img]][Documentation_100x] |
+
+[Branch_100x-img]: https://img.shields.io/badge/branch-1.0-orange
+[Branch_100x]: https://github.com/llaville/sarif-php-sdk/tree/1.0
+[PHPVersion_100x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk/1.0.1
+[PHPVersion_100x]: https://www.php.net/supported-versions.php
+[Packagist_100x-img]: https://img.shields.io/badge/packagist-v1.0.1-blue
+[Packagist_100x]: https://packagist.org/packages/bartlett/sarif-php-sdk
+[License_100x-img]: https://img.shields.io/packagist/l/bartlett/sarif-php-sdk
+[License_100x]: https://github.com/llaville/sarif-php-sdk/blob/1.0/LICENSE
+[Documentation_100x-img]: https://img.shields.io/badge/documentation-v1.0-green
+[Documentation_100x]: https://github.com/llaville/sarif-php-sdk/tree/1.0/docs
 
 ## Introduction
 
@@ -28,7 +36,7 @@ All the documentation is available on [website](https://llaville.github.io/sarif
 generated from the [docs](https://github.com/llaville/sarif-php-sdk/tree/master/docs) folder.
 
 - [Getting Started](docs/getting-started.md).
-- API [Reference](docs/reference/) describes all SARIF objects with examples.
+- API [Reference](docs/reference/README.md) describes all SARIF objects with examples.
 
 And also
 

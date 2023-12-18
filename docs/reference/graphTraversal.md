@@ -4,7 +4,6 @@
 A `graphTraversal` object represents a "graph traversal", that is, a path through
 a graph specified by a sequence of connected "edge traversals", each of which is represented by an `edgeTraversal` object.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317783).
 
 ## Example
 

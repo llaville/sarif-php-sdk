@@ -4,8 +4,6 @@
 A `toolComponentReference` object identifies a particular `toolComponent` object,
 either theTool.driver or an element of theTool.extensions. We refer to the identified toolComponent object as theComponent.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317875).
-
 ## Example
 
 ```json

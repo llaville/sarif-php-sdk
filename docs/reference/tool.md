@@ -3,8 +3,6 @@
 
 A `tool` object describes the analysis tool or converter that was run.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317529).
-
 ## Example
 
 ```json

@@ -4,8 +4,6 @@
 An `exception` object describes a runtime exception encountered during the execution of an analysis tool.
 This includes signals in POSIX-conforming operating systems.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317904).
-
 ## Example
 
 ```json

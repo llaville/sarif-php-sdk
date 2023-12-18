@@ -5,8 +5,6 @@ A `logicalLocation` object describes a logical location.
 A logical location is a location specified by a programmatic construct such as a namespace, a type, or a method,
 without regard to the physical location where the construct occurs.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317719).
-
 ## Example
 
 ```json

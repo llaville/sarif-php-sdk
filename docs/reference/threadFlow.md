@@ -4,8 +4,6 @@
 A `threadFlow` object is a sequence of code locations that specify a possible path through a single thread of execution
 such as an operating system thread or a fiber.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317744).
-
 ## Example
 
 ```json

@@ -4,8 +4,6 @@
 A `reportingDescriptorRelationship` object specifies one or more directed relationships
 from one `reportingDescriptor` object, which we refer to as theSource, to another one, which we refer to as theTarget.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317870).
-
 ## Example
 
 ```json

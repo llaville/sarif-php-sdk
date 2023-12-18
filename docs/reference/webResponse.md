@@ -3,8 +3,6 @@
 
 A `webResponse` object describes the response to an HTTP request (RFC7230)
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317818).
-
 ## Example
 
 ```json

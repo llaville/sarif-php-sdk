@@ -3,8 +3,6 @@
 
 A `replacement` object represents the replacement of a single region of an artifact.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317889).
-
 ## Example
 
 ```json

@@ -3,8 +3,6 @@
 
 The top-level element of an external property file SHALL be an object which we refer to as an `externalProperties` object.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317913).
-
 ## Example
 
 ```json

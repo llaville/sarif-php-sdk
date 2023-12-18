@@ -4,8 +4,6 @@
 A `reportingConfiguration` object contains the information in a `reportingDescriptor` that a SARIF producer can modify
 at runtime, before executing its scan.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317852).
-
 ## Example
 
 ```json

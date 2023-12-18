@@ -4,8 +4,6 @@
 A `conversion` object describes how a converter transformed the output of an analysis tool
 from the analysis tool’s native output format into the SARIF format.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317597).
-
 ## Example
 
 ```json

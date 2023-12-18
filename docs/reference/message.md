@@ -9,8 +9,6 @@ SARIF represents such a message with a `message` object, which offers the follow
 - Message strings with placeholders for variable information.
 - Message strings with embedded links.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317459).
-
 ## PlainText Example
 
 ```json

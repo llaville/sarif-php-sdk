@@ -4,8 +4,6 @@
 A `physicalLocation` object represents the physical location where a result was detected.
 A physical location specifies a reference to an artifact together with a region within that artifact.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317678).
-
 ## Example
 
 ```json

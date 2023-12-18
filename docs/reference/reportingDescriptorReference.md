@@ -5,8 +5,6 @@ A `reportingDescriptorReference` object identifies a particular `reportingDescri
 which we refer to as theDescriptor, among all `reportingDescriptor` objects defined by theTool,
 including those defined by theTool.driver and theTool.extensions.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317862).
-
 ## Example
 
 ```json

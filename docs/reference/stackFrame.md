@@ -3,8 +3,6 @@
 
 A `stackFrame` object describes a single stack frame within a call stack.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317802).
-
 ## Example
 
 ```json

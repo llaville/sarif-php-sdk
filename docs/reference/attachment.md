@@ -3,8 +3,6 @@
 
 An `attachment` object describes an artifact relevant to the detection of a result.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317591).
-
 ## Example
 
 ```json

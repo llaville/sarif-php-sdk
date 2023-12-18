@@ -5,8 +5,6 @@ Certain properties in this document represent the contents of portions of artifa
 for example, artifacts that were scanned by an analysis tool. SARIF represents such content with an `artifactContent` object.
 Depending on the circumstances, the SARIF log file might need to represent this content as readable text, raw bytes, or both.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317422).
-
 ## Example
 
 ```json

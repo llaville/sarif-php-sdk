@@ -3,8 +3,6 @@
 
 A `suppression` object describes a request to suppress a result.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317733).
-
 ## Example
 
 ```json

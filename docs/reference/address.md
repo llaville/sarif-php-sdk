@@ -4,8 +4,6 @@
 An `address` object describes a physical or virtual address,
 or a range of addresses, in an “addressable region” (memory or a binary file).
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317705).
-
 ## Example
 
 ```json

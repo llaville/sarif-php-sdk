@@ -3,8 +3,6 @@
 
 A `node` object represents a node in the graph represented by the containing graph object, which we refer to as theGraph.
 
-See [specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317771).
-
 ## Example
 
 ```json
