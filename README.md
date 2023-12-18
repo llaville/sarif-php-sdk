@@ -32,8 +32,8 @@ is available [here](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.
 
 ## Documentation
 
-All the documentation is available on [website](https://llaville.github.io/sarif-php-sdk),
-generated from the [docs](https://github.com/llaville/sarif-php-sdk/tree/master/docs) folder.
+All the documentation is available on [website](https://llaville.github.io/sarif-php-sdk/1.0),
+generated from the [docs](https://github.com/llaville/sarif-php-sdk/tree/1.0/docs) folder.
 
 - [Getting Started](docs/getting-started.md).
 - API [Reference](docs/reference/README.md) describes all SARIF objects with examples.
