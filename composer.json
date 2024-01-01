@@ -14,6 +14,9 @@
         "ext-pcre": "*",
         "ext-spl": "*"
     },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.8"
+    },
     "authors": [
         {
             "name": "Laurent Laville",
@@ -30,6 +33,25 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
+        }
+    },
+    "extra": {
+        "bamarni-bin": {
+            "bin-links": true,
+            "target-directory": "vendor-bin",
+            "forward-command": true
+        }
+    },
+    "scripts": {
+        "bin": "echo 'bin not installed'",
+        "post-update-cmd": [
+            "@composer bin all update --ansi"
+        ],
+        "post-install-cmd": [
+            "@composer bin all install --ansi"
+        ]
     }
 }
