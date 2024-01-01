@@ -2,6 +2,9 @@
 # CUSTOM
 ######################################
 
+docs/assets/images/
+site/
+
 ###### Composer dependencies ######
 vendor/
 

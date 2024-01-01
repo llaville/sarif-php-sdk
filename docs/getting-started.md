@@ -7,8 +7,6 @@
 * ext-pcre
 * ext-spl
 
-![GraPHP Composer](./graph-composer.svg)
-
 Generated with [clue/graph-composer](https://github.com/clue/graph-composer)
 
 ## Installation
