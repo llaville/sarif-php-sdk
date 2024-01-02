@@ -234,12 +234,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../getting-started/" class="md-tabs__link">
+      <a href="../../installation/" class="md-tabs__link">
         
   
     
   
-  Getting started
+  Installation
 
       </a>
     </li>
@@ -340,11 +340,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/" class="md-nav__link">
+      <a href="../../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Getting started
+    Installation
   </span>
   
 
@@ -1619,9 +1619,10 @@
 <!-- markdownlint-disable MD013 -->
 <h1 id="speciallocations-object">specialLocations object</h1>
 <p>A <code>specialLocations</code> object defines locations of special significance to SARIF consumers.</p>
+<p><img alt="specialLocations object" src="../../assets/images/reference-special-locations.graphviz.svg" /></p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/json.schemastore.org\/sarif-2.1.0.json&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://json.schemastore.org/sarif-2.1.0.json&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;runs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
@@ -1629,26 +1630,26 @@
 <span class="w">                </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CodeScanner&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;semanticVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.1.2-beta.12&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/codeScanner.dev&quot;</span>
+<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://codeScanner.dev&quot;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;originalUriBaseIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                </span><span class="nt">&quot;WEBHOST&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http:\/\/www.example.com\/&quot;</span>
+<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.example.com/&quot;</span>
 <span class="w">                </span><span class="p">},</span>
 <span class="w">                </span><span class="nt">&quot;ROOT&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file:\/\/\/&quot;</span>
+<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file:///&quot;</span>
 <span class="w">                </span><span class="p">},</span>
 <span class="w">                </span><span class="nt">&quot;HOME&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;home\/user\/&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;home/user/&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;uriBaseId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROOT&quot;</span>
 <span class="w">                </span><span class="p">},</span>
 <span class="w">                </span><span class="nt">&quot;PACKAGE&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mySoftware\/&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mySoftware/&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;uriBaseId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HOME&quot;</span>
 <span class="w">                </span><span class="p">},</span>
 <span class="w">                </span><span class="nt">&quot;SRC&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;src\/&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;src/&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;uriBaseId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PACKAGE&quot;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
@@ -1663,49 +1664,20 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="how-to-generate">How to generate</h2>
-<p>See <code>examples/specialLocations.php</code> script.</p>
+<p>See full <a href="https://github.com/llaville/sarif-php-sdk/blob/master/examples/specialLocations.php"><code>examples/specialLocations.php</code></a> script into repository.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ArtifactLocation</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Run</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\SpecialLocations</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Tool</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ToolComponent</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\SarifLog</span><span class="p">;</span>
-
-<span class="k">require_once</span> <span class="nb">dirname</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
-
-<span class="nv">$driver</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ToolComponent</span><span class="p">(</span><span class="s1">&#39;CodeScanner&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setInformationUri</span><span class="p">(</span><span class="s1">&#39;https://codeScanner.dev&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setSemanticVersion</span><span class="p">(</span><span class="s1">&#39;1.1.2-beta.12&#39;</span><span class="p">);</span>
-
-<span class="nv">$tool</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tool</span><span class="p">(</span><span class="nv">$driver</span><span class="p">);</span>
-
-<span class="nv">$webHost</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArtifactLocation</span><span class="p">();</span>
-<span class="nv">$webHost</span><span class="o">-&gt;</span><span class="na">setUri</span><span class="p">(</span><span class="s1">&#39;http://www.example.com/&#39;</span><span class="p">);</span>
-
-<span class="nv">$root</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArtifactLocation</span><span class="p">();</span>
-<span class="nv">$root</span><span class="o">-&gt;</span><span class="na">setUri</span><span class="p">(</span><span class="s1">&#39;file:///&#39;</span><span class="p">);</span>
-
-<span class="nv">$home</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArtifactLocation</span><span class="p">();</span>
-<span class="nv">$home</span><span class="o">-&gt;</span><span class="na">setUri</span><span class="p">(</span><span class="s1">&#39;home/user/&#39;</span><span class="p">);</span>
-<span class="nv">$home</span><span class="o">-&gt;</span><span class="na">setUriBaseId</span><span class="p">(</span><span class="s1">&#39;ROOT&#39;</span><span class="p">);</span>
 
 <span class="nv">$package</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArtifactLocation</span><span class="p">();</span>
 <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">setUri</span><span class="p">(</span><span class="s1">&#39;mySoftware/&#39;</span><span class="p">);</span>
 <span class="nv">$package</span><span class="o">-&gt;</span><span class="na">setUriBaseId</span><span class="p">(</span><span class="s1">&#39;HOME&#39;</span><span class="p">);</span>
 
-<span class="nv">$src</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArtifactLocation</span><span class="p">();</span>
-<span class="nv">$src</span><span class="o">-&gt;</span><span class="na">setUri</span><span class="p">(</span><span class="s1">&#39;src/&#39;</span><span class="p">);</span>
-<span class="nv">$src</span><span class="o">-&gt;</span><span class="na">setUriBaseId</span><span class="p">(</span><span class="s1">&#39;PACKAGE&#39;</span><span class="p">);</span>
-
 <span class="nv">$run</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Run</span><span class="p">(</span><span class="nv">$tool</span><span class="p">);</span>
 <span class="nv">$run</span><span class="o">-&gt;</span><span class="na">addAdditionalProperties</span><span class="p">([</span>
-    <span class="s1">&#39;WEBHOST&#39;</span> <span class="o">=&gt;</span> <span class="nv">$webHost</span><span class="p">,</span>
-    <span class="s1">&#39;ROOT&#39;</span> <span class="o">=&gt;</span> <span class="nv">$root</span><span class="p">,</span>
-    <span class="s1">&#39;HOME&#39;</span> <span class="o">=&gt;</span> <span class="nv">$home</span><span class="p">,</span>
     <span class="s1">&#39;PACKAGE&#39;</span> <span class="o">=&gt;</span> <span class="nv">$package</span><span class="p">,</span>
-    <span class="s1">&#39;SRC&#39;</span> <span class="o">=&gt;</span> <span class="nv">$src</span><span class="p">,</span>
 <span class="p">]);</span>
 
 <span class="nv">$specialLocations</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SpecialLocations</span><span class="p">();</span>
@@ -1715,14 +1687,6 @@
 <span class="nv">$specialLocations</span><span class="o">-&gt;</span><span class="na">setDisplayBase</span><span class="p">(</span><span class="nv">$artifactLocation</span><span class="p">);</span>
 
 <span class="nv">$run</span><span class="o">-&gt;</span><span class="na">setSpecialLocations</span><span class="p">(</span><span class="nv">$specialLocations</span><span class="p">);</span>
-
-<span class="nv">$log</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SarifLog</span><span class="p">([</span><span class="nv">$run</span><span class="p">]);</span>
-
-<span class="k">try</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="nv">$log</span><span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&quot;Unable to produce SARIF report due to following error: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span>
 </code></pre></div>
 
 

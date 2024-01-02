@@ -234,12 +234,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../getting-started/" class="md-tabs__link">
+      <a href="../../installation/" class="md-tabs__link">
         
   
     
   
-  Getting started
+  Installation
 
       </a>
     </li>
@@ -340,11 +340,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/" class="md-nav__link">
+      <a href="../../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Getting started
+    Installation
   </span>
   
 
@@ -1620,9 +1620,10 @@
 <h1 id="threadflow-object">threadFlow object</h1>
 <p>A <code>threadFlow</code> object is a sequence of code locations that specify a possible path through a single thread of execution
 such as an operating system thread or a fiber.</p>
+<p><img alt="threadFlow object" src="../../assets/images/reference-thread-flow.graphviz.svg" /></p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/json.schemastore.org\/sarif-2.1.0.json&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://json.schemastore.org/sarif-2.1.0.json&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;runs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
@@ -1630,7 +1631,7 @@ such as an operating system thread or a fiber.</p>
 <span class="w">                </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CodeScanner&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;semanticVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.1.2-beta.12&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/codeScanner.dev&quot;</span>
+<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://codeScanner.dev&quot;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1647,7 +1648,7 @@ such as an operating system thread or a fiber.</p>
 <span class="w">                                            </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                                                </span><span class="nt">&quot;physicalLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                                                    </span><span class="nt">&quot;artifactLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                                                        </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ui\/window.c&quot;</span><span class="p">,</span>
+<span class="w">                                                        </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ui/window.c&quot;</span><span class="p">,</span>
 <span class="w">                                                        </span><span class="nt">&quot;uriBaseId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SRCROOT&quot;</span>
 <span class="w">                                                    </span><span class="p">},</span>
 <span class="w">                                                    </span><span class="nt">&quot;region&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -1688,30 +1689,18 @@ such as an operating system thread or a fiber.</p>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="how-to-generate">How to generate</h2>
-<p>See <code>examples/codeFlow.php</code> script.</p>
+<p>See <code>examples/.php</code> script.</p>
+<p>See full <a href="https://github.com/llaville/sarif-php-sdk/blob/master/examples/codeFlow.php"><code>examples/codeFlow.php</code></a> script into repository.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ArtifactLocation</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\CodeFlow</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Location</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Message</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\MultiformatMessageString</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\PhysicalLocation</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Region</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Result</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Run</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ThreadFlow</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ThreadFlowLocation</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Tool</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ToolComponent</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\SarifLog</span><span class="p">;</span>
-
-<span class="k">require_once</span> <span class="nb">dirname</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
-
-<span class="nv">$driver</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ToolComponent</span><span class="p">(</span><span class="s1">&#39;CodeScanner&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setInformationUri</span><span class="p">(</span><span class="s1">&#39;https://codeScanner.dev&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setSemanticVersion</span><span class="p">(</span><span class="s1">&#39;1.1.2-beta.12&#39;</span><span class="p">);</span>
-<span class="nv">$tool</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tool</span><span class="p">(</span><span class="nv">$driver</span><span class="p">);</span>
 
 <span class="nv">$threadFlowLocation</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ThreadFlowLocation</span><span class="p">();</span>
 <span class="nv">$location</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Location</span><span class="p">();</span>
@@ -1733,23 +1722,6 @@ such as an operating system thread or a fiber.</p>
 <span class="nv">$threadFlow</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ThreadFlow</span><span class="p">([</span><span class="nv">$threadFlowLocation</span><span class="p">]);</span>
 <span class="nv">$threadFlow</span><span class="o">-&gt;</span><span class="na">setId</span><span class="p">(</span><span class="s1">&#39;thread-123&#39;</span><span class="p">);</span>
 <span class="nv">$threadFlow</span><span class="o">-&gt;</span><span class="na">setMessage</span><span class="p">(</span><span class="k">new</span> <span class="nx">Message</span><span class="p">(</span><span class="s1">&#39;A threadFlow object&#39;</span><span class="p">));</span>
-
-<span class="nv">$codeFlow</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CodeFlow</span><span class="p">([</span><span class="nv">$threadFlow</span><span class="p">]);</span>
-<span class="nv">$codeFlow</span><span class="o">-&gt;</span><span class="na">setMessage</span><span class="p">(</span><span class="k">new</span> <span class="nx">Message</span><span class="p">(</span><span class="s1">&#39;A codeFlow object&#39;</span><span class="p">));</span>
-
-<span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Result</span><span class="p">(</span><span class="k">new</span> <span class="nx">Message</span><span class="p">(</span><span class="s1">&#39;A result object&#39;</span><span class="p">));</span>
-<span class="nv">$result</span><span class="o">-&gt;</span><span class="na">addCodeFlows</span><span class="p">([</span><span class="nv">$codeFlow</span><span class="p">]);</span>
-
-<span class="nv">$run</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Run</span><span class="p">(</span><span class="nv">$tool</span><span class="p">);</span>
-<span class="nv">$run</span><span class="o">-&gt;</span><span class="na">addResults</span><span class="p">([</span><span class="nv">$result</span><span class="p">]);</span>
-
-<span class="nv">$log</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SarifLog</span><span class="p">([</span><span class="nv">$run</span><span class="p">]);</span>
-
-<span class="k">try</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="nv">$log</span><span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&quot;Unable to produce SARIF report due to following error: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span>
 </code></pre></div>
 
 

@@ -1,0 +1,74 @@
+digraph {
+  graph [name="G" overlap="false" rankdir="TB" bgcolor="transparent"]
+  node [fontname="Verdana" fontsize=8 shape="none" margin=0 fillcolor="#FEFECE" style="filled"]
+  edge [fontname="Verdana" fontsize=8]
+  subgraph cluster_0 {
+    graph [bgcolor="BurlyWood"]
+    label = "Bartlett\\Sarif\\Definition"
+    "Bartlett\\Sarif\\Definition\\ReportingDescriptor" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b><br/>ReportingDescriptor</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left"># id : string</td></tr>
+    <tr><td align="left"># deprecatedIds : mixed</td></tr>
+    <tr><td align="left"># guid : string</td></tr>
+    <tr><td align="left"># deprecatedGuids : mixed</td></tr>
+    <tr><td align="left"># name : string</td></tr>
+    <tr><td align="left"># deprecatedNames : mixed</td></tr>
+    <tr><td align="left"># shortDescription : MultiformatMessageString</td></tr>
+    <tr><td align="left"># fullDescription : MultiformatMessageString</td></tr>
+    <tr><td align="left"># messageStrings : mixed</td></tr>
+    <tr><td align="left"># defaultConfiguration : ReportingConfiguration</td></tr>
+    <tr><td align="left"># helpUri : string</td></tr>
+    <tr><td align="left"># help : MultiformatMessageString</td></tr>
+    <tr><td align="left"># relationships : mixed</td></tr>
+    <tr><td align="left"># properties : PropertyBag</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct(id : string)</td></tr>
+    <tr><td align="left">+ setId(id : string) : void</td></tr>
+    <tr><td align="left">+ addDeprecatedIds(deprecatedIds : array) : void</td></tr>
+    <tr><td align="left">+ setGuid(guid : string) : void</td></tr>
+    <tr><td align="left">+ addDeprecatedGuids(deprecatedGuids : array) : void</td></tr>
+    <tr><td align="left">+ setName(name : string) : void</td></tr>
+    <tr><td align="left">+ addDeprecatedNames(deprecatedNames : array) : void</td></tr>
+    <tr><td align="left">+ setShortDescription(shortDescription : Bartlett\\Sarif\\Definition\\MultiformatMessageString) : void</td></tr>
+    <tr><td align="left">+ setFullDescription(fullDescription : Bartlett\\Sarif\\Definition\\MultiformatMessageString) : void</td></tr>
+    <tr><td align="left">+ addMessageStrings(messageStrings : array) : void</td></tr>
+    <tr><td align="left">+ setDefaultConfiguration(defaultConfiguration : Bartlett\\Sarif\\Definition\\ReportingConfiguration) : void</td></tr>
+    <tr><td align="left">+ setHelpUri(helpUri : string) : void</td></tr>
+    <tr><td align="left">+ setHelp(help : Bartlett\\Sarif\\Definition\\MultiformatMessageString) : void</td></tr>
+    <tr><td align="left">+ addRelationships(relationships : array) : void</td></tr>
+    <tr><td align="left">+ setProperties(propertyBag : Bartlett\\Sarif\\Definition\\PropertyBag) : void</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_1 {
+    graph [bgcolor="Bisque"]
+    label = "Bartlett\\Sarif\\Internal"
+    "Bartlett\\Sarif\\Internal\\JsonSerializable" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«abstract»<br/>JsonSerializable</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left"># required : mixed</td></tr>
+    <tr><td align="left"># optional : mixed</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ jsonSerialize() : array</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_2 {
+    label = 0
+    "JsonSerializable" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>JsonSerializable</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» jsonSerialize()</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  "Bartlett\\Sarif\\Internal\\JsonSerializable" -> "JsonSerializable" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Definition\\ReportingDescriptor" -> "Bartlett\\Sarif\\Internal\\JsonSerializable" [arrowhead="empty" style="filled"]
+}

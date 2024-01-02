@@ -234,12 +234,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../getting-started/" class="md-tabs__link">
+      <a href="../../installation/" class="md-tabs__link">
         
   
     
   
-  Getting started
+  Installation
 
       </a>
     </li>
@@ -340,11 +340,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/" class="md-nav__link">
+      <a href="../../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Getting started
+    Installation
   </span>
   
 
@@ -1680,9 +1680,10 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <li>Message strings with placeholders for variable information.</li>
 <li>Message strings with embedded links.</li>
 </ul>
+<p><img alt="message object" src="../../assets/images/reference-message.graphviz.svg" /></p>
 <h2 id="plaintext-example">PlainText Example</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/json.schemastore.org\/sarif-2.1.0.json&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://json.schemastore.org/sarif-2.1.0.json&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;runs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
@@ -1690,14 +1691,14 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <span class="w">                </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ESLint&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;semanticVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8.1.0&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/eslint.org&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://eslint.org&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                        </span><span class="p">{</span>
 <span class="w">                            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;no-unused-vars&quot;</span><span class="p">,</span>
 <span class="w">                            </span><span class="nt">&quot;shortDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                                </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;disallow unused variables&quot;</span>
 <span class="w">                            </span><span class="p">},</span>
-<span class="w">                            </span><span class="nt">&quot;helpUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/eslint.org\/docs\/rules\/no-unused-vars&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;helpUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://eslint.org/docs/rules/no-unused-vars&quot;</span><span class="p">,</span>
 <span class="w">                            </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                                </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Variables&quot;</span>
 <span class="w">                            </span><span class="p">}</span>
@@ -1721,7 +1722,7 @@ SARIF represents such a message with a <code>message</code> object, which offers
 </code></pre></div>
 <h2 id="formatted-example">Formatted Example</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/json.schemastore.org\/sarif-2.1.0.json&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://json.schemastore.org/sarif-2.1.0.json&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;runs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
@@ -1729,7 +1730,7 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <span class="w">                </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CodeScanner&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;semanticVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.1.2-beta.12&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/codeScanner.dev&quot;</span>
+<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://codeScanner.dev&quot;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1749,7 +1750,7 @@ SARIF represents such a message with a <code>message</code> object, which offers
 </code></pre></div>
 <h2 id="embedded-links-example">Embedded links Example</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/json.schemastore.org\/sarif-2.1.0.json&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://json.schemastore.org/sarif-2.1.0.json&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;runs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
@@ -1757,7 +1758,7 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <span class="w">                </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CodeScanner&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;semanticVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.1.2-beta.12&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/codeScanner.dev&quot;</span>
+<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://codeScanner.dev&quot;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1771,7 +1772,7 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <span class="w">                            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
 <span class="w">                            </span><span class="nt">&quot;physicalLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                                </span><span class="nt">&quot;artifactLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file:\/\/\/C:\/code\/input.c&quot;</span>
+<span class="w">                                    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file:///C:/code/input.c&quot;</span>
 <span class="w">                                </span><span class="p">},</span>
 <span class="w">                                </span><span class="nt">&quot;region&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                                    </span><span class="nt">&quot;startLine&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span>
@@ -1788,7 +1789,7 @@ SARIF represents such a message with a <code>message</code> object, which offers
 </code></pre></div>
 <h2 id="string-lookup-example">String lookup Example</h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/json.schemastore.org\/sarif-2.1.0.json&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://json.schemastore.org/sarif-2.1.0.json&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;runs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
@@ -1796,7 +1797,7 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <span class="w">                </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CodeScanner&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;semanticVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.1.2-beta.12&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:\/\/codeScanner.dev&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;informationUri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://codeScanner.dev&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                        </span><span class="p">{</span>
 <span class="w">                            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CS0001&quot;</span><span class="p">,</span>
@@ -1823,86 +1824,30 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="how-to-generate">How to generate</h2>
-<p>See <code>examples/message/plainText.php</code> script.</p>
+<p>See full <a href="https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/plainText.php"><code>examples/message/plainText.php</code></a> script into repository.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Message</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\MultiformatMessageString</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\PropertyBag</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ReportingDescriptor</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Result</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Run</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Tool</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ToolComponent</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\SarifLog</span><span class="p">;</span>
-
-<span class="k">require_once</span> <span class="nb">dirname</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
-
-<span class="nv">$driver</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ToolComponent</span><span class="p">(</span><span class="s1">&#39;ESLint&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setInformationUri</span><span class="p">(</span><span class="s1">&#39;https://eslint.org&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setSemanticVersion</span><span class="p">(</span><span class="s1">&#39;8.1.0&#39;</span><span class="p">);</span>
-
-<span class="nv">$rule</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ReportingDescriptor</span><span class="p">(</span><span class="s1">&#39;no-unused-vars&#39;</span><span class="p">);</span>
-<span class="nv">$rule</span><span class="o">-&gt;</span><span class="na">setShortDescription</span><span class="p">(</span><span class="k">new</span> <span class="nx">MultiformatMessageString</span><span class="p">(</span><span class="s1">&#39;disallow unused variables&#39;</span><span class="p">));</span>
-<span class="nv">$rule</span><span class="o">-&gt;</span><span class="na">setHelpUri</span><span class="p">(</span><span class="s1">&#39;https://eslint.org/docs/rules/no-unused-vars&#39;</span><span class="p">);</span>
-<span class="nv">$properties</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PropertyBag</span><span class="p">();</span>
-<span class="nv">$properties</span><span class="o">-&gt;</span><span class="na">addProperty</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;Variables&#39;</span><span class="p">);</span>
-<span class="nv">$rule</span><span class="o">-&gt;</span><span class="na">setProperties</span><span class="p">(</span><span class="nv">$properties</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">addRules</span><span class="p">([</span><span class="nv">$rule</span><span class="p">]);</span>
-
-<span class="nv">$tool</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tool</span><span class="p">(</span><span class="nv">$driver</span><span class="p">);</span>
 
 <span class="nv">$message</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Message</span><span class="p">(</span><span class="s2">&quot;&#39;x&#39; is assigned a value but never used.&quot;</span><span class="p">);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Result</span><span class="p">(</span><span class="nv">$message</span><span class="p">);</span>
 <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setLevel</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
 <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setRuleId</span><span class="p">(</span><span class="s1">&#39;no-unused-vars&#39;</span><span class="p">);</span>
 <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setRuleIndex</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-
-<span class="nv">$run</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Run</span><span class="p">(</span><span class="nv">$tool</span><span class="p">);</span>
-<span class="nv">$run</span><span class="o">-&gt;</span><span class="na">addResults</span><span class="p">([</span><span class="nv">$result</span><span class="p">]);</span>
-
-<span class="nv">$log</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SarifLog</span><span class="p">([</span><span class="nv">$run</span><span class="p">]);</span>
-
-<span class="k">try</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="nv">$log</span><span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&quot;Unable to produce SARIF report due to following error: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span>
 </code></pre></div>
-<p>See <code>examples/message/formatted.php</code> script.</p>
+<p>See full <a href="https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/formatted.php"><code>examples/message/formatted.php</code></a> script into repository.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Message</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Result</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Run</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Tool</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ToolComponent</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\SarifLog</span><span class="p">;</span>
-
-<span class="k">require_once</span> <span class="nb">dirname</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
-
-<span class="nv">$driver</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ToolComponent</span><span class="p">(</span><span class="s1">&#39;CodeScanner&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setInformationUri</span><span class="p">(</span><span class="s1">&#39;https://codeScanner.dev&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setSemanticVersion</span><span class="p">(</span><span class="s1">&#39;1.1.2-beta.12&#39;</span><span class="p">);</span>
-<span class="nv">$tool</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tool</span><span class="p">(</span><span class="nv">$driver</span><span class="p">);</span>
 
 <span class="nv">$message</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Message</span><span class="p">(</span><span class="s2">&quot;Variable &#39;{0}&#39; is uninitialized.&quot;</span><span class="p">);</span>
 <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">addArguments</span><span class="p">([</span><span class="s1">&#39;pBuffer&#39;</span><span class="p">]);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Result</span><span class="p">(</span><span class="nv">$message</span><span class="p">);</span>
 <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setRuleId</span><span class="p">(</span><span class="s1">&#39;CA2101&#39;</span><span class="p">);</span>
-
-<span class="nv">$run</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Run</span><span class="p">(</span><span class="nv">$tool</span><span class="p">);</span>
-<span class="nv">$run</span><span class="o">-&gt;</span><span class="na">addResults</span><span class="p">([</span><span class="nv">$result</span><span class="p">]);</span>
-
-<span class="nv">$log</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SarifLog</span><span class="p">([</span><span class="nv">$run</span><span class="p">]);</span>
-
-<span class="k">try</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="nv">$log</span><span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&quot;Unable to produce SARIF report due to following error: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span>
 </code></pre></div>
-<p>See <code>examples/message/embeddedLinks.php</code></p>
+<p>See full <a href="https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/embeddedLinks.php"><code>examples/message/embeddedLinks.php</code></a> script into repository.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ArtifactLocation</span><span class="p">;</span>
@@ -1911,17 +1856,6 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\PhysicalLocation</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Region</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Result</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Run</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Tool</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ToolComponent</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\SarifLog</span><span class="p">;</span>
-
-<span class="k">require_once</span> <span class="nb">dirname</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
-
-<span class="nv">$driver</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ToolComponent</span><span class="p">(</span><span class="s1">&#39;CodeScanner&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setInformationUri</span><span class="p">(</span><span class="s1">&#39;https://codeScanner.dev&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setSemanticVersion</span><span class="p">(</span><span class="s1">&#39;1.1.2-beta.12&#39;</span><span class="p">);</span>
-<span class="nv">$tool</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tool</span><span class="p">(</span><span class="nv">$driver</span><span class="p">);</span>
 
 <span class="nv">$message</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Message</span><span class="p">(</span><span class="s1">&#39;Tainted data was used. The data came from [here](3).&#39;</span><span class="p">);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Result</span><span class="p">(</span><span class="nv">$message</span><span class="p">);</span>
@@ -1934,43 +1868,20 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <span class="nv">$physicalLocation</span><span class="o">-&gt;</span><span class="na">setRegion</span><span class="p">(</span><span class="k">new</span> <span class="nx">Region</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">19</span><span class="p">));</span>
 <span class="nv">$location</span><span class="o">-&gt;</span><span class="na">setPhysicalLocation</span><span class="p">(</span><span class="nv">$physicalLocation</span><span class="p">);</span>
 <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">addRelatedLocations</span><span class="p">([</span><span class="nv">$location</span><span class="p">]);</span>
-
-<span class="nv">$run</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Run</span><span class="p">(</span><span class="nv">$tool</span><span class="p">);</span>
-<span class="nv">$run</span><span class="o">-&gt;</span><span class="na">addResults</span><span class="p">([</span><span class="nv">$result</span><span class="p">]);</span>
-
-<span class="nv">$log</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SarifLog</span><span class="p">([</span><span class="nv">$run</span><span class="p">]);</span>
-
-<span class="k">try</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="nv">$log</span><span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&quot;Unable to produce SARIF report due to following error: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span>
 </code></pre></div>
-<p>See <code>examples/message/stringLookup.php</code></p>
+<p>See full <a href="https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/stringLookup.php"><code>examples/message/stringLookup.php</code></a> script into repository.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Message</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\MultiformatMessageString</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ReportingDescriptor</span><span class="p">;</span>
 <span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Result</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Run</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\Tool</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\Definition\ToolComponent</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Bartlett\Sarif\SarifLog</span><span class="p">;</span>
-
-<span class="k">require_once</span> <span class="nb">dirname</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
-
-<span class="nv">$driver</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ToolComponent</span><span class="p">(</span><span class="s1">&#39;CodeScanner&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setInformationUri</span><span class="p">(</span><span class="s1">&#39;https://codeScanner.dev&#39;</span><span class="p">);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">setSemanticVersion</span><span class="p">(</span><span class="s1">&#39;1.1.2-beta.12&#39;</span><span class="p">);</span>
 
 <span class="nv">$rule</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ReportingDescriptor</span><span class="p">(</span><span class="s1">&#39;no-unused-vars&#39;</span><span class="p">);</span>
 <span class="nv">$rule</span><span class="o">-&gt;</span><span class="na">setId</span><span class="p">(</span><span class="s1">&#39;CS0001&#39;</span><span class="p">);</span>
 <span class="nv">$rule</span><span class="o">-&gt;</span><span class="na">addMessageStrings</span><span class="p">([</span>
     <span class="s1">&#39;default&#39;</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">MultiformatMessageString</span><span class="p">(</span><span class="s1">&#39;This is the message text. It might be very long.&#39;</span><span class="p">),</span>
 <span class="p">]);</span>
-<span class="nv">$driver</span><span class="o">-&gt;</span><span class="na">addRules</span><span class="p">([</span><span class="nv">$rule</span><span class="p">]);</span>
-<span class="nv">$tool</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tool</span><span class="p">(</span><span class="nv">$driver</span><span class="p">);</span>
 
 <span class="nv">$message</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Message</span><span class="p">(</span>
     <span class="s1">&#39;A message object can directly contain message strings in its text and markdown properties.&#39;</span>
@@ -1980,17 +1891,6 @@ SARIF represents such a message with a <code>message</code> object, which offers
 <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setRuleId</span><span class="p">(</span><span class="s1">&#39;CS0001&#39;</span><span class="p">);</span>
 <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setRuleIndex</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setMessage</span><span class="p">(</span><span class="k">new</span> <span class="nx">Message</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">));</span>
-
-<span class="nv">$run</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Run</span><span class="p">(</span><span class="nv">$tool</span><span class="p">);</span>
-<span class="nv">$run</span><span class="o">-&gt;</span><span class="na">addResults</span><span class="p">([</span><span class="nv">$result</span><span class="p">]);</span>
-
-<span class="nv">$log</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SarifLog</span><span class="p">([</span><span class="nv">$run</span><span class="p">]);</span>
-
-<span class="k">try</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="nv">$log</span><span class="p">,</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&quot;Unable to produce SARIF report due to following error: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-<span class="p">}</span>
 </code></pre></div>
 
 
