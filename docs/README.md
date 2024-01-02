@@ -7,3 +7,9 @@ This implementation follows the general format rules but also specifies several 
 written in [property bags](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317448).
 
 ![GraPHP Composer](./assets/images/graph-composer.svg)
+
+## Installation
+
+> Learn how to install this library in different way.
+
+See [Installation Guide](installation.md)
