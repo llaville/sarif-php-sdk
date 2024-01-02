@@ -4,11 +4,13 @@
 A `physicalLocation` object represents the physical location where a result was detected.
 A physical location specifies a reference to an artifact together with a region within that artifact.
 
+![physicalLocation object](../assets/images/reference-physical-location.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -16,7 +18,7 @@ A physical location specifies a reference to an artifact together with a region 
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "results": [
@@ -28,7 +30,7 @@ A physical location specifies a reference to an artifact together with a region 
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "ui\/window.c",
+                                    "uri": "ui/window.c",
                                     "uriBaseId": "SRCROOT"
                                 },
                                 "region": {
@@ -46,7 +48,9 @@ A physical location specifies a reference to an artifact together with a region 
 
 ## How to generate
 
-See `examples/physicalLocation.php` script.
+See full [`examples/physicalLocation.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/physicalLocation.php
 
 ```php
 <?php declare(strict_types=1);
@@ -57,18 +61,7 @@ use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\PhysicalLocation;
 use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-
-$tool = new Tool($driver);
 
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('ui/window.c');
@@ -81,14 +74,4 @@ $physicalLocation->setRegion(new Region(42));
 $location->setPhysicalLocation($physicalLocation);
 $result->addLocations([$location]);
 
-$run = new Run($tool);
-$run->addResults([$result]);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

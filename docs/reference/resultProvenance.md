@@ -3,11 +3,13 @@
 
 A `resultProvenance` object contains information about the how and when theResult was detected.
 
+![resultProvenance object](../assets/images/reference-result-provenance.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -15,7 +17,7 @@ A `resultProvenance` object contains information about the how and when theResul
                 "driver": {
                     "name": "SarifSamples",
                     "version": "1.0",
-                    "informationUri": "https:\/\/github.com\/microsoft\/sarif-tutorials\/"
+                    "informationUri": "https://github.com/microsoft/sarif-tutorials/"
                 }
             },
             "results": [
@@ -37,7 +39,7 @@ A `resultProvenance` object contains information about the how and when theResul
                                     "endLine": 12,
                                     "endColumn": 13,
                                     "snippet": {
-                                        "text": "<problem>...<\/problem>"
+                                        "text": "<problem>...</problem>"
                                     }
                                 }
                             }
@@ -52,7 +54,9 @@ A `resultProvenance` object contains information about the how and when theResul
 
 ## How to generate
 
-See `examples/resultProvenance.php` script.
+See full [`examples/resultProvenance.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/resultProvenance.php
 
 ```php
 <?php declare(strict_types=1);
@@ -64,18 +68,6 @@ use Bartlett\Sarif\Definition\PhysicalLocation;
 use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\Result;
 use Bartlett\Sarif\Definition\ResultProvenance;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('SarifSamples');
-$driver->setInformationUri('https://github.com/microsoft/sarif-tutorials/');
-$driver->setVersion('1.0');
-
-$tool = new Tool($driver);
 
 $provenance = new ResultProvenance();
 $fromSources = [];
@@ -92,17 +84,6 @@ $fromSources[0]->setRegion($region);
 $provenance->addConversionSources($fromSources);
 
 $result = new Result(new Message('Assertions are unreliable.'));
-$result->setRuleId('Assertions');
 $result->setProvenance($provenance);
 
-$run = new Run($tool);
-$run->addResults([$result]);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

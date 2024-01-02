@@ -4,11 +4,13 @@
 A `versionControlDetails` object specifies the information necessary to retrieve from a version control system (VCS)
 the correct revision of the files that were scanned during the run.
 
+![versionControlDetails object](../assets/images/reference-version-control-details.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -16,19 +18,19 @@ the correct revision of the files that were scanned during the run.
                 "driver": {
                     "name": "AndroidStudio",
                     "semanticVersion": "1.0.0-beta.1",
-                    "informationUri": "https:\/\/android-studion.dev"
+                    "informationUri": "https://android-studion.dev"
                 }
             },
             "versionControlProvenance": [
                 {
-                    "repositoryUri": "https:\/\/github.com\/example-corp\/package",
+                    "repositoryUri": "https://github.com/example-corp/package",
                     "revisionId": "b87c4e9",
                     "mappedTo": {
                         "uriBaseId": "PACKAGE_ROOT"
                     }
                 },
                 {
-                    "repositoryUri": "https:\/\/github.com\/example-corp\/plugin1",
+                    "repositoryUri": "https://github.com/example-corp/plugin1",
                     "revisionId": "cafdac7",
                     "mappedTo": {
                         "uri": "plugin1",
@@ -36,7 +38,7 @@ the correct revision of the files that were scanned during the run.
                     }
                 },
                 {
-                    "repositoryUri": "https:\/\/github.com\/example-corp\/plugin2",
+                    "repositoryUri": "https://github.com/example-corp/plugin2",
                     "revisionId": "d0dc2c0",
                     "mappedTo": {
                         "uri": "plugin2",
@@ -52,25 +54,18 @@ the correct revision of the files that were scanned during the run.
 
 ## How to generate
 
-See `examples/versionControlDetails.php` script.
+See full [`examples/versionControlDetails.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/versionControlDetails.php
 
 ```php
 <?php declare(strict_types=1);
 
 use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Conversion;
-use Bartlett\Sarif\Definition\Invocation;
 use Bartlett\Sarif\Definition\Run;
 use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
 use Bartlett\Sarif\Definition\VersionControlDetails;
-use Bartlett\Sarif\SarifLog;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('AndroidStudio');
-$driver->setInformationUri('https://android-studion.dev');
-$driver->setSemanticVersion('1.0.0-beta.1');
 $tool = new Tool($driver);
 
 $package = new VersionControlDetails('https://github.com/example-corp/package');
@@ -96,11 +91,4 @@ $plugin2->setMappedTo($plugin2MappedTo);
 $run = new Run($tool);
 $run->addVersionControlDetails([$package, $plugin1, $plugin2]);
 
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

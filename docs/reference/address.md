@@ -4,11 +4,13 @@
 An `address` object describes a physical or virtual address,
 or a range of addresses, in an “addressable region” (memory or a binary file).
 
+![address object](../assets/images/reference-address.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -16,7 +18,7 @@ or a range of addresses, in an “addressable region” (memory or a binary file
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "addresses": [
@@ -50,23 +52,15 @@ or a range of addresses, in an “addressable region” (memory or a binary file
 
 ## How to generate
 
-See `examples/address.php` script.
+See full [`examples/address.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/address.php
 
 ```php
 <?php declare(strict_types=1);
 
 use Bartlett\Sarif\Definition\Address;
 use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
 $address1 = new Address();
 $address1->setName('Multitool.exe');
@@ -92,11 +86,4 @@ $address3->setRelativeAddress(512);
 $run = new Run($tool);
 $run->addAddresses([$address1, $address2, $address3]);
 
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

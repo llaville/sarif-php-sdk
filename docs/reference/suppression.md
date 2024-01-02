@@ -3,11 +3,13 @@
 
 A `suppression` object describes a request to suppress a result.
 
+![suppression object](../assets/images/reference-suppression.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -15,7 +17,7 @@ A `suppression` object describes a request to suppress a result.
                 "driver": {
                     "name": "Psalm",
                     "version": "4.x-dev",
-                    "informationUri": "https:\/\/psalm.de"
+                    "informationUri": "https://psalm.de"
                 }
             },
             "results": [
@@ -40,25 +42,16 @@ A `suppression` object describes a request to suppress a result.
 
 ## How to generate
 
-See `examples/suppression.php` script.
+See full [`examples/suppression.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/suppression.php
 
 ```php
 <?php declare(strict_types=1);
 
 use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
 use Bartlett\Sarif\Definition\Suppression;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('Psalm');
-$driver->setInformationUri('https://psalm.de');
-$driver->setVersion('4.x-dev');
-$tool = new Tool($driver);
 
 $suppression = new Suppression('inSource');
 $suppression->setGuid('11111111-1111-1111-8888-111111111111');
@@ -68,14 +61,4 @@ $suppression->setJustification('result outdated');
 $result = new Result(new Message('Request to suppress a result'));
 $result->addSuppressions([$suppression]);
 
-$run = new Run($tool);
-$run->addResults([$result]);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

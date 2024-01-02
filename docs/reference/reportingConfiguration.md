@@ -4,11 +4,13 @@
 A `reportingConfiguration` object contains the information in a `reportingDescriptor` that a SARIF producer can modify
 at runtime, before executing its scan.
 
+![reportingConfiguration object](../assets/images/reference-reporting-configuration.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -16,7 +18,7 @@ at runtime, before executing its scan.
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev",
+                    "informationUri": "https://codeScanner.dev",
                     "rules": [
                         {
                             "id": "SA2707",
@@ -44,7 +46,9 @@ at runtime, before executing its scan.
 
 ## How to generate
 
-See `examples/reportingConfiguration.php` script.
+See full [`examples/reportingConfiguration.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/reportingConfiguration.php
 
 ```php
 <?php declare(strict_types=1);
@@ -53,16 +57,6 @@ use Bartlett\Sarif\Definition\MultiformatMessageString;
 use Bartlett\Sarif\Definition\PropertyBag;
 use Bartlett\Sarif\Definition\ReportingConfiguration;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
 
 $rule = new ReportingDescriptor('SA2707');
 $rule->setName('LimitSourceLineLength');
@@ -72,17 +66,5 @@ $propertyBag = new PropertyBag();
 $propertyBag->addProperty('maxLength', 120);
 $reportingConf->setParameters($propertyBag);
 $rule->setDefaultConfiguration($reportingConf);
-$driver->addRules([$rule]);
 
-$tool = new Tool($driver);
-
-$run = new Run($tool);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

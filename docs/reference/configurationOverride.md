@@ -4,11 +4,13 @@
 A `configurationOverride` object modifies the effective runtime configuration of a specified `reportingDescriptor` object,
 which we refer to as theDescriptor.
 
+![configurationOverride object](../assets/images/reference-configuration-override.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -16,7 +18,7 @@ which we refer to as theDescriptor.
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev",
+                    "informationUri": "https://codeScanner.dev",
                     "rules": [
                         {
                             "id": "CA2101",
@@ -54,7 +56,9 @@ which we refer to as theDescriptor.
 
 ## How to generate
 
-See `examples/configurationOverride.php` script.
+See full [`examples/configurationOverride.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/configurationOverride.php
 
 ```php
 <?php declare(strict_types=1);
@@ -65,23 +69,12 @@ use Bartlett\Sarif\Definition\ReportingConfiguration;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\ReportingDescriptorReference;
 use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
 
 $rule = new ReportingDescriptor('CA2101');
 $reportingConf = new ReportingConfiguration();
 $reportingConf->setLevel('error');
 $rule->setDefaultConfiguration($reportingConf);
 $driver->addRules([$rule]);
-
-$tool = new Tool($driver);
 
 $ruleConf = new ReportingConfiguration();
 $ruleConf->setLevel('warning');
@@ -97,11 +90,4 @@ $invocation->addRuleConfigurationOverrides([$confOverrides]);
 $run = new Run($tool);
 $run->addInvocations([$invocation]);
 
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

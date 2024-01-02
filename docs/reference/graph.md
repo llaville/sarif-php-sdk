@@ -4,11 +4,13 @@
 A `graph` object represents a directed graph, a network of nodes and directed edges
 that describes some aspect of the structure of the code (for example, a call graph).
 
+![graph object](../assets/images/reference-graph.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -18,7 +20,7 @@ that describes some aspect of the structure of the code (for example, a call gra
                     "fullName": "CodeScanner 1.1, Developer Preview (en-US)",
                     "version": "1.1.2b12",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "results": [
@@ -65,33 +67,16 @@ that describes some aspect of the structure of the code (for example, a call gra
 
 ## How to generate
 
-See `examples/graph.php` script.
+See full [`examples/graph.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/graph.php
 
 ```php
 <?php declare(strict_types=1);
 
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Attachment;
 use Bartlett\Sarif\Definition\Edge;
 use Bartlett\Sarif\Definition\Graph;
-use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\Node;
-use Bartlett\Sarif\Definition\Rectangle;
-use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setFullName('CodeScanner 1.1, Developer Preview (en-US)');
-$driver->setSemanticVersion('1.1.2-beta.12');
-$driver->setVersion('1.1.2b12');
-
-$tool = new Tool($driver);
 
 $nodes = [];
 $nodes[2] = new Node('n2');
@@ -107,17 +92,4 @@ $graph = new Graph();
 $graph->addNodes($nodes);
 $graph->addEdges($edges);
 
-$result = new Result(new Message('Have a look on this graph'));
-$result->addGraphs([$graph]);
-
-$run = new Run($tool);
-$run->addResults([$result]);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

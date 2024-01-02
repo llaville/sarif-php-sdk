@@ -3,11 +3,13 @@
 
 A `result` object describes a single result detected by an analysis tool.
 
+![result object](../assets/images/reference-result.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -15,12 +17,12 @@ A `result` object describes a single result detected by an analysis tool.
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev",
+                    "informationUri": "https://codeScanner.dev",
                     "rules": [
                         {
                             "id": "CA2101",
                             "shortDescription": {
-                                "text": "Specify marshaling for P\/Invoke string arguments."
+                                "text": "Specify marshaling for P/Invoke string arguments."
                             }
                         },
                         {
@@ -44,14 +46,14 @@ A `result` object describes a single result detected by an analysis tool.
                     "message": {
                         "text": "Result on rule 1"
                     },
-                    "ruleId": "CA5350\/md5",
+                    "ruleId": "CA5350/md5",
                     "ruleIndex": 1
                 },
                 {
                     "message": {
                         "text": "Another result on rule 1"
                     },
-                    "ruleId": "CA5350\/sha-1",
+                    "ruleId": "CA5350/sha-1",
                     "ruleIndex": 1
                 }
             ]
@@ -62,37 +64,16 @@ A `result` object describes a single result detected by an analysis tool.
 
 ## How to generate
 
-See `examples/result.php` script.
+See full [`examples/result.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/result.php
 
 ```php
 <?php declare(strict_types=1);
 
 use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\MultiformatMessageString;
-use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
 use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-
-$rule1 = new ReportingDescriptor('CA2101');
-$rule1->setShortDescription(
-    new MultiformatMessageString('Specify marshaling for P/Invoke string arguments.')
-);
-$rule2 = new ReportingDescriptor('CA5350');
-$rule2->setShortDescription(
-    new MultiformatMessageString('Do not use weak cryptographic algorithms.')
-);
-$driver->addRules([$rule1, $rule2]);
-
-$tool = new Tool($driver);
 
 $result1 = new Result(new Message('Result on rule 0'));
 $result1->setRuleId('CA2101');
@@ -109,11 +90,4 @@ $result3->setRuleIndex(1);
 $run = new Run($tool);
 $run->addResults([$result1, $result2, $result3]);
 
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

@@ -4,11 +4,13 @@
 A `fix` object represents a proposed fix for the problem indicated by theResult. It specifies a set of artifacts to modify.
 For each artifact, it specifies regions to remove, and provides new content to insert.
 
+![fix object](../assets/images/reference-fix.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -16,7 +18,7 @@ For each artifact, it specifies regions to remove, and provides new content to i
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "results": [
@@ -30,7 +32,7 @@ For each artifact, it specifies regions to remove, and provides new content to i
                             "artifactChanges": [
                                 {
                                     "artifactLocation": {
-                                        "uri": "src\/a.c"
+                                        "uri": "src/a.c"
                                     },
                                     "replacements": [
                                         {
@@ -40,7 +42,7 @@ For each artifact, it specifies regions to remove, and provides new content to i
                                                 "endLine": 1
                                             },
                                             "insertedContent": {
-                                                "text": "\/\/ "
+                                                "text": "// "
                                             }
                                         }
                                     ]
@@ -57,7 +59,9 @@ For each artifact, it specifies regions to remove, and provides new content to i
 
 ## How to generate
 
-See `examples/fix.php` script.
+See full [`examples/fix.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/fix.php
 
 ```php
 <?php declare(strict_types=1);
@@ -70,17 +74,6 @@ use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\Replacement;
 use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('src/a.c');
@@ -96,16 +89,4 @@ $result = new Result(new Message('...'));
 $result->setRuleId('CA1001');
 $result->addFixes([$fix]);
 
-$run = new Run($tool);
-$run->addResults([$result]);
-
-
-$log = new SarifLog([$run]);
-
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

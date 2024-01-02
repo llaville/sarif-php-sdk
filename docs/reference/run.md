@@ -1,13 +1,15 @@
 <!-- markdownlint-disable MD013 -->
 # run object
 
-An sarifLog object specifies the version of the file format and contains the output from one or more runs.
+A `run` object describes a single run of an analysis tool and contains the output of that run.
+
+![run object](../assets/images/reference-run.graphviz.svg)
 
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -15,7 +17,7 @@ An sarifLog object specifies the version of the file format and contains the out
                 "driver": {
                     "name": "Psalm",
                     "version": "4.x-dev",
-                    "informationUri": "https:\/\/psalm.de"
+                    "informationUri": "https://psalm.de"
                 }
             },
             "properties": {
@@ -29,35 +31,20 @@ An sarifLog object specifies the version of the file format and contains the out
 
 ## How to generate
 
-See `examples/run.php` script.
+See full [`examples/run.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/run.php
 
 ```php
 <?php declare(strict_types=1);
 
-use Bartlett\Sarif\Definition\PropertyBag;
 use Bartlett\Sarif\Definition\Run;
 use Bartlett\Sarif\Definition\Tool;
 use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 $driver = new ToolComponent('Psalm');
-$driver->setInformationUri('https://psalm.de');
-$driver->setVersion('4.x-dev');
 $tool = new Tool($driver);
 
-$propertyBag = new PropertyBag();
-$propertyBag->addProperty('stableId', 'Nightly static analysis run');
-
 $run = new Run($tool);
-$run->setProperties($propertyBag);
 
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

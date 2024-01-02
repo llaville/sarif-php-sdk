@@ -5,11 +5,13 @@ Certain properties in this document represent the contents of portions of artifa
 for example, artifacts that were scanned by an analysis tool. SARIF represents such content with an `artifactContent` object.
 Depending on the circumstances, the SARIF log file might need to represent this content as readable text, raw bytes, or both.
 
+![artifactContent object](../assets/images/reference-artifact-content.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -17,7 +19,7 @@ Depending on the circumstances, the SARIF log file might need to represent this 
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "results": [
@@ -31,7 +33,7 @@ Depending on the circumstances, the SARIF log file might need to represent this 
                             "artifactChanges": [
                                 {
                                     "artifactLocation": {
-                                        "uri": "src\/a.c"
+                                        "uri": "src/a.c"
                                     },
                                     "replacements": [
                                         {
@@ -41,7 +43,7 @@ Depending on the circumstances, the SARIF log file might need to represent this 
                                                 "endLine": 1
                                             },
                                             "insertedContent": {
-                                                "text": "\/\/ "
+                                                "text": "// "
                                             }
                                         }
                                     ]
@@ -58,7 +60,9 @@ Depending on the circumstances, the SARIF log file might need to represent this 
 
 ## How to generate
 
-See `examples/fix.php` script.
+See full [`examples/fix.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/fix.php
 
 ```php
 <?php declare(strict_types=1);
@@ -66,22 +70,8 @@ See `examples/fix.php` script.
 use Bartlett\Sarif\Definition\ArtifactChange;
 use Bartlett\Sarif\Definition\ArtifactContent;
 use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Fix;
-use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\Replacement;
-use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('src/a.c');
@@ -91,22 +81,4 @@ $insertedContent->setText('// ');
 $replacement->setInsertedContent($insertedContent);
 $artifactChange = new ArtifactChange($artifactLocation, [$replacement]);
 
-$fix = new Fix([$artifactChange]);
-
-$result = new Result(new Message('...'));
-$result->setRuleId('CA1001');
-$result->addFixes([$fix]);
-
-$run = new Run($tool);
-$run->addResults([$result]);
-
-
-$log = new SarifLog([$run]);
-
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

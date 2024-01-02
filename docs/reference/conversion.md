@@ -4,11 +4,13 @@
 A `conversion` object describes how a converter transformed the output of an analysis tool
 from the analysis tool’s native output format into the SARIF format.
 
+![conversion object](../assets/images/reference-conversion.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -16,7 +18,7 @@ from the analysis tool’s native output format into the SARIF format.
                 "driver": {
                     "name": "AndroidStudio",
                     "semanticVersion": "1.0.0-beta.1",
-                    "informationUri": "https:\/\/android-studion.dev"
+                    "informationUri": "https://android-studion.dev"
                 }
             },
             "conversion": {
@@ -44,7 +46,9 @@ from the analysis tool’s native output format into the SARIF format.
 
 ## How to generate
 
-See `examples/conversion.php` script.
+See full [`examples/conversion.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/conversion.php
 
 ```php
 <?php declare(strict_types=1);
@@ -53,18 +57,6 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
 use Bartlett\Sarif\Definition\Conversion;
 use Bartlett\Sarif\Definition\Invocation;
 use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('AndroidStudio');
-$driver->setInformationUri('https://android-studion.dev');
-$driver->setSemanticVersion('1.0.0-beta.1');
-$tool = new Tool($driver);
-
-$converter = new Tool(new ToolComponent('SARIF SDK Multitool'));
 
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('northwind.log');
@@ -80,11 +72,4 @@ $conversion->setInvocation($invocation);
 $run = new Run($tool);
 $run->setConversion($conversion);
 
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

@@ -3,11 +3,13 @@
 
 An `edgeTraversal` object represents the traversal of a single edge during a graph traversal.
 
+![edgeTraversal object](../assets/images/reference-edge-traversal.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -15,7 +17,7 @@ An `edgeTraversal` object represents the traversal of a single edge during a gra
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "results": [
@@ -113,7 +115,9 @@ An `edgeTraversal` object represents the traversal of a single edge during a gra
 
 ## How to generate
 
-See `examples/graphTraversal.php` script.
+See full [`examples/graphTraversal.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/graphTraversal.php
 
 ```php
 <?php declare(strict_types=1);
@@ -126,18 +130,6 @@ use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\MultiformatMessageString;
 use Bartlett\Sarif\Definition\Node;
 use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-
-$tool = new Tool($driver);
 
 $nodes = [];
 $nodes[1] = new Node('n1');
@@ -179,14 +171,4 @@ $result = new Result(new Message('A graph and edge traversal objects'));
 $result->addGraphs([$graph]);
 $result->addGraphTraversals([$graphTraversal]);
 
-$run = new Run($tool);
-$run->addResults([$result]);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

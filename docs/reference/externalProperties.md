@@ -3,11 +3,13 @@
 
 The top-level element of an external property file SHALL be an object which we refer to as an `externalProperties` object.
 
+![externalProperties object](../assets/images/reference-external-properties.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -15,7 +17,7 @@ The top-level element of an external property file SHALL be an object which we r
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "results": []
@@ -23,7 +25,7 @@ The top-level element of an external property file SHALL be an object which we r
     ],
     "inlineExternalProperties": [
         {
-            "schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+            "schema": "https://json.schemastore.org/sarif-2.1.0.json",
             "version": "2.1.0",
             "guid": "00001111-2222-1111-8888-555566667777",
             "runGuid": "88889999-AAAA-1111-8888-DDDDEEEEFFFF",
@@ -35,13 +37,13 @@ The top-level element of an external property file SHALL be an object which we r
                     "location": {
                         "uri": "apple.png"
                     },
-                    "mimeType": "image\/png"
+                    "mimeType": "image/png"
                 },
                 {
                     "location": {
                         "uri": "banana.png"
                     },
-                    "mimeType": "image\/png"
+                    "mimeType": "image/png"
                 }
             ]
         }
@@ -51,7 +53,9 @@ The top-level element of an external property file SHALL be an object which we r
 
 ## How to generate
 
-See `examples/externalProperties.php` script.
+See full [`examples/externalProperties.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/externalProperties.php
 
 ```php
 <?php declare(strict_types=1);
@@ -61,16 +65,7 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
 use Bartlett\Sarif\Definition\ExternalProperties;
 use Bartlett\Sarif\Definition\PropertyBag;
 use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
 use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
 $apple = new Artifact();
 $location = new ArtifactLocation();
@@ -97,9 +92,4 @@ $externalProperties->addArtifacts([$apple, $banana]);
 $externalProperties->setExternalizedProperties($propertyBag);
 $log->addInlineExternalProperties([$externalProperties]);
 
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

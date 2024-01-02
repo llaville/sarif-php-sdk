@@ -4,11 +4,13 @@
 An `externalPropertyFileReference` object contains information that enables a SARIF consumer
 to locate the external property files that contain the values of all externalized properties associated with theRun.
 
+![externalPropertyFileReference object](../assets/images/reference-external-property-file-reference.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -16,12 +18,12 @@ to locate the external property files that contain the values of all externalize
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "originalUriBaseIds": {
                 "LOGSDIR": {
-                    "uri": "file:\/\/\/C:\/logs\/"
+                    "uri": "file:///C:/logs/"
                 }
             },
             "externalPropertyFileReferences": {
@@ -59,7 +61,9 @@ to locate the external property files that contain the values of all externalize
 
 ## How to generate
 
-See `examples/externalPropertyFileReferences.php` script.
+See [`examples/externalPropertyFileReferences.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/externalPropertyFileReferences.php
 
 ```php
 <?php declare(strict_types=1);
@@ -68,16 +72,6 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
 use Bartlett\Sarif\Definition\ExternalPropertyFileReference;
 use Bartlett\Sarif\Definition\ExternalPropertyFileReferences;
 use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
 $run = new Run($tool);
 $logsDir = new ArtifactLocation();
@@ -108,11 +102,4 @@ $externalPropertyFileReferences->setConversion($conversion);
 $externalPropertyFileReferences->addResults([$resultRef1, $resultRef2]);
 $run->setExternalPropertyFileReferences($externalPropertyFileReferences);
 
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

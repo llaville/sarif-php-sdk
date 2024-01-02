@@ -3,11 +3,13 @@
 
 An `artifact` object represents a single artifact.
 
+![artifact object](../assets/images/reference-artifact.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -15,27 +17,27 @@ An `artifact` object represents a single artifact.
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "artifacts": [
                 {
                     "location": {
-                        "uri": "file:\/\/\/C:\/Code\/app.zip"
+                        "uri": "file:///C:/Code/app.zip"
                     },
-                    "mimeType": "application\/zip"
+                    "mimeType": "application/zip"
                 },
                 {
                     "location": {
-                        "uri": "docs\/intro.docx"
+                        "uri": "docs/intro.docx"
                     },
-                    "mimeType": "application\/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 },
                 {
                     "parentIndex": 1,
                     "offset": 17522,
                     "length": 4050,
-                    "mimeType": "application\/x-contoso-animation"
+                    "mimeType": "application/x-contoso-animation"
                 }
             ],
             "results": []
@@ -46,7 +48,9 @@ An `artifact` object represents a single artifact.
 
 ## How to generate
 
-See `examples/artifact.php` script.
+See full [`examples/artifact.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/artifact.php
 
 ```php
 <?php declare(strict_types=1);
@@ -54,17 +58,6 @@ See `examples/artifact.php` script.
 use Bartlett\Sarif\Definition\Artifact;
 use Bartlett\Sarif\Definition\ArtifactLocation;
 use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-
-$tool = new Tool($driver);
 
 $artifact1 = new Artifact();
 $artifactLocation1 = new ArtifactLocation();
@@ -88,11 +81,4 @@ $artifact3->setParentIndex(1);
 $run = new Run($tool);
 $run->addArtifacts([$artifact1, $artifact2, $artifact3]);
 
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

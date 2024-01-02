@@ -4,11 +4,13 @@
 A `toolComponentReference` object identifies a particular `toolComponent` object,
 either theTool.driver or an element of theTool.extensions. We refer to the identified toolComponent object as theComponent.
 
+![toolComponentReference object](../assets/images/reference-tool-component-reference.graphviz.svg)
+
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -16,7 +18,7 @@ either theTool.driver or an element of theTool.extensions. We refer to the ident
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev",
+                    "informationUri": "https://codeScanner.dev",
                     "rules": [
                         {
                             "id": "CA1000",
@@ -48,7 +50,9 @@ either theTool.driver or an element of theTool.extensions. We refer to the ident
 
 ## How to generate
 
-See `examples/reportingDescriptorRelationship.php` script.
+See full [`examples/reportingDescriptorRelationship.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/reportingDescriptorRelationship.php
 
 ```php
 <?php declare(strict_types=1);
@@ -62,34 +66,10 @@ use Bartlett\Sarif\Definition\ToolComponent;
 use Bartlett\Sarif\Definition\ToolComponentReference;
 use Bartlett\Sarif\SarifLog;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-
-$rule = new ReportingDescriptor('CA1000');
-
 $target = new ReportingDescriptorReference(0, '327', '33333333-0000-1111-8888-111111111111');
 $toolComponent = new ToolComponentReference();
 $toolComponent->setName('CWE');
 $toolComponent->setGuid('33333333-0000-1111-8888-000000000000');
 $target->setToolComponent($toolComponent);
 
-$relationship = new ReportingDescriptorRelationship($target);
-$relationship->addKinds(['superset']);
-$rule->addRelationships([$relationship]);
-$driver->addRules([$rule]);
-
-$tool = new Tool($driver);
-
-$run = new Run($tool);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

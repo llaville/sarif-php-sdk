@@ -1,13 +1,15 @@
 <!-- markdownlint-disable MD013 -->
 # sarifLog object
 
-An sarifLog object specifies the version of the file format and contains the output from one or more runs.
+A `sarifLog` object specifies the version of the file format and contains the output from one or more runs.
+
+![sarifLog object](../assets/images/reference-sarif-log.graphviz.svg)
 
 ## Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -23,7 +25,9 @@ An sarifLog object specifies the version of the file format and contains the out
 
 ## How to generate
 
-See `examples/sarifLog.php` script.
+See full [`examples/sarifLog.php`][example-script] script into repository.
+
+[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/sarifLog.php
 
 ```php
 <?php declare(strict_types=1);
@@ -33,8 +37,6 @@ use Bartlett\Sarif\Definition\Tool;
 use Bartlett\Sarif\Definition\ToolComponent;
 use Bartlett\Sarif\SarifLog;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
 $driver = new ToolComponent('Psalm');
 $tool = new Tool($driver);
 
@@ -42,9 +44,4 @@ $run = new Run($tool);
 
 $log = new SarifLog([$run]);
 
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```

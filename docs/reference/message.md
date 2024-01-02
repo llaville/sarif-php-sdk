@@ -9,11 +9,13 @@ SARIF represents such a message with a `message` object, which offers the follow
 - Message strings with placeholders for variable information.
 - Message strings with embedded links.
 
+![message object](../assets/images/reference-message.graphviz.svg)
+
 ## PlainText Example
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -21,14 +23,14 @@ SARIF represents such a message with a `message` object, which offers the follow
                 "driver": {
                     "name": "ESLint",
                     "semanticVersion": "8.1.0",
-                    "informationUri": "https:\/\/eslint.org",
+                    "informationUri": "https://eslint.org",
                     "rules": [
                         {
                             "id": "no-unused-vars",
                             "shortDescription": {
                                 "text": "disallow unused variables"
                             },
-                            "helpUri": "https:\/\/eslint.org\/docs\/rules\/no-unused-vars",
+                            "helpUri": "https://eslint.org/docs/rules/no-unused-vars",
                             "properties": {
                                 "category": "Variables"
                             }
@@ -55,7 +57,7 @@ SARIF represents such a message with a `message` object, which offers the follow
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -63,7 +65,7 @@ SARIF represents such a message with a `message` object, which offers the follow
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "results": [
@@ -86,7 +88,7 @@ SARIF represents such a message with a `message` object, which offers the follow
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -94,7 +96,7 @@ SARIF represents such a message with a `message` object, which offers the follow
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev"
+                    "informationUri": "https://codeScanner.dev"
                 }
             },
             "results": [
@@ -108,7 +110,7 @@ SARIF represents such a message with a `message` object, which offers the follow
                             "id": 3,
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:\/\/\/C:\/code\/input.c"
+                                    "uri": "file:///C:/code/input.c"
                                 },
                                 "region": {
                                     "startLine": 25,
@@ -128,7 +130,7 @@ SARIF represents such a message with a `message` object, which offers the follow
 
 ```json
 {
-    "$schema": "https:\/\/json.schemastore.org\/sarif-2.1.0.json",
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
     "version": "2.1.0",
     "runs": [
         {
@@ -136,7 +138,7 @@ SARIF represents such a message with a `message` object, which offers the follow
                 "driver": {
                     "name": "CodeScanner",
                     "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https:\/\/codeScanner.dev",
+                    "informationUri": "https://codeScanner.dev",
                     "rules": [
                         {
                             "id": "CS0001",
@@ -165,36 +167,15 @@ SARIF represents such a message with a `message` object, which offers the follow
 
 ## How to generate
 
-See `examples/message/plainText.php` script.
+See full [`examples/message/plainText.php`][example-script-1] script into repository.
+
+[example-script-1]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/plainText.php
 
 ```php
 <?php
 
 use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\MultiformatMessageString;
-use Bartlett\Sarif\Definition\PropertyBag;
-use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('ESLint');
-$driver->setInformationUri('https://eslint.org');
-$driver->setSemanticVersion('8.1.0');
-
-$rule = new ReportingDescriptor('no-unused-vars');
-$rule->setShortDescription(new MultiformatMessageString('disallow unused variables'));
-$rule->setHelpUri('https://eslint.org/docs/rules/no-unused-vars');
-$properties = new PropertyBag();
-$properties->addProperty('category', 'Variables');
-$rule->setProperties($properties);
-$driver->addRules([$rule]);
-
-$tool = new Tool($driver);
 
 $message = new Message("'x' is assigned a value but never used.");
 $result = new Result($message);
@@ -202,55 +183,28 @@ $result->setLevel('error');
 $result->setRuleId('no-unused-vars');
 $result->setRuleIndex(0);
 
-$run = new Run($tool);
-$run->addResults([$result]);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```
 
-See `examples/message/formatted.php` script.
+See full [`examples/message/formatted.php`][example-script-2] script into repository.
+
+[example-script-2]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/formatted.php
 
 ```php
 <?php
 
 use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
 $message = new Message("Variable '{0}' is uninitialized.");
 $message->addArguments(['pBuffer']);
 $result = new Result($message);
 $result->setRuleId('CA2101');
 
-$run = new Run($tool);
-$run->addResults([$result]);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```
 
-See `examples/message/embeddedLinks.php`
+See full [`examples/message/embeddedLinks.php`][example-script-3] script into repository.
+
+[example-script-3]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/embeddedLinks.php
 
 ```php
 <?php
@@ -261,17 +215,6 @@ use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\PhysicalLocation;
 use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
 $message = new Message('Tainted data was used. The data came from [here](3).');
 $result = new Result($message);
@@ -285,19 +228,11 @@ $physicalLocation->setRegion(new Region(25, 19));
 $location->setPhysicalLocation($physicalLocation);
 $result->addRelatedLocations([$location]);
 
-$run = new Run($tool);
-$run->addResults([$result]);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```
 
-See `examples/message/stringLookup.php`
+See full [`examples/message/stringLookup.php`][example-script-4] script into repository.
+
+[example-script-4]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/stringLookup.php
 
 ```php
 <?php
@@ -306,24 +241,12 @@ use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\MultiformatMessageString;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\SarifLog;
-
-require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
-
-$driver = new ToolComponent('CodeScanner');
-$driver->setInformationUri('https://codeScanner.dev');
-$driver->setSemanticVersion('1.1.2-beta.12');
 
 $rule = new ReportingDescriptor('no-unused-vars');
 $rule->setId('CS0001');
 $rule->addMessageStrings([
     'default' => new MultiformatMessageString('This is the message text. It might be very long.'),
 ]);
-$driver->addRules([$rule]);
-$tool = new Tool($driver);
 
 $message = new Message(
     'A message object can directly contain message strings in its text and markdown properties.'
@@ -334,14 +257,4 @@ $result->setRuleId('CS0001');
 $result->setRuleIndex(0);
 $result->setMessage(new Message('', 'default'));
 
-$run = new Run($tool);
-$run->addResults([$result]);
-
-$log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
 ```
