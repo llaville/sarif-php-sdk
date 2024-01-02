@@ -19,6 +19,7 @@ use Bartlett\Sarif\Property\ToolComponentRef;
  *
  * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317862
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class ReportingDescriptorReference extends JsonSerializable
 {

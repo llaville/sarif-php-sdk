@@ -18,6 +18,7 @@ use Bartlett\Sarif\Property\ReportingDescriptorTarget;
  *
  * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317870
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class ReportingDescriptorRelationship extends JsonSerializable
 {

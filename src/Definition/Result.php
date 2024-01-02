@@ -45,6 +45,7 @@ use Bartlett\Sarif\Property\WorkItemUris;
  *
  * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317638
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class Result extends JsonSerializable
 {

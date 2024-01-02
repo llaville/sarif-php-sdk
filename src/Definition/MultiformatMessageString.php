@@ -16,6 +16,7 @@ use Bartlett\Sarif\Property\Text;
  * A message string or message format string rendered in multiple formats.
  *
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class MultiformatMessageString extends JsonSerializable
 {

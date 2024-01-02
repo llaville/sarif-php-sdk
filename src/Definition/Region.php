@@ -25,6 +25,7 @@ use Bartlett\Sarif\Property\StartLine;
  * A region within an artifact where a result was detected.
  *
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class Region extends JsonSerializable
 {

@@ -11,6 +11,7 @@ use Bartlett\Sarif\Definition\ExternalPropertyFileReference;
 
 /**
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 trait ExternalPropertyFileReferenceTaxonomies
 {

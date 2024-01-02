@@ -21,6 +21,7 @@ use Bartlett\Sarif\Property\RevisionTag;
  *
  * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317602
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class VersionControlDetails extends JsonSerializable
 {

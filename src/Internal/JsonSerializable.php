@@ -12,6 +12,7 @@ use function is_numeric;
 
 /**
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 abstract class JsonSerializable implements \JsonSerializable
 {

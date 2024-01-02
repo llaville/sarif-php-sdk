@@ -21,6 +21,7 @@ use Bartlett\Sarif\Property\ShortDescription;
  *
  * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317630
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class TranslationMetadata extends JsonSerializable
 {

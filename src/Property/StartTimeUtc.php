@@ -12,6 +12,7 @@ namespace Bartlett\Sarif\Property;
  * See "Date/time properties" in the SARIF spec for the required format.
  *
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 trait StartTimeUtc
 {

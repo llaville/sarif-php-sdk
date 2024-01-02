@@ -18,6 +18,7 @@ use Bartlett\Sarif\Property\UriBaseId;
  * Specifies the location of an artifact.
  *
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class ArtifactLocation extends JsonSerializable
 {

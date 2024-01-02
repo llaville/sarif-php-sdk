@@ -41,6 +41,7 @@ use Bartlett\Sarif\Property\Version;
  * A component, such as a plug-in or the driver, of the analysis tool that was run.
  *
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class ToolComponent extends JsonSerializable
 {

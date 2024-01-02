@@ -20,6 +20,7 @@ use Bartlett\Sarif\Property\Properties;
  * A location within a programming artifact.
  *
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class Location extends JsonSerializable
 {

@@ -13,6 +13,7 @@ use function is_string;
 
 /**
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 trait OriginalUriBaseIds
 {

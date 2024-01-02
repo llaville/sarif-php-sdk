@@ -13,6 +13,7 @@ use JsonSerializable;
  * Key/value pairs that provide additional information about the object.
  *
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class PropertyBag implements JsonSerializable
 {

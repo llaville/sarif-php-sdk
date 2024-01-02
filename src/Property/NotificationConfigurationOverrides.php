@@ -13,6 +13,7 @@ use Bartlett\Sarif\Definition\ConfigurationOverride;
  * An array of configurationOverride objects that describe notifications related runtime overrides.
  *
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 trait NotificationConfigurationOverrides
 {

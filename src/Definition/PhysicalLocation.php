@@ -22,6 +22,7 @@ use LogicException;
  *
  * @link https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sarif-v2.1.0-os.html#_Toc34317678
  * @author Laurent Laville
+ * @since Release 1.0.0
  */
 final class PhysicalLocation extends JsonSerializable
 {
