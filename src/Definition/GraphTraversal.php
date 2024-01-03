@@ -17,6 +17,7 @@ use Bartlett\Sarif\Property\ResultGraphIndex;
 use Bartlett\Sarif\Property\RunGraphIndex;
 
 use DomainException;
+use function is_int;
 use function is_numeric;
 
 /**
@@ -74,8 +75,12 @@ final class GraphTraversal extends JsonSerializable
             throw new DomainException('Either "runGraphIndex" or "resultGraphIndex" are required. Nothing provided.');
         }
 
-        $this->runGraphIndex = $runGraphIndex;
-        $this->resultGraphIndex = $resultGraphIndex;
+        if (is_int($runGraphIndex)) {
+            $this->runGraphIndex = $runGraphIndex;
+        }
+        if (is_int($resultGraphIndex)) {
+            $this->resultGraphIndex = $resultGraphIndex;
+        }
 
         $this->required = [];
         $this->optional = [
