@@ -15,7 +15,10 @@ use Bartlett\Sarif\Definition\PhysicalLocation;
  */
 trait ConversionSources
 {
-    protected PhysicalLocation $conversionSources;
+    /**
+     * @var PhysicalLocation[]
+     */
+    protected array $conversionSources;
 
     /**
      * @param PhysicalLocation[] $conversionSources
