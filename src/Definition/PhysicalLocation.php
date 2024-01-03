@@ -58,8 +58,12 @@ final class PhysicalLocation extends JsonSerializable
      */
     public function __construct(ArtifactLocation $artifactLocation = null, Address $address = null)
     {
-        $this->artifactLocation = $artifactLocation;
-        $this->address = $address;
+        if ($artifactLocation instanceof ArtifactLocation) {
+            $this->artifactLocation = $artifactLocation;
+        }
+        if ($address instanceof Address) {
+            $this->address = $address;
+        }
 
         if (empty($address) && empty($artifactLocation)) {
             throw new LogicException('Either "address" or "artifactLocation" are required. Nothing provided.');
