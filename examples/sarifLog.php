@@ -21,9 +21,3 @@ $tool = new Tool($driver);
 $run = new Run($tool);
 
 $log = new SarifLog([$run]);
-
-try {
-    echo $log, PHP_EOL;
-} catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
-}
