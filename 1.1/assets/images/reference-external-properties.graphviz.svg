@@ -31,27 +31,27 @@
 <polygon fill="none" stroke="black" points="16,-800.5 16,-822.5 417,-822.5 417,-800.5 16,-800.5"/>
 <text text-anchor="start" x="174" y="-806.1" font-family="Verdana" font-weight="bold" font-size="8.00">ExternalProperties</text>
 <polygon fill="none" stroke="black" points="16,-521.5 16,-800.5 417,-800.5 417,-521.5 16,-521.5"/>
-<text text-anchor="start" x="21" y="-789.1" font-family="Verdana" font-size="8.00"># schema : string</text>
-<text text-anchor="start" x="21" y="-776.1" font-family="Verdana" font-size="8.00"># version : string</text>
-<text text-anchor="start" x="21" y="-763.1" font-family="Verdana" font-size="8.00"># guid : string</text>
-<text text-anchor="start" x="21" y="-750.1" font-family="Verdana" font-size="8.00"># runGuid : string</text>
-<text text-anchor="start" x="21" y="-737.1" font-family="Verdana" font-size="8.00"># conversion : Conversion</text>
+<text text-anchor="start" x="21" y="-789.1" font-family="Verdana" font-size="8.00"># schema</text>
+<text text-anchor="start" x="21" y="-776.1" font-family="Verdana" font-size="8.00"># version</text>
+<text text-anchor="start" x="21" y="-763.1" font-family="Verdana" font-size="8.00"># guid</text>
+<text text-anchor="start" x="21" y="-750.1" font-family="Verdana" font-size="8.00"># runGuid</text>
+<text text-anchor="start" x="21" y="-737.1" font-family="Verdana" font-size="8.00"># conversion</text>
 <text text-anchor="start" x="21" y="-724.1" font-family="Verdana" font-size="8.00"># graphs : mixed</text>
-<text text-anchor="start" x="21" y="-711.1" font-family="Verdana" font-size="8.00"># externalizedProperties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-711.1" font-family="Verdana" font-size="8.00"># externalizedProperties</text>
 <text text-anchor="start" x="21" y="-698.1" font-family="Verdana" font-size="8.00"># artifacts : mixed</text>
 <text text-anchor="start" x="21" y="-685.1" font-family="Verdana" font-size="8.00"># invocations : mixed</text>
 <text text-anchor="start" x="21" y="-672.1" font-family="Verdana" font-size="8.00"># logicalLocations : mixed</text>
 <text text-anchor="start" x="21" y="-659.1" font-family="Verdana" font-size="8.00"># locations : mixed</text>
 <text text-anchor="start" x="21" y="-646.1" font-family="Verdana" font-size="8.00"># results : mixed</text>
 <text text-anchor="start" x="21" y="-633.1" font-family="Verdana" font-size="8.00"># taxonomies : mixed</text>
-<text text-anchor="start" x="21" y="-620.1" font-family="Verdana" font-size="8.00"># driver : ToolComponent</text>
+<text text-anchor="start" x="21" y="-620.1" font-family="Verdana" font-size="8.00"># driver</text>
 <text text-anchor="start" x="21" y="-607.1" font-family="Verdana" font-size="8.00"># extensions : mixed</text>
 <text text-anchor="start" x="21" y="-594.1" font-family="Verdana" font-size="8.00"># policies : mixed</text>
 <text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># translations : mixed</text>
 <text text-anchor="start" x="21" y="-568.1" font-family="Verdana" font-size="8.00"># addresses : mixed</text>
 <text text-anchor="start" x="21" y="-555.1" font-family="Verdana" font-size="8.00"># webRequests : mixed</text>
 <text text-anchor="start" x="21" y="-542.1" font-family="Verdana" font-size="8.00"># webResponses : mixed</text>
-<text text-anchor="start" x="21" y="-529.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-529.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-521.5 417,-521.5 417,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-510.1" font-family="Verdana" font-size="8.00">+ __construct(version : string = &#39;2\.1\.0&#39;, schemaUri : string = &#39;&#39;)</text>
 <text text-anchor="start" x="21" y="-497.1" font-family="Verdana" font-size="8.00">+ setSchema(schema : string) : void</text>

@@ -31,10 +31,10 @@
 <polygon fill="none" stroke="black" points="16,-358.5 16,-380.5 358,-380.5 358,-358.5 16,-358.5"/>
 <text text-anchor="start" x="112.5" y="-364.1" font-family="Verdana" font-weight="bold" font-size="8.00">ReportingDescriptorRelationship</text>
 <polygon fill="none" stroke="black" points="16,-300.5 16,-358.5 358,-358.5 358,-300.5 16,-300.5"/>
-<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># target : ReportingDescriptorReference</text>
+<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># target</text>
 <text text-anchor="start" x="21" y="-334.1" font-family="Verdana" font-size="8.00"># kinds : mixed</text>
-<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># description : Message</text>
-<text text-anchor="start" x="21" y="-308.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># description</text>
+<text text-anchor="start" x="21" y="-308.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-300.5 358,-300.5 358,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-289.1" font-family="Verdana" font-size="8.00">+ __construct(target : Bartlett\Sarif\Definition\ReportingDescriptorReference)</text>
 <text text-anchor="start" x="21" y="-276.1" font-family="Verdana" font-size="8.00">+ setTarget(target : Bartlett\Sarif\Definition\ReportingDescriptorReference) : void</text>

@@ -31,12 +31,12 @@
 <polygon fill="none" stroke="black" points="16,-410.5 16,-432.5 325,-432.5 325,-410.5 16,-410.5"/>
 <text text-anchor="start" x="144" y="-416.1" font-family="Verdana" font-weight="bold" font-size="8.00">ThreadFlow</text>
 <polygon fill="none" stroke="black" points="16,-326.5 16,-410.5 325,-410.5 325,-326.5 16,-326.5"/>
-<text text-anchor="start" x="21" y="-399.1" font-family="Verdana" font-size="8.00"># id : string</text>
-<text text-anchor="start" x="21" y="-386.1" font-family="Verdana" font-size="8.00"># message : Message</text>
+<text text-anchor="start" x="21" y="-399.1" font-family="Verdana" font-size="8.00"># id</text>
+<text text-anchor="start" x="21" y="-386.1" font-family="Verdana" font-size="8.00"># message</text>
 <text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># initialState : mixed</text>
 <text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># immutableState : mixed</text>
 <text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># locations : mixed</text>
-<text text-anchor="start" x="21" y="-334.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-334.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-326.5 325,-326.5 325,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-315.1" font-family="Verdana" font-size="8.00">+ __construct(locations : array)</text>
 <text text-anchor="start" x="21" y="-302.1" font-family="Verdana" font-size="8.00">+ setId(id : string) : void</text>

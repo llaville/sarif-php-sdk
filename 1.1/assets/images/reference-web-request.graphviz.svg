@@ -31,15 +31,15 @@
 <polygon fill="none" stroke="black" points="16,-488.5 16,-510.5 325,-510.5 325,-488.5 16,-488.5"/>
 <text text-anchor="start" x="142" y="-494.1" font-family="Verdana" font-weight="bold" font-size="8.00">WebRequest</text>
 <polygon fill="none" stroke="black" points="16,-365.5 16,-488.5 325,-488.5 325,-365.5 16,-365.5"/>
-<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># index : int</text>
-<text text-anchor="start" x="21" y="-464.1" font-family="Verdana" font-size="8.00"># protocol : string</text>
-<text text-anchor="start" x="21" y="-451.1" font-family="Verdana" font-size="8.00"># version : string</text>
-<text text-anchor="start" x="21" y="-438.1" font-family="Verdana" font-size="8.00"># target : string</text>
-<text text-anchor="start" x="21" y="-425.1" font-family="Verdana" font-size="8.00"># method : string</text>
+<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># index</text>
+<text text-anchor="start" x="21" y="-464.1" font-family="Verdana" font-size="8.00"># protocol</text>
+<text text-anchor="start" x="21" y="-451.1" font-family="Verdana" font-size="8.00"># version</text>
+<text text-anchor="start" x="21" y="-438.1" font-family="Verdana" font-size="8.00"># target</text>
+<text text-anchor="start" x="21" y="-425.1" font-family="Verdana" font-size="8.00"># method</text>
 <text text-anchor="start" x="21" y="-412.1" font-family="Verdana" font-size="8.00"># headers : mixed</text>
 <text text-anchor="start" x="21" y="-399.1" font-family="Verdana" font-size="8.00"># parameters : mixed</text>
-<text text-anchor="start" x="21" y="-386.1" font-family="Verdana" font-size="8.00"># body : ArtifactContent</text>
-<text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-386.1" font-family="Verdana" font-size="8.00"># body</text>
+<text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-365.5 325,-365.5 325,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-354.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-341.1" font-family="Verdana" font-size="8.00">+ setIndex(index : int = &#45;1) : void</text>

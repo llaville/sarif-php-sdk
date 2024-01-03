@@ -9,10 +9,10 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>ReportingDescriptorRelationship</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># target : ReportingDescriptorReference</td></tr>
+    <tr><td align="left"># target</td></tr>
     <tr><td align="left"># kinds : mixed</td></tr>
-    <tr><td align="left"># description : Message</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># description</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(target : Bartlett\\Sarif\\Definition\\ReportingDescriptorReference)</td></tr>

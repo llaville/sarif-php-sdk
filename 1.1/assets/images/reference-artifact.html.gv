@@ -9,19 +9,19 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>Artifact</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># description : Message</td></tr>
-    <tr><td align="left"># location : ArtifactLocation</td></tr>
-    <tr><td align="left"># artifactLocation : ArtifactLocation</td></tr>
-    <tr><td align="left"># parentIndex : int</td></tr>
-    <tr><td align="left"># offset : int</td></tr>
-    <tr><td align="left"># length : int</td></tr>
+    <tr><td align="left"># description</td></tr>
+    <tr><td align="left"># location</td></tr>
+    <tr><td align="left"># artifactLocation</td></tr>
+    <tr><td align="left"># parentIndex</td></tr>
+    <tr><td align="left"># offset</td></tr>
+    <tr><td align="left"># length</td></tr>
     <tr><td align="left"># roles : mixed</td></tr>
-    <tr><td align="left"># mimeType : string</td></tr>
-    <tr><td align="left"># contents : ArtifactContent</td></tr>
-    <tr><td align="left"># encoding : string</td></tr>
-    <tr><td align="left"># sourceLanguage : string</td></tr>
+    <tr><td align="left"># mimeType</td></tr>
+    <tr><td align="left"># contents</td></tr>
+    <tr><td align="left"># encoding</td></tr>
+    <tr><td align="left"># sourceLanguage</td></tr>
     <tr><td align="left"># hashes : mixed</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct()</td></tr>

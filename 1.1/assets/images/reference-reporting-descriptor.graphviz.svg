@@ -31,20 +31,20 @@
 <polygon fill="none" stroke="black" points="16,-618.5 16,-640.5 450,-640.5 450,-618.5 16,-618.5"/>
 <text text-anchor="start" x="187" y="-624.1" font-family="Verdana" font-weight="bold" font-size="8.00">ReportingDescriptor</text>
 <polygon fill="none" stroke="black" points="16,-430.5 16,-618.5 450,-618.5 450,-430.5 16,-430.5"/>
-<text text-anchor="start" x="21" y="-607.1" font-family="Verdana" font-size="8.00"># id : string</text>
+<text text-anchor="start" x="21" y="-607.1" font-family="Verdana" font-size="8.00"># id</text>
 <text text-anchor="start" x="21" y="-594.1" font-family="Verdana" font-size="8.00"># deprecatedIds : mixed</text>
-<text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># guid : string</text>
+<text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># guid</text>
 <text text-anchor="start" x="21" y="-568.1" font-family="Verdana" font-size="8.00"># deprecatedGuids : mixed</text>
-<text text-anchor="start" x="21" y="-555.1" font-family="Verdana" font-size="8.00"># name : string</text>
+<text text-anchor="start" x="21" y="-555.1" font-family="Verdana" font-size="8.00"># name</text>
 <text text-anchor="start" x="21" y="-542.1" font-family="Verdana" font-size="8.00"># deprecatedNames : mixed</text>
-<text text-anchor="start" x="21" y="-529.1" font-family="Verdana" font-size="8.00"># shortDescription : MultiformatMessageString</text>
-<text text-anchor="start" x="21" y="-516.1" font-family="Verdana" font-size="8.00"># fullDescription : MultiformatMessageString</text>
+<text text-anchor="start" x="21" y="-529.1" font-family="Verdana" font-size="8.00"># shortDescription</text>
+<text text-anchor="start" x="21" y="-516.1" font-family="Verdana" font-size="8.00"># fullDescription</text>
 <text text-anchor="start" x="21" y="-503.1" font-family="Verdana" font-size="8.00"># messageStrings : mixed</text>
-<text text-anchor="start" x="21" y="-490.1" font-family="Verdana" font-size="8.00"># defaultConfiguration : ReportingConfiguration</text>
-<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># helpUri : string</text>
-<text text-anchor="start" x="21" y="-464.1" font-family="Verdana" font-size="8.00"># help : MultiformatMessageString</text>
+<text text-anchor="start" x="21" y="-490.1" font-family="Verdana" font-size="8.00"># defaultConfiguration</text>
+<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># helpUri</text>
+<text text-anchor="start" x="21" y="-464.1" font-family="Verdana" font-size="8.00"># help</text>
 <text text-anchor="start" x="21" y="-451.1" font-family="Verdana" font-size="8.00"># relationships : mixed</text>
-<text text-anchor="start" x="21" y="-438.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-438.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-430.5 450,-430.5 450,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-419.1" font-family="Verdana" font-size="8.00">+ __construct(id : string)</text>
 <text text-anchor="start" x="21" y="-406.1" font-family="Verdana" font-size="8.00">+ setId(id : string) : void</text>

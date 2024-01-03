@@ -9,20 +9,20 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>ThreadFlowLocation</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># index : int</td></tr>
-    <tr><td align="left"># location : Location</td></tr>
-    <tr><td align="left"># stack : Stack</td></tr>
+    <tr><td align="left"># index</td></tr>
+    <tr><td align="left"># location</td></tr>
+    <tr><td align="left"># stack</td></tr>
     <tr><td align="left"># kinds : mixed</td></tr>
     <tr><td align="left"># taxa : mixed</td></tr>
-    <tr><td align="left"># module : string</td></tr>
+    <tr><td align="left"># module</td></tr>
     <tr><td align="left"># state : mixed</td></tr>
-    <tr><td align="left"># nestingLevel : int</td></tr>
-    <tr><td align="left"># executionOrder : int</td></tr>
-    <tr><td align="left"># executionTimeUtc : string</td></tr>
-    <tr><td align="left"># importance : string</td></tr>
-    <tr><td align="left"># webRequest : WebRequest</td></tr>
-    <tr><td align="left"># webResponse : WebResponse</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># nestingLevel</td></tr>
+    <tr><td align="left"># executionOrder</td></tr>
+    <tr><td align="left"># executionTimeUtc</td></tr>
+    <tr><td align="left"># importance</td></tr>
+    <tr><td align="left"># webRequest</td></tr>
+    <tr><td align="left"># webResponse</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct()</td></tr>

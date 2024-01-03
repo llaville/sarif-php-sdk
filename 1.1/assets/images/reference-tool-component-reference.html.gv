@@ -9,10 +9,10 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>ToolComponentReference</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># name : string</td></tr>
-    <tr><td align="left"># index : int</td></tr>
-    <tr><td align="left"># guid : string</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># name</td></tr>
+    <tr><td align="left"># index</td></tr>
+    <tr><td align="left"># guid</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct()</td></tr>

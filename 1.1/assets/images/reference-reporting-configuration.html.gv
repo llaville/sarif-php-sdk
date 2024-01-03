@@ -9,11 +9,11 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>ReportingConfiguration</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># enabled : bool</td></tr>
-    <tr><td align="left"># level : string</td></tr>
-    <tr><td align="left"># rank : float</td></tr>
-    <tr><td align="left"># parameters : PropertyBag</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># enabled</td></tr>
+    <tr><td align="left"># level</td></tr>
+    <tr><td align="left"># rank</td></tr>
+    <tr><td align="left"># parameters</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct()</td></tr>

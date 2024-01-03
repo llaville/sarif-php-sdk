@@ -9,13 +9,13 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>VersionControlDetails</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># repositoryUri : string</td></tr>
-    <tr><td align="left"># revisionId : string</td></tr>
-    <tr><td align="left"># branch : string</td></tr>
-    <tr><td align="left"># revisionTag : string</td></tr>
-    <tr><td align="left"># asOfTimeUtc : string</td></tr>
-    <tr><td align="left"># mappedTo : ArtifactLocation</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># repositoryUri</td></tr>
+    <tr><td align="left"># revisionId</td></tr>
+    <tr><td align="left"># branch</td></tr>
+    <tr><td align="left"># revisionTag</td></tr>
+    <tr><td align="left"># asOfTimeUtc</td></tr>
+    <tr><td align="left"># mappedTo</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(repositoryUri : string)</td></tr>

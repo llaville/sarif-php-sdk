@@ -31,10 +31,10 @@
 <polygon fill="none" stroke="black" points="16,-358.5 16,-380.5 325,-380.5 325,-358.5 16,-358.5"/>
 <text text-anchor="start" x="145" y="-364.1" font-family="Verdana" font-weight="bold" font-size="8.00">Conversion</text>
 <polygon fill="none" stroke="black" points="16,-300.5 16,-358.5 325,-358.5 325,-300.5 16,-300.5"/>
-<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># tool : Tool</text>
-<text text-anchor="start" x="21" y="-334.1" font-family="Verdana" font-size="8.00"># invocation : Invocation</text>
+<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># tool</text>
+<text text-anchor="start" x="21" y="-334.1" font-family="Verdana" font-size="8.00"># invocation</text>
 <text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># analysisToolLogFiles : mixed</text>
-<text text-anchor="start" x="21" y="-308.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-308.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-300.5 325,-300.5 325,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-289.1" font-family="Verdana" font-size="8.00">+ __construct(tool : Bartlett\Sarif\Definition\Tool)</text>
 <text text-anchor="start" x="21" y="-276.1" font-family="Verdana" font-size="8.00">+ setTool(tool : Bartlett\Sarif\Definition\Tool) : void</text>

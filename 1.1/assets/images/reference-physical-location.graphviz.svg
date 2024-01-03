@@ -31,12 +31,12 @@
 <polygon fill="none" stroke="black" points="17,-410.5 17,-432.5 616,-432.5 616,-410.5 17,-410.5"/>
 <text text-anchor="start" x="278.5" y="-416.1" font-family="Verdana" font-weight="bold" font-size="8.00">PhysicalLocation</text>
 <polygon fill="none" stroke="black" points="17,-326.5 17,-410.5 616,-410.5 616,-326.5 17,-326.5"/>
-<text text-anchor="start" x="22" y="-399.1" font-family="Verdana" font-size="8.00"># address : mixed</text>
-<text text-anchor="start" x="22" y="-386.1" font-family="Verdana" font-size="8.00"># location : ArtifactLocation</text>
-<text text-anchor="start" x="22" y="-373.1" font-family="Verdana" font-size="8.00"># artifactLocation : ArtifactLocation</text>
-<text text-anchor="start" x="22" y="-360.1" font-family="Verdana" font-size="8.00"># region : Region</text>
-<text text-anchor="start" x="22" y="-347.1" font-family="Verdana" font-size="8.00"># contextRegion : Region</text>
-<text text-anchor="start" x="22" y="-334.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="22" y="-399.1" font-family="Verdana" font-size="8.00"># address</text>
+<text text-anchor="start" x="22" y="-386.1" font-family="Verdana" font-size="8.00"># location</text>
+<text text-anchor="start" x="22" y="-373.1" font-family="Verdana" font-size="8.00"># artifactLocation</text>
+<text text-anchor="start" x="22" y="-360.1" font-family="Verdana" font-size="8.00"># region</text>
+<text text-anchor="start" x="22" y="-347.1" font-family="Verdana" font-size="8.00"># contextRegion</text>
+<text text-anchor="start" x="22" y="-334.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="17,-229.5 17,-326.5 616,-326.5 616,-229.5 17,-229.5"/>
 <text text-anchor="start" x="22" y="-315.1" font-family="Verdana" font-size="8.00">+ __construct(artifactLocation : Bartlett\Sarif\Definition\ArtifactLocation = «unknown», address : Bartlett\Sarif\Definition\Address = «unknown»)</text>
 <text text-anchor="start" x="22" y="-302.1" font-family="Verdana" font-size="8.00">+ setAddress(address : Bartlett\Sarif\Definition\Address) : void</text>

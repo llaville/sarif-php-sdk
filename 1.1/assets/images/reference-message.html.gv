@@ -9,11 +9,11 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>Message</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># text : string</td></tr>
-    <tr><td align="left"># markdown : string</td></tr>
-    <tr><td align="left"># id : string</td></tr>
+    <tr><td align="left"># text</td></tr>
+    <tr><td align="left"># markdown</td></tr>
+    <tr><td align="left"># id</td></tr>
     <tr><td align="left"># arguments : mixed</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(text : string = '', id : string = '')</td></tr>

@@ -9,23 +9,23 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>ExternalPropertyFileReferences</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># conversion : ExternalPropertyFileReference</td></tr>
+    <tr><td align="left"># conversion</td></tr>
     <tr><td align="left"># graphs : mixed</td></tr>
-    <tr><td align="left"># externalizedProperties : ExternalPropertyFileReference</td></tr>
-    <tr><td align="left"># artifacts : ExternalPropertyFileReference</td></tr>
+    <tr><td align="left"># externalizedProperties</td></tr>
+    <tr><td align="left"># artifacts</td></tr>
     <tr><td align="left"># invocations : mixed</td></tr>
     <tr><td align="left"># logicalLocations : mixed</td></tr>
     <tr><td align="left"># threadFlowLocations : mixed</td></tr>
     <tr><td align="left"># results : mixed</td></tr>
     <tr><td align="left"># taxonomies : mixed</td></tr>
     <tr><td align="left"># addresses : mixed</td></tr>
-    <tr><td align="left"># driver : ExternalPropertyFileReference</td></tr>
+    <tr><td align="left"># driver</td></tr>
     <tr><td align="left"># extensions : mixed</td></tr>
     <tr><td align="left"># policies : mixed</td></tr>
     <tr><td align="left"># translations : mixed</td></tr>
     <tr><td align="left"># webRequests : mixed</td></tr>
     <tr><td align="left"># webResponses : mixed</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct()</td></tr>

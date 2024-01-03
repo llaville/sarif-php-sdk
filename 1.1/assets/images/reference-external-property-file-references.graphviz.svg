@@ -31,23 +31,23 @@
 <polygon fill="none" stroke="black" points="16,-696.5 16,-718.5 491,-718.5 491,-696.5 16,-696.5"/>
 <text text-anchor="start" x="182" y="-702.1" font-family="Verdana" font-weight="bold" font-size="8.00">ExternalPropertyFileReferences</text>
 <polygon fill="none" stroke="black" points="16,-469.5 16,-696.5 491,-696.5 491,-469.5 16,-469.5"/>
-<text text-anchor="start" x="21" y="-685.1" font-family="Verdana" font-size="8.00"># conversion : ExternalPropertyFileReference</text>
+<text text-anchor="start" x="21" y="-685.1" font-family="Verdana" font-size="8.00"># conversion</text>
 <text text-anchor="start" x="21" y="-672.1" font-family="Verdana" font-size="8.00"># graphs : mixed</text>
-<text text-anchor="start" x="21" y="-659.1" font-family="Verdana" font-size="8.00"># externalizedProperties : ExternalPropertyFileReference</text>
-<text text-anchor="start" x="21" y="-646.1" font-family="Verdana" font-size="8.00"># artifacts : ExternalPropertyFileReference</text>
+<text text-anchor="start" x="21" y="-659.1" font-family="Verdana" font-size="8.00"># externalizedProperties</text>
+<text text-anchor="start" x="21" y="-646.1" font-family="Verdana" font-size="8.00"># artifacts</text>
 <text text-anchor="start" x="21" y="-633.1" font-family="Verdana" font-size="8.00"># invocations : mixed</text>
 <text text-anchor="start" x="21" y="-620.1" font-family="Verdana" font-size="8.00"># logicalLocations : mixed</text>
 <text text-anchor="start" x="21" y="-607.1" font-family="Verdana" font-size="8.00"># threadFlowLocations : mixed</text>
 <text text-anchor="start" x="21" y="-594.1" font-family="Verdana" font-size="8.00"># results : mixed</text>
 <text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># taxonomies : mixed</text>
 <text text-anchor="start" x="21" y="-568.1" font-family="Verdana" font-size="8.00"># addresses : mixed</text>
-<text text-anchor="start" x="21" y="-555.1" font-family="Verdana" font-size="8.00"># driver : ExternalPropertyFileReference</text>
+<text text-anchor="start" x="21" y="-555.1" font-family="Verdana" font-size="8.00"># driver</text>
 <text text-anchor="start" x="21" y="-542.1" font-family="Verdana" font-size="8.00"># extensions : mixed</text>
 <text text-anchor="start" x="21" y="-529.1" font-family="Verdana" font-size="8.00"># policies : mixed</text>
 <text text-anchor="start" x="21" y="-516.1" font-family="Verdana" font-size="8.00"># translations : mixed</text>
 <text text-anchor="start" x="21" y="-503.1" font-family="Verdana" font-size="8.00"># webRequests : mixed</text>
 <text text-anchor="start" x="21" y="-490.1" font-family="Verdana" font-size="8.00"># webResponses : mixed</text>
-<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-469.5 491,-469.5 491,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-458.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-445.1" font-family="Verdana" font-size="8.00">+ setConversion(conversion : Bartlett\Sarif\Definition\ExternalPropertyFileReference) : void</text>

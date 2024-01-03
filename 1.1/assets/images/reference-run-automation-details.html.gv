@@ -9,11 +9,11 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>RunAutomationDetails</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># description : Message</td></tr>
-    <tr><td align="left"># id : string</td></tr>
-    <tr><td align="left"># guid : string</td></tr>
-    <tr><td align="left"># correlationGuid : string</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># description</td></tr>
+    <tr><td align="left"># id</td></tr>
+    <tr><td align="left"># guid</td></tr>
+    <tr><td align="left"># correlationGuid</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct()</td></tr>

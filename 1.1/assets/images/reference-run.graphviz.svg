@@ -31,25 +31,25 @@
 <polygon fill="none" stroke="black" points="16,-996 16,-1018 566,-1018 566,-996 16,-996"/>
 <text text-anchor="start" x="281.5" y="-1001.6" font-family="Verdana" font-weight="bold" font-size="8.00">Run</text>
 <polygon fill="none" stroke="black" points="16,-626 16,-996 566,-996 566,-626 16,-626"/>
-<text text-anchor="start" x="21" y="-984.6" font-family="Verdana" font-size="8.00"># tool : Tool</text>
+<text text-anchor="start" x="21" y="-984.6" font-family="Verdana" font-size="8.00"># tool</text>
 <text text-anchor="start" x="21" y="-971.6" font-family="Verdana" font-size="8.00"># invocations : mixed</text>
-<text text-anchor="start" x="21" y="-958.6" font-family="Verdana" font-size="8.00"># conversion : Conversion</text>
-<text text-anchor="start" x="21" y="-945.6" font-family="Verdana" font-size="8.00"># language : string</text>
+<text text-anchor="start" x="21" y="-958.6" font-family="Verdana" font-size="8.00"># conversion</text>
+<text text-anchor="start" x="21" y="-945.6" font-family="Verdana" font-size="8.00"># language</text>
 <text text-anchor="start" x="21" y="-932.6" font-family="Verdana" font-size="8.00"># versionControlProvenance : mixed</text>
 <text text-anchor="start" x="21" y="-919.6" font-family="Verdana" font-size="8.00"># originalUriBaseIds : mixed</text>
 <text text-anchor="start" x="21" y="-906.6" font-family="Verdana" font-size="8.00"># artifacts : mixed</text>
 <text text-anchor="start" x="21" y="-893.6" font-family="Verdana" font-size="8.00"># logicalLocations : mixed</text>
 <text text-anchor="start" x="21" y="-880.6" font-family="Verdana" font-size="8.00"># graphs : mixed</text>
 <text text-anchor="start" x="21" y="-867.6" font-family="Verdana" font-size="8.00"># results : mixed</text>
-<text text-anchor="start" x="21" y="-854.6" font-family="Verdana" font-size="8.00"># automationDetails : RunAutomationDetails</text>
-<text text-anchor="start" x="21" y="-841.6" font-family="Verdana" font-size="8.00"># runAggregates : RunAutomationDetails</text>
-<text text-anchor="start" x="21" y="-828.6" font-family="Verdana" font-size="8.00"># baselineGuid : string</text>
+<text text-anchor="start" x="21" y="-854.6" font-family="Verdana" font-size="8.00"># automationDetails</text>
+<text text-anchor="start" x="21" y="-841.6" font-family="Verdana" font-size="8.00"># runAggregates</text>
+<text text-anchor="start" x="21" y="-828.6" font-family="Verdana" font-size="8.00"># baselineGuid</text>
 <text text-anchor="start" x="21" y="-815.6" font-family="Verdana" font-size="8.00"># redactionTokens : mixed</text>
-<text text-anchor="start" x="21" y="-802.6" font-family="Verdana" font-size="8.00"># defaultEncoding : string</text>
-<text text-anchor="start" x="21" y="-789.6" font-family="Verdana" font-size="8.00"># defaultSourceLanguage : string</text>
+<text text-anchor="start" x="21" y="-802.6" font-family="Verdana" font-size="8.00"># defaultEncoding</text>
+<text text-anchor="start" x="21" y="-789.6" font-family="Verdana" font-size="8.00"># defaultSourceLanguage</text>
 <text text-anchor="start" x="21" y="-776.6" font-family="Verdana" font-size="8.00"># newlineSequences : mixed</text>
-<text text-anchor="start" x="21" y="-763.6" font-family="Verdana" font-size="8.00"># columnKind : string</text>
-<text text-anchor="start" x="21" y="-750.6" font-family="Verdana" font-size="8.00"># externalPropertyFileReferences : ExternalPropertyFileReferences</text>
+<text text-anchor="start" x="21" y="-763.6" font-family="Verdana" font-size="8.00"># columnKind</text>
+<text text-anchor="start" x="21" y="-750.6" font-family="Verdana" font-size="8.00"># externalPropertyFileReferences</text>
 <text text-anchor="start" x="21" y="-737.6" font-family="Verdana" font-size="8.00"># locations : mixed</text>
 <text text-anchor="start" x="21" y="-724.6" font-family="Verdana" font-size="8.00"># taxonomies : mixed</text>
 <text text-anchor="start" x="21" y="-711.6" font-family="Verdana" font-size="8.00"># addresses : mixed</text>
@@ -57,8 +57,8 @@
 <text text-anchor="start" x="21" y="-685.6" font-family="Verdana" font-size="8.00"># policies : mixed</text>
 <text text-anchor="start" x="21" y="-672.6" font-family="Verdana" font-size="8.00"># webRequests : mixed</text>
 <text text-anchor="start" x="21" y="-659.6" font-family="Verdana" font-size="8.00"># webResponses : mixed</text>
-<text text-anchor="start" x="21" y="-646.6" font-family="Verdana" font-size="8.00"># specialLocations : SpecialLocations</text>
-<text text-anchor="start" x="21" y="-633.6" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-646.6" font-family="Verdana" font-size="8.00"># specialLocations</text>
+<text text-anchor="start" x="21" y="-633.6" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-230 16,-626 566,-626 566,-230 16,-230"/>
 <text text-anchor="start" x="21" y="-614.6" font-family="Verdana" font-size="8.00">+ __construct(tool : Bartlett\Sarif\Definition\Tool)</text>
 <text text-anchor="start" x="21" y="-601.6" font-family="Verdana" font-size="8.00">+ jsonSerialize() : array</text>

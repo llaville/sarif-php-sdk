@@ -9,31 +9,31 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>Invocation</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># commandLine : string</td></tr>
+    <tr><td align="left"># commandLine</td></tr>
     <tr><td align="left"># arguments : mixed</td></tr>
     <tr><td align="left"># responseFiles : mixed</td></tr>
-    <tr><td align="left"># startTimeUtc : string</td></tr>
-    <tr><td align="left"># endTimeUtc : string</td></tr>
-    <tr><td align="left"># exitCode : int</td></tr>
+    <tr><td align="left"># startTimeUtc</td></tr>
+    <tr><td align="left"># endTimeUtc</td></tr>
+    <tr><td align="left"># exitCode</td></tr>
     <tr><td align="left"># ruleConfigurationOverrides : mixed</td></tr>
     <tr><td align="left"># notificationConfigurationOverrides : mixed</td></tr>
     <tr><td align="left"># toolExecutionNotifications : mixed</td></tr>
-    <tr><td align="left"># exitCodeDescription : string</td></tr>
-    <tr><td align="left"># exitSignalName : string</td></tr>
-    <tr><td align="left"># exitSignalNumber : int</td></tr>
-    <tr><td align="left"># processStartFailureMessage : string</td></tr>
-    <tr><td align="left"># executionSuccessful : bool</td></tr>
-    <tr><td align="left"># machine : string</td></tr>
-    <tr><td align="left"># account : string</td></tr>
-    <tr><td align="left"># processId : int</td></tr>
-    <tr><td align="left"># executableLocation : ArtifactLocation</td></tr>
-    <tr><td align="left"># workingDirectory : ArtifactLocation</td></tr>
+    <tr><td align="left"># exitCodeDescription</td></tr>
+    <tr><td align="left"># exitSignalName</td></tr>
+    <tr><td align="left"># exitSignalNumber</td></tr>
+    <tr><td align="left"># processStartFailureMessage</td></tr>
+    <tr><td align="left"># executionSuccessful</td></tr>
+    <tr><td align="left"># machine</td></tr>
+    <tr><td align="left"># account</td></tr>
+    <tr><td align="left"># processId</td></tr>
+    <tr><td align="left"># executableLocation</td></tr>
+    <tr><td align="left"># workingDirectory</td></tr>
     <tr><td align="left"># environmentVariables : mixed</td></tr>
-    <tr><td align="left"># stdin : ArtifactLocation</td></tr>
-    <tr><td align="left"># stdout : ArtifactLocation</td></tr>
-    <tr><td align="left"># stderr : ArtifactLocation</td></tr>
-    <tr><td align="left"># stdoutStderr : ArtifactLocation</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># stdin</td></tr>
+    <tr><td align="left"># stdout</td></tr>
+    <tr><td align="left"># stderr</td></tr>
+    <tr><td align="left"># stdoutStderr</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(executionSuccessful : bool)</td></tr>

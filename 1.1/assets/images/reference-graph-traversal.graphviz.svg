@@ -31,13 +31,13 @@
 <polygon fill="none" stroke="black" points="16,-436.5 16,-458.5 376,-458.5 376,-436.5 16,-436.5"/>
 <text text-anchor="start" x="161.5" y="-442.1" font-family="Verdana" font-weight="bold" font-size="8.00">GraphTraversal</text>
 <polygon fill="none" stroke="black" points="16,-339.5 16,-436.5 376,-436.5 376,-339.5 16,-339.5"/>
-<text text-anchor="start" x="21" y="-425.1" font-family="Verdana" font-size="8.00"># runGraphIndex : int</text>
-<text text-anchor="start" x="21" y="-412.1" font-family="Verdana" font-size="8.00"># resultGraphIndex : int</text>
-<text text-anchor="start" x="21" y="-399.1" font-family="Verdana" font-size="8.00"># description : Message</text>
+<text text-anchor="start" x="21" y="-425.1" font-family="Verdana" font-size="8.00"># runGraphIndex</text>
+<text text-anchor="start" x="21" y="-412.1" font-family="Verdana" font-size="8.00"># resultGraphIndex</text>
+<text text-anchor="start" x="21" y="-399.1" font-family="Verdana" font-size="8.00"># description</text>
 <text text-anchor="start" x="21" y="-386.1" font-family="Verdana" font-size="8.00"># initialState : mixed</text>
 <text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># immutableState : mixed</text>
 <text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># edgeTraversals : mixed</text>
-<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-339.5 376,-339.5 376,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-328.1" font-family="Verdana" font-size="8.00">+ __construct(runGraphIndex : int = «unknown», resultGraphIndex : int = «unknown»)</text>
 <text text-anchor="start" x="21" y="-315.1" font-family="Verdana" font-size="8.00">+ setRunGraphIndex(runGraphIndex : int = &#45;1) : void</text>

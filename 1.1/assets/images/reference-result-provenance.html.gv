@@ -9,13 +9,13 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>ResultProvenance</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># firstDetectionTimeUtc : string</td></tr>
-    <tr><td align="left"># lastDetectionTimeUtc : string</td></tr>
-    <tr><td align="left"># firstDetectionRunGuid : string</td></tr>
-    <tr><td align="left"># lastDetectionRunGuid : string</td></tr>
-    <tr><td align="left"># invocationIndex : int</td></tr>
-    <tr><td align="left"># conversionSources : PhysicalLocation</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># firstDetectionTimeUtc</td></tr>
+    <tr><td align="left"># lastDetectionTimeUtc</td></tr>
+    <tr><td align="left"># firstDetectionRunGuid</td></tr>
+    <tr><td align="left"># lastDetectionRunGuid</td></tr>
+    <tr><td align="left"># invocationIndex</td></tr>
+    <tr><td align="left"># conversionSources</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct()</td></tr>

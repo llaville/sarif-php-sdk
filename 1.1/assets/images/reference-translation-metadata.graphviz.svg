@@ -31,13 +31,13 @@
 <polygon fill="none" stroke="black" points="17,-436.5 17,-458.5 428,-458.5 428,-436.5 17,-436.5"/>
 <text text-anchor="start" x="175.5" y="-442.1" font-family="Verdana" font-weight="bold" font-size="8.00">TranslationMetadata</text>
 <polygon fill="none" stroke="black" points="17,-339.5 17,-436.5 428,-436.5 428,-339.5 17,-339.5"/>
-<text text-anchor="start" x="22" y="-425.1" font-family="Verdana" font-size="8.00"># name : string</text>
-<text text-anchor="start" x="22" y="-412.1" font-family="Verdana" font-size="8.00"># fullName : string</text>
-<text text-anchor="start" x="22" y="-399.1" font-family="Verdana" font-size="8.00"># shortDescription : MultiformatMessageString</text>
-<text text-anchor="start" x="22" y="-386.1" font-family="Verdana" font-size="8.00"># fullDescription : MultiformatMessageString</text>
-<text text-anchor="start" x="22" y="-373.1" font-family="Verdana" font-size="8.00"># downloadUri : string</text>
-<text text-anchor="start" x="22" y="-360.1" font-family="Verdana" font-size="8.00"># informationUri : string</text>
-<text text-anchor="start" x="22" y="-347.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="22" y="-425.1" font-family="Verdana" font-size="8.00"># name</text>
+<text text-anchor="start" x="22" y="-412.1" font-family="Verdana" font-size="8.00"># fullName</text>
+<text text-anchor="start" x="22" y="-399.1" font-family="Verdana" font-size="8.00"># shortDescription</text>
+<text text-anchor="start" x="22" y="-386.1" font-family="Verdana" font-size="8.00"># fullDescription</text>
+<text text-anchor="start" x="22" y="-373.1" font-family="Verdana" font-size="8.00"># downloadUri</text>
+<text text-anchor="start" x="22" y="-360.1" font-family="Verdana" font-size="8.00"># informationUri</text>
+<text text-anchor="start" x="22" y="-347.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="17,-229.5 17,-339.5 428,-339.5 428,-229.5 17,-229.5"/>
 <text text-anchor="start" x="22" y="-328.1" font-family="Verdana" font-size="8.00">+ __construct(name : string)</text>
 <text text-anchor="start" x="22" y="-315.1" font-family="Verdana" font-size="8.00">+ setName(name : string) : void</text>

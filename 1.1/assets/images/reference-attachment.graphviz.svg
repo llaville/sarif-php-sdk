@@ -31,11 +31,11 @@
 <polygon fill="none" stroke="black" points="16,-384.5 16,-406.5 378,-406.5 378,-384.5 16,-384.5"/>
 <text text-anchor="start" x="170.5" y="-390.1" font-family="Verdana" font-weight="bold" font-size="8.00">Attachment</text>
 <polygon fill="none" stroke="black" points="16,-313.5 16,-384.5 378,-384.5 378,-313.5 16,-313.5"/>
-<text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># description : Message</text>
-<text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># artifactLocation : ArtifactLocation</text>
+<text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># description</text>
+<text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># artifactLocation</text>
 <text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># regions : mixed</text>
 <text text-anchor="start" x="21" y="-334.1" font-family="Verdana" font-size="8.00"># rectangles : mixed</text>
-<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-313.5 378,-313.5 378,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-302.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-289.1" font-family="Verdana" font-size="8.00">+ setDescription(description : Bartlett\Sarif\Definition\Message) : void</text>

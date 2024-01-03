@@ -31,20 +31,20 @@
 <polygon fill="none" stroke="black" points="16,-618.5 16,-640.5 359,-640.5 359,-618.5 16,-618.5"/>
 <text text-anchor="start" x="142" y="-624.1" font-family="Verdana" font-weight="bold" font-size="8.00">ThreadFlowLocation</text>
 <polygon fill="none" stroke="black" points="16,-430.5 16,-618.5 359,-618.5 359,-430.5 16,-430.5"/>
-<text text-anchor="start" x="21" y="-607.1" font-family="Verdana" font-size="8.00"># index : int</text>
-<text text-anchor="start" x="21" y="-594.1" font-family="Verdana" font-size="8.00"># location : Location</text>
-<text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># stack : Stack</text>
+<text text-anchor="start" x="21" y="-607.1" font-family="Verdana" font-size="8.00"># index</text>
+<text text-anchor="start" x="21" y="-594.1" font-family="Verdana" font-size="8.00"># location</text>
+<text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># stack</text>
 <text text-anchor="start" x="21" y="-568.1" font-family="Verdana" font-size="8.00"># kinds : mixed</text>
 <text text-anchor="start" x="21" y="-555.1" font-family="Verdana" font-size="8.00"># taxa : mixed</text>
-<text text-anchor="start" x="21" y="-542.1" font-family="Verdana" font-size="8.00"># module : string</text>
+<text text-anchor="start" x="21" y="-542.1" font-family="Verdana" font-size="8.00"># module</text>
 <text text-anchor="start" x="21" y="-529.1" font-family="Verdana" font-size="8.00"># state : mixed</text>
-<text text-anchor="start" x="21" y="-516.1" font-family="Verdana" font-size="8.00"># nestingLevel : int</text>
-<text text-anchor="start" x="21" y="-503.1" font-family="Verdana" font-size="8.00"># executionOrder : int</text>
-<text text-anchor="start" x="21" y="-490.1" font-family="Verdana" font-size="8.00"># executionTimeUtc : string</text>
-<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># importance : string</text>
-<text text-anchor="start" x="21" y="-464.1" font-family="Verdana" font-size="8.00"># webRequest : WebRequest</text>
-<text text-anchor="start" x="21" y="-451.1" font-family="Verdana" font-size="8.00"># webResponse : WebResponse</text>
-<text text-anchor="start" x="21" y="-438.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-516.1" font-family="Verdana" font-size="8.00"># nestingLevel</text>
+<text text-anchor="start" x="21" y="-503.1" font-family="Verdana" font-size="8.00"># executionOrder</text>
+<text text-anchor="start" x="21" y="-490.1" font-family="Verdana" font-size="8.00"># executionTimeUtc</text>
+<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># importance</text>
+<text text-anchor="start" x="21" y="-464.1" font-family="Verdana" font-size="8.00"># webRequest</text>
+<text text-anchor="start" x="21" y="-451.1" font-family="Verdana" font-size="8.00"># webResponse</text>
+<text text-anchor="start" x="21" y="-438.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-430.5 359,-430.5 359,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-419.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-406.1" font-family="Verdana" font-size="8.00">+ setIndex(index : int = &#45;1) : void</text>

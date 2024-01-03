@@ -9,11 +9,11 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>SarifLog</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># schema : string</td></tr>
-    <tr><td align="left"># version : string</td></tr>
+    <tr><td align="left"># schema</td></tr>
+    <tr><td align="left"># version</td></tr>
     <tr><td align="left"># runs : mixed</td></tr>
     <tr><td align="left"># inlineExternalProperties : mixed</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(runs : array = [], version : string = '2\.1\.0')</td></tr>

@@ -31,10 +31,10 @@
 <polygon fill="none" stroke="black" points="17,-358.5 17,-380.5 412,-380.5 412,-358.5 17,-358.5"/>
 <text text-anchor="start" x="180" y="-364.1" font-family="Verdana" font-weight="bold" font-size="8.00">ArtifactChange</text>
 <polygon fill="none" stroke="black" points="17,-300.5 17,-358.5 412,-358.5 412,-300.5 17,-300.5"/>
-<text text-anchor="start" x="22" y="-347.1" font-family="Verdana" font-size="8.00"># location : ArtifactLocation</text>
-<text text-anchor="start" x="22" y="-334.1" font-family="Verdana" font-size="8.00"># artifactLocation : ArtifactLocation</text>
+<text text-anchor="start" x="22" y="-347.1" font-family="Verdana" font-size="8.00"># location</text>
+<text text-anchor="start" x="22" y="-334.1" font-family="Verdana" font-size="8.00"># artifactLocation</text>
 <text text-anchor="start" x="22" y="-321.1" font-family="Verdana" font-size="8.00"># replacements : mixed</text>
-<text text-anchor="start" x="22" y="-308.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="22" y="-308.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="17,-229.5 17,-300.5 412,-300.5 412,-229.5 17,-229.5"/>
 <text text-anchor="start" x="22" y="-289.1" font-family="Verdana" font-size="8.00">+ __construct(artifactLocation : Bartlett\Sarif\Definition\ArtifactLocation, replacements : array)</text>
 <text text-anchor="start" x="22" y="-276.1" font-family="Verdana" font-size="8.00">+ setLocation(location : Bartlett\Sarif\Definition\ArtifactLocation) : void</text>

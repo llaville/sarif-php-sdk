@@ -9,11 +9,11 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>ExternalPropertyFileReference</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># location : ArtifactLocation</td></tr>
-    <tr><td align="left"># artifactLocation : ArtifactLocation</td></tr>
-    <tr><td align="left"># guid : string</td></tr>
-    <tr><td align="left"># itemCount : int</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># location</td></tr>
+    <tr><td align="left"># artifactLocation</td></tr>
+    <tr><td align="left"># guid</td></tr>
+    <tr><td align="left"># itemCount</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(location : Bartlett\\Sarif\\Definition\\ArtifactLocation = «unknown», guid : string = '')</td></tr>

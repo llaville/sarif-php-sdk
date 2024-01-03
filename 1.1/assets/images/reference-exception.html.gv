@@ -9,11 +9,11 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>Exception</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># kind : string</td></tr>
-    <tr><td align="left"># message : string</td></tr>
-    <tr><td align="left"># stack : Stack</td></tr>
+    <tr><td align="left"># kind</td></tr>
+    <tr><td align="left"># message</td></tr>
+    <tr><td align="left"># stack</td></tr>
     <tr><td align="left"># innerExceptions : mixed</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct()</td></tr>

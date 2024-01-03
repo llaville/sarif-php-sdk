@@ -9,17 +9,17 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>Result</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># ruleId : string</td></tr>
-    <tr><td align="left"># ruleIndex : int</td></tr>
-    <tr><td align="left"># rule : ReportingDescriptorReference</td></tr>
-    <tr><td align="left"># kind : string</td></tr>
-    <tr><td align="left"># level : string</td></tr>
-    <tr><td align="left"># message : Message</td></tr>
-    <tr><td align="left"># analysisTarget : ArtifactLocation</td></tr>
+    <tr><td align="left"># ruleId</td></tr>
+    <tr><td align="left"># ruleIndex</td></tr>
+    <tr><td align="left"># rule</td></tr>
+    <tr><td align="left"># kind</td></tr>
+    <tr><td align="left"># level</td></tr>
+    <tr><td align="left"># message</td></tr>
+    <tr><td align="left"># analysisTarget</td></tr>
     <tr><td align="left"># locations : mixed</td></tr>
-    <tr><td align="left"># guid : string</td></tr>
-    <tr><td align="left"># correlationGuid : string</td></tr>
-    <tr><td align="left"># occurrenceCount : int</td></tr>
+    <tr><td align="left"># guid</td></tr>
+    <tr><td align="left"># correlationGuid</td></tr>
+    <tr><td align="left"># occurrenceCount</td></tr>
     <tr><td align="left"># partialFingerprints : mixed</td></tr>
     <tr><td align="left"># fingerprints : mixed</td></tr>
     <tr><td align="left"># stacks : mixed</td></tr>
@@ -28,17 +28,17 @@ digraph {
     <tr><td align="left"># graphTraversals : mixed</td></tr>
     <tr><td align="left"># relatedLocations : mixed</td></tr>
     <tr><td align="left"># suppressions : mixed</td></tr>
-    <tr><td align="left"># baselineState : string</td></tr>
-    <tr><td align="left"># rank : float</td></tr>
+    <tr><td align="left"># baselineState</td></tr>
+    <tr><td align="left"># rank</td></tr>
     <tr><td align="left"># attachments : mixed</td></tr>
-    <tr><td align="left"># hostedViewerUri : string</td></tr>
+    <tr><td align="left"># hostedViewerUri</td></tr>
     <tr><td align="left"># workItemUris : mixed</td></tr>
-    <tr><td align="left"># provenance : ResultProvenance</td></tr>
+    <tr><td align="left"># provenance</td></tr>
     <tr><td align="left"># fixes : mixed</td></tr>
     <tr><td align="left"># taxa : mixed</td></tr>
-    <tr><td align="left"># webRequest : WebRequest</td></tr>
-    <tr><td align="left"># webResponse : WebResponse</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># webRequest</td></tr>
+    <tr><td align="left"># webResponse</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(message : Bartlett\\Sarif\\Definition\\Message)</td></tr>

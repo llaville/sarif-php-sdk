@@ -31,10 +31,10 @@
 <polygon fill="none" stroke="black" points="16,-358.5 16,-380.5 325,-380.5 325,-358.5 16,-358.5"/>
 <text text-anchor="start" x="122.5" y="-364.1" font-family="Verdana" font-weight="bold" font-size="8.00">LocationRelationship</text>
 <polygon fill="none" stroke="black" points="16,-300.5 16,-358.5 325,-358.5 325,-300.5 16,-300.5"/>
-<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># target : int</text>
+<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># target</text>
 <text text-anchor="start" x="21" y="-334.1" font-family="Verdana" font-size="8.00"># kinds : mixed</text>
-<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># description : Message</text>
-<text text-anchor="start" x="21" y="-308.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># description</text>
+<text text-anchor="start" x="21" y="-308.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-300.5 325,-300.5 325,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-289.1" font-family="Verdana" font-size="8.00">+ __construct(target : int)</text>
 <text text-anchor="start" x="21" y="-276.1" font-family="Verdana" font-size="8.00">+ setTarget(target : int) : void</text>

@@ -31,9 +31,9 @@
 <polygon fill="none" stroke="black" points="16,-332.5 16,-354.5 325,-354.5 325,-332.5 16,-332.5"/>
 <text text-anchor="start" x="163.5" y="-338.1" font-family="Verdana" font-weight="bold" font-size="8.00">Fix</text>
 <polygon fill="none" stroke="black" points="16,-287.5 16,-332.5 325,-332.5 325,-287.5 16,-287.5"/>
-<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># description : Message</text>
+<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># description</text>
 <text text-anchor="start" x="21" y="-308.1" font-family="Verdana" font-size="8.00"># artifactChanges : mixed</text>
-<text text-anchor="start" x="21" y="-295.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-295.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-287.5 325,-287.5 325,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-276.1" font-family="Verdana" font-size="8.00">+ __construct(artifactChanges : array)</text>
 <text text-anchor="start" x="21" y="-263.1" font-family="Verdana" font-size="8.00">+ setDescription(description : Bartlett\Sarif\Definition\Message) : void</text>

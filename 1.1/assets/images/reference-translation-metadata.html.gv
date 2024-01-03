@@ -9,13 +9,13 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>TranslationMetadata</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># name : string</td></tr>
-    <tr><td align="left"># fullName : string</td></tr>
-    <tr><td align="left"># shortDescription : MultiformatMessageString</td></tr>
-    <tr><td align="left"># fullDescription : MultiformatMessageString</td></tr>
-    <tr><td align="left"># downloadUri : string</td></tr>
-    <tr><td align="left"># informationUri : string</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># name</td></tr>
+    <tr><td align="left"># fullName</td></tr>
+    <tr><td align="left"># shortDescription</td></tr>
+    <tr><td align="left"># fullDescription</td></tr>
+    <tr><td align="left"># downloadUri</td></tr>
+    <tr><td align="left"># informationUri</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(name : string)</td></tr>

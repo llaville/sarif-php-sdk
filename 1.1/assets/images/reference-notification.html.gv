@@ -10,14 +10,14 @@ digraph {
     <tr><td bgcolor="#eeeeee"><b><br/>Notification</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left"># locations : mixed</td></tr>
-    <tr><td align="left"># message : Message</td></tr>
-    <tr><td align="left"># level : string</td></tr>
-    <tr><td align="left"># threadId : int</td></tr>
-    <tr><td align="left"># timeUtc : string</td></tr>
-    <tr><td align="left"># exception : Exception</td></tr>
-    <tr><td align="left"># descriptor : ReportingDescriptorReference</td></tr>
-    <tr><td align="left"># associatedRule : ReportingDescriptorReference</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># message</td></tr>
+    <tr><td align="left"># level</td></tr>
+    <tr><td align="left"># threadId</td></tr>
+    <tr><td align="left"># timeUtc</td></tr>
+    <tr><td align="left"># exception</td></tr>
+    <tr><td align="left"># descriptor</td></tr>
+    <tr><td align="left"># associatedRule</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(message : Bartlett\\Sarif\\Definition\\Message)</td></tr>

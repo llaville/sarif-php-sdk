@@ -31,8 +31,8 @@
 <polygon fill="none" stroke="black" points="16,-306.5 16,-328.5 348,-328.5 348,-306.5 16,-306.5"/>
 <text text-anchor="start" x="144" y="-312.1" font-family="Verdana" font-weight="bold" font-size="8.00">SpecialLocations</text>
 <polygon fill="none" stroke="black" points="16,-274.5 16,-306.5 348,-306.5 348,-274.5 16,-274.5"/>
-<text text-anchor="start" x="21" y="-295.1" font-family="Verdana" font-size="8.00"># displayBase : ArtifactLocation</text>
-<text text-anchor="start" x="21" y="-282.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-295.1" font-family="Verdana" font-size="8.00"># displayBase</text>
+<text text-anchor="start" x="21" y="-282.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-274.5 348,-274.5 348,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-263.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-250.1" font-family="Verdana" font-size="8.00">+ setDisplayBase(displayBase : Bartlett\Sarif\Definition\ArtifactLocation) : void</text>

@@ -9,12 +9,12 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>ThreadFlow</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># id : string</td></tr>
-    <tr><td align="left"># message : Message</td></tr>
+    <tr><td align="left"># id</td></tr>
+    <tr><td align="left"># message</td></tr>
     <tr><td align="left"># initialState : mixed</td></tr>
     <tr><td align="left"># immutableState : mixed</td></tr>
     <tr><td align="left"># locations : mixed</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(locations : array)</td></tr>

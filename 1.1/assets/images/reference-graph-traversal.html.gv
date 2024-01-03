@@ -9,13 +9,13 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>GraphTraversal</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># runGraphIndex : int</td></tr>
-    <tr><td align="left"># resultGraphIndex : int</td></tr>
-    <tr><td align="left"># description : Message</td></tr>
+    <tr><td align="left"># runGraphIndex</td></tr>
+    <tr><td align="left"># resultGraphIndex</td></tr>
+    <tr><td align="left"># description</td></tr>
     <tr><td align="left"># initialState : mixed</td></tr>
     <tr><td align="left"># immutableState : mixed</td></tr>
     <tr><td align="left"># edgeTraversals : mixed</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(runGraphIndex : int = «unknown», resultGraphIndex : int = «unknown»)</td></tr>

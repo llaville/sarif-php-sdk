@@ -31,19 +31,19 @@
 <polygon fill="none" stroke="black" points="16,-592.5 16,-614.5 378,-614.5 378,-592.5 16,-592.5"/>
 <text text-anchor="start" x="180" y="-598.1" font-family="Verdana" font-weight="bold" font-size="8.00">Artifact</text>
 <polygon fill="none" stroke="black" points="16,-417.5 16,-592.5 378,-592.5 378,-417.5 16,-417.5"/>
-<text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># description : Message</text>
-<text text-anchor="start" x="21" y="-568.1" font-family="Verdana" font-size="8.00"># location : ArtifactLocation</text>
-<text text-anchor="start" x="21" y="-555.1" font-family="Verdana" font-size="8.00"># artifactLocation : ArtifactLocation</text>
-<text text-anchor="start" x="21" y="-542.1" font-family="Verdana" font-size="8.00"># parentIndex : int</text>
-<text text-anchor="start" x="21" y="-529.1" font-family="Verdana" font-size="8.00"># offset : int</text>
-<text text-anchor="start" x="21" y="-516.1" font-family="Verdana" font-size="8.00"># length : int</text>
+<text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># description</text>
+<text text-anchor="start" x="21" y="-568.1" font-family="Verdana" font-size="8.00"># location</text>
+<text text-anchor="start" x="21" y="-555.1" font-family="Verdana" font-size="8.00"># artifactLocation</text>
+<text text-anchor="start" x="21" y="-542.1" font-family="Verdana" font-size="8.00"># parentIndex</text>
+<text text-anchor="start" x="21" y="-529.1" font-family="Verdana" font-size="8.00"># offset</text>
+<text text-anchor="start" x="21" y="-516.1" font-family="Verdana" font-size="8.00"># length</text>
 <text text-anchor="start" x="21" y="-503.1" font-family="Verdana" font-size="8.00"># roles : mixed</text>
-<text text-anchor="start" x="21" y="-490.1" font-family="Verdana" font-size="8.00"># mimeType : string</text>
-<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># contents : ArtifactContent</text>
-<text text-anchor="start" x="21" y="-464.1" font-family="Verdana" font-size="8.00"># encoding : string</text>
-<text text-anchor="start" x="21" y="-451.1" font-family="Verdana" font-size="8.00"># sourceLanguage : string</text>
+<text text-anchor="start" x="21" y="-490.1" font-family="Verdana" font-size="8.00"># mimeType</text>
+<text text-anchor="start" x="21" y="-477.1" font-family="Verdana" font-size="8.00"># contents</text>
+<text text-anchor="start" x="21" y="-464.1" font-family="Verdana" font-size="8.00"># encoding</text>
+<text text-anchor="start" x="21" y="-451.1" font-family="Verdana" font-size="8.00"># sourceLanguage</text>
 <text text-anchor="start" x="21" y="-438.1" font-family="Verdana" font-size="8.00"># hashes : mixed</text>
-<text text-anchor="start" x="21" y="-425.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-425.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-417.5 378,-417.5 378,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-406.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-393.1" font-family="Verdana" font-size="8.00">+ setDescription(description : Bartlett\Sarif\Definition\Message) : void</text>

@@ -31,10 +31,10 @@
 <polygon fill="none" stroke="black" points="17,-358.5 17,-380.5 370,-380.5 370,-358.5 17,-358.5"/>
 <text text-anchor="start" x="158.5" y="-364.1" font-family="Verdana" font-weight="bold" font-size="8.00">ArtifactContent</text>
 <polygon fill="none" stroke="black" points="17,-300.5 17,-358.5 370,-358.5 370,-300.5 17,-300.5"/>
-<text text-anchor="start" x="22" y="-347.1" font-family="Verdana" font-size="8.00"># text : string</text>
-<text text-anchor="start" x="22" y="-334.1" font-family="Verdana" font-size="8.00"># binary : string</text>
-<text text-anchor="start" x="22" y="-321.1" font-family="Verdana" font-size="8.00"># rendered : MultiformatMessageString</text>
-<text text-anchor="start" x="22" y="-308.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="22" y="-347.1" font-family="Verdana" font-size="8.00"># text</text>
+<text text-anchor="start" x="22" y="-334.1" font-family="Verdana" font-size="8.00"># binary</text>
+<text text-anchor="start" x="22" y="-321.1" font-family="Verdana" font-size="8.00"># rendered</text>
+<text text-anchor="start" x="22" y="-308.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="17,-229.5 17,-300.5 370,-300.5 370,-229.5 17,-229.5"/>
 <text text-anchor="start" x="22" y="-289.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="22" y="-276.1" font-family="Verdana" font-size="8.00">+ setText(text : string) : void</text>

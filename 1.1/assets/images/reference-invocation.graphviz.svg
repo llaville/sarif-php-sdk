@@ -31,31 +31,31 @@
 <polygon fill="none" stroke="black" points="16,-904.5 16,-926.5 410,-926.5 410,-904.5 16,-904.5"/>
 <text text-anchor="start" x="189" y="-910.1" font-family="Verdana" font-weight="bold" font-size="8.00">Invocation</text>
 <polygon fill="none" stroke="black" points="16,-573.5 16,-904.5 410,-904.5 410,-573.5 16,-573.5"/>
-<text text-anchor="start" x="21" y="-893.1" font-family="Verdana" font-size="8.00"># commandLine : string</text>
+<text text-anchor="start" x="21" y="-893.1" font-family="Verdana" font-size="8.00"># commandLine</text>
 <text text-anchor="start" x="21" y="-880.1" font-family="Verdana" font-size="8.00"># arguments : mixed</text>
 <text text-anchor="start" x="21" y="-867.1" font-family="Verdana" font-size="8.00"># responseFiles : mixed</text>
-<text text-anchor="start" x="21" y="-854.1" font-family="Verdana" font-size="8.00"># startTimeUtc : string</text>
-<text text-anchor="start" x="21" y="-841.1" font-family="Verdana" font-size="8.00"># endTimeUtc : string</text>
-<text text-anchor="start" x="21" y="-828.1" font-family="Verdana" font-size="8.00"># exitCode : int</text>
+<text text-anchor="start" x="21" y="-854.1" font-family="Verdana" font-size="8.00"># startTimeUtc</text>
+<text text-anchor="start" x="21" y="-841.1" font-family="Verdana" font-size="8.00"># endTimeUtc</text>
+<text text-anchor="start" x="21" y="-828.1" font-family="Verdana" font-size="8.00"># exitCode</text>
 <text text-anchor="start" x="21" y="-815.1" font-family="Verdana" font-size="8.00"># ruleConfigurationOverrides : mixed</text>
 <text text-anchor="start" x="21" y="-802.1" font-family="Verdana" font-size="8.00"># notificationConfigurationOverrides : mixed</text>
 <text text-anchor="start" x="21" y="-789.1" font-family="Verdana" font-size="8.00"># toolExecutionNotifications : mixed</text>
-<text text-anchor="start" x="21" y="-776.1" font-family="Verdana" font-size="8.00"># exitCodeDescription : string</text>
-<text text-anchor="start" x="21" y="-763.1" font-family="Verdana" font-size="8.00"># exitSignalName : string</text>
-<text text-anchor="start" x="21" y="-750.1" font-family="Verdana" font-size="8.00"># exitSignalNumber : int</text>
-<text text-anchor="start" x="21" y="-737.1" font-family="Verdana" font-size="8.00"># processStartFailureMessage : string</text>
-<text text-anchor="start" x="21" y="-724.1" font-family="Verdana" font-size="8.00"># executionSuccessful : bool</text>
-<text text-anchor="start" x="21" y="-711.1" font-family="Verdana" font-size="8.00"># machine : string</text>
-<text text-anchor="start" x="21" y="-698.1" font-family="Verdana" font-size="8.00"># account : string</text>
-<text text-anchor="start" x="21" y="-685.1" font-family="Verdana" font-size="8.00"># processId : int</text>
-<text text-anchor="start" x="21" y="-672.1" font-family="Verdana" font-size="8.00"># executableLocation : ArtifactLocation</text>
-<text text-anchor="start" x="21" y="-659.1" font-family="Verdana" font-size="8.00"># workingDirectory : ArtifactLocation</text>
+<text text-anchor="start" x="21" y="-776.1" font-family="Verdana" font-size="8.00"># exitCodeDescription</text>
+<text text-anchor="start" x="21" y="-763.1" font-family="Verdana" font-size="8.00"># exitSignalName</text>
+<text text-anchor="start" x="21" y="-750.1" font-family="Verdana" font-size="8.00"># exitSignalNumber</text>
+<text text-anchor="start" x="21" y="-737.1" font-family="Verdana" font-size="8.00"># processStartFailureMessage</text>
+<text text-anchor="start" x="21" y="-724.1" font-family="Verdana" font-size="8.00"># executionSuccessful</text>
+<text text-anchor="start" x="21" y="-711.1" font-family="Verdana" font-size="8.00"># machine</text>
+<text text-anchor="start" x="21" y="-698.1" font-family="Verdana" font-size="8.00"># account</text>
+<text text-anchor="start" x="21" y="-685.1" font-family="Verdana" font-size="8.00"># processId</text>
+<text text-anchor="start" x="21" y="-672.1" font-family="Verdana" font-size="8.00"># executableLocation</text>
+<text text-anchor="start" x="21" y="-659.1" font-family="Verdana" font-size="8.00"># workingDirectory</text>
 <text text-anchor="start" x="21" y="-646.1" font-family="Verdana" font-size="8.00"># environmentVariables : mixed</text>
-<text text-anchor="start" x="21" y="-633.1" font-family="Verdana" font-size="8.00"># stdin : ArtifactLocation</text>
-<text text-anchor="start" x="21" y="-620.1" font-family="Verdana" font-size="8.00"># stdout : ArtifactLocation</text>
-<text text-anchor="start" x="21" y="-607.1" font-family="Verdana" font-size="8.00"># stderr : ArtifactLocation</text>
-<text text-anchor="start" x="21" y="-594.1" font-family="Verdana" font-size="8.00"># stdoutStderr : ArtifactLocation</text>
-<text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-633.1" font-family="Verdana" font-size="8.00"># stdin</text>
+<text text-anchor="start" x="21" y="-620.1" font-family="Verdana" font-size="8.00"># stdout</text>
+<text text-anchor="start" x="21" y="-607.1" font-family="Verdana" font-size="8.00"># stderr</text>
+<text text-anchor="start" x="21" y="-594.1" font-family="Verdana" font-size="8.00"># stdoutStderr</text>
+<text text-anchor="start" x="21" y="-581.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-573.5 410,-573.5 410,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-562.1" font-family="Verdana" font-size="8.00">+ __construct(executionSuccessful : bool)</text>
 <text text-anchor="start" x="21" y="-549.1" font-family="Verdana" font-size="8.00">+ setCommandLine(commandLine : string) : void</text>

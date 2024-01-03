@@ -9,10 +9,10 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>ArtifactContent</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># text : string</td></tr>
-    <tr><td align="left"># binary : string</td></tr>
-    <tr><td align="left"># rendered : MultiformatMessageString</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># text</td></tr>
+    <tr><td align="left"># binary</td></tr>
+    <tr><td align="left"># rendered</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct()</td></tr>

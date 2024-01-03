@@ -31,13 +31,13 @@
 <polygon fill="none" stroke="black" points="16,-436.5 16,-458.5 325,-458.5 325,-436.5 16,-436.5"/>
 <text text-anchor="start" x="135" y="-442.1" font-family="Verdana" font-weight="bold" font-size="8.00">LogicalLocation</text>
 <polygon fill="none" stroke="black" points="16,-339.5 16,-436.5 325,-436.5 325,-339.5 16,-339.5"/>
-<text text-anchor="start" x="21" y="-425.1" font-family="Verdana" font-size="8.00"># name : string</text>
-<text text-anchor="start" x="21" y="-412.1" font-family="Verdana" font-size="8.00"># index : int</text>
-<text text-anchor="start" x="21" y="-399.1" font-family="Verdana" font-size="8.00"># fullyQualifiedName : string</text>
-<text text-anchor="start" x="21" y="-386.1" font-family="Verdana" font-size="8.00"># decoratedName : string</text>
-<text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># parentIndex : int</text>
-<text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># kind : string</text>
-<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-425.1" font-family="Verdana" font-size="8.00"># name</text>
+<text text-anchor="start" x="21" y="-412.1" font-family="Verdana" font-size="8.00"># index</text>
+<text text-anchor="start" x="21" y="-399.1" font-family="Verdana" font-size="8.00"># fullyQualifiedName</text>
+<text text-anchor="start" x="21" y="-386.1" font-family="Verdana" font-size="8.00"># decoratedName</text>
+<text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># parentIndex</text>
+<text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># kind</text>
+<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-339.5 325,-339.5 325,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-328.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-315.1" font-family="Verdana" font-size="8.00">+ setName(name : string) : void</text>

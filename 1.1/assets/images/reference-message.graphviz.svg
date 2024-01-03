@@ -31,11 +31,11 @@
 <polygon fill="none" stroke="black" points="16,-384.5 16,-406.5 325,-406.5 325,-384.5 16,-384.5"/>
 <text text-anchor="start" x="150.5" y="-390.1" font-family="Verdana" font-weight="bold" font-size="8.00">Message</text>
 <polygon fill="none" stroke="black" points="16,-313.5 16,-384.5 325,-384.5 325,-313.5 16,-313.5"/>
-<text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># text : string</text>
-<text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># markdown : string</text>
-<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># id : string</text>
+<text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># text</text>
+<text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># markdown</text>
+<text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># id</text>
 <text text-anchor="start" x="21" y="-334.1" font-family="Verdana" font-size="8.00"># arguments : mixed</text>
-<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># properties : PropertyBag</text>
+<text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-313.5 325,-313.5 325,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-302.1" font-family="Verdana" font-size="8.00">+ __construct(text : string = &#39;&#39;, id : string = &#39;&#39;)</text>
 <text text-anchor="start" x="21" y="-289.1" font-family="Verdana" font-size="8.00">+ setText(text : string) : void</text>

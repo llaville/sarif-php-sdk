@@ -9,25 +9,25 @@ digraph {
 <table cellspacing="0" border="0" cellborder="1">
     <tr><td bgcolor="#eeeeee"><b><br/>Run</b></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left"># tool : Tool</td></tr>
+    <tr><td align="left"># tool</td></tr>
     <tr><td align="left"># invocations : mixed</td></tr>
-    <tr><td align="left"># conversion : Conversion</td></tr>
-    <tr><td align="left"># language : string</td></tr>
+    <tr><td align="left"># conversion</td></tr>
+    <tr><td align="left"># language</td></tr>
     <tr><td align="left"># versionControlProvenance : mixed</td></tr>
     <tr><td align="left"># originalUriBaseIds : mixed</td></tr>
     <tr><td align="left"># artifacts : mixed</td></tr>
     <tr><td align="left"># logicalLocations : mixed</td></tr>
     <tr><td align="left"># graphs : mixed</td></tr>
     <tr><td align="left"># results : mixed</td></tr>
-    <tr><td align="left"># automationDetails : RunAutomationDetails</td></tr>
-    <tr><td align="left"># runAggregates : RunAutomationDetails</td></tr>
-    <tr><td align="left"># baselineGuid : string</td></tr>
+    <tr><td align="left"># automationDetails</td></tr>
+    <tr><td align="left"># runAggregates</td></tr>
+    <tr><td align="left"># baselineGuid</td></tr>
     <tr><td align="left"># redactionTokens : mixed</td></tr>
-    <tr><td align="left"># defaultEncoding : string</td></tr>
-    <tr><td align="left"># defaultSourceLanguage : string</td></tr>
+    <tr><td align="left"># defaultEncoding</td></tr>
+    <tr><td align="left"># defaultSourceLanguage</td></tr>
     <tr><td align="left"># newlineSequences : mixed</td></tr>
-    <tr><td align="left"># columnKind : string</td></tr>
-    <tr><td align="left"># externalPropertyFileReferences : ExternalPropertyFileReferences</td></tr>
+    <tr><td align="left"># columnKind</td></tr>
+    <tr><td align="left"># externalPropertyFileReferences</td></tr>
     <tr><td align="left"># locations : mixed</td></tr>
     <tr><td align="left"># taxonomies : mixed</td></tr>
     <tr><td align="left"># addresses : mixed</td></tr>
@@ -35,8 +35,8 @@ digraph {
     <tr><td align="left"># policies : mixed</td></tr>
     <tr><td align="left"># webRequests : mixed</td></tr>
     <tr><td align="left"># webResponses : mixed</td></tr>
-    <tr><td align="left"># specialLocations : SpecialLocations</td></tr>
-    <tr><td align="left"># properties : PropertyBag</td></tr>
+    <tr><td align="left"># specialLocations</td></tr>
+    <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
     <tr><td align="left">+ __construct(tool : Bartlett\\Sarif\\Definition\\Tool)</td></tr>
