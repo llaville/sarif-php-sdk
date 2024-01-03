@@ -15,28 +15,18 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
  */
 trait LocationArtifact
 {
-    /**
-     * @var ArtifactLocation
-     */
-    protected $location;
+    protected ArtifactLocation $location;
 
     /**
      * Alias for PhysicalLocation definition
-     * @var ArtifactLocation
      */
-    protected $artifactLocation;
+    protected ArtifactLocation $artifactLocation;
 
-    /**
-     * @param ArtifactLocation $location
-     */
     public function setLocation(ArtifactLocation $location): void
     {
         $this->location = $location;
     }
 
-    /**
-     * @param ArtifactLocation $artifactLocation
-     */
     public function setArtifactLocation(ArtifactLocation $artifactLocation): void
     {
         $this->artifactLocation = $artifactLocation;

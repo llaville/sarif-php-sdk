@@ -15,14 +15,8 @@ use DomainException;
  */
 trait Rank
 {
-    /**
-     * @var float
-     */
-    protected $rank;
+    protected float $rank;
 
-    /**
-     * @param float $rank
-     */
     public function setRank(float $rank = -1): void
     {
         if ($rank < -1) {

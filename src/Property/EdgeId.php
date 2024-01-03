@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait EdgeId
 {
-    /**
-     * @var string
-     */
-    protected $edgeId;
+    protected string $edgeId;
 
-    /**
-     * @param string $edgeId
-     */
     public function setEdgeId(string $edgeId): void
     {
         $this->edgeId = $edgeId;

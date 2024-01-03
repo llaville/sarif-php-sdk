@@ -16,14 +16,8 @@ use function in_array;
  */
 trait Importance
 {
-    /**
-     * @var string
-     */
-    protected $importance;
+    protected string $importance;
 
-    /**
-     * @param string $importance
-     */
     public function setImportance(string $importance = 'important'): void
     {
         $enum = ["essential", "important", "unimportant"];

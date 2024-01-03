@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait FullyQualifiedName
 {
-    /**
-     * @var string
-     */
-    protected $fullyQualifiedName;
+    protected string $fullyQualifiedName;
 
-    /**
-     * @param string $fullyQualifiedName
-     */
     public function setFullyQualifiedName(string $fullyQualifiedName): void
     {
         $this->fullyQualifiedName = $fullyQualifiedName;

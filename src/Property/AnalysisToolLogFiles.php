@@ -18,7 +18,7 @@ trait AnalysisToolLogFiles
     /**
      * @var ArtifactLocation[]
      */
-    protected $analysisToolLogFiles;
+    protected array $analysisToolLogFiles;
 
     /**
      * @param ArtifactLocation[] $analysisToolLogFiles

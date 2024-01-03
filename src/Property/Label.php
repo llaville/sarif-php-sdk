@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Message;
  */
 trait Label
 {
-    /**
-     * @var Message
-     */
-    protected $label;
+    protected Message $label;
 
-    /**
-     * @param Message $label
-     */
     public function setLabel(Message $label): void
     {
         $this->label = $label;

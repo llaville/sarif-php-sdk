@@ -15,14 +15,8 @@ use DomainException;
  */
 trait IdLocation
 {
-    /**
-     * @var int
-     */
-    protected $id;
+    protected int $id;
 
-    /**
-     * @param int $id
-     */
     public function setId(int $id = -1): void
     {
         if ($id < -1) {

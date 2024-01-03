@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ReasonPhrase
 {
-    /**
-     * @var string
-     */
-    protected $reasonPhrase;
+    protected string $reasonPhrase;
 
-    /**
-     * @param string $reasonPhrase
-     */
     public function setReasonPhrase(string $reasonPhrase): void
     {
         $this->reasonPhrase = $reasonPhrase;

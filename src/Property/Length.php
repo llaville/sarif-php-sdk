@@ -15,14 +15,8 @@ use DomainException;
  */
 trait Length
 {
-    /**
-     * @var int
-     */
-    protected $length;
+    protected int $length;
 
-    /**
-     * @param int $length
-     */
     public function setLength(int $length = -1): void
     {
         if ($length < -1) {

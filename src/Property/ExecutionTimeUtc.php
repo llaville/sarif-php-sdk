@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ExecutionTimeUtc
 {
-    /**
-     * @var string format date_time
-     */
-    protected $executionTimeUtc;
+    protected string $executionTimeUtc;
 
-    /**
-     * @param string $executionTimeUtc
-     */
     public function setExecutionTimeUtc(string $executionTimeUtc): void
     {
         $this->executionTimeUtc = $executionTimeUtc;

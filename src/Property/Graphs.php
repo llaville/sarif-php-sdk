@@ -18,7 +18,7 @@ trait Graphs
     /**
      * @var Graph[]
      */
-    protected $graphs;
+    protected array $graphs;
 
     /**
      * @param Graph[] $graphs

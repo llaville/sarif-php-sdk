@@ -20,7 +20,7 @@ trait NotificationConfigurationOverrides
     /**
      * @var ConfigurationOverride[]
      */
-    protected $notificationConfigurationOverrides;
+    protected array $notificationConfigurationOverrides;
 
     /**
      * @param ConfigurationOverride[] $notificationConfigurationOverrides

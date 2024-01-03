@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Binary
 {
-    /**
-     * @var string
-     */
-    protected $binary;
+    protected string $binary;
 
-    /**
-     * @param string $binary
-     */
     public function setBinary(string $binary): void
     {
         $this->binary = $binary;

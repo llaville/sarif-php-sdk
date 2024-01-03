@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Bottom
 {
-    /**
-     * @var float
-     */
-    protected $bottom;
+    protected float $bottom;
 
-    /**
-     * @param float $bottom
-     */
     public function setBottom(float $bottom): void
     {
         $this->bottom = $bottom;

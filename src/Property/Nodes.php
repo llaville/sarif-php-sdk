@@ -18,7 +18,7 @@ trait Nodes
     /**
      * @var Node[]
      */
-    protected $nodes;
+    protected array $nodes;
 
     /**
      * @param Node[] $nodes

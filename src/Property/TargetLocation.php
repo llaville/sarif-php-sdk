@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait TargetLocation
 {
-    /**
-     * @var int
-     */
-    protected $target;
+    protected int $target;
 
-    /**
-     * @param int $target
-     */
     public function setTarget(int $target): void
     {
         $this->target = $target;

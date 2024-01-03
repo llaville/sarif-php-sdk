@@ -18,7 +18,7 @@ trait ImmutableState
     /**
      * @var array<string, MultiformatMessageString>
      */
-    protected $immutableState;
+    protected array $immutableState;
 
     /**
      * @param array<string, MultiformatMessageString> $additionalProperties

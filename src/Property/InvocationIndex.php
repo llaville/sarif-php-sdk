@@ -15,14 +15,8 @@ use DomainException;
  */
 trait InvocationIndex
 {
-    /**
-     * @var int
-     */
-    protected $invocationIndex;
+    protected int $invocationIndex;
 
-    /**
-     * @param int $invocationIndex
-     */
     public function setInvocationIndex(int $invocationIndex = -1): void
     {
         if ($invocationIndex < -1) {

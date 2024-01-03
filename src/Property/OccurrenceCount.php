@@ -15,14 +15,8 @@ use DomainException;
  */
 trait OccurrenceCount
 {
-    /**
-     * @var int
-     */
-    protected $occurrenceCount;
+    protected int $occurrenceCount;
 
-    /**
-     * @param int $occurrenceCount
-     */
     public function setOccurrenceCount(int $occurrenceCount): void
     {
         if ($occurrenceCount < 1) {

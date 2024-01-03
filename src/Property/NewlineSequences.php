@@ -18,7 +18,7 @@ trait NewlineSequences
     /**
      * @var string[]
      */
-    protected $newlineSequences;
+    protected array $newlineSequences;
 
     /**
      * @param string[] $newlineSequences

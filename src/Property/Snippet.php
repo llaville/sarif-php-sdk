@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactContent;
  */
 trait Snippet
 {
-    /**
-     * @var ArtifactContent
-     */
-    protected $snippet;
+    protected ArtifactContent $snippet;
 
-    /**
-     * @param ArtifactContent $snippet
-     */
     public function setSnippet(ArtifactContent $snippet): void
     {
         $this->snippet = $snippet;

@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Location;
  */
 trait CodeLocation
 {
-    /**
-     * @var Location
-     */
-    protected $location;
+    protected Location $location;
 
-    /**
-     * @param Location $location
-     */
     public function setLocation(Location $location): void
     {
         $this->location = $location;

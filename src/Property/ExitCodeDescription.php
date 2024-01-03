@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ExitCodeDescription
 {
-    /**
-     * @var string
-     */
-    protected $exitCodeDescription;
+    protected string $exitCodeDescription;
 
-    /**
-     * @param string $exitCodeDescription
-     */
     public function setExitCodeDescription(string $exitCodeDescription): void
     {
         $this->exitCodeDescription = $exitCodeDescription;

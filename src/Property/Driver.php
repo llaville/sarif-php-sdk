@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ToolComponent;
  */
 trait Driver
 {
-    /**
-     * @var ToolComponent
-     */
-    protected $driver;
+    protected ToolComponent $driver;
 
-    /**
-     * @param ToolComponent $driver
-     */
     public function setDriver(ToolComponent $driver): void
     {
         $this->driver = $driver;

@@ -18,7 +18,7 @@ trait PartialFingerprints
     /**
      * @var string[]
      */
-    protected $partialFingerprints;
+    protected array $partialFingerprints;
 
     /**
      * @param string[] $partialFingerprints

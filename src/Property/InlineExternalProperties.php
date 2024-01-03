@@ -18,7 +18,7 @@ trait InlineExternalProperties
     /**
      * @var ExternalProperties[]
      */
-    protected $inlineExternalProperties;
+    protected array $inlineExternalProperties;
 
     /**
      * @param ExternalProperties[] $items

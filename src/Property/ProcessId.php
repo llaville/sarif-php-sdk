@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ProcessId
 {
-    /**
-     * @var int
-     */
-    protected $processId;
+    protected int $processId;
 
-    /**
-     * @param int $processId
-     */
     public function setProcessId(int $processId): void
     {
         $this->processId = $processId;

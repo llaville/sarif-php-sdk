@@ -20,7 +20,7 @@ trait OriginalUriBaseIds
     /**
      * @var array<string, ArtifactLocation>
      */
-    protected $originalUriBaseIds;
+    protected array $originalUriBaseIds;
 
     /**
      * @param array<string, ArtifactLocation> $additionalProperties

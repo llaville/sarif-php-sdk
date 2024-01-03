@@ -18,7 +18,7 @@ trait CodeFlows
     /**
      * @var CodeFlow[]
      */
-    protected $codeFlows;
+    protected array $codeFlows;
 
     /**
      * @param CodeFlow[] $codeFlows

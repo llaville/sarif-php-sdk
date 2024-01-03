@@ -18,7 +18,7 @@ trait Parameters
     /**
      * @var string[]
      */
-    protected $parameters;
+    protected array $parameters;
 
     /**
      * @param string[] $parameters

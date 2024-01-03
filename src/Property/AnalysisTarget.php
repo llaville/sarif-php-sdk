@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
  */
 trait AnalysisTarget
 {
-    /**
-     * @var ArtifactLocation
-     */
-    protected $analysisTarget;
+    protected ArtifactLocation $analysisTarget;
 
-    /**
-     * @param ArtifactLocation $analysisTarget
-     */
     public function setAnalysisTarget(ArtifactLocation $analysisTarget): void
     {
         $this->analysisTarget = $analysisTarget;

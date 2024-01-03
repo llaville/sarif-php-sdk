@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait StartLine
 {
-    /**
-     * @var int
-     */
-    protected $startLine;
+    protected int $startLine;
 
-    /**
-     * @param int $startLine
-     */
     public function setStartLine(int $startLine): void
     {
         $this->startLine = $startLine;

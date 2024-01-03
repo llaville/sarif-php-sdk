@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ReportingDescriptorReference;
  */
 trait AssociatedRule
 {
-    /**
-     * @var ReportingDescriptorReference
-     */
-    protected $associatedRule;
+    protected ReportingDescriptorReference $associatedRule;
 
-    /**
-     * @param ReportingDescriptorReference $associatedRule
-     */
     public function setAssociatedRule(ReportingDescriptorReference $associatedRule): void
     {
         $this->associatedRule = $associatedRule;

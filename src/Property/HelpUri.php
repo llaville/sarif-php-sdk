@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait HelpUri
 {
-    /**
-     * @var string
-     */
-    protected $helpUri;
+    protected string $helpUri;
 
-    /**
-     * @param string $helpUri
-     */
     public function setHelpUri(string $helpUri): void
     {
         $this->helpUri = $helpUri;

@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Address;
  */
 trait AddressLocation
 {
-    /**
-     * @var Address;
-     */
-    protected $address;
+    protected Address $address;
 
-    /**
-     * @param Address $address
-     */
     public function setAddress(Address $address): void
     {
         $this->address = $address;

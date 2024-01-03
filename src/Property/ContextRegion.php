@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Region;
  */
 trait ContextRegion
 {
-    /**
-     * @var Region
-     */
-    protected $contextRegion;
+    protected Region $contextRegion;
 
-    /**
-     * @param Region $contextRegion
-     */
     public function setContextRegion(Region $contextRegion): void
     {
         $this->contextRegion = $contextRegion;

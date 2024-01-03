@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait RepositoryUri
 {
-    /**
-     * @var string format uri
-     */
-    protected $repositoryUri;
+    protected string $repositoryUri;
 
-    /**
-     * @param string $repositoryUri
-     */
     public function setRepositoryUri(string $repositoryUri): void
     {
         $this->repositoryUri = $repositoryUri;

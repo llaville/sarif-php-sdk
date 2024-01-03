@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ResultProvenance;
  */
 trait Provenance
 {
-    /**
-     * @var ResultProvenance
-     */
-    protected $provenance;
+    protected ResultProvenance $provenance;
 
-    /**
-     * @param ResultProvenance $provenance
-     */
     public function setProvenance(ResultProvenance $provenance): void
     {
         $this->provenance = $provenance;

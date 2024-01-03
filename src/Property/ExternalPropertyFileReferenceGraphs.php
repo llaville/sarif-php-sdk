@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceGraphs
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $graphs;
+    protected array $graphs;
 
     /**
      * @param ExternalPropertyFileReference[] $graphs

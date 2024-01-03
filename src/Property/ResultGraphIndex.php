@@ -15,14 +15,8 @@ use DomainException;
  */
 trait ResultGraphIndex
 {
-    /**
-     * @var int
-     */
-    protected $resultGraphIndex;
+    protected int $resultGraphIndex;
 
-    /**
-     * @param int $resultGraphIndex
-     */
     public function setResultGraphIndex(int $resultGraphIndex = -1): void
     {
         if ($resultGraphIndex < -1) {

@@ -18,7 +18,7 @@ trait Notifications
     /**
      * @var ReportingDescriptor[]
      */
-    protected $notifications;
+    protected array $notifications;
 
     /**
      * @param ReportingDescriptor[] $notifications

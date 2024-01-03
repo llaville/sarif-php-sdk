@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
  */
 trait ExecutableLocation
 {
-    /**
-     * @var ArtifactLocation
-     */
-    protected $executableLocation;
+    protected ArtifactLocation $executableLocation;
 
-    /**
-     * @param ArtifactLocation $executableLocation
-     */
     public function setExecutableLocation(ArtifactLocation $executableLocation): void
     {
         $this->executableLocation = $executableLocation;

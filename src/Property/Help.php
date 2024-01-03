@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\MultiformatMessageString;
  */
 trait Help
 {
-    /**
-     * @var MultiformatMessageString
-     */
-    protected $help;
+    protected MultiformatMessageString $help;
 
-    /**
-     * @param MultiformatMessageString $help
-     */
     public function setHelp(MultiformatMessageString $help): void
     {
         $this->help = $help;

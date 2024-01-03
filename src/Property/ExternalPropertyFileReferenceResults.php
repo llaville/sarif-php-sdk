@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceResults
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $results;
+    protected array $results;
 
     /**
      * @param ExternalPropertyFileReference[] $results

@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Product
 {
-    /**
-     * @var string
-     */
-    protected $product;
+    protected string $product;
 
-    /**
-     * @param string $product
-     */
     public function setProduct(string $product): void
     {
         $this->product = $product;

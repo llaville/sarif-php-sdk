@@ -16,14 +16,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait EndTimeUtc
 {
-    /**
-     * @var string format date-time
-     */
-    protected $endTimeUtc;
+    protected string $endTimeUtc;
 
-    /**
-     * @param string $endTimeUtc
-     */
     public function setEndTimeUtc(string $endTimeUtc): void
     {
         $this->endTimeUtc = $endTimeUtc;

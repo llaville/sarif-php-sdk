@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\WebResponse;
  */
 trait WebResponseDetails
 {
-    /**
-     * @var WebResponse
-     */
-    protected $webResponse;
+    protected WebResponse $webResponse;
 
-    /**
-     * @param WebResponse $webResponse
-     */
     public function setWebResponse(WebResponse $webResponse): void
     {
         $this->webResponse = $webResponse;

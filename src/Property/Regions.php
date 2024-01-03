@@ -18,7 +18,7 @@ trait Regions
     /**
      * @var Region[]
      */
-    protected $regions;
+    protected array $regions;
 
     /**
      * @param Region[] $regions

@@ -15,14 +15,8 @@ use DomainException;
  */
 trait Offset
 {
-    /**
-     * @var int
-     */
-    protected $offset;
+    protected int $offset;
 
-    /**
-     * @param int $offset
-     */
     public function setOffset(int $offset): void
     {
         if ($offset < 0) {

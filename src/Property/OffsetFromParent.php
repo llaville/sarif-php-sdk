@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait OffsetFromParent
 {
-    /**
-     * @var int
-     */
-    protected $offsetFromParent;
+    protected int $offsetFromParent;
 
-    /**
-     * @param int $offsetFromParent
-     */
     public function setOffsetFromParent(int $offsetFromParent): void
     {
         $this->offsetFromParent = $offsetFromParent;

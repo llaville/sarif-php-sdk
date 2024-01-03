@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait SourceNodeId
 {
-    /**
-     * @var string
-     */
-    protected $sourceNodeId;
+    protected string $sourceNodeId;
 
-    /**
-     * @param string $sourceNodeId
-     */
     public function setSourceNodeId(string $sourceNodeId): void
     {
         $this->sourceNodeId = $sourceNodeId;

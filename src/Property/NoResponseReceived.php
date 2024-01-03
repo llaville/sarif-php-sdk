@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait NoResponseReceived
 {
-    /**
-     * @var bool
-     */
-    protected $noResponseReceived;
+    protected bool $noResponseReceived;
 
-    /**
-     * @param bool $noResponseReceived
-     */
     public function setNoResponseReceived(bool $noResponseReceived = false): void
     {
         $this->noResponseReceived = $noResponseReceived;

@@ -15,14 +15,8 @@ use DomainException;
  */
 trait AbsoluteAddress
 {
-    /**
-     * @var int
-     */
-    protected $absoluteAddress;
+    protected int $absoluteAddress;
 
-    /**
-     * @param int $absoluteAddress
-     */
     public function setAbsoluteAddress(int $absoluteAddress = -1): void
     {
         if ($absoluteAddress < -1) {

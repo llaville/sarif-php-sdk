@@ -18,7 +18,7 @@ trait Invocations
     /**
      * @var Invocation[]
      */
-    protected $invocations;
+    protected array $invocations;
 
     /**
      * @param Invocation[] $invocations

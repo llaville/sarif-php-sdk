@@ -18,7 +18,7 @@ trait Attachments
     /**
      * @var Attachment[]
      */
-    protected $attachments;
+    protected array $attachments;
 
     /**
      * @param Attachment[] $attachments

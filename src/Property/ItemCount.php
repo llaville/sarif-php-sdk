@@ -15,14 +15,8 @@ use DomainException;
  */
 trait ItemCount
 {
-    /**
-     * @var int
-     */
-    protected $itemCount;
+    protected int $itemCount;
 
-    /**
-     * @param int $itemCount
-     */
     public function setItemCount(int $itemCount = -1): void
     {
         if ($itemCount < -1) {

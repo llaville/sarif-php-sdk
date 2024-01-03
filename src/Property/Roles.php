@@ -19,7 +19,7 @@ trait Roles
     /**
      * @var string[]
      */
-    protected $roles;
+    protected array $roles;
 
     /**
      * @param string[] $roles

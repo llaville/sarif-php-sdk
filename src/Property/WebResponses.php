@@ -18,7 +18,7 @@ trait WebResponses
     /**
      * @var WebResponse[];
      */
-    protected $webResponses;
+    protected array $webResponses;
 
     /**
      * @param WebResponse[] $webResponses

@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ExternalPropertyFileReference;
  */
 trait ExternalPropertyFileReferenceProperties
 {
-    /**
-     * @var ExternalPropertyFileReference
-     */
-    protected $externalizedProperties;
+    protected ExternalPropertyFileReference $externalizedProperties;
 
-    /**
-     * @param ExternalPropertyFileReference $externalizedProperties
-     */
     public function setExternalizedProperties(ExternalPropertyFileReference $externalizedProperties): void
     {
         $this->externalizedProperties = $externalizedProperties;

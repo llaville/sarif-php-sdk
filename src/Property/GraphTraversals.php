@@ -18,7 +18,7 @@ trait GraphTraversals
     /**
      * @var GraphTraversal[]
      */
-    protected $graphTraversals;
+    protected array $graphTraversals;
 
     /**
      * @param GraphTraversal[] $graphTraversals

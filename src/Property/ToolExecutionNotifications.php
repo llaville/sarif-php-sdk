@@ -18,7 +18,7 @@ trait ToolExecutionNotifications
     /**
      * @var Notification[]
      */
-    protected $toolExecutionNotifications;
+    protected array $toolExecutionNotifications;
 
     /**
      * @param Notification[] $toolExecutionNotifications

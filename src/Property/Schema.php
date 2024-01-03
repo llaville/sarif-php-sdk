@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Schema
 {
-    /**
-     * @var string
-     */
-    protected $schema;
+    protected string $schema;
 
-    /**
-     * @param string $schema
-     */
     public function setSchema(string $schema): void
     {
         $this->schema = $schema;

@@ -15,14 +15,8 @@ use DomainException;
  */
 trait Index
 {
-    /**
-     * @var int
-     */
-    protected $index;
+    protected int $index;
 
-    /**
-     * @param int $index
-     */
     public function setIndex(int $index = -1): void
     {
         if ($index < -1) {

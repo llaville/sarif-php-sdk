@@ -19,7 +19,7 @@ trait DeprecatedGuids
     /**
      * @var string[]
      */
-    protected $deprecatedGuids;
+    protected array $deprecatedGuids;
 
     /**
      * @param string[] $deprecatedGuids

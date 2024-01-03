@@ -18,7 +18,7 @@ trait Frames
     /**
      * @var StackFrame[]
      */
-    protected $frames;
+    protected array $frames;
 
     /**
      * @param StackFrame[] $frames

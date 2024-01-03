@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceTranslations
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $translations;
+    protected array $translations;
 
     /**
      * @param ExternalPropertyFileReference[] $translations

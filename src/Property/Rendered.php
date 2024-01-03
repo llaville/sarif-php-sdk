@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\MultiformatMessageString;
  */
 trait Rendered
 {
-    /**
-     * @var MultiformatMessageString
-     */
-    protected $rendered;
+    protected MultiformatMessageString $rendered;
 
-    /**
-     * @param MultiformatMessageString $rendered
-     */
     public function setRendered(MultiformatMessageString $rendered): void
     {
         $this->rendered = $rendered;

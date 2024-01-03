@@ -63,7 +63,6 @@ final class SarifLog extends JsonSerializable
 
     /**
      * @param Run[] $runs
-     * @param string $version
      */
     public function __construct(array $runs = [], string $version = '2.1.0')
     {
@@ -84,9 +83,6 @@ final class SarifLog extends JsonSerializable
         $this->optional = ['inlineExternalProperties'];
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         try {

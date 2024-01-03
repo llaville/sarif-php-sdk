@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceResponses
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $webResponses;
+    protected array $webResponses;
 
     /**
      * @param ExternalPropertyFileReference[] $webResponses

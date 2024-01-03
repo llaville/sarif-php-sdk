@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait DefaultSourceLanguage
 {
-    /**
-     * @var string
-     */
-    protected $defaultSourceLanguage;
+    protected string $defaultSourceLanguage;
 
-    /**
-     * @param string $defaultSourceLanguage
-     */
     public function setDefaultSourceLanguage(string $defaultSourceLanguage): void
     {
         $this->defaultSourceLanguage = $defaultSourceLanguage;

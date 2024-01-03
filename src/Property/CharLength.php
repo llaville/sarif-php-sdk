@@ -15,14 +15,8 @@ use DomainException;
  */
 trait CharLength
 {
-    /**
-     * @var int
-     */
-    protected $charLength;
+    protected int $charLength;
 
-    /**
-     * @param int $charLength
-     */
     public function setCharLength(int $charLength): void
     {
         if ($charLength < 0) {

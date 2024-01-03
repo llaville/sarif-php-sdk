@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceExtensions
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $extensions;
+    protected array $extensions;
 
     /**
      * @param ExternalPropertyFileReference[] $extensions

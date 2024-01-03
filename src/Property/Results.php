@@ -18,7 +18,7 @@ trait Results
     /**
      * @var Result[]
      */
-    protected $results;
+    protected array $results;
 
     /**
      * @param Result[] $results

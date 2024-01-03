@@ -18,7 +18,7 @@ trait MessageStrings
     /**
      * @var array<string, MultiformatMessageString>
      */
-    protected $messageStrings;
+    protected array $messageStrings;
 
     /**
      * @param array<string, MultiformatMessageString> $messageStrings

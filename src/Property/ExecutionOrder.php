@@ -15,14 +15,8 @@ use DomainException;
  */
 trait ExecutionOrder
 {
-    /**
-     * @var int
-     */
-    protected $executionOrder;
+    protected int $executionOrder;
 
-    /**
-     * @param int $executionOrder
-     */
     public function setExecutionOrder(int $executionOrder = -1): void
     {
         if ($executionOrder < -1) {

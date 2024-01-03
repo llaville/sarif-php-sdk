@@ -18,7 +18,7 @@ trait Kinds
     /**
      * @var string[]
      */
-    protected $kinds;
+    protected array $kinds;
 
     /**
      * @param string[] $kinds

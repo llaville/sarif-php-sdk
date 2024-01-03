@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
  */
 trait WorkingDirectory
 {
-    /**
-     * @var ArtifactLocation
-     */
-    protected $workingDirectory;
+    protected ArtifactLocation $workingDirectory;
 
-    /**
-     * @param ArtifactLocation $workingDirectory
-     */
     public function setWorkingDirectory(ArtifactLocation $workingDirectory): void
     {
         $this->workingDirectory = $workingDirectory;

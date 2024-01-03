@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ExitCode
 {
-    /**
-     * @var int
-     */
-    protected $exitCode;
+    protected int $exitCode;
 
-    /**
-     * @param int $exitCode
-     */
     public function setExitCode(int $exitCode): void
     {
         $this->exitCode = $exitCode;

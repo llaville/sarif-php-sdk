@@ -18,7 +18,7 @@ trait LocationRelationships
     /**
      * @var LocationRelationship[]
      */
-    protected $relationships;
+    protected array $relationships;
 
     /**
      * @param LocationRelationship[] $relationships

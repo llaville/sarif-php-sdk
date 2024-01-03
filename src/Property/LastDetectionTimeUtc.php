@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait LastDetectionTimeUtc
 {
-    /**
-     * @var string format date-time
-     */
-    protected $lastDetectionTimeUtc;
+    protected string $lastDetectionTimeUtc;
 
-    /**
-     * @param string $lastDetectionTimeUtc
-     */
     public function setLastDetectionTimeUtc(string $lastDetectionTimeUtc): void
     {
         $this->lastDetectionTimeUtc = $lastDetectionTimeUtc;

@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Region;
  */
 trait DeletedRegion
 {
-    /**
-     * @var Region
-     */
-    protected $deletedRegion;
+    protected Region $deletedRegion;
 
-    /**
-     * @param Region $deletedRegion
-     */
     public function setDeletedRegion(Region $deletedRegion): void
     {
         $this->deletedRegion = $deletedRegion;

@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Message;
  */
 trait MessageString
 {
-    /**
-     * @var Message
-     */
-    protected $message;
+    protected Message $message;
 
-    /**
-     * @param Message $message
-     */
     public function setMessage(Message $message): void
     {
         $this->message = $message;

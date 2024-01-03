@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\PropertyBag;
  */
 trait Properties
 {
-    /**
-     * @var PropertyBag
-     */
-    protected $properties;
+    protected PropertyBag $properties;
 
-    /**
-     * @param PropertyBag $propertyBag
-     */
     public function setProperties(PropertyBag $propertyBag): void
     {
         $this->properties = $propertyBag;

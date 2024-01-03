@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Stack;
  */
 trait CallStack
 {
-    /**
-     * @var Stack
-     */
-    protected $stack;
+    protected Stack $stack;
 
-    /**
-     * @param Stack $stack
-     */
     public function setStack(Stack $stack): void
     {
         $this->stack = $stack;

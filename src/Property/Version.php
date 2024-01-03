@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Version
 {
-    /**
-     * @var string
-     */
-    protected $version;
+    protected string $version;
 
-    /**
-     * @param string $version
-     */
     public function setVersion(string $version): void
     {
         $this->version = $version;

@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
  */
 trait DisplayBase
 {
-    /**
-     * @var ArtifactLocation
-     */
-    protected $displayBase;
+    protected ArtifactLocation $displayBase;
 
-    /**
-     * @param ArtifactLocation $displayBase
-     */
     public function setDisplayBase(ArtifactLocation $displayBase): void
     {
         $this->displayBase = $displayBase;

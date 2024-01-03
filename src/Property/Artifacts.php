@@ -18,7 +18,7 @@ trait Artifacts
     /**
      * @var Artifact[]
      */
-    protected $artifacts;
+    protected array $artifacts;
 
     /**
      * @param Artifact[] $artifacts

@@ -18,7 +18,7 @@ trait Taxa
     /**
      * @var ReportingDescriptor[]
      */
-    protected $taxa;
+    protected array $taxa;
 
     /**
      * @param ReportingDescriptor[] $taxa

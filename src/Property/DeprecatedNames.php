@@ -18,7 +18,7 @@ trait DeprecatedNames
     /**
      * @var string[]
      */
-    protected $deprecatedNames;
+    protected array $deprecatedNames;
 
     /**
      * @param string[] $deprecatedNames

@@ -16,14 +16,8 @@ use function preg_match_all;
  */
 trait CorrelationGuid
 {
-    /**
-     * @var string
-     */
-    protected $correlationGuid;
+    protected string $correlationGuid;
 
-    /**
-     * @param string $correlationGuid
-     */
     public function setCorrelationGuid(string $correlationGuid): void
     {
         $pattern = "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$";

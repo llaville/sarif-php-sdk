@@ -18,7 +18,7 @@ trait Addresses
     /**
      * @var Address[]
      */
-    protected $addresses;
+    protected array $addresses;
 
     /**
      * @param Address[] $addresses

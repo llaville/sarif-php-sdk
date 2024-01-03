@@ -18,7 +18,7 @@ trait LogicalLocations
     /**
      * @var LogicalLocation[]
      */
-    protected $logicalLocations;
+    protected array $logicalLocations;
 
     /**
      * @param LogicalLocation[] $logicalLocations

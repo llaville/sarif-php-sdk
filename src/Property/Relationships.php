@@ -18,7 +18,7 @@ trait Relationships
     /**
      * @var ReportingDescriptorRelationship[]
      */
-    protected $relationships;
+    protected array $relationships;
 
     /**
      * @param ReportingDescriptorRelationship[] $relationships

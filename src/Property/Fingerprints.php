@@ -18,7 +18,7 @@ trait Fingerprints
     /**
      * @var string[]
      */
-    protected $fingerprints;
+    protected array $fingerprints;
 
     /**
      * @param string[] $fingerprints

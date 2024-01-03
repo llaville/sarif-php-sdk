@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Protocol
 {
-    /**
-     * @var string
-     */
-    protected $protocol;
+    protected string $protocol;
 
-    /**
-     * @param string $protocol
-     */
     public function setProtocol(string $protocol): void
     {
         $this->protocol = $protocol;

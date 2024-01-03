@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactContent;
  */
 trait InsertedContent
 {
-    /**
-     * @var ArtifactContent
-     */
-    protected $insertedContent;
+    protected ArtifactContent $insertedContent;
 
-    /**
-     * @param ArtifactContent $insertedContent
-     */
     public function setInsertedContent(ArtifactContent $insertedContent): void
     {
         $this->insertedContent = $insertedContent;

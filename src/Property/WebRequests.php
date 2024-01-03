@@ -18,7 +18,7 @@ trait WebRequests
     /**
      * @var WebRequest[];
      */
-    protected $webRequests;
+    protected array $webRequests;
 
     /**
      * @param WebRequest[] $webRequests

@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ReleaseDateUtc
 {
-    /**
-     * @var string
-     */
-    protected $releaseDateUtc;
+    protected string $releaseDateUtc;
 
-    /**
-     * @param string $releaseDateUtc
-     */
     public function setReleaseDateUtc(string $releaseDateUtc): void
     {
         $this->releaseDateUtc = $releaseDateUtc;

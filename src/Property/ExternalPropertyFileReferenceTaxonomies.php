@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceTaxonomies
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $taxonomies;
+    protected array $taxonomies;
 
     /**
      * @param ExternalPropertyFileReference[] $taxonomies

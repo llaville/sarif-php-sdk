@@ -16,7 +16,7 @@ trait Contents
     /**
      * @var string[]
      */
-    protected $contents;
+    protected array $contents;
 
     /**
      * @param string[] $contents

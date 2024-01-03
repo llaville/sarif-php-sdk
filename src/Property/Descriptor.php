@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ReportingDescriptorReference;
  */
 trait Descriptor
 {
-    /**
-     * @var ReportingDescriptorReference
-     */
-    protected $descriptor;
+    protected ReportingDescriptorReference $descriptor;
 
-    /**
-     * @param ReportingDescriptorReference $descriptor
-     */
     public function setDescriptor(ReportingDescriptorReference $descriptor): void
     {
         $this->descriptor = $descriptor;

@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ThreadId
 {
-    /**
-     * @var int
-     */
-    protected $threadId;
+    protected int $threadId;
 
-    /**
-     * @param int $threadId
-     */
     public function setThreadId(int $threadId): void
     {
         $this->threadId = $threadId;

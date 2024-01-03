@@ -19,7 +19,7 @@ trait Extensions
      * Tool extensions that contributed to or reconfigured the analysis tool that was run.
      * @var ToolComponent[]
      */
-    protected $extensions;
+    protected array $extensions;
 
     /**
      * @param ToolComponent[] $extensions

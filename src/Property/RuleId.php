@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait RuleId
 {
-    /**
-     * @var string
-     */
-    protected $ruleId;
+    protected string $ruleId;
 
-    /**
-     * @param string $ruleId
-     */
     public function setRuleId(string $ruleId): void
     {
         $this->ruleId = $ruleId;

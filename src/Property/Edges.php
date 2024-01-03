@@ -18,7 +18,7 @@ trait Edges
     /**
      * @var Edge[]
      */
-    protected $edges;
+    protected array $edges;
 
     /**
      * @param Edge[] $edges

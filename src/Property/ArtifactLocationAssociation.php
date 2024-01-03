@@ -18,7 +18,7 @@ trait ArtifactLocationAssociation
     /**
      * @var ArtifactLocation[]
      */
-    protected $locations;
+    protected array $locations;
 
     /**
      * @param ArtifactLocation[] $locations

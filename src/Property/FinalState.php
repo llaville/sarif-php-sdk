@@ -18,7 +18,7 @@ trait FinalState
     /**
      * @var array<string, MultiformatMessageString>
      */
-    protected $finalState;
+    protected array $finalState;
 
     /**
      * @param array<string, MultiformatMessageString> $additionalProperties

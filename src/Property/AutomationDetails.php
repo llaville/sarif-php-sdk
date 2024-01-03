@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\RunAutomationDetails;
  */
 trait AutomationDetails
 {
-    /**
-     * @var RunAutomationDetails
-     */
-    protected $automationDetails;
+    protected RunAutomationDetails $automationDetails;
 
-    /**
-     * @param RunAutomationDetails $automationDetails
-     */
     public function setAutomationDetails(RunAutomationDetails $automationDetails): void
     {
         $this->automationDetails = $automationDetails;

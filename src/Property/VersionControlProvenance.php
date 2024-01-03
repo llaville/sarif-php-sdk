@@ -18,7 +18,7 @@ trait VersionControlProvenance
     /**
      * @var VersionControlDetails[]
      */
-    protected $versionControlProvenance;
+    protected array $versionControlProvenance;
 
     /**
      * @param VersionControlDetails[] $versionControlDetails

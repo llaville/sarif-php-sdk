@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ReportingConfiguration;
  */
 trait DefaultConfiguration
 {
-    /**
-     * @var ReportingConfiguration
-     */
-    protected $defaultConfiguration;
+    protected ReportingConfiguration $defaultConfiguration;
 
-    /**
-     * @param ReportingConfiguration $defaultConfiguration
-     */
     public function setDefaultConfiguration(ReportingConfiguration $defaultConfiguration): void
     {
         $this->defaultConfiguration = $defaultConfiguration;

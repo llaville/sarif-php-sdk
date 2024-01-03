@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait MessageStringNative
 {
-    /**
-     * @var string
-     */
-    protected $message;
+    protected string $message;
 
-    /**
-     * @param string $message
-     */
     public function setMessage(string $message): void
     {
         $this->message = $message;

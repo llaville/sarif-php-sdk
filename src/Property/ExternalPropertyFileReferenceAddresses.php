@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceAddresses
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $addresses;
+    protected array $addresses;
 
     /**
      * @param ExternalPropertyFileReference[] $addresses

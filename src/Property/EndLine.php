@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait EndLine
 {
-    /**
-     * @var int
-     */
-    protected $endLine;
+    protected int $endLine;
 
-    /**
-     * @param int $endLine
-     */
     public function setEndLine(int $endLine): void
     {
         $this->endLine = $endLine;

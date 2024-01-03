@@ -8,19 +8,15 @@
 namespace Bartlett\Sarif\Property;
 
 /**
+ * Format date-time
+ *
  * @author Laurent Laville
  * @since Release 1.0.0
  */
 trait AsOfTimeUtc
 {
-    /**
-     * @var string format date-time
-     */
-    protected $asOfTimeUtc;
+    protected string $asOfTimeUtc;
 
-    /**
-     * @param string $asOfTimeUtc
-     */
     public function setAsOfTimeUtc(string $asOfTimeUtc): void
     {
         $this->asOfTimeUtc = $asOfTimeUtc;

@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceLogicalLocations
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $logicalLocations;
+    protected array $logicalLocations;
 
     /**
      * @param ExternalPropertyFileReference[] $logicalLocations

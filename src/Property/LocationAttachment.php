@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
  */
 trait LocationAttachment
 {
-    /**
-     * @var ArtifactLocation
-     */
-    protected $artifactLocation;
+    protected ArtifactLocation $artifactLocation;
 
-    /**
-     * @param ArtifactLocation $artifactLocation
-     */
     public function setArtifactLocation(ArtifactLocation $artifactLocation): void
     {
         $this->artifactLocation = $artifactLocation;

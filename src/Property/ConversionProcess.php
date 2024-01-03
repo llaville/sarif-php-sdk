@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Conversion;
  */
 trait ConversionProcess
 {
-    /**
-     * @var Conversion
-     */
-    protected $conversion;
+    protected Conversion $conversion;
 
-    /**
-     * @param Conversion $conversion
-     */
     public function setConversion(Conversion $conversion): void
     {
         $this->conversion = $conversion;

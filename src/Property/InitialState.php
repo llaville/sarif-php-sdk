@@ -18,7 +18,7 @@ trait InitialState
     /**
      * @var array<string, MultiformatMessageString>
      */
-    protected $initialState;
+    protected array $initialState;
 
     /**
      * @param array<string, MultiformatMessageString> $additionalProperties

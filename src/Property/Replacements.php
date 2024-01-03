@@ -18,7 +18,7 @@ trait Replacements
     /**
      * @var Replacement[]
      */
-    protected $replacements;
+    protected array $replacements;
 
     /**
      * @param Replacement[] $replacements

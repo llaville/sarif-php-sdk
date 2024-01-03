@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ByteOffset
 {
-    /**
-     * @var int
-     */
-    protected $byteOffset;
+    protected int $byteOffset;
 
-    /**
-     * @param int $byteOffset
-     */
     public function setByteOffset(int $byteOffset = -1): void
     {
         if ($byteOffset < -1) {

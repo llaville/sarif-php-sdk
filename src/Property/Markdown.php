@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Markdown
 {
-    /**
-     * @var string
-     */
-    protected $markdown;
+    protected string $markdown;
 
-    /**
-     * @param string $markdown
-     */
     public function setMarkdown(string $markdown): void
     {
         $this->markdown = $markdown;

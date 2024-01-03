@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ExecutionSuccessful
 {
-    /**
-     * @var bool
-     */
-    protected $executionSuccessful;
+    protected bool $executionSuccessful;
 
-    /**
-     * @param bool $executionSuccessful
-     */
     public function setExecutionSuccessful(bool $executionSuccessful): void
     {
         $this->executionSuccessful = $executionSuccessful;

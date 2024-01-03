@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ExternalPropertyFileReference;
  */
 trait ExternalPropertyFileReferenceConversion
 {
-    /**
-     * @var ExternalPropertyFileReference
-     */
-    protected $conversion;
+    protected ExternalPropertyFileReference $conversion;
 
-    /**
-     * @param ExternalPropertyFileReference $conversion
-     */
     public function setConversion(ExternalPropertyFileReference $conversion): void
     {
         $this->conversion = $conversion;

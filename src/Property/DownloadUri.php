@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait DownloadUri
 {
-    /**
-     * @var string
-     */
-    protected $downloadUri;
+    protected string $downloadUri;
 
-    /**
-     * @param string $downloadUri
-     */
     public function setDownloadUri(string $downloadUri): void
     {
         $this->downloadUri = $downloadUri;

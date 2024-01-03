@@ -18,7 +18,7 @@ trait EdgeTraversals
     /**
      * @var EdgeTraversal[]
      */
-    protected $edgeTraversals;
+    protected array $edgeTraversals;
 
     /**
      * @param EdgeTraversal[] $edgeTraversals

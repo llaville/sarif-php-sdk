@@ -7,6 +7,8 @@
  */
 namespace Bartlett\Sarif\Property;
 
+use function is_string;
+
 /**
  * @author Laurent Laville
  * @since Release 1.0.0
@@ -16,7 +18,7 @@ trait RedactionTokens
     /**
      * @var string[]
      */
-    protected $redactionTokens;
+    protected array $redactionTokens;
 
     /**
      * @param string[] $redactionTokens
@@ -24,7 +26,7 @@ trait RedactionTokens
     public function addRedactionTokens(array $redactionTokens): void
     {
         foreach ($redactionTokens as $redactionToken) {
-            if (\is_string($redactionToken)) {
+            if (is_string($redactionToken)) {
                 $this->redactionTokens[] = $redactionToken;
             }
         }

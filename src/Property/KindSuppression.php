@@ -16,14 +16,8 @@ use function in_array;
  */
 trait KindSuppression
 {
-    /**
-     * @var string
-     */
-    protected $kind;
+    protected string $kind;
 
-    /**
-     * @param string $kind
-     */
     public function setKind(string $kind): void
     {
         $enum = ['inSource', 'external'];

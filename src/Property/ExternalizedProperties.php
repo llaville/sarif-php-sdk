@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\PropertyBag;
  */
 trait ExternalizedProperties
 {
-    /**
-     * @var PropertyBag
-     */
-    protected $externalizedProperties;
+    protected PropertyBag $externalizedProperties;
 
-    /**
-     * @param PropertyBag $externalizedProperties
-     */
     public function setExternalizedProperties(PropertyBag $externalizedProperties): void
     {
         $this->externalizedProperties = $externalizedProperties;

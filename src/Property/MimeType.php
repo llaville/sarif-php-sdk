@@ -16,14 +16,8 @@ use function preg_match_all;
  */
 trait MimeType
 {
-    /**
-     * @var string
-     */
-    protected $mimeType;
+    protected string $mimeType;
 
-    /**
-     * @param string $mimeType
-     */
     public function setMimeType(string $mimeType): void
     {
         $pattern = "[^/]+/.+";

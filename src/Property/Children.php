@@ -18,7 +18,7 @@ trait Children
     /**
      * @var Node[]
      */
-    protected $children;
+    protected array $children;
 
     /**
      * @param Node[] $children

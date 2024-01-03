@@ -16,14 +16,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait StartTimeUtc
 {
-    /**
-     * @var string format date-time
-     */
-    protected $startTimeUtc;
+    protected string $startTimeUtc;
 
-    /**
-     * @param string $startTimeUtc
-     */
     public function setStartTimeUtc(string $startTimeUtc): void
     {
         $this->startTimeUtc = $startTimeUtc;

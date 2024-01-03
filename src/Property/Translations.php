@@ -18,7 +18,7 @@ trait Translations
     /**
      * @var ToolComponent[]
      */
-    protected $translations;
+    protected array $translations;
 
     /**
      * @param ToolComponent[] $translations

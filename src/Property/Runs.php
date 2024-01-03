@@ -18,11 +18,8 @@ trait Runs
     /**
      * @var Run[]
      */
-    protected $runs;
+    protected array $runs;
 
-    /**
-     * @param Run $run
-     */
     public function addRun(Run $run): void
     {
         $this->runs[] = $run;

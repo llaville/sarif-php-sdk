@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferencePolicies
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $policies;
+    protected array $policies;
 
     /**
      * @param ExternalPropertyFileReference[] $policies

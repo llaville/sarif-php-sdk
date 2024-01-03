@@ -16,14 +16,8 @@ use function preg_match_all;
  */
 trait DottedQuadFileVersion
 {
-    /**
-     * @var string
-     */
-    protected $dottedQuadFileVersion;
+    protected string $dottedQuadFileVersion;
 
-    /**
-     * @param string $dottedQuadFileVersion
-     */
     public function setDottedQuadFileVersion(string $dottedQuadFileVersion): void
     {
         $pattern = "[0-9]+(\\.[0-9]+){3}";

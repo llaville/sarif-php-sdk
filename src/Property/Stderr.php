@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
  */
 trait Stderr
 {
-    /**
-     * @var ArtifactLocation
-     */
-    protected $stderr;
+    protected ArtifactLocation $stderr;
 
-    /**
-     * @param ArtifactLocation $stderr
-     */
     public function setStderr(ArtifactLocation $stderr): void
     {
         $this->stderr = $stderr;

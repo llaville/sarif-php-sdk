@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait StartColumn
 {
-    /**
-     * @var int
-     */
-    protected $startColumn;
+    protected int $startColumn;
 
-    /**
-     * @param int $startColumn
-     */
     public function setStartColumn(int $startColumn): void
     {
         $this->startColumn = $startColumn;

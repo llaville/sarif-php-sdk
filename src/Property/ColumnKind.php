@@ -16,14 +16,8 @@ use function in_array;
  */
 trait ColumnKind
 {
-    /**
-     * @var string
-     */
-    protected $columnKind;
+    protected string $columnKind;
 
-    /**
-     * @param string $columnKind
-     */
     public function setColumnKind(string $columnKind): void
     {
         $enum = ["utf16CodeUnits", "unicodeCodePoints"];

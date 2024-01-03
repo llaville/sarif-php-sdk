@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait TimeUtc
 {
-    /**
-     * @var string format date-time
-     */
-    protected $timeUtc;
+    protected string $timeUtc;
 
-    /**
-     * @param string $timeUtc
-     */
     public function setTimeUtc(string $timeUtc): void
     {
         $this->timeUtc = $timeUtc;

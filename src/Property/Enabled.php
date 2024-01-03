@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Enabled
 {
-    /**
-     * @var bool
-     */
-    protected $enabled;
+    protected bool $enabled;
 
-    /**
-     * @param bool $enabled
-     */
     public function setEnabled(bool $enabled = true): void
     {
         $this->enabled = $enabled;

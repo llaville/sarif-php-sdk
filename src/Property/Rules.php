@@ -19,7 +19,7 @@ trait Rules
      * An array of reportingDescriptor objects relevant to the analysis performed by the tool component.
      * @var ReportingDescriptor[]
      */
-    protected $rules;
+    protected array $rules;
 
     /**
      * @param ReportingDescriptor[] $rules

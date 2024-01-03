@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait HostedViewerUri
 {
-    /**
-     * @var string format uri
-     */
-    protected $hostedViewerUri;
+    protected string $hostedViewerUri;
 
-    /**
-     * @param string $hostedViewerUri
-     */
     public function setHostedViewerUri(string $hostedViewerUri): void
     {
         $this->hostedViewerUri = $hostedViewerUri;

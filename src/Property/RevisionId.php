@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait RevisionId
 {
-    /**
-     * @var string
-     */
-    protected $revisionId;
+    protected string $revisionId;
 
-    /**
-     * @param string $revisionId
-     */
     public function setRevisionId(string $revisionId): void
     {
         $this->revisionId = $revisionId;

@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait EndColumn
 {
-    /**
-     * @var int
-     */
-    protected $endColumn;
+    protected int $endColumn;
 
-    /**
-     * @param int $endColumn
-     */
     public function setEndColumn(int $endColumn): void
     {
         $this->endColumn = $endColumn;

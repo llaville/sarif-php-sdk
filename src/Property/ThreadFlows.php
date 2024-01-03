@@ -18,7 +18,7 @@ trait ThreadFlows
     /**
      * @var ThreadFlow[]
      */
-    protected $threadFlows;
+    protected array $threadFlows;
 
     /**
      * @param ThreadFlow[] $threadFlows

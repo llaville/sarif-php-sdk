@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
  */
 trait Stdout
 {
-    /**
-     * @var ArtifactLocation
-     */
-    protected $stdout;
+    protected ArtifactLocation $stdout;
 
-    /**
-     * @param ArtifactLocation $stdout
-     */
     public function setStdout(ArtifactLocation $stdout): void
     {
         $this->stdout = $stdout;

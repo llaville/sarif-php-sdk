@@ -18,7 +18,7 @@ trait RuleConfigurationOverrides
     /**
      * @var ConfigurationOverride[]
      */
-    protected $ruleConfigurationOverrides;
+    protected array $ruleConfigurationOverrides;
 
     /**
      * @param ConfigurationOverride[] $ruleConfigurationOverrides

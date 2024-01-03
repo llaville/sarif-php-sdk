@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ExternalPropertyFileReference;
  */
 trait ExternalPropertyFileReferenceArtifacts
 {
-    /**
-     * @var ExternalPropertyFileReference
-     */
-    protected $artifacts;
+    protected ExternalPropertyFileReference $artifacts;
 
-    /**
-     * @param ExternalPropertyFileReference $artifacts
-     */
     public function setArtifacts(ExternalPropertyFileReference $artifacts): void
     {
         $this->artifacts = $artifacts;

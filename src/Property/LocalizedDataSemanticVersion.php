@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait LocalizedDataSemanticVersion
 {
-    /**
-     * @var string
-     */
-    protected $localizedDataSemanticVersion;
+    protected string $localizedDataSemanticVersion;
 
-    /**
-     * @param string $localizedDataSemanticVersion
-     */
     public function setLocalizedDataSemanticVersion(string $localizedDataSemanticVersion): void
     {
         $this->localizedDataSemanticVersion = $localizedDataSemanticVersion;

@@ -18,7 +18,7 @@ trait Annotations
     /**
      * @var Region[]
      */
-    protected $annotations;
+    protected array $annotations;
 
     /**
      * @param Region[] $annotations

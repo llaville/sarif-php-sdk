@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactContent;
  */
 trait Body
 {
-    /**
-     * @var ArtifactContent
-     */
-    protected $body;
+    protected ArtifactContent $body;
 
-    /**
-     * @param ArtifactContent $body
-     */
     public function setBody(ArtifactContent $body): void
     {
         $this->body = $body;

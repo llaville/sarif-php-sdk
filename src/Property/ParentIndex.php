@@ -15,14 +15,8 @@ use DomainException;
  */
 trait ParentIndex
 {
-    /**
-     * @var int
-     */
-    protected $parentIndex;
+    protected int $parentIndex;
 
-    /**
-     * @param int $parentIndex
-     */
     public function setParentIndex(int $parentIndex = -1): void
     {
         if ($parentIndex < -1) {

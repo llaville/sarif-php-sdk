@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Top
 {
-    /**
-     * @var float
-     */
-    protected $top;
+    protected float $top;
 
-    /**
-     * @param float $top
-     */
     public function setTop(float $top): void
     {
         $this->top = $top;

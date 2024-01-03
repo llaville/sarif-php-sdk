@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Method
 {
-    /**
-     * @var string
-     */
-    protected $method;
+    protected string $method;
 
-    /**
-     * @param string $method
-     */
     public function setMethod(string $method): void
     {
         $this->method = $method;

@@ -15,14 +15,8 @@ use DomainException;
  */
 trait StepOverEdgeCount
 {
-    /**
-     * @var int
-     */
-    protected $stepOverEdgeCount;
+    protected int $stepOverEdgeCount;
 
-    /**
-     * @param int $stepOverEdgeCount
-     */
     public function setStepOverEdgeCount(int $stepOverEdgeCount): void
     {
         if ($stepOverEdgeCount < 0) {

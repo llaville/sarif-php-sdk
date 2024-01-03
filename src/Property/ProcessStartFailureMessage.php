@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ProcessStartFailureMessage
 {
-    /**
-     * @var string
-     */
-    protected $processStartFailureMessage;
+    protected string $processStartFailureMessage;
 
-    /**
-     * @param string $processStartFailureMessage
-     */
     public function setProcessStartFailureMessage(string $processStartFailureMessage): void
     {
         $this->processStartFailureMessage = $processStartFailureMessage;

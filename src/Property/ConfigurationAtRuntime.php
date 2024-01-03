@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ReportingConfiguration;
  */
 trait ConfigurationAtRuntime
 {
-    /**
-     * @var ReportingConfiguration
-     */
-    protected $configuration;
+    protected ReportingConfiguration $configuration;
 
-    /**
-     * @param ReportingConfiguration $configuration
-     */
     public function setConfiguration(ReportingConfiguration $configuration): void
     {
         $this->configuration = $configuration;

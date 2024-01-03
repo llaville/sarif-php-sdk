@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Exception;
  */
 trait RuntimeException
 {
-    /**
-     * @var Exception
-     */
-    protected $exception;
+    protected Exception $exception;
 
-    /**
-     * @param Exception $exception
-     */
     public function setRuntimeException(Exception $exception): void
     {
         $this->exception = $exception;

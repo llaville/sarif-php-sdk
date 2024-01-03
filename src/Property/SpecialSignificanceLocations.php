@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\SpecialLocations;
  */
 trait SpecialSignificanceLocations
 {
-    /**
-     * @var SpecialLocations
-     */
-    protected $specialLocations;
+    protected SpecialLocations $specialLocations;
 
-    /**
-     * @param SpecialLocations $specialLocations
-     */
     public function setSpecialLocations(SpecialLocations $specialLocations): void
     {
         $this->specialLocations = $specialLocations;

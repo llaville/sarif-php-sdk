@@ -18,7 +18,7 @@ trait Rectangles
     /**
      * @var Rectangle[]
      */
-    protected $rectangles;
+    protected array $rectangles;
 
     /**
      * @param Rectangle[] $rectangles

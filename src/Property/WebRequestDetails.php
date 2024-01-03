@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\WebRequest;
  */
 trait WebRequestDetails
 {
-    /**
-     * @var WebRequest
-     */
-    protected $webRequest;
+    protected WebRequest $webRequest;
 
-    /**
-     * @param WebRequest $webRequest
-     */
     public function setWebRequest(WebRequest $webRequest): void
     {
         $this->webRequest = $webRequest;

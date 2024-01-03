@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ExternalPropertyFileReference;
  */
 trait ExternalPropertyFileReferenceDriver
 {
-    /**
-     * @var ExternalPropertyFileReference
-     */
-    protected $driver;
+    protected ExternalPropertyFileReference $driver;
 
-    /**
-     * @param ExternalPropertyFileReference $driver
-     */
     public function setDriver(ExternalPropertyFileReference $driver): void
     {
         $this->driver = $driver;

@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait IsComprehensible
 {
-    /**
-     * @var bool
-     */
-    protected $isComprehensible;
+    protected bool $isComprehensible;
 
-    /**
-     * @param bool $isComprehensible
-     */
     public function setIsComprehensible(bool $isComprehensible): void
     {
         $this->isComprehensible = $isComprehensible;

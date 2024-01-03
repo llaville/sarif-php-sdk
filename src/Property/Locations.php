@@ -18,7 +18,7 @@ trait Locations
     /**
      * @var Location[]
      */
-    protected $locations;
+    protected array $locations;
 
     /**
      * @param Location[] $locations

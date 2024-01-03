@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait UriBaseId
 {
-    /**
-     * @var string
-     */
-    protected $uriBaseId;
+    protected string $uriBaseId;
 
-    /**
-     * @param string $uriBaseId
-     */
     public function setUriBaseId(string $uriBaseId): void
     {
         $this->uriBaseId = $uriBaseId;

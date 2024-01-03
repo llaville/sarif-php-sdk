@@ -18,7 +18,7 @@ trait Suppressions
     /**
      * @var Suppression[]
      */
-    protected $suppressions;
+    protected array $suppressions;
 
     /**
      * @param Suppression[] $suppressions

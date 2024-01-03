@@ -16,14 +16,8 @@ use function in_array;
  */
 trait BaselineState
 {
-    /**
-     * @var string
-     */
-    protected $baselineState;
+    protected string $baselineState;
 
-    /**
-     * @param string $baselineState
-     */
     public function setBaselineState(string $baselineState): void
     {
         $enum = ["new", "unchanged", "updated", "absent"];

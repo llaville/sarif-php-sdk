@@ -16,14 +16,8 @@ use function preg_match_all;
  */
 trait Guid
 {
-    /**
-     * @var string
-     */
-    protected $guid;
+    protected string $guid;
 
-    /**
-     * @param string $guid
-     */
     public function setGuid(string $guid): void
     {
         $pattern = "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$";

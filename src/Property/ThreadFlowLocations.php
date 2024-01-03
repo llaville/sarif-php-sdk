@@ -18,7 +18,7 @@ trait ThreadFlowLocations
     /**
      * @var ThreadFlowLocation[]
      */
-    protected $locations;
+    protected array $locations;
 
     /**
      * @param ThreadFlowLocation[] $locations

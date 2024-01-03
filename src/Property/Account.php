@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Account
 {
-    /**
-     * @var string
-     */
-    protected $account;
+    protected string $account;
 
-    /**
-     * @param string $account
-     */
     public function setAccount(string $account): void
     {
         $this->account = $account;

@@ -18,7 +18,7 @@ trait Policies
     /**
      * @var ToolComponent[]
      */
-    protected $policies;
+    protected array $policies;
 
     /**
      * @param ToolComponent[] $policies

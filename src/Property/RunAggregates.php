@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\RunAutomationDetails;
  */
 trait RunAggregates
 {
-    /**
-     * @var RunAutomationDetails
-     */
-    protected $runAggregates;
+    protected RunAutomationDetails $runAggregates;
 
-    /**
-     * @param RunAutomationDetails $runAggregates
-     */
     public function setRunAggregates(RunAutomationDetails $runAggregates): void
     {
         $this->runAggregates = $runAggregates;

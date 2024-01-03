@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ProductSuite
 {
-    /**
-     * @var string
-     */
-    protected $productSuite;
+    protected string $productSuite;
 
-    /**
-     * @param string $productSuite
-     */
     public function setProductSuite(string $productSuite): void
     {
         $this->productSuite = $productSuite;

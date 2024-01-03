@@ -16,14 +16,8 @@ use function in_array;
  */
 trait StatusSuppression
 {
-    /**
-     * @var string
-     */
-    protected $status;
+    protected string $status;
 
-    /**
-     * @param string $status
-     */
     public function setStatus(string $status): void
     {
         $enum = ['accepted', 'underReview', 'rejected'];

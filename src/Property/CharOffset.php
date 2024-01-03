@@ -15,14 +15,8 @@ use DomainException;
  */
 trait CharOffset
 {
-    /**
-     * @var int
-     */
-    protected $charOffset;
+    protected int $charOffset;
 
-    /**
-     * @param int $charOffset
-     */
     public function setCharOffset(int $charOffset = -1): void
     {
         if ($charOffset < -1) {

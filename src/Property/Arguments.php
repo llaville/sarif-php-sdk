@@ -18,7 +18,7 @@ trait Arguments
     /**
      * @var string[]
      */
-    protected $arguments;
+    protected array $arguments;
 
     /**
      * @param string[] $arguments

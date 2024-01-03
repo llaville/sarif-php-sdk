@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait DefaultEncoding
 {
-    /**
-     * @var string
-     */
-    protected $defaultEncoding;
+    protected string $defaultEncoding;
 
-    /**
-     * @param string $defaultEncoding
-     */
     public function setDefaultEncoding(string $defaultEncoding): void
     {
         $this->defaultEncoding = $defaultEncoding;

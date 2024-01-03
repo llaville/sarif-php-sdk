@@ -20,13 +20,13 @@ abstract class JsonSerializable implements \JsonSerializable
      * Declares all properties required.
      * @var string[]
      */
-    protected $required;
+    protected array $required;
 
     /**
      * Declares all other optional properties.
      * @var string[]
      */
-    protected $optional;
+    protected array $optional;
 
     /**
      * Checks all properties that are mandatory.

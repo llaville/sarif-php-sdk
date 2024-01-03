@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Organization
 {
-    /**
-     * @var string
-     */
-    protected $organization;
+    protected string $organization;
 
-    /**
-     * @param string $organization
-     */
     public function setOrganization(string $organization): void
     {
         $this->organization = $organization;

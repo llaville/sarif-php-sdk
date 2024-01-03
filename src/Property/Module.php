@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Module
 {
-    /**
-     * @var string
-     */
-    protected $module;
+    protected string $module;
 
-    /**
-     * @param string $module
-     */
     public function setModule(string $module): void
     {
         $this->module = $module;

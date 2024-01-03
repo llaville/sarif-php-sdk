@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ReportingDescriptorReference;
  */
 trait Rule
 {
-    /**
-     * @var ReportingDescriptorReference
-     */
-    protected $rule;
+    protected ReportingDescriptorReference $rule;
 
-    /**
-     * @param ReportingDescriptorReference $rule
-     */
     public function setRule(ReportingDescriptorReference $rule): void
     {
         $this->rule = $rule;

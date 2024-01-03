@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Message;
  */
 trait Description
 {
-    /**
-     * @var Message
-     */
-    protected $description;
+    protected Message $description;
 
-    /**
-     * @param Message $description
-     */
     public function setDescription(Message $description): void
     {
         $this->description = $description;

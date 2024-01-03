@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ExitSignalName
 {
-    /**
-     * @var string
-     */
-    protected $exitSignalName;
+    protected string $exitSignalName;
 
-    /**
-     * @param string $exitSignalName
-     */
     public function setExitSignalName(string $exitSignalName): void
     {
         $this->exitSignalName = $exitSignalName;

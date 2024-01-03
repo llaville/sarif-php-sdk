@@ -18,7 +18,7 @@ trait InnerExceptions
     /**
      * @var Exception[]
      */
-    protected $innerExceptions;
+    protected array $innerExceptions;
 
     /**
      * @param Exception[] $innerExceptions

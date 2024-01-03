@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Name
 {
-    /**
-     * @var string
-     */
-    protected $name;
+    protected string $name;
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name): void
     {
         $this->name = $name;

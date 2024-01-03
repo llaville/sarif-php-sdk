@@ -18,7 +18,7 @@ trait SupportedTaxonomies
     /**
      * @var ToolComponentReference[]
      */
-    protected $supportedTaxonomies;
+    protected array $supportedTaxonomies;
 
     /**
      * @param ToolComponentReference[] $supportedTaxonomies

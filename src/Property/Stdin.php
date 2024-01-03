@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ArtifactLocation;
  */
 trait Stdin
 {
-    /**
-     * @var ArtifactLocation
-     */
-    protected $stdin;
+    protected ArtifactLocation $stdin;
 
-    /**
-     * @param ArtifactLocation $stdin
-     */
     public function setStdin(ArtifactLocation $stdin): void
     {
         $this->stdin = $stdin;

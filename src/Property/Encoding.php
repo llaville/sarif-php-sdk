@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Encoding
 {
-    /**
-     * @var string
-     */
-    protected $encoding;
+    protected string $encoding;
 
-    /**
-     * @param string $encoding
-     */
     public function setEncoding(string $encoding): void
     {
         $this->encoding = $encoding;

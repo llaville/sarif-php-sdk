@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Justification
 {
-    /**
-     * @var string
-     */
-    protected $justification;
+    protected string $justification;
 
-    /**
-     * @param string $justification
-     */
     public function setJustification(string $justification): void
     {
         $this->justification = $justification;

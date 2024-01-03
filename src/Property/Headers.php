@@ -16,7 +16,7 @@ trait Headers
     /**
      * @var string[]
      */
-    protected $headers;
+    protected array $headers;
 
     /**
      * @param array<string, mixed> $additionalProperties

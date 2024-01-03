@@ -18,7 +18,7 @@ trait ArtifactChanges
     /**
      * @var ArtifactChange[]
      */
-    protected $artifactChanges;
+    protected array $artifactChanges;
 
     /**
      * @param ArtifactChange[] $artifactChanges

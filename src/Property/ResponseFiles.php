@@ -18,7 +18,7 @@ trait ResponseFiles
     /**
      * @var ArtifactLocation[]
      */
-    protected $responseFiles;
+    protected array $responseFiles;
 
     /**
      * @param ArtifactLocation[] $responseFiles

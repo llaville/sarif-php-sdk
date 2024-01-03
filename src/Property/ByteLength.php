@@ -15,14 +15,8 @@ use DomainException;
  */
 trait ByteLength
 {
-    /**
-     * @var int
-     */
-    protected $byteLength;
+    protected int $byteLength;
 
-    /**
-     * @param int $byteLength
-     */
     public function setByteLength(int $byteLength): void
     {
         if ($byteLength < 0) {

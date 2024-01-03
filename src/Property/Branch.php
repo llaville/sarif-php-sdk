@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Branch
 {
-    /**
-     * @var string
-     */
-    protected $branch;
+    protected string $branch;
 
-    /**
-     * @param string $branch
-     */
     public function setBranch(string $branch): void
     {
         $this->branch = $branch;

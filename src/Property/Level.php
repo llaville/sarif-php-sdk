@@ -16,14 +16,8 @@ use function in_array;
  */
 trait Level
 {
-    /**
-     * @var string
-     */
-    protected $level;
+    protected string $level;
 
-    /**
-     * @param string $level
-     */
     public function setLevel(string $level = 'warning'): void
     {
         $enum = ["none", "note", "warning", "error"];

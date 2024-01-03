@@ -15,10 +15,7 @@ use Bartlett\Sarif\Definition\ReportingDescriptorReference;
  */
 trait ReportingDescriptorTarget
 {
-    /**
-     * @var ReportingDescriptorReference
-     */
-    protected $target;
+    protected ReportingDescriptorReference $target;
 
     /**
      * @param ReportingDescriptorReference $target

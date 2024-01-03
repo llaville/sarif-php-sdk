@@ -15,14 +15,8 @@ use DomainException;
  */
 trait RunGraphIndex
 {
-    /**
-     * @var int
-     */
-    protected $runGraphIndex;
+    protected int $runGraphIndex;
 
-    /**
-     * @param int $runGraphIndex
-     */
     public function setRunGraphIndex(int $runGraphIndex = -1): void
     {
         if ($runGraphIndex < -1) {

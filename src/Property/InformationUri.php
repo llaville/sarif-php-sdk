@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait InformationUri
 {
-    /**
-     * @var string
-     */
-    protected $informationUri;
+    protected string $informationUri;
 
-    /**
-     * @param string $informationUri
-     */
     public function setInformationUri(string $informationUri): void
     {
         $this->informationUri = $informationUri;

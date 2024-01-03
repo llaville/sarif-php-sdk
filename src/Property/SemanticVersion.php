@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait SemanticVersion
 {
-    /**
-     * @var string
-     */
-    protected $semanticVersion;
+    protected string $semanticVersion;
 
-    /**
-     * @param string $semanticVersion
-     */
     public function setSemanticVersion(string $semanticVersion): void
     {
         $this->semanticVersion = $semanticVersion;

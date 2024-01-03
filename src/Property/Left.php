@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Left
 {
-    /**
-     * @var float
-     */
-    protected $left;
+    protected float $left;
 
-    /**
-     * @param float $left
-     */
     public function setLeft(float $left): void
     {
         $this->left = $left;

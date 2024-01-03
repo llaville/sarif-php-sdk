@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait RelativeAddress
 {
-    /**
-     * @var int
-     */
-    protected $relativeAddress;
+    protected int $relativeAddress;
 
-    /**
-     * @param int $relativeAddress
-     */
     public function setRelativeAddress(int $relativeAddress): void
     {
         $this->relativeAddress = $relativeAddress;

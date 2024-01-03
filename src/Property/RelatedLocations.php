@@ -18,7 +18,7 @@ trait RelatedLocations
     /**
      * @var Location[]
      */
-    protected $relatedLocations;
+    protected array $relatedLocations;
 
     /**
      * @param Location[] $relatedLocations

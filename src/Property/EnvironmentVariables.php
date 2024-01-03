@@ -16,7 +16,7 @@ trait EnvironmentVariables
     /**
      * @var array<string, mixed>
      */
-    protected $environmentVariables;
+    protected array $environmentVariables;
 
     /**
      * @param array<string, mixed> $additionalProperties

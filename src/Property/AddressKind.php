@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait AddressKind
 {
-    /**
-     * @var string
-     */
-    protected $kind;
+    protected string $kind;
 
-    /**
-     * @param string $kind
-     */
     public function setKind(string $kind): void
     {
         $this->kind = $kind;

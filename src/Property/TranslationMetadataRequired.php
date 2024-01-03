@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\TranslationMetadata;
  */
 trait TranslationMetadataRequired
 {
-    /**
-     * @var TranslationMetadata
-     */
-    protected $translationMetadata;
+    protected TranslationMetadata $translationMetadata;
 
-    /**
-     * @param TranslationMetadata $translationMetadata
-     */
     public function setTranslationMetadata(TranslationMetadata $translationMetadata): void
     {
         $this->translationMetadata = $translationMetadata;

@@ -16,7 +16,7 @@ trait RequestParameters
     /**
      * @var string[]
      */
-    protected $parameters;
+    protected array $parameters;
 
     /**
      * @param array<string, mixed> $additionalProperties

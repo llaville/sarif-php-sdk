@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceInvocations
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $invocations;
+    protected array $invocations;
 
     /**
      * @param ExternalPropertyFileReference[] $invocations

@@ -16,14 +16,8 @@ use function preg_match_all;
  */
 trait Language
 {
-    /**
-     * @var string
-     */
-    protected $language;
+    protected string $language;
 
-    /**
-     * @param string $language
-     */
     public function setLanguage(string $language): void
     {
         $pattern = "^[a-zA-Z]{2}|^[a-zA-Z]{2}-[a-zA-Z]{2}]?$";

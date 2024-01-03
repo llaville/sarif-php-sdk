@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Machine
 {
-    /**
-     * @var string
-     */
-    protected $machine;
+    protected string $machine;
 
-    /**
-     * @param string $machine
-     */
     public function setMachine(string $machine): void
     {
         $this->machine = $machine;

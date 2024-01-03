@@ -18,7 +18,7 @@ trait Stacks
     /**
      * @var Stack[]
      */
-    protected $stacks;
+    protected array $stacks;
 
     /**
      * @param Stack[] $stacks

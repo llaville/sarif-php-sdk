@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait Uri
 {
-    /**
-     * @var string format uri-reference
-     */
-    protected $uri;
+    protected string $uri;
 
-    /**
-     * @param string $uri
-     */
     public function setUri(string $uri): void
     {
         $this->uri = $uri;

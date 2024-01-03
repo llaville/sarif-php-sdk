@@ -16,14 +16,8 @@ use function in_array;
  */
 trait Kind
 {
-    /**
-     * @var string
-     */
-    protected $kind;
+    protected string $kind;
 
-    /**
-     * @param string $kind
-     */
     public function setKind(string $kind = 'fail'): void
     {
         $enum = ["notApplicable", "pass", "fail", "review", "open", "informational"];

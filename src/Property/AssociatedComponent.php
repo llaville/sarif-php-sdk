@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\ToolComponentReference;
  */
 trait AssociatedComponent
 {
-    /**
-     * @var ToolComponentReference
-     */
-    protected $associatedComponent;
+    protected ToolComponentReference $associatedComponent;
 
-    /**
-     * @param ToolComponentReference $associatedComponent
-     */
     public function setAssociatedComponent(ToolComponentReference $associatedComponent): void
     {
         $this->associatedComponent = $associatedComponent;

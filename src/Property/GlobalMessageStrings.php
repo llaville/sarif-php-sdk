@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\MultiformatMessageString;
  */
 trait GlobalMessageStrings
 {
-    /**
-     * @var MultiformatMessageString
-     */
-    protected $globalMessageStrings;
+    protected MultiformatMessageString $globalMessageStrings;
 
-    /**
-     * @param MultiformatMessageString $globalMessageStrings
-     */
     public function setGlobalMessageStrings(MultiformatMessageString $globalMessageStrings): void
     {
         $this->globalMessageStrings = $globalMessageStrings;

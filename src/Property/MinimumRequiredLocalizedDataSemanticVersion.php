@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait MinimumRequiredLocalizedDataSemanticVersion
 {
-    /**
-     * @var string
-     */
-    protected $minimumRequiredLocalizedDataSemanticVersion;
+    protected string $minimumRequiredLocalizedDataSemanticVersion;
 
-    /**
-     * @param string $minimumRequiredLocalizedDataSemanticVersion
-     */
     public function setMinimumRequiredLocalizedDataSemanticVersion(string $minimumRequiredLocalizedDataSemanticVersion): void
     {
         $this->minimumRequiredLocalizedDataSemanticVersion = $minimumRequiredLocalizedDataSemanticVersion;

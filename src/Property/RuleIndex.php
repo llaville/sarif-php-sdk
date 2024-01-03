@@ -15,14 +15,8 @@ use DomainException;
  */
 trait RuleIndex
 {
-    /**
-     * @var int
-     */
-    protected $ruleIndex;
+    protected int $ruleIndex;
 
-    /**
-     * @param int $ruleIndex
-     */
     public function setRuleIndex(int $ruleIndex = -1): void
     {
         if ($ruleIndex < -1) {

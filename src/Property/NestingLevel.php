@@ -15,14 +15,8 @@ use DomainException;
  */
 trait NestingLevel
 {
-    /**
-     * @var int
-     */
-    protected $nestingLevel;
+    protected int $nestingLevel;
 
-    /**
-     * @param int $nestingLevel
-     */
     public function setNestingLevel(int $nestingLevel): void
     {
         if ($nestingLevel < 0) {

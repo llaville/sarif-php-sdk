@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait ExitSignalNumber
 {
-    /**
-     * @var int
-     */
-    protected $exitSignalNumber;
+    protected int $exitSignalNumber;
 
-    /**
-     * @param int $exitSignalNumber
-     */
     public function setExitSignalNumber(int $exitSignalNumber): void
     {
         $this->exitSignalNumber = $exitSignalNumber;

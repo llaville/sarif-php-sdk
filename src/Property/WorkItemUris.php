@@ -18,7 +18,7 @@ trait WorkItemUris
     /**
      * @var string[] format uri
      */
-    protected $workItemUris;
+    protected array $workItemUris;
 
     /**
      * @param string[] $workItemUris

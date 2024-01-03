@@ -18,7 +18,7 @@ trait Taxonomies
     /**
      * @var ToolComponent[]
      */
-    protected $taxonomies;
+    protected array $taxonomies;
 
     /**
      * @param ToolComponent[] $taxonomies

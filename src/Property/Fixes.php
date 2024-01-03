@@ -18,7 +18,7 @@ trait Fixes
     /**
      * @var Fix[]
      */
-    protected $fixes;
+    protected array $fixes;
 
     /**
      * @param Fix[] $fixes

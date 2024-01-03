@@ -18,7 +18,7 @@ trait ExternalPropertyFileReferenceThreadFlowLocations
     /**
      * @var ExternalPropertyFileReference[]
      */
-    protected $threadFlowLocations;
+    protected array $threadFlowLocations;
 
     /**
      * @param ExternalPropertyFileReference[] $threadFlowLocations

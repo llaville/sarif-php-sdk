@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Region;
  */
 trait RegionArtifact
 {
-    /**
-     * @var Region
-     */
-    protected $region;
+    protected Region $region;
 
-    /**
-     * @param Region $region
-     */
     public function setRegion(Region $region): void
     {
         $this->region = $region;

@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\MultiformatMessageString;
  */
 trait ShortDescription
 {
-    /**
-     * @var MultiformatMessageString
-     */
-    protected $shortDescription;
+    protected MultiformatMessageString $shortDescription;
 
-    /**
-     * @param MultiformatMessageString $shortDescription
-     */
     public function setShortDescription(MultiformatMessageString $shortDescription): void
     {
         $this->shortDescription = $shortDescription;

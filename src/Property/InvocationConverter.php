@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Invocation;
  */
 trait InvocationConverter
 {
-    /**
-     * @var Invocation
-     */
-    protected $invocation;
+    protected Invocation $invocation;
 
-    /**
-     * @param Invocation $invocation
-     */
     public function setInvocation(Invocation $invocation): void
     {
         $this->invocation = $invocation;

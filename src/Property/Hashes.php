@@ -18,7 +18,7 @@ trait Hashes
     /**
      * @var array<string, mixed>
      */
-    protected $hashes;
+    protected array $hashes;
 
     /**
      * @param array<string, mixed> $hashes

@@ -15,14 +15,8 @@ use Bartlett\Sarif\Definition\Tool;
  */
 trait ToolPipeline
 {
-    /**
-     * @var Tool
-     */
-    protected $tool;
+    protected Tool $tool;
 
-    /**
-     * @param Tool $tool
-     */
     public function setTool(Tool $tool): void
     {
         $this->tool = $tool;

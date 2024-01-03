@@ -13,14 +13,8 @@ namespace Bartlett\Sarif\Property;
  */
 trait CommandLine
 {
-    /**
-     * @var string
-     */
-    protected $commandLine;
+    protected string $commandLine;
 
-    /**
-     * @param string $commandLine
-     */
     public function setCommandLine(string $commandLine): void
     {
         $this->commandLine = $commandLine;
