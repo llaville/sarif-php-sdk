@@ -21,6 +21,8 @@ use Bartlett\Sarif\Property\SourceLanguage;
 use Bartlett\Sarif\Property\StartColumn;
 use Bartlett\Sarif\Property\StartLine;
 
+use function is_int;
+
 /**
  * A region within an artifact where a result was detected.
  *
@@ -101,10 +103,18 @@ final class Region extends JsonSerializable
         ?int $endLine = null,
         ?int $endColumn = null
     ) {
-        $this->startLine = $startLine;
-        $this->startColumn = $startColumn;
-        $this->endLine = $endLine;
-        $this->endColumn = $endColumn;
+        if (is_int($startLine)) {
+            $this->startLine = $startLine;
+        }
+        if (is_int($startColumn)) {
+            $this->startColumn = $startColumn;
+        }
+        if (is_int($endLine)) {
+            $this->endLine = $endLine;
+        }
+        if (is_int($endColumn)) {
+            $this->endColumn = $endColumn;
+        }
 
         $this->required = [];
         $this->optional = [
