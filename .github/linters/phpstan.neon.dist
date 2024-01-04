@@ -5,15 +5,6 @@ parameters:
         - ../../examples/
     treatPhpDocTypesAsCertain: false
     ignoreErrors:
-        -   # @see https://github.com/phpstan/phpstan/issues/5952
-            message: "#^Dead catch \\- Exception is never thrown in the try block\\.$#"
-            paths:
-                - ../../examples/
-
-        -
-            message: "#^Cannot access an offset on Bartlett\\\\Sarif\\\\Definition\\\\PhysicalLocation\\.$#"
-            path: ../../src/Definition/ResultProvenance.php
-
         -
             message: "#^Unreachable statement \\- code above always terminates\\.$#"
             path: ../../src/SarifLog.php
