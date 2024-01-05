@@ -55,7 +55,9 @@ final class ExternalPropertyFileReference extends JsonSerializable
             throw new DomainException('Either "location" or "guid" are required. Nothing provided.');
         }
 
-        $this->location = $location;
+        if ($location instanceof ArtifactLocation) {
+            $this->location = $location;
+        }
         $this->setGuid($guid);
 
         $this->required = [];
