@@ -14,7 +14,7 @@ namespace Bartlett\Sarif\Property;
 trait Headers
 {
     /**
-     * @var string[]
+     * @var array<string, mixed>
      */
     protected array $headers;
 

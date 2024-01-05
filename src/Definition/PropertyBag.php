@@ -19,9 +19,9 @@ final class PropertyBag implements JsonSerializable
 {
     /**
      * A set of distinct strings that provide additional information.
-     * @var string[]
+     * @var array<string, mixed>
      */
-    private $tags;
+    private array $tags;
 
     public function __construct()
     {
@@ -29,7 +29,6 @@ final class PropertyBag implements JsonSerializable
     }
 
     /**
-     * @param string $key
      * @param mixed $value
      */
     public function addProperty(string $key, $value): void
