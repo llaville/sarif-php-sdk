@@ -89,7 +89,7 @@ final class SarifLog extends JsonSerializable
             if (empty($this->runs)) {
                 throw new DomainException('"runs" are required. None provided.');
             }
-            return json_encode($this, JSON_PRETTY_PRINT);
+            return json_encode($this, JSON_PRETTY_PRINT) ? : '';
         } catch (Throwable $e) {
             if (PHP_VERSION_ID >= 70400) {
                 throw $e;
