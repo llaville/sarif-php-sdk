@@ -27,7 +27,7 @@ trait Taxonomies
     {
         foreach ($taxonomies as $taxonomy) {
             if ($taxonomy instanceof ToolComponent) {
-                $this->taxonomies[] = $taxonomies;
+                $this->taxonomies[] = $taxonomy;
             }
         }
     }
