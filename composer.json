@@ -29,6 +29,11 @@
             "Bartlett\\Sarif\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Bartlett\\Sarif\\Tests\\": "tests/"
+        }
+    },
     "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
