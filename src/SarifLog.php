@@ -34,7 +34,7 @@ use const PHP_VERSION_ID;
  * @author Laurent Laville
  * @since Release 1.0.0
  */
-final class SarifLog extends JsonSerializable
+class SarifLog extends JsonSerializable
 {
     /**
      * The URI of the JSON schema corresponding to the version.

@@ -1,0 +1,76 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "SarifSamples",
+                    "version": "1.0",
+                    "informationUri": "https://github.com/microsoft/sarif-tutorials/"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "Uninitialized variable."
+                    },
+                    "ruleId": "TUT1001",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "collections/list.h",
+                                    "uriBaseId": "SRCROOT"
+                                },
+                                "region": {
+                                    "startLine": 15
+                                }
+                            },
+                            "logicalLocations": [
+                                {
+                                    "fullyQualifiedName": "collections::list::add"
+                                }
+                            ]
+                        }
+                    ],
+                    "stacks": [
+                        {
+                            "frames": [
+                                {
+                                    "location": {
+                                        "physicalLocation": {
+                                            "artifactLocation": {
+                                                "uri": "collections/list.h",
+                                                "uriBaseId": "SRCROOT"
+                                            },
+                                            "region": {
+                                                "startLine": 110,
+                                                "startColumn": 15
+                                            }
+                                        },
+                                        "logicalLocations": [
+                                            {
+                                                "fullyQualifiedName": "collections::list::add_core"
+                                            }
+                                        ]
+                                    },
+                                    "module": "platform",
+                                    "threadId": 52,
+                                    "parameters": [
+                                        "null",
+                                        "0",
+                                        "14"
+                                    ]
+                                }
+                            ],
+                            "message": {
+                                "text": "Call stack resulting from usage of uninitialized variable."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

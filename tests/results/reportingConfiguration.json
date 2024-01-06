@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev",
+                    "rules": [
+                        {
+                            "id": "SA2707",
+                            "name": "LimitSourceLineLength",
+                            "shortDescription": {
+                                "text": "Limit source line length for readability."
+                            },
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "warning",
+                                "rank": -1,
+                                "parameters": {
+                                    "maxLength": 120
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "results": []
+        }
+    ]
+}

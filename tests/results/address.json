@@ -1,0 +1,39 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev"
+                }
+            },
+            "addresses": [
+                {
+                    "absoluteAddress": 1024,
+                    "kind": "module",
+                    "name": "Multitool.exe"
+                },
+                {
+                    "absoluteAddress": 1400,
+                    "relativeAddress": 376,
+                    "kind": "header",
+                    "name": "Sections",
+                    "offsetFromParent": 376,
+                    "parentIndex": 0
+                },
+                {
+                    "absoluteAddress": 1536,
+                    "relativeAddress": 512,
+                    "kind": "section",
+                    "name": ".text",
+                    "offsetFromParent": 136,
+                    "parentIndex": 1
+                }
+            ],
+            "results": []
+        }
+    ]
+}
