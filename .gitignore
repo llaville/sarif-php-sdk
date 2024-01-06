@@ -7,15 +7,16 @@ site/
 
 ###### Composer dependencies ######
 vendor/
+###### Composer bin plugin ######
+vendor-bin/**/vendor/
 
 ###### PHPLint ######
-.phplint-cache
+.phplint.cache/
 
 ###### PHPUnit ######
-.phpunit.result.cache
+.phpunit.cache/
 
 ###### Mega-Linter ######
-report/
 megalinter-reports/
 
 ######################################
@@ -58,7 +59,6 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 *.lnk
-
 
 ######################################
 # Editors
