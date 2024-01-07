@@ -1,0 +1,82 @@
+---
+name: Release
+
+on:
+    push:
+        tags:
+            - "[0-9]+.[0-9]+.[0-9]+"
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    tests:
+        uses: ./.github/workflows/unit-tests.yaml
+
+    build:
+        needs: tests
+
+        runs-on: ${{ matrix.os }}
+
+        strategy:
+            fail-fast: false
+            matrix:
+                os:
+                    - ubuntu-22.04
+                php:
+                    - 8.2
+                tools:
+                    - box:4.6  # available since https://github.com/shivammathur/setup-php/releases/tag/2.27.0
+
+        steps:
+            -   # https://github.com/actions/checkout
+                name: Checkout
+                uses: actions/checkout@v4
+
+            -   # https://github.com/shivammathur/setup-php
+                name: Setup PHP runtime
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: ${{ matrix.php }}
+                    coverage: "none"
+                    tools: ${{ matrix.tools }}
+
+            -   # https://getcomposer.org/doc/06-config.md#platform
+                name: Setup Composer Platform
+                run: |
+                    composer config platform.php 7.4
+
+            -   # https://github.com/ramsey/composer-install
+                name: Install Composer dependencies
+                uses: ramsey/composer-install@v2
+                with:
+                    composer-options: "--prefer-dist"
+
+            -   # https://github.com/llaville/box-manifest
+                name: Download BOX Manifest Artifact
+                run: |
+                    curl -Ls https://github.com/llaville/box-manifest/releases/latest/download/box-manifest.phar -o /usr/local/bin/box-manifest
+                    chmod +x /usr/local/bin/box-manifest
+
+            -   # https://github.com/llaville/box-manifest
+                name: Build Release Artifact
+                run: |
+                    box-manifest manifest:build --ansi -vv -c box.json --output-file=sbom.json
+                    box-manifest manifest:build --ansi -vv -c box.json --output-file=console.txt --format console
+                    box-manifest manifest:stub  --ansi -vv -c box.json --output-file=stub.php --resource console.txt --resource sbom.json
+                    box compile --ansi -vv -c box.json.dist
+
+            -   # https://github.com/softprops/action-gh-release
+                name: Create Release from current tag
+                if: github.ref_type == 'tag'
+                uses: softprops/action-gh-release@v1
+                with:  # https://github.com/softprops/action-gh-release#-customizing
+                    prerelease: false
+                    draft: false
+                    body_path: ${{ github.workspace }}/.changes/1.x/${{ github.ref_name }}.md
+                    # https://github.com/softprops/action-gh-release#%EF%B8%8F-uploading-release-assets
+                    files: |
+                        ${{ github.workspace }}/sarif-php-sdk.phar
+                    fail_on_unmatched_files: true
+                    tag_name: ${{ github.ref_name }}
