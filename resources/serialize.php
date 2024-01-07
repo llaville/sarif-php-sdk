@@ -16,16 +16,18 @@ use Symfony\Component\Serializer\Serializer;
 if ($_SERVER['argc'] == 1) {
     echo '=====================================================================', PHP_EOL;
     echo 'Usage: php resources/serialize.php <example-filename>', PHP_EOL;
+    echo '                                   <folder>', PHP_EOL;
     echo '                                   <json-encode-options>', PHP_EOL;
     echo '=====================================================================', PHP_EOL;
     exit();
 }
 
 $script = $_SERVER['argv'][1] ?? null;
-$jsonEncodeOptions = $_SERVER['argv'][2] ?? (JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+$folder = $_SERVER['argv'][2] ?? sys_get_temp_dir();
+$jsonEncodeOptions = $_SERVER['argv'][3] ?? (JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
 $baseDir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'examples' . DIRECTORY_SEPARATOR;
-$example = $baseDir . $script;
+$example = $baseDir . $script . '.php';
 $available = is_file($example) && file_exists($example);
 
 if (empty($script) || !$available) {
@@ -44,7 +46,9 @@ $serializer = new Serializer([$normalizer], [$encoder]);
 
 try {
     $jsonString = $serializer->serialize($log, 'json', ['json_encode_options' => $jsonEncodeOptions]);
-    echo $jsonString, PHP_EOL;
+    $target = rtrim($folder, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $script . '.json';
+    file_put_contents($target, $jsonString);
+    echo (empty($target) ? 'no' : $target) . ' file generated' . PHP_EOL;
 } catch (Exception $e) {
     echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
 }
