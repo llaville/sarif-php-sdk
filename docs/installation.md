@@ -3,14 +3,13 @@
 
 1. [Requirements](#requirements)
 2. [PHAR](#phar)
-3. [Docker](#docker)
-4. [Phive](#phive)
-5. [Composer](#composer)
-6. [Git](#git)
+3. [Phive](#phive)
+4. [Composer](#composer)
+5. [Git](#git)
 
 ## Requirements
 
-* PHP 7.1 or greater
+* PHP 7.4 or greater
 * ext-json
 * ext-pcre
 * ext-spl
@@ -20,15 +19,10 @@
 The preferred method of installation is to use the PHAR version which can be downloaded from the most recent
 [Github Release][releases]. This method ensures you will not have any dependency conflict issue.
 
-## Docker
-
-Retrieve official image with [Docker][docker]
-
-```shell
-docker pull ghcr.io/llaville/sarif-php-sdk:v1
-or
-docker pull ghcr.io/llaville/sarif-php-sdk:latest
-```
+> **TIP** When you want to use, load autoloader as follows :
+> ```php
+> require_once 'phar://' . '/absolute/path/to' . '/sarif-php-sdk.phar/vendor/autoload.php';
+> ```
 
 ## Phive
 
@@ -49,7 +43,7 @@ You can also install application locally to your project with [Phive][phive] and
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <phive xmlns="https://phar.io/phive">
-    <phar name="llaville/sarif-php-sdk" version="^1" copy="false" />
+    <phar name="llaville/sarif-php-sdk" version="^1.1" copy="false" />
 </phive>
 ```
 
@@ -63,7 +57,7 @@ The recommended way to install this library is [through composer][composer].
 If you don't know yet what is composer, have a look [on introduction][composer-intro].
 
 ```shell
-composer require bartlett/sarif-php-sdk ^1
+composer require bartlett/sarif-php-sdk ^1.1
 ```
 
 If you cannot install it because of a dependency conflict, or you prefer to install it for your project, we recommend
@@ -88,4 +82,3 @@ git clone -b 1.1 https://github.com/llaville/sarif-php-sdk.git
 [bamarni/composer-bin-plugin]: https://github.com/bamarni/composer-bin-plugin
 [github-repo]: https://github.com/llaville/sarif-php-sdk.git
 [phive]: https://github.com/phar-io/phive
-[docker]: https://docs.docker.com/get-docker/

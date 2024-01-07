@@ -77,7 +77,7 @@ final class NativeJsonSerializerTest extends TestCase
     }
 
     #[DataProvider('sarifLogDataProvider')]
-    public function testRequiredProperties(string $example, SarifLog $sarifLog, ?string $expectException): void
+    public function testBuildReport(string $example, SarifLog $sarifLog, ?string $expectException): void
     {
         if (!empty($expectException)) {
             $this->expectException($expectException);

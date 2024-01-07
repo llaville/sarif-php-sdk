@@ -13,3 +13,9 @@ written in [property bags](https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/sar
 > Learn how to install this library in different way.
 
 See [Installation Guide](installation.md)
+
+## API Reference
+
+> Discover all API objects with each one at least an example of how to generate a SARIF report.
+
+See [Reference Guide](reference/README.md)

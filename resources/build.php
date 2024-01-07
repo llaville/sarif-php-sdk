@@ -6,6 +6,7 @@
  * file that was distributed with this source code.
  *
  * @author Laurent Laville
+ * @since Release 1.1.0
  */
 
 use Bartlett\GraphUml\Generator\GraphVizGenerator;
