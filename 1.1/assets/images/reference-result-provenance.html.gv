@@ -14,7 +14,7 @@ digraph {
     <tr><td align="left"># firstDetectionRunGuid</td></tr>
     <tr><td align="left"># lastDetectionRunGuid</td></tr>
     <tr><td align="left"># invocationIndex</td></tr>
-    <tr><td align="left"># conversionSources</td></tr>
+    <tr><td align="left"># conversionSources : mixed</td></tr>
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">

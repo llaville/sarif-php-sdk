@@ -404,15 +404,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#phive" class="md-nav__link">
     <span class="md-ellipsis">
       Phive
@@ -1636,15 +1627,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#phive" class="md-nav__link">
     <span class="md-ellipsis">
       Phive
@@ -1691,14 +1673,13 @@
 <ol>
 <li><a href="#requirements">Requirements</a></li>
 <li><a href="#phar">PHAR</a></li>
-<li><a href="#docker">Docker</a></li>
 <li><a href="#phive">Phive</a></li>
 <li><a href="#composer">Composer</a></li>
 <li><a href="#git">Git</a></li>
 </ol>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li>PHP 7.1 or greater</li>
+<li>PHP 7.4 or greater</li>
 <li>ext-json</li>
 <li>ext-pcre</li>
 <li>ext-spl</li>
@@ -1706,12 +1687,11 @@
 <h2 id="phar">PHAR</h2>
 <p>The preferred method of installation is to use the PHAR version which can be downloaded from the most recent
 <a href="https://github.com/llaville/sarif-php-sdk/releases/">Github Release</a>. This method ensures you will not have any dependency conflict issue.</p>
-<h2 id="docker">Docker</h2>
-<p>Retrieve official image with <a href="https://docs.docker.com/get-docker/">Docker</a></p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/llaville/sarif-php-sdk:v1
-or
-docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/llaville/sarif-php-sdk:latest
-</code></pre></div>
+<blockquote>
+<p><strong>TIP</strong> When you want to use, load autoloader as follows :
+<div class="highlight"><pre><span></span><code><span class="x">require_once &#39;phar://&#39; . &#39;/absolute/path/to&#39; . &#39;/sarif-php-sdk.phar/vendor/autoload.php&#39;;</span>
+</code></pre></div></p>
+</blockquote>
 <h2 id="phive">Phive</h2>
 <p>You can install application globally with <a href="https://github.com/phar-io/phive">Phive</a></p>
 <div class="highlight"><pre><span></span><code>phive<span class="w"> </span>install<span class="w"> </span>llaville/sarif-php-sdk<span class="w"> </span>--force-accept-unsigned
@@ -1722,7 +1702,7 @@ docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/llaville/sarif
 <p>You can also install application locally to your project with <a href="https://github.com/phar-io/phive">Phive</a> and configuration file <code>.phive/phars.xml</code></p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;phive</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;https://phar.io/phive&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;phar</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;llaville/sarif-php-sdk&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;^1&quot;</span><span class="w"> </span><span class="na">copy=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;phar</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;llaville/sarif-php-sdk&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;^1.1&quot;</span><span class="w"> </span><span class="na">copy=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/phive&gt;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>phive<span class="w"> </span>install<span class="w"> </span>--force-accept-unsigned
@@ -1730,7 +1710,7 @@ docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/llaville/sarif
 <h2 id="composer">Composer</h2>
 <p>The recommended way to install this library is <a href="https://getcomposer.org">through composer</a>.
 If you don't know yet what is composer, have a look <a href="http://getcomposer.org/doc/00-intro.md">on introduction</a>.</p>
-<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>bartlett/sarif-php-sdk<span class="w"> </span>^1
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>bartlett/sarif-php-sdk<span class="w"> </span>^1.1
 </code></pre></div>
 <p>If you cannot install it because of a dependency conflict, or you prefer to install it for your project, we recommend
 you to take a look at <a href="https://github.com/bamarni/composer-bin-plugin">bamarni/composer-bin-plugin</a>. Example:</p>

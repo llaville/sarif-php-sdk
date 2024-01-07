@@ -36,7 +36,7 @@
 <text text-anchor="start" x="21" y="-399.1" font-family="Verdana" font-size="8.00"># firstDetectionRunGuid</text>
 <text text-anchor="start" x="21" y="-386.1" font-family="Verdana" font-size="8.00"># lastDetectionRunGuid</text>
 <text text-anchor="start" x="21" y="-373.1" font-family="Verdana" font-size="8.00"># invocationIndex</text>
-<text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># conversionSources</text>
+<text text-anchor="start" x="21" y="-360.1" font-family="Verdana" font-size="8.00"># conversionSources : mixed</text>
 <text text-anchor="start" x="21" y="-347.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-229.5 16,-339.5 325,-339.5 325,-229.5 16,-229.5"/>
 <text text-anchor="start" x="21" y="-328.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
