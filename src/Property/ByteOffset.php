@@ -7,6 +7,8 @@
  */
 namespace Bartlett\Sarif\Property;
 
+use DomainException;
+
 /**
  * @author Laurent Laville
  * @since Release 1.0.0
@@ -18,7 +20,7 @@ trait ByteOffset
     public function setByteOffset(int $byteOffset = -1): void
     {
         if ($byteOffset < -1) {
-            throw new \DomainException('Minimum value is -1. Expect to be greater, but have ' . $byteOffset);
+            throw new DomainException('Minimum value is -1. Expect to be greater, but have ' . $byteOffset);
         }
         $this->byteOffset = $byteOffset;
     }
