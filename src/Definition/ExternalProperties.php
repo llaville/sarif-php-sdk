@@ -150,14 +150,10 @@ final class ExternalProperties extends JsonSerializable
      * @param string $version
      * @param string $schemaUri
      */
-    public function __construct(string $version = '2.1.0', string $schemaUri = '')
+    public function __construct(string $version = '2.1.0', ?string $schemaUri = null)
     {
         $this->version = $version;
-        if (empty($schemaUri)) {
-            $this->schema = sprintf('https://json.schemastore.org/sarif-%s.json', $version);
-        } else {
-            $this->schema = $schemaUri;
-        }
+        $this->schema = $schemaUri ?? sprintf('https://json.schemastore.org/sarif-%s.json', $version);
 
         $this->required = [];
         $this->optional = [
