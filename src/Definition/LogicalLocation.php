@@ -69,8 +69,8 @@ final class LogicalLocation extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'name',
             'index',
             'fullyQualifiedName',
@@ -79,5 +79,6 @@ final class LogicalLocation extends JsonSerializable
             'kind',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

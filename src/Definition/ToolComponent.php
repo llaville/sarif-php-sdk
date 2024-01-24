@@ -203,8 +203,8 @@ final class ToolComponent extends JsonSerializable
         $this->name = $name;
         $this->rules = [];
 
-        $this->required = ['name'];
-        $this->optional = [
+        $required = ['name'];
+        $optional = [
             'guid',
             'organization',
             'product',
@@ -233,5 +233,6 @@ final class ToolComponent extends JsonSerializable
             'supportedTaxonomies',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

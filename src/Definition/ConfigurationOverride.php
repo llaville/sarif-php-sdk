@@ -38,11 +38,12 @@ final class ConfigurationOverride extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'configuration',
             'descriptor',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

@@ -68,8 +68,8 @@ final class ResultProvenance extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'firstDetectionTimeUtc',
             'lastDetectionTimeUtc',
             'firstDetectionRunGuid',
@@ -78,5 +78,6 @@ final class ResultProvenance extends JsonSerializable
             'conversionSources',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

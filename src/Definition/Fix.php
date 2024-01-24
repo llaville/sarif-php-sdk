@@ -45,10 +45,11 @@ final class Fix extends JsonSerializable
     {
         $this->addArtifactChanges($artifactChanges);
 
-        $this->required = ['artifactChanges'];
-        $this->optional = [
+        $required = ['artifactChanges'];
+        $optional = [
             'description,',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

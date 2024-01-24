@@ -61,15 +61,12 @@ final class VersionControlDetails extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param string $repositoryUri
-     */
     public function __construct(string $repositoryUri)
     {
         $this->repositoryUri = $repositoryUri;
 
-        $this->required = ['repositoryUri'];
-        $this->optional = [
+        $required = ['repositoryUri'];
+        $optional = [
             'revisionId',
             'branch',
             'revisionTag',
@@ -77,5 +74,6 @@ final class VersionControlDetails extends JsonSerializable
             'mappedTo',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

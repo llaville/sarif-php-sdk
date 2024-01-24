@@ -200,15 +200,12 @@ final class Run extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param Tool $tool
-     */
     public function __construct(Tool $tool)
     {
         $this->tool = $tool;
 
-        $this->required = ['tool'];
-        $this->optional = [
+        $required = ['tool'];
+        $optional = [
             'invocations',
             'conversion',
             'language',
@@ -237,6 +234,7 @@ final class Run extends JsonSerializable
             'specialLocations',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 
     /**

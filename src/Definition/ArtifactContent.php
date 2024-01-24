@@ -44,12 +44,13 @@ final class ArtifactContent extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'text',
             'binary',
             'rendered',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

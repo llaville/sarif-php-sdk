@@ -45,18 +45,16 @@ final class ReportingDescriptorRelationship extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param ReportingDescriptorReference $target
-     */
     public function __construct(ReportingDescriptorReference $target)
     {
         $this->target = $target;
 
-        $this->required = ['target'];
-        $this->optional = [
+        $required = ['target'];
+        $optional = [
             'kinds',
             'description',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

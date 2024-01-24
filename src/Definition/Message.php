@@ -50,10 +50,6 @@ final class Message extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param string $text
-     * @param string $id
-     */
     public function __construct(string $text = '', string $id = '')
     {
         // Any of "id", "text" are required
@@ -64,13 +60,14 @@ final class Message extends JsonSerializable
         $this->id = $id;
         $this->text = $text;
 
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'text',
             'markdown',
             'id',
             'arguments',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

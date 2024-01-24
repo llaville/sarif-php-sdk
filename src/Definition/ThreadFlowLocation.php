@@ -112,8 +112,8 @@ final class ThreadFlowLocation extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'index',
             'location',
             'stack',
@@ -129,5 +129,6 @@ final class ThreadFlowLocation extends JsonSerializable
             'webResponse',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

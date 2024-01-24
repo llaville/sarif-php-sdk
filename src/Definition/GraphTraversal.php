@@ -82,8 +82,8 @@ final class GraphTraversal extends JsonSerializable
             $this->resultGraphIndex = $resultGraphIndex;
         }
 
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'runGraphIndex',
             'resultGraphIndex',
             'description',
@@ -92,5 +92,6 @@ final class GraphTraversal extends JsonSerializable
             'edgeTraversals',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

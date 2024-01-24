@@ -44,10 +44,11 @@ final class CodeFlow extends JsonSerializable
     {
         $this->addThreadFlows($threadFlows);
 
-        $this->required = ['threadFlows'];
-        $this->optional = [
+        $required = ['threadFlows'];
+        $optional = [
             'message',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

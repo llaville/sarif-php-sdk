@@ -64,13 +64,14 @@ final class ThreadFlow extends JsonSerializable
     {
         $this->addLocations($locations);
 
-        $this->required = ['locations'];
-        $this->optional = [
+        $required = ['locations'];
+        $optional = [
             'id',
             'message',
             'initialState',
             'immutableState',
             'properties'
         ];
+        parent::__construct($required, $optional);
     }
 }

@@ -43,10 +43,11 @@ final class Replacement extends JsonSerializable
     {
         $this->deletedRegion = $deletedRegion;
 
-        $this->required = ['deletedRegion'];
-        $this->optional = [
+        $required = ['deletedRegion'];
+        $optional = [
             'insertedContent',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

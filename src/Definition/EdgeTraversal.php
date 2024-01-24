@@ -48,19 +48,17 @@ final class EdgeTraversal extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param string $edgeId
-     */
     public function __construct(string $edgeId)
     {
         $this->edgeId = $edgeId;
 
-        $this->required = ['edgeId'];
-        $this->optional = [
+        $required = ['edgeId'];
+        $optional = [
             'message',
             'finalState',
             'stepOverEdgeCount',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

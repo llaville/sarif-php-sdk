@@ -60,12 +60,13 @@ final class ExternalPropertyFileReference extends JsonSerializable
         }
         $this->setGuid($guid);
 
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'location',
             'guid',
             'itemCount',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

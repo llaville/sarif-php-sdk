@@ -50,24 +50,20 @@ final class ReportingDescriptorReference extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param int $index
-     * @param string $id
-     * @param string $guid
-     */
     public function __construct(int $index = -1, string $id = '', string $guid = '')
     {
         $this->setIndex($index);
         $this->id = $id;
         $this->guid = $guid;
 
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'index',
             'id',
             'guid',
             'toolComponent',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

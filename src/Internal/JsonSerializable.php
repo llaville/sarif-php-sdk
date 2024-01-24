@@ -20,13 +20,23 @@ abstract class JsonSerializable implements \JsonSerializable
      * Declares all properties required.
      * @var string[]
      */
-    protected array $required;
+    private array $required;
 
     /**
      * Declares all other optional properties.
      * @var string[]
      */
-    protected array $optional;
+    private array $optional;
+
+    /**
+     * @param string[] $required
+     * @param string[] $optional
+     */
+    public function __construct(array $required = [], array $optional = [])
+    {
+        $this->required = $required;
+        $this->optional = $optional;
+    }
 
     /**
      * Checks all properties that are mandatory.

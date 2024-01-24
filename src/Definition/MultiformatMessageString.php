@@ -42,10 +42,11 @@ final class MultiformatMessageString extends JsonSerializable
     {
         $this->text = $text;
 
-        $this->required = ['text'];
-        $this->optional = [
+        $required = ['text'];
+        $optional = [
             'markdown',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

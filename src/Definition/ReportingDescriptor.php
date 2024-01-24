@@ -117,8 +117,8 @@ final class ReportingDescriptor extends JsonSerializable
         $this->messageStrings = [];
         $this->relationships = [];
 
-        $this->required = ['id'];
-        $this->optional = [
+        $required = ['id'];
+        $optional = [
             'deprecatedIds',
             'guid',
             'deprecatedGuids',
@@ -133,5 +133,6 @@ final class ReportingDescriptor extends JsonSerializable
             'relationships',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

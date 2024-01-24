@@ -211,8 +211,8 @@ final class Result extends JsonSerializable
     {
         $this->message = $message;
 
-        $this->required = ['message'];
-        $this->optional = [
+        $required = ['message'];
+        $optional = [
             'ruleId',
             'ruleIndex',
             'rule',
@@ -243,5 +243,6 @@ final class Result extends JsonSerializable
             'webResponse',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

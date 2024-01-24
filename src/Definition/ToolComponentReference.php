@@ -44,12 +44,13 @@ final class ToolComponentReference extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'name',
             'index',
             'guid',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

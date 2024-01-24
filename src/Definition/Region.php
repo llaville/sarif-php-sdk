@@ -116,8 +116,8 @@ final class Region extends JsonSerializable
             $this->endColumn = $endColumn;
         }
 
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'startLine',
             'startColumn',
             'endLine',
@@ -131,5 +131,6 @@ final class Region extends JsonSerializable
             'sourceLanguage',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

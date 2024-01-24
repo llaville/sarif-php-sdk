@@ -44,10 +44,11 @@ final class Stack extends JsonSerializable
     {
         $this->addFrames($frames);
 
-        $this->required = ['frames'];
-        $this->optional = [
+        $required = ['frames'];
+        $optional = [
             'message',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

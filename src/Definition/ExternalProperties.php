@@ -155,8 +155,8 @@ final class ExternalProperties extends JsonSerializable
         $this->version = $version;
         $this->schema = $schemaUri ?? sprintf('https://json.schemastore.org/sarif-%s.json', $version);
 
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'schema',
             'version',
             'guid',
@@ -179,5 +179,6 @@ final class ExternalProperties extends JsonSerializable
             'webResponses',
             'properties'
         ];
+        parent::__construct($required, $optional);
     }
 }

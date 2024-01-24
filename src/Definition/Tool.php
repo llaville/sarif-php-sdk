@@ -36,17 +36,15 @@ final class Tool extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param ToolComponent $driver
-     */
     public function __construct(ToolComponent $driver)
     {
         $this->driver = $driver;
 
-        $this->required = ['driver'];
-        $this->optional = [
+        $required = ['driver'];
+        $optional = [
             'extensions',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

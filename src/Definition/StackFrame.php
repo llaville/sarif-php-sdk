@@ -50,13 +50,14 @@ final class StackFrame extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'location',
             'module',
             'threadId',
             'parameters',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

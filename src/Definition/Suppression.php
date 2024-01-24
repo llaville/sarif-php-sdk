@@ -58,13 +58,14 @@ final class Suppression extends JsonSerializable
     {
         $this->kind = $kind;
 
-        $this->required = ['kind'];
-        $this->optional = [
+        $required = ['kind'];
+        $optional = [
             'guid',
             'status',
             'justification',
             'location',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

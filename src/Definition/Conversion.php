@@ -50,11 +50,12 @@ final class Conversion extends JsonSerializable
     {
         $this->tool = $tool;
 
-        $this->required = ['tool'];
-        $this->optional = [
+        $required = ['tool'];
+        $optional = [
             'invocation',
             'analysisToolLogFiles',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

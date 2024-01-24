@@ -50,13 +50,14 @@ final class ArtifactLocation extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'uri',
             'uriBaseId',
             'index',
             'description',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

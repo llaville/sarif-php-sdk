@@ -51,13 +51,14 @@ final class Exception extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'kind',
             'message',
             'stack',
             'innerExceptions',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

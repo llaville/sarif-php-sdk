@@ -177,8 +177,8 @@ final class Invocation extends JsonSerializable
     {
         $this->executionSuccessful = $executionSuccessful;
 
-        $this->required = ['executionSuccessful'];
-        $this->optional = [
+        $required = ['executionSuccessful'];
+        $optional = [
             'commandLine',
             'arguments',
             'responseFiles',
@@ -206,5 +206,6 @@ final class Invocation extends JsonSerializable
             'stdoutStderr',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

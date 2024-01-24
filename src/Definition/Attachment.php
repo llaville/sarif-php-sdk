@@ -50,13 +50,14 @@ final class Attachment extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = ['artifactLocation'];
-        $this->optional = [
+        $required = ['artifactLocation'];
+        $optional = [
             'description',
             'artifactLocation',
             'regions',
             'rectangles',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

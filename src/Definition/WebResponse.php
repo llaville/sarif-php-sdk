@@ -74,8 +74,8 @@ final class WebResponse extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'index',
             'protocol',
             'version',
@@ -86,5 +86,8 @@ final class WebResponse extends JsonSerializable
             'noResponseReceived',
             'properties',
         ];
+        parent::__construct($required, $optional);
+
+        $this->setNoResponseReceived(false);
     }
 }

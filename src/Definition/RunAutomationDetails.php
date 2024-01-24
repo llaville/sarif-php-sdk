@@ -51,13 +51,14 @@ final class RunAutomationDetails extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'description',
             'id',
             'guid',
             'correlationGuid',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

@@ -69,13 +69,14 @@ final class PhysicalLocation extends JsonSerializable
             throw new LogicException('Either "address" or "artifactLocation" are required. Nothing provided.');
         }
 
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'address',
             'artifactLocation',
             'region',
             'contextRegion',
             'properties' ,
         ];
+        parent::__construct($required, $optional);
     }
 }

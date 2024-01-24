@@ -56,8 +56,8 @@ final class Rectangle extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'top',
             'left',
             'bottom',
@@ -65,5 +65,6 @@ final class Rectangle extends JsonSerializable
             'message',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

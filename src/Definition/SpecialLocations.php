@@ -32,10 +32,11 @@ final class SpecialLocations extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'displayBase',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

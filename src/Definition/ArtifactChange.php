@@ -46,12 +46,13 @@ final class ArtifactChange extends JsonSerializable
         $this->artifactLocation = $artifactLocation;
         $this->addReplacements($replacements);
 
-        $this->required = [
+        $required = [
             'artifactLocation',
             'replacements',
         ];
-        $this->optional = [
+        $optional = [
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

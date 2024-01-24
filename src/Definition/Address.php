@@ -82,8 +82,8 @@ final class Address extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'absoluteAddress',
             'relativeAddress',
             'length',
@@ -95,5 +95,6 @@ final class Address extends JsonSerializable
             'parentIndex',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

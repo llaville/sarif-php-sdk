@@ -93,8 +93,8 @@ final class Artifact extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'description',
             'location',
             'parentIndex',
@@ -108,5 +108,6 @@ final class Artifact extends JsonSerializable
             'hashes',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

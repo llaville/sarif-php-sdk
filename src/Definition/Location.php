@@ -61,8 +61,8 @@ final class Location extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'id',
             'physicalLocation',
             'logicalLocations',
@@ -71,5 +71,6 @@ final class Location extends JsonSerializable
             'relationships',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

@@ -59,14 +59,15 @@ final class Edge extends JsonSerializable
         $this->sourceNodeId = $sourceNodeId;
         $this->targetNodeId = $targetNodeId;
 
-        $this->required = [
+        $required = [
             'id',
             'sourceNodeId',
             'targetNodeId',
         ];
-        $this->optional = [
+        $optional = [
             'label',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

@@ -51,16 +51,17 @@ final class ReportingConfiguration extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'enabled',
             'level',
             'rank',
             'parameters',
             'properties',
         ];
+        parent::__construct($required, $optional);
 
-        $this->setEnabled();
+        $this->setEnabled(true);
         $this->setLevel();
         $this->setRank();
     }

@@ -48,19 +48,17 @@ final class Node extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param string $id
-     */
     public function __construct(string $id)
     {
         $this->id = $id;
 
-        $this->required = ['id'];
-        $this->optional = [
+        $required = ['id'];
+        $optional = [
             'label',
             'location',
             'children',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

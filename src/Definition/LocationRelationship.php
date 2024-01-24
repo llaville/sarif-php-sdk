@@ -43,18 +43,16 @@ final class LocationRelationship extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param int $target
-     */
     public function __construct(int $target)
     {
         $this->target = $target;
 
-        $this->required = ['target'];
-        $this->optional = [
+        $required = ['target'];
+        $optional = [
             'kinds',
             'description',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

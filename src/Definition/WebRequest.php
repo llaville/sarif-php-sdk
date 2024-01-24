@@ -75,8 +75,8 @@ final class WebRequest extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'index',
             'protocol',
             'version',
@@ -87,5 +87,6 @@ final class WebRequest extends JsonSerializable
             'body',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

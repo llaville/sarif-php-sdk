@@ -72,15 +72,12 @@ final class Notification extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param Message $message
-     */
     public function __construct(Message $message)
     {
         $this->message = $message;
 
-        $this->required = ['message'];
-        $this->optional = [
+        $required = ['message'];
+        $optional = [
             'locations',
             'level',
             'threadId',
@@ -90,5 +87,6 @@ final class Notification extends JsonSerializable
             'associateRule',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

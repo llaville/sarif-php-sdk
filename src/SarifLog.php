@@ -76,11 +76,12 @@ class SarifLog extends JsonSerializable
         }
         $this->inlineExternalProperties = [];
 
-        $this->required = [
+        $required = [
             'version',
             'runs'
         ];
-        $this->optional = ['inlineExternalProperties'];
+        $optional = ['inlineExternalProperties'];
+        parent::__construct($required, $optional);
     }
 
     public function __toString(): string

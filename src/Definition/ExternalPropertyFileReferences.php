@@ -123,8 +123,8 @@ final class ExternalPropertyFileReferences extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'conversion',
             'graphs',
             'externalizedProperties',
@@ -143,5 +143,6 @@ final class ExternalPropertyFileReferences extends JsonSerializable
             'webResponses',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

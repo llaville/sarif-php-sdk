@@ -44,12 +44,13 @@ final class Graph extends JsonSerializable
 
     public function __construct()
     {
-        $this->required = [];
-        $this->optional = [
+        $required = [];
+        $optional = [
             'description',
             'nodes',
             'edges',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }

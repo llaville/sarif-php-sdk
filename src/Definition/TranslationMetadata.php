@@ -60,15 +60,12 @@ final class TranslationMetadata extends JsonSerializable
      */
     use Properties;
 
-    /**
-     * @param string $name
-     */
     public function __construct(string $name)
     {
         $this->name = $name;
 
-        $this->required = ['name'];
-        $this->optional = [
+        $required = ['name'];
+        $optional = [
             'fullName',
             'shortDescription',
             'fullDescription',
@@ -76,5 +73,6 @@ final class TranslationMetadata extends JsonSerializable
             'informationUri',
             'properties',
         ];
+        parent::__construct($required, $optional);
     }
 }
