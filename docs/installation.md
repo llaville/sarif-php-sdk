@@ -20,6 +20,7 @@ The preferred method of installation is to use the PHAR version which can be dow
 [Github Release][releases]. This method ensures you will not have any dependency conflict issue.
 
 > **TIP** When you want to use, load autoloader as follows :
+>
 > ```php
 > require_once 'phar://' . '/absolute/path/to' . '/sarif-php-sdk.phar/vendor/autoload.php';
 > ```
