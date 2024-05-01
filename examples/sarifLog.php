@@ -15,9 +15,4 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('Psalm');
-$tool = new Tool($driver);
-
-$run = new Run($tool);
-
-$log = new SarifLog([$run]);
+$log = new SarifLog();
