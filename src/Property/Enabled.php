@@ -15,7 +15,7 @@ trait Enabled
 {
     protected bool $enabled;
 
-    public function setEnabled(bool $enabled = true): void
+    public function setEnabled(bool $enabled): void
     {
         $this->enabled = $enabled;
     }

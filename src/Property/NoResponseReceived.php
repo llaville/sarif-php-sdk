@@ -15,7 +15,7 @@ trait NoResponseReceived
 {
     protected bool $noResponseReceived;
 
-    public function setNoResponseReceived(bool $noResponseReceived = false): void
+    public function setNoResponseReceived(bool $noResponseReceived): void
     {
         $this->noResponseReceived = $noResponseReceived;
     }
