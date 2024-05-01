@@ -22,7 +22,7 @@ trait Level
     {
         $enum = ["none", "note", "warning", "error"];
         if (!in_array($level, $enum)) {
-            throw new DomainException($level . ' "level" is not allowed.');
+            throw new DomainException('Level "' . $level . '" is not allowed.');
         }
         $this->level = $level;
     }
