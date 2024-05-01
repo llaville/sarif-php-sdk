@@ -1,0 +1,4 @@
+kind: Added
+body: \Bartlett\Sarif\Factory\SerializerFactory that create encoder and serializer
+  for json data (compatible with Symfony Serializer Component)
+time: 2024-05-01T05:33:46.145148772Z

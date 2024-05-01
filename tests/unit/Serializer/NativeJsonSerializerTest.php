@@ -7,12 +7,12 @@
  */
 namespace Bartlett\Sarif\Tests\unit\Serializer;
 
+use Bartlett\Sarif\Factory\PhpSerializerFactory;
 use Bartlett\Sarif\SarifLog;
 use Bartlett\Sarif\Tests\TestCase;
 
 use PHPUnit\Framework\Attributes\DataProvider;
 
-use DomainException;
 use Generator;
 
 /**
@@ -24,7 +24,6 @@ final class NativeJsonSerializerTest extends TestCase
     public static function sarifLogDataProvider(): Generator
     {
         $examples = [
-            '' => DomainException::class,
             'message/embeddedLinks' => null,
             'message/formatted' => null,
             'message/plainText' => null,
@@ -64,14 +63,9 @@ final class NativeJsonSerializerTest extends TestCase
         ];
 
         foreach ($examples as $example => $expectException) {
-            $log = new SarifLog();
-            if (empty($example)) {
-                $description = 'basic SarifLog instance';
-            } else {
-                /** Should provide SarifLog instance referenced by $log variable  */
-                require_once dirname(__DIR__, 3) . '/examples/' . $example . '.php';
-                $description = 'examples/' . $example;
-            }
+            /** Should provide SarifLog instance referenced by $log variable  */
+            require_once dirname(__DIR__, 3) . '/examples/' . $example . '.php';
+            $description = 'examples/' . $example;
             yield $description => [$example, $log, $expectException];
         }
     }
@@ -83,7 +77,11 @@ final class NativeJsonSerializerTest extends TestCase
             $this->expectException($expectException);
         }
 
-        $jsonString = (string) $sarifLog;
+        $factory = new PhpSerializerFactory();
+        $serializer = $factory->createSerializer();
+
+        $jsonString = $serializer->serialize($sarifLog, 'json');
+
         $this->assertJsonStringEqualsJsonFile(
             dirname(__DIR__, 2) . '/results/' . $example . '.json',
             $jsonString

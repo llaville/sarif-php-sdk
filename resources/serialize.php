@@ -9,22 +9,18 @@
  * @since Release 1.1.0
  */
 
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\JsonSerializableNormalizer;
-use Symfony\Component\Serializer\Serializer;
-
 if ($_SERVER['argc'] == 1) {
     echo '=====================================================================', PHP_EOL;
     echo 'Usage: php resources/serialize.php <example-filename>', PHP_EOL;
     echo '                                   <folder>', PHP_EOL;
-    echo '                                   <json-encode-options>', PHP_EOL;
+    echo '                                   <json-encode-options> (pretty print: 128, unescaped slashes: 64)', PHP_EOL;
     echo '=====================================================================', PHP_EOL;
     exit();
 }
 
 $script = $_SERVER['argv'][1] ?? null;
 $folder = $_SERVER['argv'][2] ?? sys_get_temp_dir();
-$jsonEncodeOptions = $_SERVER['argv'][3] ?? (JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+$jsonEncodeOptions = $_SERVER['argv'][3] ?? 0;
 
 $baseDir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'examples' . DIRECTORY_SEPARATOR;
 $example = $baseDir . $script . '.php';
@@ -40,9 +36,17 @@ if (!isset($log) || !$log instanceof \Bartlett\Sarif\SarifLog) {
     throw new LogicException(sprintf('Example script "%s" does not provide a SarifLog object', $script));
 }
 
-$normalizer = new JsonSerializableNormalizer ();
-$encoder = new JsonEncoder();
-$serializer = new Serializer([$normalizer], [$encoder]);
+/**
+ * Serializer creation:
+ * - default with standard PHP Json encode function via PhpSerializerFactory
+ * - alternative with Symfony Serializer Component via SymfonySerializerFactory
+ */
+$factory = new \Bartlett\Sarif\Factory\PhpSerializerFactory();
+// or
+// $factory = new \Bartlett\Sarif\Factory\SymfonySerializerFactory();
+// or any other factory that implement \Bartlett\Sarif\Factory\SerializerFactory interface
+
+$serializer = $factory->createSerializer();
 
 try {
     $jsonString = $serializer->serialize($log, 'json', ['json_encode_options' => $jsonEncodeOptions]);
