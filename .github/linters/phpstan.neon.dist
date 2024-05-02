@@ -4,6 +4,8 @@ parameters:
         - ../../src/
         - ../../examples/
     excludePaths:
+        - ../../src/Factory/SymfonySerializerFactory.php
+        - ../../src/Serializer/Encoder/SymfonyJsonEncoder.php
         - ../../src/Converter/AbstractConverter.php
         - ../../src/Converter/Php*Converter.php
         - ../../examples/converters/
