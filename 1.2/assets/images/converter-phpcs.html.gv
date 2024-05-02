@@ -1,0 +1,80 @@
+digraph {
+  graph [name="G" overlap="false" rankdir="TB" bgcolor="transparent"]
+  node [fontname="Verdana" fontsize=8 shape="none" margin=0 fillcolor="#FEFECE" style="filled"]
+  edge [fontname="Verdana" fontsize=8]
+  subgraph cluster_0 {
+    graph [bgcolor="BurlyWood"]
+    label = "Bartlett\\Sarif\\Converter"
+    "Bartlett\\Sarif\\Converter\\PhpCsConverter" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b><br/>PhpCsConverter</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «static» TOOL_NAME : string = "PHP_CodeSniffer" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» TOOL_SHORT_DESCRIPTION : string = "Detects\ violations\ of\ a\ defined\ set\ of\ coding\ standards\." {readOnly}</td></tr>
+    <tr><td align="left">+ «static» TOOL_FULL_DESCRIPTION : string = "PHP_CodeSniffer\ tokenizes\ PHP\,\ JavaScript\ and\ CSS\ files\ and\ detects\ violations\ of\ a\ defined\ set\ of\ coding\ standards\." {readOnly}</td></tr>
+    <tr><td align="left">+ «static» TOOL_INFO_URI : string = "https\:\/\/github\.com\/PHPCSStandards\/PHP_CodeSniffer" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» TOOL_COMPOSER_PACKAGE : string = "squizlabs\/php_codesniffer" {readOnly}</td></tr>
+</table></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ rules() : array</td></tr>
+    <tr><td align="left">+ generateFileReport(report, phpcsFile : PHP_CodeSniffer\\Files\\File, showSources = false, width = 80)</td></tr>
+    <tr><td align="left">+ generate(cachedData, totalFiles, totalErrors, totalWarnings, totalFixable, showSources = false, width = 80, interactive = false, toScreen = true)</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Converter\\AbstractConverter" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«abstract»<br/>AbstractConverter</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left"># toolName</td></tr>
+    <tr><td align="left"># toolShortDescription</td></tr>
+    <tr><td align="left"># toolFullDescription</td></tr>
+    <tr><td align="left"># toolInformationUri</td></tr>
+    <tr><td align="left"># toolSemanticVersion</td></tr>
+    <tr><td align="left"># rules : mixed = []</td></tr>
+    <tr><td align="left"># results : mixed = []</td></tr>
+    <tr><td align="left"># serializer</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct(factory : Bartlett\\Sarif\\Factory\\SerializerFactory = «unknown»)</td></tr>
+    <tr><td align="left">+ toolDriver() : Bartlett\\Sarif\\Definition\\ToolComponent</td></tr>
+    <tr><td align="left">+ toolExtensions() : array</td></tr>
+    <tr><td align="left">+ rules() : array</td></tr>
+    <tr><td align="left">+ sarifLog(runs : array = [], version : string = '2\.1\.0') : ?string</td></tr>
+    <tr><td align="left">+ invocations(properties : Bartlett\\Sarif\\Definition\\PropertyBag = «unknown») : array</td></tr>
+    <tr><td align="left">+ run(invocations : array) : Bartlett\\Sarif\\Definition\\Run</td></tr>
+    <tr><td align="left"># getToolVersion(package : string) : string</td></tr>
+    <tr><td align="left"># pathToArtifactLocation(path : string) : string</td></tr>
+    <tr><td align="left"># pathToUri(path : string) : string</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Converter\\ConverterInterface" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>ConverterInterface</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» toolDriver() : Bartlett\\Sarif\\Definition\\ToolComponent</td></tr>
+    <tr><td align="left">+ «abstract» toolExtensions() : array</td></tr>
+    <tr><td align="left">+ «abstract» rules() : array</td></tr>
+    <tr><td align="left">+ «abstract» invocations(properties : Bartlett\\Sarif\\Definition\\PropertyBag = «unknown») : array</td></tr>
+    <tr><td align="left">+ «abstract» run(invocations : array) : Bartlett\\Sarif\\Definition\\Run</td></tr>
+    <tr><td align="left">+ «abstract» sarifLog(runs : array = [], version : string = '2\.1\.0') : ?string</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_1 {
+    label = "PHP_CodeSniffer\\Reports"
+    "PHP_CodeSniffer\\Reports\\Report" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>Report</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» generateFileReport(report : array, phpcsFile : PHP_CodeSniffer\\Files\\File, showSources : bool = false, width : int = 80)</td></tr>
+    <tr><td align="left">+ «abstract» generate(cachedData : string, totalFiles : int, totalErrors : int, totalWarnings : int, totalFixable : int, showSources : bool = false, width : int = 80, interactive : bool = false, toScreen : bool = true)</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  "Bartlett\\Sarif\\Converter\\AbstractConverter" -> "Bartlett\\Sarif\\Converter\\ConverterInterface" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Converter\\PhpCsConverter" -> "Bartlett\\Sarif\\Converter\\AbstractConverter" [arrowhead="empty" style="filled"]
+  "Bartlett\\Sarif\\Converter\\PhpCsConverter" -> "PHP_CodeSniffer\\Reports\\Report" [arrowhead="empty" style="dashed"]
+}

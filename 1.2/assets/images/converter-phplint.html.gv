@@ -1,0 +1,65 @@
+digraph {
+  graph [name="G" overlap="false" rankdir="TB" bgcolor="transparent"]
+  node [fontname="Verdana" fontsize=8 shape="none" margin=0 fillcolor="#FEFECE" style="filled"]
+  edge [fontname="Verdana" fontsize=8]
+  subgraph cluster_0 {
+    graph [bgcolor="BurlyWood"]
+    label = "Bartlett\\Sarif\\Converter"
+    "Bartlett\\Sarif\\Converter\\PhpLintConverter" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b><br/>PhpLintConverter</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «static» TOOL_NAME : string = "PHPLint" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» TOOL_SHORT_DESCRIPTION : string = "Syntax\ check\ only\ \(lint\)\ of\ PHP\ files" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» TOOL_FULL_DESCRIPTION : string = "PHPLint\ is\ a\ tool\ that\ can\ speed\ up\ linting\ of\ php\ files\ by\ running\ several\ lint\ processes\ at\ once\." {readOnly}</td></tr>
+    <tr><td align="left">+ «static» TOOL_INFO_URI : string = "https\:\/\/github\.com\/overtrue\/phplint" {readOnly}</td></tr>
+    <tr><td align="left">+ «static» TOOL_COMPOSER_PACKAGE : string = "overtrue\/phplint" {readOnly}</td></tr>
+</table></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ format(results : Overtrue\\PHPLint\\Output\\LinterOutput) : string</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Converter\\AbstractConverter" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«abstract»<br/>AbstractConverter</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left"># toolName</td></tr>
+    <tr><td align="left"># toolShortDescription</td></tr>
+    <tr><td align="left"># toolFullDescription</td></tr>
+    <tr><td align="left"># toolInformationUri</td></tr>
+    <tr><td align="left"># toolSemanticVersion</td></tr>
+    <tr><td align="left"># rules : mixed = []</td></tr>
+    <tr><td align="left"># results : mixed = []</td></tr>
+    <tr><td align="left"># serializer</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct(factory : Bartlett\\Sarif\\Factory\\SerializerFactory = «unknown»)</td></tr>
+    <tr><td align="left">+ toolDriver() : Bartlett\\Sarif\\Definition\\ToolComponent</td></tr>
+    <tr><td align="left">+ toolExtensions() : array</td></tr>
+    <tr><td align="left">+ rules() : array</td></tr>
+    <tr><td align="left">+ sarifLog(runs : array = [], version : string = '2\.1\.0') : ?string</td></tr>
+    <tr><td align="left">+ invocations(properties : Bartlett\\Sarif\\Definition\\PropertyBag = «unknown») : array</td></tr>
+    <tr><td align="left">+ run(invocations : array) : Bartlett\\Sarif\\Definition\\Run</td></tr>
+    <tr><td align="left"># getToolVersion(package : string) : string</td></tr>
+    <tr><td align="left"># pathToArtifactLocation(path : string) : string</td></tr>
+    <tr><td align="left"># pathToUri(path : string) : string</td></tr>
+</table></td></tr>
+</table>>]
+    "Bartlett\\Sarif\\Converter\\ConverterInterface" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>ConverterInterface</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» toolDriver() : Bartlett\\Sarif\\Definition\\ToolComponent</td></tr>
+    <tr><td align="left">+ «abstract» toolExtensions() : array</td></tr>
+    <tr><td align="left">+ «abstract» rules() : array</td></tr>
+    <tr><td align="left">+ «abstract» invocations(properties : Bartlett\\Sarif\\Definition\\PropertyBag = «unknown») : array</td></tr>
+    <tr><td align="left">+ «abstract» run(invocations : array) : Bartlett\\Sarif\\Definition\\Run</td></tr>
+    <tr><td align="left">+ «abstract» sarifLog(runs : array = [], version : string = '2\.1\.0') : ?string</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  "Bartlett\\Sarif\\Converter\\AbstractConverter" -> "Bartlett\\Sarif\\Converter\\ConverterInterface" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Converter\\PhpLintConverter" -> "Bartlett\\Sarif\\Converter\\AbstractConverter" [arrowhead="empty" style="filled"]
+}
