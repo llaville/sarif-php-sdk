@@ -1,0 +1,5 @@
+{
+    "require-dev": {
+        "symfony/serializer": "^6.4 || ^7.0"
+    }
+}
