@@ -22,6 +22,11 @@ interface ConverterInterface
     public function toolDriver(): ToolComponent;
 
     /**
+     * @return ToolComponent[]
+     */
+    public function toolExtensions(): array;
+
+    /**
      * @return array<ReportingDescriptor>
      */
     public function rules(): array;

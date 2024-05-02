@@ -87,6 +87,14 @@ abstract class AbstractConverter implements ConverterInterface
     /**
      * @inheritDoc
      */
+    public function toolExtensions(): array
+    {
+        return [];
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function rules(): array
     {
         return $this->rules;
@@ -129,6 +137,7 @@ abstract class AbstractConverter implements ConverterInterface
         $driver->addRules($this->rules());
 
         $tool = new Tool($driver);
+        $tool->addExtensions($this->toolExtensions());
 
         $run = new Run($tool);
 
