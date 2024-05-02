@@ -29,7 +29,7 @@ class PhpSerializerFactory implements SerializerFactory
         if ($realEncoder instanceof EncoderInterface) {
             return $realEncoder;
         }
-        return new PhpJsonEncoder(JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+        return new PhpJsonEncoder();
     }
 
     public function createSerializer(?EncoderInterface $realEncoder = null): SerializerInterface
