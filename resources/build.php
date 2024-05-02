@@ -21,6 +21,11 @@ use Symfony\Component\Console\Output\NullOutput;
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 require_once dirname(__DIR__) . '/vendor-bin/umlwriter/vendor/autoload.php';
 
+$phpcsAutoloader = Composer\InstalledVersions::getInstallPath(
+    'squizlabs/php_codesniffer'
+    ) . '/autoload.php';
+require_once $phpcsAutoloader;
+
 $script = $_SERVER['argv'][1] ?? null;
 $folder = $_SERVER['argv'][2] ?? sys_get_temp_dir();
 $format = $_SERVER['argv'][3] ?? 'svg';

@@ -49,7 +49,7 @@ $factory = new \Bartlett\Sarif\Factory\PhpSerializerFactory();
 $serializer = $factory->createSerializer();
 
 try {
-    $jsonString = $serializer->serialize($log, 'json', ['json_encode_options' => $jsonEncodeOptions]);
+    $jsonString = $serializer->serialize($log, 'json', ['json_encode_options' => (int) $jsonEncodeOptions]);
     $target = rtrim($folder, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $script . '.json';
     file_put_contents($target, $jsonString);
     echo (empty($target) ? 'no' : $target) . ' file generated' . PHP_EOL;
