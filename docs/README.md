@@ -19,3 +19,9 @@ See [Installation Guide](installation.md)
 > Discover all API objects with each one at least an example of how to generate a SARIF report.
 
 See [Reference Guide](reference/README.md)
+
+## Converter Reference
+
+> Discover all PHP converters that are able to generate a SARIF report.
+
+See [Converter Guide](converter/README.md)
