@@ -1,0 +1,12 @@
+path:
+    - ../fixtures/
+jobs: 10
+extensions:
+    - php
+warning: true
+memory-limit: -1
+no-cache: true
+log-json: false
+log-junit: false
+log-sarif: true
+sarif-converter: MyConverter

@@ -2,16 +2,18 @@
 <ruleset
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="phpcs.xsd"
-    name="MyStandard">
+    name="MyStandard"
+    namespace="MyStandard\CS">
+
     <description>My custom coding standard.</description>
 
-    <file>../../src</file>
-    <file>../../examples</file>
+    <autoload>../../../vendor/autoload.php</autoload>
 
-    <exclude-pattern>*/examples/converters/*</exclude-pattern>
+    <file>../fixtures</file>
 
     <rule ref="PSR12">
         <exclude name="PSR12.Files.FileHeader" />
         <exclude name="PSR12.Files.OpenTag" />
+        <exclude name="Squiz.Classes.ValidClassName" />
     </rule>
 </ruleset>

@@ -4,4 +4,5 @@ extensions:
     - php
 exclude:
     - vendor
+    - examples/converters/fixtures
 warning: false
