@@ -20,6 +20,7 @@ use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Reports\Report;
 
 use function array_count_values;
+use function getcwd;
 use function strtolower;
 
 /**
@@ -58,6 +59,7 @@ class PhpCsConverter extends AbstractConverter implements Report
 
         $artifactLocation = new ArtifactLocation();
         $artifactLocation->setUri($this->pathToArtifactLocation($report['filename']));
+        $artifactLocation->setUriBaseId('WORKINGDIR');
 
         foreach ($report['messages'] as $line => $lineErrors) {
             foreach ($lineErrors as $column => $colErrors) {
@@ -106,6 +108,13 @@ class PhpCsConverter extends AbstractConverter implements Report
         $properties->addProperty('totals.fixable', $totalFixable);
 
         $run = $this->run($this->invocations($properties));
+
+        $workingDir = new ArtifactLocation();
+        $workingDir->setUri($this->pathToUri(getcwd() . '/'));
+        $originalUriBaseIds = [
+            'WORKINGDIR' => $workingDir,
+        ];
+        $run->addAdditionalProperties($originalUriBaseIds);
 
         echo $this->sarifLog([$run]);
     }
