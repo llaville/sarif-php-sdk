@@ -24,12 +24,19 @@ use Bartlett\Sarif\Serializer\SerializerInterface;
 use Composer\InstalledVersions;
 
 use RuntimeException;
+use function array_intersect;
+use function array_slice;
+use function array_unshift;
+use function count;
+use function explode;
 use function getcwd;
+use function implode;
 use function parse_url;
 use function sprintf;
 use function str_replace;
 use function strlen;
 use function substr;
+use function trim;
 use const DIRECTORY_SEPARATOR;
 use const PHP_URL_SCHEME;
 
@@ -170,12 +177,22 @@ abstract class AbstractConverter implements ConverterInterface
             $workingDir = '.';
         }
         if (substr($path, 0, strlen($workingDir)) === $workingDir) {
-            // relative path
+            // have common path
             return substr($path, strlen($workingDir) + 1);
         }
 
-        // absolute path with protocol
-        return $this->pathToUri($path);
+        // make $path relative to working directory
+        $cwd = explode('/', trim($workingDir, '/'));
+        $rPath = explode('/', trim($path, '/'));
+        $commonParts = array_intersect($cwd, $rPath);
+
+        $relativeCwd = array_slice($cwd, count($commonParts));
+        $relativePath = array_slice($rPath, count($commonParts));
+
+        foreach ($relativeCwd as $item) {
+            array_unshift($relativePath,  '..');
+        }
+        return implode('/', $relativePath);
     }
 
     /**
