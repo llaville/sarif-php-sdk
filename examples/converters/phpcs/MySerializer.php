@@ -18,7 +18,7 @@ class MySerializerFactory extends PhpSerializerFactory
     public function createEncoder($realEncoder = null): EncoderInterface
     {
         if ($this->prettyPrint) {
-            $realEncoder = new PhpJsonEncoder(JSON_PRETTY_PRINT);
+            $realEncoder = new PhpJsonEncoder(JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
         }
         return parent::createEncoder($realEncoder);
     }
