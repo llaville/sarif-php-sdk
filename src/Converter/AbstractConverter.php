@@ -7,10 +7,12 @@
  */
 namespace Bartlett\Sarif\Converter;
 
+use Bartlett\Sarif\Definition\ArtifactContent;
 use Bartlett\Sarif\Definition\ArtifactLocation;
 use Bartlett\Sarif\Definition\Invocation;
 use Bartlett\Sarif\Definition\MultiformatMessageString;
 use Bartlett\Sarif\Definition\PropertyBag;
+use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
 use Bartlett\Sarif\Definition\Run;
@@ -23,12 +25,17 @@ use Bartlett\Sarif\Serializer\SerializerInterface;
 
 use Composer\InstalledVersions;
 
+use PHP_Parallel_Lint\PhpConsoleColor\ConsoleColor;
+use PHP_Parallel_Lint\PhpConsoleHighlighter\Highlighter;
+
 use RuntimeException;
+use Throwable;
 use function array_intersect;
 use function array_slice;
 use function array_unshift;
 use function count;
 use function explode;
+use function file_get_contents;
 use function getcwd;
 use function implode;
 use function parse_url;
@@ -213,5 +220,47 @@ abstract class AbstractConverter implements ConverterInterface
         }
 
         return 'file://' . $path;
+    }
+
+    /**
+     * Provides code snippet.
+     *
+     * Only if `php-parallel-lint/php-console-highlighter` package is installed
+     * @link https://packagist.org/packages/php-parallel-lint/php-console-highlighter
+     */
+    protected function getCodeSnippet(string $filePath, int $lineNumber, int $linesBefore, int $linesAfter): ?string
+    {
+        if (InstalledVersions::isInstalled('php-parallel-lint/php-console-highlighter') === false) {
+            return null;
+        }
+
+        try {
+            $highlighter = new Highlighter(new ConsoleColor());
+            $fileContent = file_get_contents($filePath);
+            $snippet = $highlighter->getCodeSnippet($fileContent, $lineNumber, $linesBefore, $linesAfter);
+        } catch (Throwable $exception) {
+            $snippet = null;
+        }
+        return $snippet;
+    }
+
+    protected function getSnippetRegion(
+        string $filePath,
+        int $lineNumber,
+        ?int $column = null,
+        int $linesBefore = 2,
+        int $linesAfter = 2
+    ): Region {
+        $region = new Region($lineNumber, $column);
+
+        $snippet = $this->getCodeSnippet($filePath, $lineNumber, $linesBefore, $linesAfter);
+
+        if ($snippet !== null) {
+            $artifactContent = new ArtifactContent();
+            $artifactContent->setRendered(new MultiformatMessageString($snippet));
+            $region->setSnippet($artifactContent);
+        }
+
+        return $region;
     }
 }
