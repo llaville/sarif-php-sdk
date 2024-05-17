@@ -12,7 +12,6 @@ use Bartlett\Sarif\Definition\Location;
 use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\PhysicalLocation;
 use Bartlett\Sarif\Definition\PropertyBag;
-use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
 
@@ -21,6 +20,7 @@ use PHP_CodeSniffer\Reports\Report;
 
 use function array_count_values;
 use function getcwd;
+use function max;
 use function strtolower;
 
 /**
@@ -50,7 +50,7 @@ class PhpCsConverter extends AbstractConverter implements Report
         return $rules;
     }
 
-    public function generateFileReport($report, File $phpcsFile, $showSources = false, $width = 80)
+    public function generateFileReport($report, File $phpcsFile, $showSources = false, $width = 80): bool
     {
         if ($report['errors'] === 0 && $report['warnings'] === 0) {
             // Nothing to print.
@@ -61,13 +61,27 @@ class PhpCsConverter extends AbstractConverter implements Report
         $artifactLocation->setUri($this->pathToArtifactLocation($report['filename']));
         $artifactLocation->setUriBaseId('WORKINGDIR');
 
+        $surroundingLines = 2;
+
         foreach ($report['messages'] as $line => $lineErrors) {
             foreach ($lineErrors as $column => $colErrors) {
                 foreach ($colErrors as $error) {
                     $result = new Result(new Message($error['message']));
 
                     $physicalLocation = new PhysicalLocation($artifactLocation);
-                    $physicalLocation->setRegion(new Region($line, $column));
+                    $region = $this->getSnippetRegion($phpcsFile->getFilename(), $line, $column, 0, 0);
+                    $physicalLocation->setRegion($region);
+
+                    $startLine = max($line - $surroundingLines, 1);
+                    $contextRegion = $this->getSnippetRegion(
+                        $phpcsFile->getFilename(),
+                        $startLine,
+                        null,
+                        0,
+                        $surroundingLines * 2
+                    );
+                    $contextRegion->setEndLine($line + $surroundingLines);
+                    $physicalLocation->setContextRegion($contextRegion);
 
                     $location = new Location();
                     $location->setPhysicalLocation($physicalLocation);
