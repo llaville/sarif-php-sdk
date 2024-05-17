@@ -20,6 +20,7 @@ use PHP_CodeSniffer\Reports\Report;
 
 use function array_count_values;
 use function getcwd;
+use function hash_file;
 use function max;
 use function strtolower;
 
