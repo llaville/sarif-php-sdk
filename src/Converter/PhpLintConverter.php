@@ -10,8 +10,10 @@ namespace Bartlett\Sarif\Converter;
 use Bartlett\Sarif\Definition\ArtifactLocation;
 use Bartlett\Sarif\Definition\Location;
 use Bartlett\Sarif\Definition\Message;
+use Bartlett\Sarif\Definition\MultiformatMessageString;
 use Bartlett\Sarif\Definition\PhysicalLocation;
 use Bartlett\Sarif\Definition\Region;
+use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
 
 use Overtrue\PHPLint\Output\LinterOutput;
@@ -30,6 +32,21 @@ class PhpLintConverter extends AbstractConverter
     protected const TOOL_FULL_DESCRIPTION = 'PHPLint is a tool that can speed up linting of php files by running several lint processes at once.';
     protected const TOOL_INFO_URI = 'https://github.com/overtrue/phplint';
     protected const TOOL_COMPOSER_PACKAGE = 'overtrue/phplint';
+
+    protected const DEFAULT_HELP_URI = 'https://www.php.net/manual/en/features.commandline.options.php';
+
+    public function rules(): array
+    {
+        $rule = new ReportingDescriptor('CS101');
+        $rule->setShortDescription(new MultiformatMessageString('Syntax error'));
+        $rule->setFullDescription(new MultiformatMessageString('Syntax error detected when lint a file'));
+        $rule->setHelp(new MultiformatMessageString(self::DEFAULT_HELP_URI));
+        $rule->setHelpUri('https://www.php.net/manual/en/langref.php');
+        
+        return [
+            $rule,
+        ];
+    }
 
     public function format(LinterOutput $results): string
     {
@@ -50,6 +67,7 @@ class PhpLintConverter extends AbstractConverter
             $physicalLocation->setRegion(new Region($failure['line']));
             $location->setPhysicalLocation($physicalLocation);
             $result->addLocations([$location]);
+            $result->setRuleId('CS101');
 
             $this->results[] = $result;
         }
