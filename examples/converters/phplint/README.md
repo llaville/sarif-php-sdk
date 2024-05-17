@@ -116,6 +116,9 @@ spl_autoload_register(function (string $class): void {
 
 **Step 4:** Use a custom binary launcher
 
+> [!WARNING]
+> Creation of a custom launcher is no more necessary with PHPLint 9.3.1 or greater. Use the `--bootstrap` option.
+
 ```
 #!/usr/bin/env php
 <?php
@@ -128,8 +131,16 @@ require_once dirname(__DIR__, 3) . '/vendor/overtrue/phplint/phplint.php';
 
 **Step 5:** And finally, print the SARIF report
 
+With custom launcher :
+
 ```shell
 ./phplint -v
+```
+
+Without custom launcher :
+
+```shell
+../../../vendor/bin/phplint --bootstrap autoload.php
 ```
 
 [phplint]: https://github.com/overtrue/phplint
