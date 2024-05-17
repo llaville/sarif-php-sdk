@@ -17,6 +17,7 @@ use Bartlett\Sarif\Definition\Result;
 use Overtrue\PHPLint\Output\LinterOutput;
 
 use function getcwd;
+use function hash_file;
 
 /**
  * @author Laurent Laville
@@ -35,7 +36,10 @@ class PhpLintConverter extends AbstractConverter
         $failures = $results->getFailures();
 
         foreach ($failures as $file => $failure) {
+            $fingerprints = hash_file('sha256', $file);
+
             $result = new Result(new Message($failure['error']));
+            $result->addPartialFingerprints(['syntaxError' => $fingerprints]);
 
             $artifactLocation = new ArtifactLocation();
             $artifactLocation->setUri($this->pathToArtifactLocation($file));
