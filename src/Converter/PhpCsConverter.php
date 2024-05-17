@@ -63,13 +63,16 @@ class PhpCsConverter extends AbstractConverter implements Report
 
         $surroundingLines = 2;
 
+        $fingerprints = hash_file('sha256', $report['filename']);
+
         foreach ($report['messages'] as $line => $lineErrors) {
             foreach ($lineErrors as $column => $colErrors) {
                 foreach ($colErrors as $error) {
                     $result = new Result(new Message($error['message']));
+                    $result->addPartialFingerprints([$error['source'] => $fingerprints]);
 
                     $physicalLocation = new PhysicalLocation($artifactLocation);
-                    $region = $this->getSnippetRegion($phpcsFile->getFilename(), $line, $column, 0, 0);
+                    $region = $this->getSnippetRegion($report['filename'], $line, $column, 0, 0);
                     $physicalLocation->setRegion($region);
 
                     $startLine = max($line - $surroundingLines, 1);
