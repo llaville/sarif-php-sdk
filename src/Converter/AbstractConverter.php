@@ -149,6 +149,8 @@ abstract class AbstractConverter implements ConverterInterface
         $invocation = new Invocation(true);
         $invocation->setWorkingDirectory($workingDir);
 
+        $invocation->setCommandLine(implode(' ', $GLOBALS['argv']));
+
         $utcFormat = "Y-m-d\TH:i:s\Z";
         if ($this->startTime) {
             $invocation->setStartTimeUtc(gmdate($utcFormat, $this->startTime));
