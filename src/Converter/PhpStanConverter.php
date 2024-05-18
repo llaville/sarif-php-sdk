@@ -10,9 +10,11 @@ namespace Bartlett\Sarif\Converter;
 use Bartlett\Sarif\Definition\ArtifactLocation;
 use Bartlett\Sarif\Definition\Location;
 use Bartlett\Sarif\Definition\Message;
+use Bartlett\Sarif\Definition\MultiformatMessageString;
 use Bartlett\Sarif\Definition\PhysicalLocation;
 use Bartlett\Sarif\Definition\PropertyBag;
 use Bartlett\Sarif\Definition\Region;
+use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
 
 use PHPStan\Command\AnalysisResult;
@@ -34,6 +36,21 @@ class PhpStanConverter extends AbstractConverter implements ErrorFormatter
     protected const TOOL_INFO_URI = 'https://phpstan.org';
     protected const TOOL_COMPOSER_PACKAGE = 'phpstan/phpstan-src';
 
+    protected const DEFAULT_HELP_URI = 'https://phpstan.org/user-guide/command-line-usage';
+
+    public function rules(): array
+    {
+        $rule = new ReportingDescriptor('CA101');
+        $rule->setShortDescription(new MultiformatMessageString('Analysis error'));
+        $rule->setFullDescription(new MultiformatMessageString('Errors detected during analysis of source files'));
+        $rule->setHelp(new MultiformatMessageString(self::DEFAULT_HELP_URI));
+        $rule->setHelpUri('https://phpstan.org/user-guide/getting-started');
+
+        return [
+            $rule,
+        ];
+    }
+
     public function formatErrors(AnalysisResult $analysisResult, Output $output): int
     {
         foreach ($analysisResult->getFileSpecificErrors() as $fileSpecificError) {
@@ -42,7 +59,7 @@ class PhpStanConverter extends AbstractConverter implements ErrorFormatter
             $fingerprints = hash_file('sha256', $file);
 
             $result = new Result(new Message($fileSpecificError->getMessage()));
-            $result->addPartialFingerprints(['codingStandard' => $fingerprints]);
+            $result->addPartialFingerprints([$fileSpecificError->getIdentifier() => $fingerprints]);
 
             $artifactLocation = new ArtifactLocation();
             $artifactLocation->setUri($this->pathToArtifactLocation($file));
@@ -57,6 +74,7 @@ class PhpStanConverter extends AbstractConverter implements ErrorFormatter
             $properties = new PropertyBag();
             $properties->addProperty('ignorable', $fileSpecificError->canBeIgnored());
             $result->setProperties($properties);
+            $result->setRuleId('CA101');
 
             $this->results[] = $result;
         }
