@@ -39,6 +39,7 @@ use function date;
 use function explode;
 use function file_get_contents;
 use function getcwd;
+use function gmdate;
 use function implode;
 use function parse_url;
 use function sprintf;
@@ -73,6 +74,16 @@ abstract class AbstractConverter implements ConverterInterface
     protected array $results = [];
 
     protected SerializerInterface $serializer;
+
+    /**
+     * Specify the UTC date and time at which the invocation started.
+     */
+    protected ?int $startTime = null;
+
+    /**
+     * Specify the UTC date and time at which the invocation ended.
+     */
+    protected ?int $endTime = null;
 
     public function __construct(?SerializerFactory $factory = null)
     {
@@ -137,6 +148,14 @@ abstract class AbstractConverter implements ConverterInterface
 
         $invocation = new Invocation(true);
         $invocation->setWorkingDirectory($workingDir);
+
+        $utcFormat = "Y-m-d\TH:i:s\Z";
+        if ($this->startTime) {
+            $invocation->setStartTimeUtc(gmdate($utcFormat, $this->startTime));
+        }
+        if ($this->endTime) {
+            $invocation->setEndTimeUtc(gmdate($utcFormat, $this->endTime));
+        }
 
         if ($properties !== null) {
             $invocation->setProperties($properties);
