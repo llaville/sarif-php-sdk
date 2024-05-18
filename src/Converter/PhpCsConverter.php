@@ -22,6 +22,7 @@ use function array_count_values;
 use function getcwd;
 use function hash_file;
 use function max;
+use function strpos;
 use function strtolower;
 
 /**
@@ -49,6 +50,25 @@ class PhpCsConverter extends AbstractConverter implements Report
         }
 
         return $rules;
+    }
+
+    public function invocations(?PropertyBag $properties = null): array
+    {
+        $invocations = parent::invocations($properties);
+
+        $arguments = $GLOBALS['argv'];
+        $responseFileOption = '--report-file=';
+        foreach ($arguments as $argument) {
+            if (strpos($argument, $responseFileOption) === 0) {
+                // @link https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Reporting#writing-a-report-to-a-file
+                $responseFile = new ArtifactLocation();
+                $responseFile->setDescription(new Message('Writing a Report to a File'));
+                $responseFile->setUri($this->pathToUri(\str_replace($responseFileOption, '', $argument)));
+                $invocations[0]->addResponseFiles([$responseFile]);
+            }
+        }
+
+        return $invocations;
     }
 
     public function generateFileReport($report, File $phpcsFile, $showSources = false, $width = 80): bool
