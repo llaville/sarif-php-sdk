@@ -12,6 +12,7 @@ use Bartlett\Sarif\Definition\Location;
 use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\MultiformatMessageString;
 use Bartlett\Sarif\Definition\PhysicalLocation;
+use Bartlett\Sarif\Definition\PropertyBag;
 use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
@@ -20,6 +21,7 @@ use Overtrue\PHPLint\Output\LinterOutput;
 
 use function getcwd;
 use function hash_file;
+use function str_replace;
 
 /**
  * @author Laurent Laville
@@ -42,10 +44,28 @@ class PhpLintConverter extends AbstractConverter
         $rule->setFullDescription(new MultiformatMessageString('Syntax error detected when lint a file'));
         $rule->setHelp(new MultiformatMessageString(self::DEFAULT_HELP_URI));
         $rule->setHelpUri('https://www.php.net/manual/en/langref.php');
-        
+
         return [
             $rule,
         ];
+    }
+
+    public function invocations(?PropertyBag $properties = null): array
+    {
+        $invocations = parent::invocations($properties);
+
+        $arguments = $GLOBALS['argv'];
+        $responseFileOption = '--log-sarif=';
+        foreach ($arguments as $argument) {
+            if (strpos($argument, $responseFileOption) === 0) {
+                $responseFile = new ArtifactLocation();
+                $responseFile->setDescription(new Message('Log scan results to a file'));
+                $responseFile->setUri($this->pathToUri(str_replace($responseFileOption, '', $argument)));
+                $invocations[0]->addResponseFiles([$responseFile]);
+            }
+        }
+
+        return $invocations;
     }
 
     public function format(LinterOutput $results): string
