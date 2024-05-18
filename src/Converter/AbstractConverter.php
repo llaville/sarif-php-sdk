@@ -32,6 +32,7 @@ use PHP_Parallel_Lint\PhpConsoleHighlighter\Highlighter;
 use RuntimeException;
 use Throwable;
 use function array_intersect;
+use function array_shift;
 use function array_slice;
 use function array_unshift;
 use function count;
@@ -149,7 +150,10 @@ abstract class AbstractConverter implements ConverterInterface
         $invocation = new Invocation(true);
         $invocation->setWorkingDirectory($workingDir);
 
-        $invocation->setCommandLine(implode(' ', $GLOBALS['argv']));
+        $arguments = $GLOBALS['argv'];
+        $cmd = array_shift($arguments);
+        $invocation->setCommandLine($cmd);
+        $invocation->addArguments($arguments);
 
         $utcFormat = "Y-m-d\TH:i:s\Z";
         if ($this->startTime) {
