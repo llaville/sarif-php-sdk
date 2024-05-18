@@ -16,6 +16,7 @@ use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
 use Bartlett\Sarif\Definition\Run;
+use Bartlett\Sarif\Definition\RunAutomationDetails;
 use Bartlett\Sarif\Definition\Tool;
 use Bartlett\Sarif\Definition\ToolComponent;
 use Bartlett\Sarif\Factory\PhpSerializerFactory;
@@ -34,6 +35,7 @@ use function array_intersect;
 use function array_slice;
 use function array_unshift;
 use function count;
+use function date;
 use function explode;
 use function file_get_contents;
 use function getcwd;
@@ -44,6 +46,7 @@ use function str_replace;
 use function strlen;
 use function substr;
 use function trim;
+use const DATE_ATOM;
 use const DIRECTORY_SEPARATOR;
 use const PHP_URL_SCHEME;
 
@@ -142,6 +145,14 @@ abstract class AbstractConverter implements ConverterInterface
         return [$invocation];
     }
 
+    public function automationDetails(): RunAutomationDetails
+    {
+        $automationDetails = new RunAutomationDetails();
+        $automationDetails->setId('Daily run '. date(DATE_ATOM));
+
+        return $automationDetails;
+    }
+
     /**
      * @inheritDoc
      */
@@ -157,6 +168,7 @@ abstract class AbstractConverter implements ConverterInterface
 
         $run->addInvocations($invocations);
         $run->addResults($this->results);
+        $run->setAutomationDetails($this->automationDetails());
 
         return $run;
     }

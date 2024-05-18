@@ -11,6 +11,7 @@ use Bartlett\Sarif\Definition\Invocation;
 use Bartlett\Sarif\Definition\PropertyBag;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Run;
+use Bartlett\Sarif\Definition\RunAutomationDetails;
 use Bartlett\Sarif\Definition\ToolComponent;
 
 /**
@@ -35,6 +36,8 @@ interface ConverterInterface
      * @return Invocation[]
      */
     public function invocations(?PropertyBag $properties = null): array;
+
+    public function automationDetails(): RunAutomationDetails;
 
     /**
      * @param Invocation[] $invocations
