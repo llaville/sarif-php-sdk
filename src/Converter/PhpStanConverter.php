@@ -13,7 +13,6 @@ use Bartlett\Sarif\Definition\Message;
 use Bartlett\Sarif\Definition\MultiformatMessageString;
 use Bartlett\Sarif\Definition\PhysicalLocation;
 use Bartlett\Sarif\Definition\PropertyBag;
-use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
 
@@ -23,6 +22,7 @@ use PHPStan\Command\Output;
 
 use function getcwd;
 use function hash_file;
+use function max;
 
 /**
  * @author Laurent Laville
@@ -53,6 +53,8 @@ class PhpStanConverter extends AbstractConverter implements ErrorFormatter
 
     public function formatErrors(AnalysisResult $analysisResult, Output $output): int
     {
+        $surroundingLines = 2;
+
         foreach ($analysisResult->getFileSpecificErrors() as $fileSpecificError) {
             $file = $fileSpecificError->getFile();
 
@@ -67,7 +69,21 @@ class PhpStanConverter extends AbstractConverter implements ErrorFormatter
 
             $location = new Location();
             $physicalLocation = new PhysicalLocation($artifactLocation);
-            $physicalLocation->setRegion(new Region($fileSpecificError->getLine()));
+            $line = $fileSpecificError->getLine();
+            $region = $this->getSnippetRegion($file, $line, null, 0, 0);
+            $physicalLocation->setRegion($region);
+
+            $startLine = max($line - $surroundingLines, 1);
+            $contextRegion = $this->getSnippetRegion(
+                $file,
+                $startLine,
+                null,
+                0,
+                $surroundingLines * 2
+            );
+            $contextRegion->setEndLine($line + $surroundingLines);
+            $physicalLocation->setContextRegion($contextRegion);
+
             $location->setPhysicalLocation($physicalLocation);
             $result->addLocations([$location]);
 
