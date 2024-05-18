@@ -28,7 +28,7 @@ services:
 From `examples/converters/phpstan` demo folder :
 
 ```shell
-../../../vendor/bin/phpstan analyse --error-format=sarif
+../../../vendor/bin/phpstan analyse --error-format=sarif --configuration phpstan.neon.dist --autoload-file ../../../vendor/autoload.php
 ```
 
 ## How to customize your converter
@@ -105,7 +105,7 @@ services:
 **Step 4:** And finally, print the SARIF report
 
 ```shell
-../../../vendor/bin/phpstan analyse --error-format=sarif --autoload-file bootstrap.php
+../../../vendor/bin/phpstan analyse --error-format=sarif --configuration phpstan.neon --autoload-file bootstrap.php
 ```
 
 ### Change contents of tool object in SARIF output
@@ -121,12 +121,11 @@ Here we will see how to identify this converter in SARIF report :
 ```php
 <?php
 
-use Bartlett\Sarif\Converter\PhpStanConverter;
 use Bartlett\Sarif\Definition\MultiformatMessageString;
 use Bartlett\Sarif\Definition\ToolComponent;
 use Composer\InstalledVersions;
 
-class MyConverter extends PhpStanConverter
+class MyOtherConverter extends MyConverter
 {
     public function toolExtensions(): array
     {
@@ -145,7 +144,7 @@ class MyConverter extends PhpStanConverter
 **Step 2:** And finally, print the SARIF report
 
 ```shell
-../../../vendor/bin/phpstan analyse --error-format=sarif --autoload-file bootstrap.php
+../../../vendor/bin/phpstan analyse --error-format=sarif --configuration phpstan.custom.neon --autoload-file bootstrap.php
 ```
 
 [phpstan]: https://github.com/phpstan/phpstan
