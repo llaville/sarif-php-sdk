@@ -20,6 +20,7 @@ use PHPStan\Command\ErrorFormatter\ErrorFormatter;
 use PHPStan\Command\Output;
 
 use function getcwd;
+use function hash_file;
 
 /**
  * @author Laurent Laville
@@ -38,7 +39,10 @@ class PhpStanConverter extends AbstractConverter implements ErrorFormatter
         foreach ($analysisResult->getFileSpecificErrors() as $fileSpecificError) {
             $file = $fileSpecificError->getFile();
 
+            $fingerprints = hash_file('sha256', $file);
+
             $result = new Result(new Message($fileSpecificError->getMessage()));
+            $result->addPartialFingerprints(['codingStandard' => $fingerprints]);
 
             $artifactLocation = new ArtifactLocation();
             $artifactLocation->setUri($this->pathToArtifactLocation($file));
