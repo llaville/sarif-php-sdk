@@ -15,6 +15,7 @@ use Bartlett\Sarif\Definition\PhysicalLocation;
 use Bartlett\Sarif\Definition\PropertyBag;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
+use Bartlett\Sarif\Definition\ToolComponent;
 
 use PHPStan\Command\AnalysisResult;
 use PHPStan\Command\ErrorFormatter\ErrorFormatter;
@@ -23,6 +24,7 @@ use PHPStan\Command\Output;
 use function getcwd;
 use function hash_file;
 use function max;
+use function sprintf;
 
 /**
  * @author Laurent Laville
@@ -37,6 +39,16 @@ class PhpStanConverter extends AbstractConverter implements ErrorFormatter
     protected const TOOL_COMPOSER_PACKAGE = 'phpstan/phpstan-src';
 
     protected const DEFAULT_HELP_URI = 'https://phpstan.org/user-guide/command-line-usage';
+
+    public function toolDriver(): ToolComponent
+    {
+        $this->toolFullName = sprintf(
+            '%s %s',
+            self::TOOL_FULL_DESCRIPTION,
+            $this->toolSemanticVersion
+        );
+        return parent::toolDriver();
+    }
 
     public function rules(): array
     {
