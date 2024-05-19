@@ -22,6 +22,7 @@ use function array_count_values;
 use function getcwd;
 use function hash_file;
 use function max;
+use function str_replace;
 use function strpos;
 use function strtolower;
 
@@ -63,7 +64,7 @@ class PhpCsConverter extends AbstractConverter implements Report
                 // @link https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Reporting#writing-a-report-to-a-file
                 $responseFile = new ArtifactLocation();
                 $responseFile->setDescription(new Message('Writing a Report to a File'));
-                $responseFile->setUri($this->pathToUri(\str_replace($responseFileOption, '', $argument)));
+                $responseFile->setUri($this->pathToUri(str_replace($responseFileOption, '', $argument)));
                 $invocations[0]->addResponseFiles([$responseFile]);
             }
         }
