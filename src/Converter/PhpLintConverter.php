@@ -16,11 +16,13 @@ use Bartlett\Sarif\Definition\PropertyBag;
 use Bartlett\Sarif\Definition\Region;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
+use Bartlett\Sarif\Definition\ToolComponent;
 
 use Overtrue\PHPLint\Output\LinterOutput;
 
 use function getcwd;
 use function hash_file;
+use function sprintf;
 use function str_replace;
 
 /**
@@ -36,6 +38,16 @@ class PhpLintConverter extends AbstractConverter
     protected const TOOL_COMPOSER_PACKAGE = 'overtrue/phplint';
 
     protected const DEFAULT_HELP_URI = 'https://www.php.net/manual/en/features.commandline.options.php';
+
+    public function toolDriver(): ToolComponent
+    {
+        $this->toolFullName = sprintf(
+            '%s version %s by overtrue and contributors',
+            self::TOOL_NAME,
+            $this->toolSemanticVersion
+        );
+        return parent::toolDriver();
+    }
 
     public function rules(): array
     {
