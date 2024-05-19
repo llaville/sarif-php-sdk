@@ -14,6 +14,7 @@ use Bartlett\Sarif\Definition\PhysicalLocation;
 use Bartlett\Sarif\Definition\PropertyBag;
 use Bartlett\Sarif\Definition\ReportingDescriptor;
 use Bartlett\Sarif\Definition\Result;
+use Bartlett\Sarif\Definition\ToolComponent;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Reports\Report;
@@ -22,6 +23,7 @@ use function array_count_values;
 use function getcwd;
 use function hash_file;
 use function max;
+use function sprintf;
 use function str_replace;
 use function strpos;
 use function strtolower;
@@ -37,6 +39,16 @@ class PhpCsConverter extends AbstractConverter implements Report
     protected const TOOL_FULL_DESCRIPTION = 'PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.';
     protected const TOOL_INFO_URI = 'https://github.com/PHPCSStandards/PHP_CodeSniffer';
     protected const TOOL_COMPOSER_PACKAGE = 'squizlabs/php_codesniffer';
+
+    public function toolDriver(): ToolComponent
+    {
+        $this->toolFullName = sprintf(
+            '%s version %s by Squiz and PHPCSStandards',
+            self::TOOL_NAME,
+            $this->toolSemanticVersion
+        );
+        return parent::toolDriver();
+    }
 
     public function rules(): array
     {
