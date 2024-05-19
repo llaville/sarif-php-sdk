@@ -59,6 +59,7 @@ use const PHP_URL_SCHEME;
 abstract class AbstractConverter implements ConverterInterface
 {
     protected string $toolName;
+    protected ?string $toolFullName = null;
     protected string $toolShortDescription;
     protected string $toolFullDescription;
     protected string $toolInformationUri;
@@ -99,6 +100,10 @@ abstract class AbstractConverter implements ConverterInterface
         $driver = new ToolComponent($this->toolName ?? static::TOOL_NAME);
         $driver->setInformationUri($this->toolInformationUri ?? static::TOOL_INFO_URI);
         $driver->setSemanticVersion($this->toolSemanticVersion);
+
+        if ($this->toolFullName) {
+            $driver->setFullName($this->toolFullName);
+        }
 
         $shortDescription = $this->toolShortDescription ?? static::TOOL_SHORT_DESCRIPTION;
         if (!empty($shortDescription)) {
