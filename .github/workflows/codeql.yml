@@ -55,7 +55,9 @@ jobs:
 
             -   # https://github.com/llaville/sarif-php-sdk/tree/master/examples/converters/phpstan
                 name: Install PHPStan SARIF Converter
-                run: composer require --dev --prefer-dist --no-progress phpstan/phpstan bartlett/sarif-php-sdk
+                run: |
+                    rm composer.*
+                    composer require --dev --prefer-dist --no-progress phpstan/phpstan bartlett/sarif-php-sdk
 
             -   # https://github.com/phpstan/phpstan
                 name: Run PHPStan analysis
