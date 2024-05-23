@@ -62,7 +62,9 @@ jobs:
             -   # https://github.com/phpstan/phpstan
                 name: Run PHPCS analysis
                 continue-on-error: true
-                run: vendor/bin/phpcs --report='\Bartlett\Sarif\Converter\PhpCsConverter' --report-file=phpcs.sarif.json
+                run: |
+                    cd examples/converters/phpcs
+                    ../../../vendor/bin/phpcs --report='\Bartlett\Sarif\Converter\PhpCsConverter' --report-file=../../../phpcs.sarif.json
 
             -   # https://github.com/actions/upload-artifact
                 uses: actions/upload-artifact@v4
