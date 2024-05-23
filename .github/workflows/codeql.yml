@@ -16,6 +16,67 @@ on:
                 type: string
 
 jobs:
+    phpcs-analysis:
+        name: PHPCS analysis
+
+        # read https://github.com/github/codeql-action/issues/2117
+        permissions:
+            # required for all workflows
+            security-events: write
+            # only required for workflows in private repositories
+            actions: read
+            contents: read
+
+        runs-on: "${{ matrix.operating-system }}"
+
+        strategy:
+            fail-fast: false
+            matrix:
+                operating-system:
+                    - "ubuntu-22.04"
+                php-version:
+                    - "8.1"
+
+        steps:
+            -   # https://github.com/actions/checkout
+                name: Checkout Code
+                uses: actions/checkout@v4
+                with:
+                    fetch-depth: 1
+                    repository: ${{ github.event.inputs.repo }}
+                    ref: ${{ github.event.inputs.ref }}
+
+            -   # https://github.com/shivammathur/setup-php
+                name: Setup PHP runtime
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: ${{ matrix.php-version }}
+                    coverage: "none"
+
+            -   # https://github.com/llaville/sarif-php-sdk/tree/master/examples/converters/phpcs
+                name: Install PHPCS SARIF Converter
+                run: |
+                    rm composer.*
+                    composer require --dev --prefer-dist --no-progress squizlabs/php_codesniffer bartlett/sarif-php-sdk
+
+            -   # https://github.com/phpstan/phpstan
+                name: Run PHPCS analysis
+                continue-on-error: true
+                run: vendor/bin/phpcs --report='\Bartlett\Sarif\Converter\PhpCsConverter' --report-file=phpcs.sarif.json
+
+            -   # https://github.com/actions/upload-artifact
+                uses: actions/upload-artifact@v4
+                with:
+                    name: phpcs-${{ matrix.version }}-${{ matrix.php-version }}
+                    path: phpcs.sarif.json
+
+            -   # https://github.com/github/codeql-action
+                name: Upload analysis results to GitHub
+                uses: github/codeql-action/upload-sarif@v2
+                with:
+                    sarif_file: phpcs.sarif.json
+                    wait-for-processing: true
+
     phpstan-analysis:
         name: PHPStan analysis
 
