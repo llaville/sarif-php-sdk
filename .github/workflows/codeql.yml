@@ -127,7 +127,7 @@ jobs:
                 continue-on-error: true
                 run: |
                     cd examples/converters/phplint
-                    ../../../vendor/bin/phplint --log-sarif=../../../phplint.sarif.json
+                    ../../../vendor/bin/phplint --log-sarif=../../../phplint.sarif.json --bootstrap autoload.php
 
             -   # https://github.com/actions/upload-artifact
                 uses: actions/upload-artifact@v4
