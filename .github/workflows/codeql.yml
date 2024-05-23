@@ -59,7 +59,7 @@ jobs:
                     rm composer.*
                     composer require --dev --prefer-dist --no-progress squizlabs/php_codesniffer bartlett/sarif-php-sdk
 
-            -   # https://github.com/phpstan/phpstan
+            -   # https://github.com/PHPCSStandards/PHP_CodeSniffer
                 name: Run PHPCS analysis
                 continue-on-error: true
                 run: |
