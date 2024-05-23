@@ -188,7 +188,9 @@ jobs:
             -   # https://github.com/phpstan/phpstan
                 name: Run PHPStan analysis
                 continue-on-error: true
-                run: vendor/bin/phpstan analyze --configuration=examples/converters/phpstan/phpstan.neon.dist --error-format=sarif --autoload-file vendor/autoload.php > phpstan.sarif.json
+                run: |
+                    cd examples/converters/phpstan
+                    ../../../vendor/bin/phpstan analyze --configuration=phpstan.neon.dist --error-format=sarif --autoload-file ../../../vendor/autoload.php > ../../../phpstan.sarif.json
 
             -   # https://github.com/actions/upload-artifact
                 uses: actions/upload-artifact@v4
