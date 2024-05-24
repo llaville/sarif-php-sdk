@@ -25,3 +25,9 @@ See [Reference Guide](reference/README.md)
 > Discover all PHP converters that are able to generate a SARIF report.
 
 See [Converter Guide](converter/README.md)
+
+## GitHub Code Scanning
+
+> Discover how to integrate SARIF reports with GH Code Scanning features.
+
+See [GitHub Code Scanning Guide](github-code-scanning/README.md)
