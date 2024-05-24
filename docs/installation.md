@@ -19,7 +19,8 @@
 The preferred method of installation is to use the PHAR version which can be downloaded from the most recent
 [Github Release][releases]. This method ensures you will not have any dependency conflict issue.
 
-> **TIP** When you want to use, load autoloader as follows :
+> [!TIP]
+> When you want to use, load autoloader as follows :
 >
 > ```php
 > require_once 'phar://' . '/absolute/path/to' . '/sarif-php-sdk.phar/vendor/autoload.php';
@@ -44,7 +45,7 @@ You can also install application locally to your project with [Phive][phive] and
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <phive xmlns="https://phar.io/phive">
-    <phar name="llaville/sarif-php-sdk" version="^1.2" copy="false" />
+    <phar name="llaville/sarif-php-sdk" version="^1.3" copy="false" />
 </phive>
 ```
 
@@ -58,7 +59,7 @@ The recommended way to install this library is [through composer][composer].
 If you don't know yet what is composer, have a look [on introduction][composer-intro].
 
 ```shell
-composer require bartlett/sarif-php-sdk ^1.2
+composer require bartlett/sarif-php-sdk ^1.3
 ```
 
 If you cannot install it because of a dependency conflict, or you prefer to install it for your project, we recommend
@@ -74,7 +75,7 @@ composer bin sarif-php-sdk require --dev bartlett/sarif-php-sdk
 The SARIF PHP SDK can be directly used from [GitHub][github-repo] by cloning the repository into a directory of your choice.
 
 ```shell
-git clone -b 1.2 https://github.com/llaville/sarif-php-sdk.git
+git clone -b 1.3 https://github.com/llaville/sarif-php-sdk.git
 ```
 
 [releases]: https://github.com/llaville/sarif-php-sdk/releases/
