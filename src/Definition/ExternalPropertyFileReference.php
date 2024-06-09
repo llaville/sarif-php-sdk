@@ -51,10 +51,6 @@ final class ExternalPropertyFileReference extends JsonSerializable
      */
     public function __construct(ArtifactLocation $location = null, string $guid = '')
     {
-        if (empty($location) && empty($guid)) {
-            throw new DomainException('Either "location" or "guid" are required. Nothing provided.');
-        }
-
         if ($location instanceof ArtifactLocation) {
             $this->location = $location;
         }

@@ -148,7 +148,7 @@ final class ExternalProperties extends JsonSerializable
 
     /**
      * @param string $version
-     * @param string $schemaUri
+     * @param string|null $schemaUri
      */
     public function __construct(string $version = '2.1.0', ?string $schemaUri = null)
     {

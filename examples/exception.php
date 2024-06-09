@@ -42,7 +42,7 @@ $notification->setDescriptor(new ReportingDescriptorReference(1, 'CTN9999'));
 $notification->setLevel('error');
 $exception = new Exception();
 $exception->setMessage("Exception evaluating rule 'C2001'");
-$notification->setRuntimeException($exception);
+$notification->setException($exception);
 $invocation = new Invocation(true);
 $invocation->addToolExecutionNotifications([$notification]);
 

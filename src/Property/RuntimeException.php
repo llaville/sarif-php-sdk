@@ -17,7 +17,7 @@ trait RuntimeException
 {
     protected Exception $exception;
 
-    public function setRuntimeException(Exception $exception): void
+    public function setException(Exception $exception): void
     {
         $this->exception = $exception;
     }

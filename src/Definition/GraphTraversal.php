@@ -71,10 +71,6 @@ final class GraphTraversal extends JsonSerializable
      */
     public function __construct(?int $runGraphIndex = null, ?int $resultGraphIndex = null)
     {
-        if (!is_numeric($runGraphIndex) && !is_numeric($resultGraphIndex)) {
-            throw new DomainException('Either "runGraphIndex" or "resultGraphIndex" are required. Nothing provided.');
-        }
-
         if (is_int($runGraphIndex)) {
             $this->runGraphIndex = $runGraphIndex;
         }
