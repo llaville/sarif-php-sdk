@@ -24,59 +24,55 @@ final class NativeJsonSerializerTest extends TestCase
     public static function sarifLogDataProvider(): Generator
     {
         $examples = [
-            'message/embeddedLinks' => null,
-            'message/formatted' => null,
-            'message/plainText' => null,
-            'message/stringLookup' => null,
-            'address' => null,
-            'artifact' => null,
-            'attachment' => null,
-            'codeFlow' => null,
-            'configurationOverride' => null,
-            'conversion' => null,
-            'exception' => null,
-            'externalProperties' => null,
-            'externalPropertyFileReferences' => null,
-            'fix' => null,
-            'graph' => null,
-            'graphTraversal' => null,
-            'locationRelationship' => null,
-            'logicalLocation' => null,
-            'physicalLocation' => null,
-            'rectangle' => null,
-            'reportingConfiguration' => null,
-            'reportingDescriptor' => null,
-            'reportingDescriptorReference' => null,
-            'reportingDescriptorRelationship' => null,
-            'result' => null,
-            'resultProvenance' => null,
-            'run' => null,
-            'runAutomationDetails' => null,
-            'sarifLog' => null,
-            'specialLocations' => null,
-            'stack' => null,
-            'suppression' => null,
-            'tool' => null,
-            'translationMetadata' => null,
-            'versionControlDetails' => null,
-            'webRequest' => null,
+            'message/embeddedLinks',
+            'message/formatted',
+            'message/plainText',
+            'message/stringLookup',
+            'address',
+            'artifact',
+            'attachment',
+            'codeFlow',
+            'configurationOverride',
+            'conversion',
+            'exception',
+            'externalProperties',
+            'externalPropertyFileReferences',
+            'fix',
+            'graph',
+            'graphTraversal',
+            'locationRelationship',
+            'logicalLocation',
+            'physicalLocation',
+            'rectangle',
+            'reportingConfiguration',
+            'reportingDescriptor',
+            'reportingDescriptorReference',
+            'reportingDescriptorRelationship',
+            'result',
+            'resultProvenance',
+            'run',
+            'runAutomationDetails',
+            'sarifLog',
+            'specialLocations',
+            'stack',
+            'suppression',
+            'tool',
+            'translationMetadata',
+            'versionControlDetails',
+            'webRequest',
         ];
 
-        foreach ($examples as $example => $expectException) {
+        foreach ($examples as $example) {
             /** Should provide SarifLog instance referenced by $log variable  */
             require_once dirname(__DIR__, 3) . '/examples/' . $example . '.php';
             $description = 'examples/' . $example;
-            yield $description => [$example, $log, $expectException];
+            yield $description => [$example, $log];
         }
     }
 
     #[DataProvider('sarifLogDataProvider')]
-    public function testBuildReport(string $example, SarifLog $sarifLog, ?string $expectException): void
+    public function testBuildReport(string $example, SarifLog $sarifLog): void
     {
-        if (!empty($expectException)) {
-            $this->expectException($expectException);
-        }
-
         $factory = new PhpSerializerFactory();
         $serializer = $factory->createSerializer();
 

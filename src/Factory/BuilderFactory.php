@@ -33,7 +33,6 @@ use Bartlett\Sarif\Builder\LogicalLocation;
 use Bartlett\Sarif\Builder\Node;
 use Bartlett\Sarif\Builder\Notification;
 use Bartlett\Sarif\Builder\PhysicalLocation;
-use Bartlett\Sarif\Builder\Property;
 use Bartlett\Sarif\Builder\PropertyBag;
 use Bartlett\Sarif\Builder\Rectangle;
 use Bartlett\Sarif\Builder\Region;
