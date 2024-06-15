@@ -9,6 +9,8 @@ parameters:
         - ../../src/Converter/AbstractConverter.php
         - ../../src/Converter/Php*Converter.php
         - ../../examples/converters/
+        - ../../examples/builder/message/
+        - ../../examples/builder/run
     treatPhpDocTypesAsCertain: false
     ignoreErrors:
         -
