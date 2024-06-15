@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # GitHub Code Scanning
 
 > You can use code scanning to find security vulnerabilities and errors in the code for your project on GitHub.
@@ -7,6 +8,7 @@ GitHub Code Scanning features are compatible with SARIF.
 
 > [!NOTE]
 > Since version 1.2.0
+>
 > 1. The SARIF converter for PHP_CodeSniffer allows you to use [PHP_CodeSniffer][phpcs] as GitHub Code Scanning tool.
 > 2. The SARIF converter for PHPLint allows you to use [PHPLint][phplint] as GitHub Code Scanning tool.
 > 3. The SARIF converter for PHPStan allows you to use [PHPStan][phpstan] as GitHub Code Scanning tool.

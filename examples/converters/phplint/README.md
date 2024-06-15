@@ -119,7 +119,7 @@ spl_autoload_register(function (string $class): void {
 > [!WARNING]
 > Creation of a custom launcher is no more necessary with PHPLint 9.3.1 or greater. Use the `--bootstrap` option.
 
-```
+```php
 #!/usr/bin/env php
 <?php
 
@@ -144,3 +144,4 @@ Without custom launcher :
 ```
 
 [phplint]: https://github.com/overtrue/phplint
+[json-encode]: https://www.php.net/manual/en/function.json-encode

@@ -120,4 +120,5 @@ class MyConverter extends PhpCsConverter
 ```
 
 [phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
+[json-encode]: https://www.php.net/manual/en/function.json-encode
 [phpcs-report-fqn]: https://github.com/squizlabs/PHP_CodeSniffer/issues/1942

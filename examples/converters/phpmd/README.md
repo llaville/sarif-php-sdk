@@ -137,3 +137,4 @@ class MySarifRenderer extends PhpMdRenderer
 ```
 
 [phpmd]: https://github.com/phpmd/phpmd
+[json-encode]: https://www.php.net/manual/en/function.json-encode

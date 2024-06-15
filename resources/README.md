@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # Resources
 
 This section reference resources used to :

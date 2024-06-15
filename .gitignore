@@ -19,6 +19,9 @@ vendor-bin/**/vendor/
 ###### Mega-Linter ######
 megalinter-reports/
 
+###### PHP-CS-Fixer ######
+.php-cs-fixer.cache
+
 ######################################
 # GENERIC
 ######################################
