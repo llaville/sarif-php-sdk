@@ -55,7 +55,7 @@ use Bartlett\Sarif\Builder\TranslationMetadata;
 use Bartlett\Sarif\Builder\VersionControlDetails;
 use Bartlett\Sarif\Builder\WebRequest;
 use Bartlett\Sarif\Builder\WebResponse;
-use Bartlett\Sarif\Internal\BuilderFactoryInterface;
+use Bartlett\Sarif\Contract\BuilderFactoryInterface;
 
 /**
  * @author Laurent Laville

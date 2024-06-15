@@ -1,6 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Bartlett\Sarif\Internal;
+namespace Bartlett\Sarif\Contract;
+
+use Bartlett\Sarif\Internal\JsonSerializable;
 
 /**
  * @author Laurent Laville

@@ -2,6 +2,7 @@
 
 namespace Bartlett\Sarif\Builder;
 
+use Bartlett\Sarif\Contract\BuilderDeclarationInterface;
 use Bartlett\Sarif\Definition;
 use Bartlett\Sarif\Internal;
 
@@ -14,7 +15,11 @@ use function is_numeric;
 use function method_exists;
 use function ucfirst;
 
-abstract class Declaration implements Internal\BuilderDeclarationInterface
+/**
+ * @author Laurent Laville
+ * @since Release 1.5.0
+ */
+abstract class Declaration implements BuilderDeclarationInterface
 {
     protected Definition\PropertyBag $properties;
 
