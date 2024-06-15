@@ -20,6 +20,12 @@ See [Installation Guide](installation.md)
 
 See [Reference Guide](reference/README.md)
 
+## API Builders
+
+> Discover all fluent builders with each one at least an example of how to generate a SARIF report.
+
+See [Builder Guide](builder/README.md)
+
 ## Converter Reference
 
 > Discover all PHP converters that are able to generate a SARIF report.
