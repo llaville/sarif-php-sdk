@@ -7,6 +7,7 @@ ASSETS_IMAGE_DIR="docs/assets/images"
 php $SCRIPT_DIR/build.php graph-composer $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php builder-api $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phpcs $ASSETS_IMAGE_DIR
+php $SCRIPT_DIR/build.php converter-phpmd $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phplint $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php converter-phpstan $ASSETS_IMAGE_DIR
 php $SCRIPT_DIR/build.php reference-address $ASSETS_IMAGE_DIR
