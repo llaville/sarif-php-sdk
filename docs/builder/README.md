@@ -6,6 +6,8 @@ It can often be tedious to manually construct objects.
 
 Since release 1.5.0, the project provides a number of utilities to simplify the construction of sarif objects with their properties.
 
+![builder factory](../assets/images/builder-api.graphviz.svg)
+
 ## Fluent builders
 
 The library comes with a number of builders, which allow creating sarif objects using a fluent interface.
