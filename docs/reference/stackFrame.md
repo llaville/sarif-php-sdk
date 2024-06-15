@@ -90,7 +90,12 @@ A `stackFrame` object describes a single stack frame within a call stack.
 
 See full [`examples/stack.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/stack.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/stack.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/stack.php
 
 ```php
 <?php declare(strict_types=1);

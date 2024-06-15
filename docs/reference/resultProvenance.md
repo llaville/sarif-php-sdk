@@ -56,7 +56,12 @@ A `resultProvenance` object contains information about the how and when theResul
 
 See full [`examples/resultProvenance.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/resultProvenance.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/resultProvenance.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/resultProvenance.php
 
 ```php
 <?php declare(strict_types=1);

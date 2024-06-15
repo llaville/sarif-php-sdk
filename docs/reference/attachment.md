@@ -48,7 +48,12 @@ An `attachment` object describes an artifact relevant to the detection of a resu
 
 See full [`examples/attachment.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/attachment.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/attachment.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/attachment.php
 
 ```php
 <?php declare(strict_types=1);

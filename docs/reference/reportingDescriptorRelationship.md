@@ -52,7 +52,12 @@ from one `reportingDescriptor` object, which we refer to as theSource, to anothe
 
 See full [`examples/reportingDescriptorRelationship.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/reportingDescriptorRelationship.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/reportingDescriptorRelationship.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/reportingDescriptorRelationship.php
 
 ```php
 <?php declare(strict_types=1);

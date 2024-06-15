@@ -60,7 +60,12 @@ A `webRequest` object describes an HTTP request (RFC7230).
 
 See full [`examples/webRequest.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/webRequest.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/webRequest.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/webRequest.php
 
 ```php
 <?php declare(strict_types=1);

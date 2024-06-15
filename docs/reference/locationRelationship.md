@@ -104,7 +104,12 @@ which we refer to as theSource, to another one, which we refer to as theTarget.
 
 See full [`examples/locationRelationship.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/locationRelationship.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/locationRelationship.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/locationRelationship.php
 
 ```php
 <?php declare(strict_types=1);

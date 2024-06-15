@@ -61,9 +61,14 @@ to locate the external property files that contain the values of all externalize
 
 ## How to generate
 
-See [`examples/externalPropertyFileReferences.php`][example-script] script into repository.
+See full [`examples/externalPropertyFileReferences.php`][example-script] script into repository.
+
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/externalPropertyFileReferences.php`][example-builder] script into repository.
 
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/externalPropertyFileReferences.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/externalPropertyFileReferences.php
 
 ```php
 <?php declare(strict_types=1);

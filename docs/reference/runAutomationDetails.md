@@ -47,7 +47,12 @@ A `runAutomationDetails` object contains information that specifies theRun’s i
 
 See full [`examples/runAutomationDetails.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/runAutomationDetails.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/runAutomationDetails.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/runAutomationDetails.php
 
 ```php
 <?php declare(strict_types=1);

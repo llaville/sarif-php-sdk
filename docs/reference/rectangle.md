@@ -58,7 +58,12 @@ for example, by highlighting them or surrounding them with a border.
 
 See full [`examples/rectangle.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/rectangle.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/rectangle.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/rectangle.php
 
 ```php
 <?php declare(strict_types=1);

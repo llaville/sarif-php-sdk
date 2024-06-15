@@ -44,7 +44,12 @@ A `suppression` object describes a request to suppress a result.
 
 See full [`examples/suppression.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/suppression.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/suppression.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/suppression.php
 
 ```php
 <?php declare(strict_types=1);

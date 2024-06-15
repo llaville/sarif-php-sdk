@@ -169,7 +169,12 @@ SARIF represents such a message with a `message` object, which offers the follow
 
 See full [`examples/message/plainText.php`][example-script-1] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/plainText.php`][example-builder-1] script into repository.
+
 [example-script-1]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/plainText.php
+[example-builder-1]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/plainText.php
 
 ```php
 <?php
@@ -187,7 +192,12 @@ $result->setRuleIndex(0);
 
 See full [`examples/message/formatted.php`][example-script-2] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/formatted.php`][example-builder-2] script into repository.
+
 [example-script-2]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/formatted.php
+[example-builder-2]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/formatted.php
 
 ```php
 <?php
@@ -204,7 +214,12 @@ $result->setRuleId('CA2101');
 
 See full [`examples/message/embeddedLinks.php`][example-script-3] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/embeddedLinks.php`][example-builder-3] script into repository.
+
 [example-script-3]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/embeddedLinks.php
+[example-builder-3]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/embeddedLinks.php
 
 ```php
 <?php
@@ -232,7 +247,12 @@ $result->addRelatedLocations([$location]);
 
 See full [`examples/message/stringLookup.php`][example-script-4] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/stringLookup.php`][example-builder-4] script into repository.
+
 [example-script-4]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/stringLookup.php
+[example-builder-4]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/stringLookup.php
 
 ```php
 <?php

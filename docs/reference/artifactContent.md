@@ -62,7 +62,12 @@ Depending on the circumstances, the SARIF log file might need to represent this 
 
 See full [`examples/fix.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/fix.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/fix.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/fix.php
 
 ```php
 <?php declare(strict_types=1);

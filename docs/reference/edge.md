@@ -68,7 +68,12 @@ A `edge` object represents a directed edge in the graph represented by theGraph.
 
 See full [`examples/graph.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/graph.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/graph.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/graph.php
 
 ```php
 <?php declare(strict_types=1);

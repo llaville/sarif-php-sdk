@@ -44,7 +44,12 @@ without regard to the physical location where the construct occurs.
 
 See full [`examples/logicalLocation.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/logicalLocation.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/logicalLocation.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/logicalLocation.php
 
 ```php
 <?php declare(strict_types=1);

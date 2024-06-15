@@ -55,7 +55,12 @@ A `specialLocations` object defines locations of special significance to SARIF c
 
 See full [`examples/specialLocations.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/specialLocations.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/specialLocations.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/specialLocations.php
 
 ```php
 <?php declare(strict_types=1);

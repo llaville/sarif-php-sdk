@@ -38,7 +38,12 @@ A `tool` object describes the analysis tool or converter that was run.
 
 See full [`examples/tool.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/tool.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/tool.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/tool.php
 
 ```php
 <?php declare(strict_types=1);

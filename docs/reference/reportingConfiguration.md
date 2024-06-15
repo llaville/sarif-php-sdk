@@ -48,7 +48,12 @@ at runtime, before executing its scan.
 
 See full [`examples/reportingConfiguration.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/reportingConfiguration.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/reportingConfiguration.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/reportingConfiguration.php
 
 ```php
 <?php declare(strict_types=1);

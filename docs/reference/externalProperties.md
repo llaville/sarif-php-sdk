@@ -55,7 +55,12 @@ The top-level element of an external property file SHALL be an object which we r
 
 See full [`examples/externalProperties.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/externalProperties.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/externalProperties.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/externalProperties.php
 
 ```php
 <?php declare(strict_types=1);

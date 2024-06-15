@@ -70,7 +70,12 @@ including those defined by theTool.driver and theTool.extensions.
 
 See full [`examples/reportingDescriptorReference.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/reportingDescriptorReference.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/reportingDescriptorReference.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/reportingDescriptorReference.php
 
 ```php
 <?php declare(strict_types=1);

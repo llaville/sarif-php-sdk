@@ -78,11 +78,14 @@ such as an operating system thread or a fiber.
 
 ## How to generate
 
-See `examples/.php` script.
-
 See full [`examples/codeFlow.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/codeFlow.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/codeFlow.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/codeFlow.php
 
 ```php
 <?php declare(strict_types=1);

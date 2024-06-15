@@ -33,7 +33,12 @@ A `run` object describes a single run of an analysis tool and contains the outpu
 
 See full [`examples/run.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/run.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/run.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/run.php
 
 ```php
 <?php declare(strict_types=1);

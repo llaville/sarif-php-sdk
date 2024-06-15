@@ -70,7 +70,12 @@ Conditions relevant to artifacts being analyzed by a tool are represented by `re
 
 See full [`examples/reportingDescriptorReference.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/reportingDescriptorReference.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/reportingDescriptorReference.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/reportingDescriptorReference.php
 
 ```php
 <?php declare(strict_types=1);

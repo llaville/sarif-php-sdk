@@ -66,7 +66,12 @@ A `result` object describes a single result detected by an analysis tool.
 
 See full [`examples/result.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/result.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/result.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/result.php
 
 ```php
 <?php declare(strict_types=1);

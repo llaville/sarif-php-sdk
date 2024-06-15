@@ -19,7 +19,12 @@ A `sarifLog` object specifies the version of the file format and contains the ou
 
 See full [`examples/sarifLog.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/sarifLog.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/sarifLog.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/sarifLog.php
 
 ```php
 <?php declare(strict_types=1);

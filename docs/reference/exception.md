@@ -72,7 +72,12 @@ This includes signals in POSIX-conforming operating systems.
 
 See full [`examples/exception.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/exception.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/exception.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/exception.php
 
 ```php
 <?php declare(strict_types=1);

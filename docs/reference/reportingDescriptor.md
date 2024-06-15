@@ -69,7 +69,12 @@ A `reportingDescriptor` object contains information that describes a "reporting 
 
 See full [`examples/reportingDescriptor.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/reportingDescriptor.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/reportingDescriptor.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/reportingDescriptor.php
 
 ```php
 <?php declare(strict_types=1);

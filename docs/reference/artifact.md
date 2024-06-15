@@ -50,7 +50,12 @@ An `artifact` object represents a single artifact.
 
 See full [`examples/artifact.php`][example-script] script into repository.
 
+> [!NOTE]
+> Since release 1.5.0, you may use fluent builders API as alternative.
+> See full [`examples/builder/artifact.php`][example-builder] script into repository.
+
 [example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/artifact.php
+[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/artifact.php
 
 ```php
 <?php declare(strict_types=1);
