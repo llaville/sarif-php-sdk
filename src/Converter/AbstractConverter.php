@@ -178,7 +178,7 @@ abstract class AbstractConverter implements ConverterInterface
     public function automationDetails(): RunAutomationDetails
     {
         $automationDetails = new RunAutomationDetails();
-        $automationDetails->setId('Daily run '. date(DATE_ATOM));
+        $automationDetails->setId('Daily run ' . date(DATE_ATOM));
 
         return $automationDetails;
     }
@@ -239,7 +239,7 @@ abstract class AbstractConverter implements ConverterInterface
         $relativePath = array_slice($rPath, count($commonParts));
 
         foreach ($relativeCwd as $item) {
-            array_unshift($relativePath,  '..');
+            array_unshift($relativePath, '..');
         }
         return implode('/', $relativePath);
     }
