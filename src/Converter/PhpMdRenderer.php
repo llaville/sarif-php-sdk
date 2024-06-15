@@ -31,6 +31,6 @@ class PhpMdRenderer extends AbstractRenderer
     public function renderReport(Report $report): void
     {
         $writer = $this->getWriter();
-        $writer->write($this->innerConverter->generateReport($report));
+        $writer->write($this->innerConverter->generateReport($report));  // @phpstan-ignore argument.type
     }
 }

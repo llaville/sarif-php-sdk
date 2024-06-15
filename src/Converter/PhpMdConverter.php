@@ -22,7 +22,6 @@ use PHPMD\Report;
 use PHPMD\RuleViolation;
 
 use function array_map;
-use function getcwd;
 use function hash_file;
 use function implode;
 use function str_replace;

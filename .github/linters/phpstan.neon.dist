@@ -16,3 +16,5 @@ parameters:
         -
             message: "#^Unreachable statement \\- code above always terminates\\.$#"
             path: ../../src/SarifLog.php
+    scanDirectories:
+        - ../../vendor-bin/phpmd/vendor/phpmd/phpmd/src
