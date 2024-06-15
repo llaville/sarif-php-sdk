@@ -1,0 +1,134 @@
+digraph {
+  graph [name="G" overlap="false" rankdir="LR" bgcolor="transparent"]
+  node [fontname="Verdana" fontsize=8 shape="none" margin=0 fillcolor="#FEFECE" style="filled"]
+  edge [fontname="Verdana" fontsize=8]
+  subgraph cluster_0 {
+    graph [bgcolor="BurlyWood"]
+    label = "Bartlett\\Sarif\\Contract"
+    "Bartlett\\Sarif\\Contract\\BuilderFactoryInterface" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>BuilderFactoryInterface</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» address() : Bartlett\\Sarif\\Builder\\Address</td></tr>
+    <tr><td align="left">+ «abstract» artifact() : Bartlett\\Sarif\\Builder\\Artifact</td></tr>
+    <tr><td align="left">+ «abstract» artifactChange() : Bartlett\\Sarif\\Builder\\ArtifactChange</td></tr>
+    <tr><td align="left">+ «abstract» artifactContent() : Bartlett\\Sarif\\Builder\\ArtifactContent</td></tr>
+    <tr><td align="left">+ «abstract» artifactLocation() : Bartlett\\Sarif\\Builder\\ArtifactLocation</td></tr>
+    <tr><td align="left">+ «abstract» automationDetails() : Bartlett\\Sarif\\Builder\\AutomationDetails</td></tr>
+    <tr><td align="left">+ «abstract» attachment() : Bartlett\\Sarif\\Builder\\Attachment</td></tr>
+    <tr><td align="left">+ «abstract» configuration() : Bartlett\\Sarif\\Builder\\Configuration</td></tr>
+    <tr><td align="left">+ «abstract» configurationOverride() : Bartlett\\Sarif\\Builder\\ConfigurationOverride</td></tr>
+    <tr><td align="left">+ «abstract» conversion() : Bartlett\\Sarif\\Builder\\Conversion</td></tr>
+    <tr><td align="left">+ «abstract» codeFlow() : Bartlett\\Sarif\\Builder\\CodeFlow</td></tr>
+    <tr><td align="left">+ «abstract» descriptor() : Bartlett\\Sarif\\Builder\\Descriptor</td></tr>
+    <tr><td align="left">+ «abstract» descriptorReference() : Bartlett\\Sarif\\Builder\\DescriptorReference</td></tr>
+    <tr><td align="left">+ «abstract» driver() : Bartlett\\Sarif\\Builder\\Driver</td></tr>
+    <tr><td align="left">+ «abstract» exception() : Bartlett\\Sarif\\Builder\\Exception</td></tr>
+    <tr><td align="left">+ «abstract» edge() : Bartlett\\Sarif\\Builder\\Edge</td></tr>
+    <tr><td align="left">+ «abstract» edgeTraversal() : Bartlett\\Sarif\\Builder\\EdgeTraversal</td></tr>
+    <tr><td align="left">+ «abstract» extension() : Bartlett\\Sarif\\Builder\\Extension</td></tr>
+    <tr><td align="left">+ «abstract» externalProperties() : Bartlett\\Sarif\\Builder\\ExternalProperties</td></tr>
+    <tr><td align="left">+ «abstract» externalPropertyFileReference() : Bartlett\\Sarif\\Builder\\ExternalPropertyFileReference</td></tr>
+    <tr><td align="left">+ «abstract» externalPropertyFileReferences() : Bartlett\\Sarif\\Builder\\ExternalPropertyFileReferences</td></tr>
+    <tr><td align="left">+ «abstract» fix() : Bartlett\\Sarif\\Builder\\Fix</td></tr>
+    <tr><td align="left">+ «abstract» graph() : Bartlett\\Sarif\\Builder\\Graph</td></tr>
+    <tr><td align="left">+ «abstract» graphTraversal() : Bartlett\\Sarif\\Builder\\GraphTraversal</td></tr>
+    <tr><td align="left">+ «abstract» invocation() : Bartlett\\Sarif\\Builder\\Invocation</td></tr>
+    <tr><td align="left">+ «abstract» location() : Bartlett\\Sarif\\Builder\\Location</td></tr>
+    <tr><td align="left">+ «abstract» logicalLocation() : Bartlett\\Sarif\\Builder\\LogicalLocation</td></tr>
+    <tr><td align="left">+ «abstract» locationRelationship() : Bartlett\\Sarif\\Builder\\LocationRelationship</td></tr>
+    <tr><td align="left">+ «abstract» node() : Bartlett\\Sarif\\Builder\\Node</td></tr>
+    <tr><td align="left">+ «abstract» notification() : Bartlett\\Sarif\\Builder\\Notification</td></tr>
+    <tr><td align="left">+ «abstract» physicalLocation() : Bartlett\\Sarif\\Builder\\PhysicalLocation</td></tr>
+    <tr><td align="left">+ «abstract» propertyBag() : Bartlett\\Sarif\\Builder\\PropertyBag</td></tr>
+    <tr><td align="left">+ «abstract» rectangle() : Bartlett\\Sarif\\Builder\\Rectangle</td></tr>
+    <tr><td align="left">+ «abstract» region() : Bartlett\\Sarif\\Builder\\Region</td></tr>
+    <tr><td align="left">+ «abstract» relationship() : Bartlett\\Sarif\\Builder\\Relationship</td></tr>
+    <tr><td align="left">+ «abstract» replacement() : Bartlett\\Sarif\\Builder\\Replacement</td></tr>
+    <tr><td align="left">+ «abstract» result(messageText : string, messageId : string = '', arguments : array = []) : Bartlett\\Sarif\\Builder\\Result</td></tr>
+    <tr><td align="left">+ «abstract» resultProvenance() : Bartlett\\Sarif\\Builder\\ResultProvenance</td></tr>
+    <tr><td align="left">+ «abstract» rule() : Bartlett\\Sarif\\Builder\\Rule</td></tr>
+    <tr><td align="left">+ «abstract» run() : Bartlett\\Sarif\\Builder\\Run</td></tr>
+    <tr><td align="left">+ «abstract» stack() : Bartlett\\Sarif\\Builder\\Stack</td></tr>
+    <tr><td align="left">+ «abstract» stackFrame() : Bartlett\\Sarif\\Builder\\StackFrame</td></tr>
+    <tr><td align="left">+ «abstract» suppression() : Bartlett\\Sarif\\Builder\\Suppression</td></tr>
+    <tr><td align="left">+ «abstract» specialLocations() : Bartlett\\Sarif\\Builder\\SpecialLocations</td></tr>
+    <tr><td align="left">+ «abstract» specification(version : string) : Bartlett\\Sarif\\Builder\\Specification</td></tr>
+    <tr><td align="left">+ «abstract» threadFlow() : Bartlett\\Sarif\\Builder\\ThreadFlow</td></tr>
+    <tr><td align="left">+ «abstract» threadFlowLocation() : Bartlett\\Sarif\\Builder\\ThreadFlowLocation</td></tr>
+    <tr><td align="left">+ «abstract» tool() : Bartlett\\Sarif\\Builder\\Tool</td></tr>
+    <tr><td align="left">+ «abstract» toolComponent() : Bartlett\\Sarif\\Builder\\ToolComponent</td></tr>
+    <tr><td align="left">+ «abstract» translationMetadata() : Bartlett\\Sarif\\Builder\\TranslationMetadata</td></tr>
+    <tr><td align="left">+ «abstract» versionControlDetails() : Bartlett\\Sarif\\Builder\\VersionControlDetails</td></tr>
+    <tr><td align="left">+ «abstract» webRequest() : Bartlett\\Sarif\\Builder\\WebRequest</td></tr>
+    <tr><td align="left">+ «abstract» webResponse() : Bartlett\\Sarif\\Builder\\WebResponse</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_1 {
+    graph [bgcolor="Bisque"]
+    label = "Bartlett\\Sarif\\Factory"
+    "Bartlett\\Sarif\\Factory\\BuilderFactory" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b><br/>BuilderFactory</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ address() : Bartlett\\Sarif\\Builder\\Address</td></tr>
+    <tr><td align="left">+ artifact() : Bartlett\\Sarif\\Builder\\Artifact</td></tr>
+    <tr><td align="left">+ artifactChange() : Bartlett\\Sarif\\Builder\\ArtifactChange</td></tr>
+    <tr><td align="left">+ artifactContent() : Bartlett\\Sarif\\Builder\\ArtifactContent</td></tr>
+    <tr><td align="left">+ artifactLocation() : Bartlett\\Sarif\\Builder\\ArtifactLocation</td></tr>
+    <tr><td align="left">+ automationDetails() : Bartlett\\Sarif\\Builder\\AutomationDetails</td></tr>
+    <tr><td align="left">+ attachment() : Bartlett\\Sarif\\Builder\\Attachment</td></tr>
+    <tr><td align="left">+ configuration() : Bartlett\\Sarif\\Builder\\Configuration</td></tr>
+    <tr><td align="left">+ configurationOverride() : Bartlett\\Sarif\\Builder\\ConfigurationOverride</td></tr>
+    <tr><td align="left">+ conversion() : Bartlett\\Sarif\\Builder\\Conversion</td></tr>
+    <tr><td align="left">+ codeFlow() : Bartlett\\Sarif\\Builder\\CodeFlow</td></tr>
+    <tr><td align="left">+ descriptor() : Bartlett\\Sarif\\Builder\\Descriptor</td></tr>
+    <tr><td align="left">+ descriptorReference() : Bartlett\\Sarif\\Builder\\DescriptorReference</td></tr>
+    <tr><td align="left">+ driver() : Bartlett\\Sarif\\Builder\\Driver</td></tr>
+    <tr><td align="left">+ exception() : Bartlett\\Sarif\\Builder\\Exception</td></tr>
+    <tr><td align="left">+ edge() : Bartlett\\Sarif\\Builder\\Edge</td></tr>
+    <tr><td align="left">+ edgeTraversal() : Bartlett\\Sarif\\Builder\\EdgeTraversal</td></tr>
+    <tr><td align="left">+ extension() : Bartlett\\Sarif\\Builder\\Extension</td></tr>
+    <tr><td align="left">+ externalProperties() : Bartlett\\Sarif\\Builder\\ExternalProperties</td></tr>
+    <tr><td align="left">+ externalPropertyFileReference() : Bartlett\\Sarif\\Builder\\ExternalPropertyFileReference</td></tr>
+    <tr><td align="left">+ externalPropertyFileReferences() : Bartlett\\Sarif\\Builder\\ExternalPropertyFileReferences</td></tr>
+    <tr><td align="left">+ fix() : Bartlett\\Sarif\\Builder\\Fix</td></tr>
+    <tr><td align="left">+ graph() : Bartlett\\Sarif\\Builder\\Graph</td></tr>
+    <tr><td align="left">+ graphTraversal() : Bartlett\\Sarif\\Builder\\GraphTraversal</td></tr>
+    <tr><td align="left">+ invocation() : Bartlett\\Sarif\\Builder\\Invocation</td></tr>
+    <tr><td align="left">+ location() : Bartlett\\Sarif\\Builder\\Location</td></tr>
+    <tr><td align="left">+ logicalLocation() : Bartlett\\Sarif\\Builder\\LogicalLocation</td></tr>
+    <tr><td align="left">+ locationRelationship() : Bartlett\\Sarif\\Builder\\LocationRelationship</td></tr>
+    <tr><td align="left">+ node() : Bartlett\\Sarif\\Builder\\Node</td></tr>
+    <tr><td align="left">+ notification() : Bartlett\\Sarif\\Builder\\Notification</td></tr>
+    <tr><td align="left">+ physicalLocation() : Bartlett\\Sarif\\Builder\\PhysicalLocation</td></tr>
+    <tr><td align="left">+ propertyBag() : Bartlett\\Sarif\\Builder\\PropertyBag</td></tr>
+    <tr><td align="left">+ rectangle() : Bartlett\\Sarif\\Builder\\Rectangle</td></tr>
+    <tr><td align="left">+ region() : Bartlett\\Sarif\\Builder\\Region</td></tr>
+    <tr><td align="left">+ relationship() : Bartlett\\Sarif\\Builder\\Relationship</td></tr>
+    <tr><td align="left">+ replacement() : Bartlett\\Sarif\\Builder\\Replacement</td></tr>
+    <tr><td align="left">+ result(messageText : string, messageId : string = '', arguments : array = []) : Bartlett\\Sarif\\Builder\\Result</td></tr>
+    <tr><td align="left">+ resultProvenance() : Bartlett\\Sarif\\Builder\\ResultProvenance</td></tr>
+    <tr><td align="left">+ rule() : Bartlett\\Sarif\\Builder\\Rule</td></tr>
+    <tr><td align="left">+ run() : Bartlett\\Sarif\\Builder\\Run</td></tr>
+    <tr><td align="left">+ stack() : Bartlett\\Sarif\\Builder\\Stack</td></tr>
+    <tr><td align="left">+ stackFrame() : Bartlett\\Sarif\\Builder\\StackFrame</td></tr>
+    <tr><td align="left">+ suppression() : Bartlett\\Sarif\\Builder\\Suppression</td></tr>
+    <tr><td align="left">+ specialLocations() : Bartlett\\Sarif\\Builder\\SpecialLocations</td></tr>
+    <tr><td align="left">+ specification(version : string) : Bartlett\\Sarif\\Builder\\Specification</td></tr>
+    <tr><td align="left">+ threadFlow() : Bartlett\\Sarif\\Builder\\ThreadFlow</td></tr>
+    <tr><td align="left">+ threadFlowLocation() : Bartlett\\Sarif\\Builder\\ThreadFlowLocation</td></tr>
+    <tr><td align="left">+ tool() : Bartlett\\Sarif\\Builder\\Tool</td></tr>
+    <tr><td align="left">+ toolComponent() : Bartlett\\Sarif\\Builder\\ToolComponent</td></tr>
+    <tr><td align="left">+ translationMetadata() : Bartlett\\Sarif\\Builder\\TranslationMetadata</td></tr>
+    <tr><td align="left">+ versionControlDetails() : Bartlett\\Sarif\\Builder\\VersionControlDetails</td></tr>
+    <tr><td align="left">+ webRequest() : Bartlett\\Sarif\\Builder\\WebRequest</td></tr>
+    <tr><td align="left">+ webResponse() : Bartlett\\Sarif\\Builder\\WebResponse</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  "Bartlett\\Sarif\\Factory\\BuilderFactory" -> "Bartlett\\Sarif\\Contract\\BuilderFactoryInterface" [arrowhead="empty" style="dashed"]
+}
