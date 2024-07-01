@@ -8,9 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\ArtifactChanges;
-use Bartlett\Sarif\Property\Description;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * A proposed fix for the problem represented by a result object.
@@ -26,17 +24,17 @@ final class Fix extends JsonSerializable
     /**
      * A message that describes the proposed fix, enabling viewers to present the proposed change to an end user.
      */
-    use Description;
+    use Property\Description;
 
     /**
      * One or more artifact changes that comprise a fix for a result.
      */
-    use ArtifactChanges;
+    use Property\ArtifactChanges;
 
     /**
      * Key/value pairs that provide additional information about the fix.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param ArtifactChange[] $artifactChanges

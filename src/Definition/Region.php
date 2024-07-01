@@ -8,18 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\ByteLength;
-use Bartlett\Sarif\Property\ByteOffset;
-use Bartlett\Sarif\Property\CharLength;
-use Bartlett\Sarif\Property\CharOffset;
-use Bartlett\Sarif\Property\EndColumn;
-use Bartlett\Sarif\Property\EndLine;
-use Bartlett\Sarif\Property\MessageString;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Snippet;
-use Bartlett\Sarif\Property\SourceLanguage;
-use Bartlett\Sarif\Property\StartColumn;
-use Bartlett\Sarif\Property\StartLine;
+use Bartlett\Sarif\Property;
 
 use function is_int;
 
@@ -34,62 +23,62 @@ final class Region extends JsonSerializable
     /**
      * The line number of the first character in the region.
      */
-    use StartLine;
+    use Property\StartLine;
 
     /**
      * The column number of the first character in the region.
      */
-    use StartColumn;
+    use Property\StartColumn;
 
     /**
      * The line number of the last character in the region.
      */
-    use EndLine;
+    use Property\EndLine;
 
     /**
      * The column number of the character following the end of the region.
      */
-    use EndColumn;
+    use Property\EndColumn;
 
     /**
      * The zero-based offset from the beginning of the artifact of the first character in the region.
      */
-    use CharOffset;
+    use Property\CharOffset;
 
     /**
      * The length of the region in characters.
      */
-    use CharLength;
+    use Property\CharLength;
 
     /**
      * The zero-based offset from the beginning of the artifact of the first byte in the region.
      */
-    use ByteOffset;
+    use Property\ByteOffset;
 
     /**
      * The length of the region in bytes.
      */
-    use ByteLength;
+    use Property\ByteLength;
 
     /**
      * The portion of the artifact contents within the specified region.
      */
-    use Snippet;
+    use Property\Snippet;
 
     /**
      * A message relevant to the region.
      */
-    use MessageString;
+    use Property\MessageString;
 
     /**
      * Specifies the source language, if any, of the portion of the artifact specified by the region object.
      */
-    use SourceLanguage;
+    use Property\SourceLanguage;
 
     /**
      * Key/value pairs that provide additional information about the region.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param int|null $startLine

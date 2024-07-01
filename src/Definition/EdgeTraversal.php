@@ -8,11 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\EdgeId;
-use Bartlett\Sarif\Property\FinalState;
-use Bartlett\Sarif\Property\MessageString;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\StepOverEdgeCount;
+use Bartlett\Sarif\Property;
 
 /**
  * Represents the traversal of a single edge during a graph traversal.
@@ -26,27 +22,27 @@ final class EdgeTraversal extends JsonSerializable
     /**
      * Identifies the edge being traversed.
      */
-    use EdgeId;
+    use Property\EdgeId;
 
     /**
      * A message to display to the user as the edge is traversed.
      */
-    use MessageString;
+    use Property\MessageString;
 
     /**
      * The values of relevant expressions after the edge has been traversed.
      */
-    use FinalState;
+    use Property\FinalState;
 
     /**
      * The number of edge traversals necessary to return from a nested graph.
      */
-    use StepOverEdgeCount;
+    use Property\StepOverEdgeCount;
 
     /**
      * Key/value pairs that provide additional information about the edge traversal.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(string $edgeId)
     {

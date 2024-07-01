@@ -8,11 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\CorrelationGuid;
-use Bartlett\Sarif\Property\Description;
-use Bartlett\Sarif\Property\Guid;
-use Bartlett\Sarif\Property\Id;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * Information that describes a run's identity and role within an engineering system process.
@@ -26,28 +22,28 @@ final class RunAutomationDetails extends JsonSerializable
     /**
      * A description of the identity and role played within the engineering system by this object's containing run object.
      */
-    use Description;
+    use Property\Description;
 
     /**
      * A hierarchical string that uniquely identifies this object's containing run object.
      */
-    use Id;
+    use Property\Id;
 
     /**
      * A stable, unique identifer for this object's containing run object in the form of a GUID.
      */
-    use Guid;
+    use Property\Guid;
 
     /**
      * A stable, unique identifier for the equivalence class of runs to which this object's containing run object
      * belongs in the form of a GUID.
      */
-    use CorrelationGuid;
+    use Property\CorrelationGuid;
 
     /**
      * Key/value pairs that provide additional information about the run automation details.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

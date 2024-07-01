@@ -8,10 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Binary;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Rendered;
-use Bartlett\Sarif\Property\Text;
+use Bartlett\Sarif\Property;
 
 /**
  * Represents the contents of an artifact.
@@ -25,22 +22,22 @@ final class ArtifactContent extends JsonSerializable
     /**
      * UTF-8-encoded content from a text artifact.
      */
-    use Text;
+    use Property\Text;
 
     /**
      * MIME Base64-encoded content from a binary artifact, or from a text artifact in its original encoding.
      */
-    use Binary;
+    use Property\Binary;
 
     /**
      * An alternate rendered representation of the artifact (e.g., a decompiled representation of a binary region).
      */
-    use Rendered;
+    use Property\Rendered;
 
     /**
      * Key/value pairs that provide additional information about the artifact content.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

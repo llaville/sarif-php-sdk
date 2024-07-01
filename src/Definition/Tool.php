@@ -8,9 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Driver;
-use Bartlett\Sarif\Property\Extensions;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * The analysis tool that was run.
@@ -24,17 +22,17 @@ final class Tool extends JsonSerializable
     /**
      * The analysis tool that was run.
      */
-    use Driver;
+    use Property\Driver;
 
     /**
      * Tool extensions that contributed to or reconfigured the analysis tool that was run.
      */
-    use Extensions;
+    use Property\Extensions;
 
     /**
      * Key/value pairs that provide additional information about the tool.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(ToolComponent $driver)
     {

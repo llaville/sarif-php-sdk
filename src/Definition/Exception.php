@@ -8,11 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\CallStack;
-use Bartlett\Sarif\Property\InnerExceptions;
-use Bartlett\Sarif\Property\KindException;
-use Bartlett\Sarif\Property\MessageStringNative;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * An exception object describes a runtime exception encountered during the execution of an analysis tool.
@@ -27,27 +23,27 @@ final class Exception extends JsonSerializable
      * A string that identifies the kind of exception,
      * for example, the fully qualified type name of an object that was thrown, or the symbolic name of a signal.
      */
-    use KindException;
+    use Property\KindException;
 
     /**
      * A message that describes the exception.
      */
-    use MessageStringNative;
+    use Property\MessageStringNative;
 
     /**
      * The sequence of function calls leading to the exception.
      */
-    use CallStack;
+    use Property\CallStack;
 
     /**
      * An array of exception objects each of which is considered a cause of this exception.
      */
-    use InnerExceptions;
+    use Property\InnerExceptions;
 
     /**
      * Key/value pairs that provide additional information about the exception.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

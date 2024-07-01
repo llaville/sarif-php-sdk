@@ -8,10 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\AnalysisToolLogFiles;
-use Bartlett\Sarif\Property\InvocationConverter;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\ToolPipeline;
+use Bartlett\Sarif\Property;
 
 /**
  * Describes how a converter transformed the output of a static analysis tool
@@ -26,22 +23,22 @@ final class Conversion extends JsonSerializable
     /**
      * A tool object that describes the converter.
      */
-    use ToolPipeline;
+    use Property\ToolPipeline;
 
     /**
      * An invocation object that describes the invocation of the converter.
      */
-    use InvocationConverter;
+    use Property\InvocationConverter;
 
     /**
      * The locations of the analysis tool's per-run log files.
      */
-    use AnalysisToolLogFiles;
+    use Property\AnalysisToolLogFiles;
 
     /**
      * Key/value pairs that provide additional information about the conversion.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param Tool $tool

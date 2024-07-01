@@ -8,13 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Annotations;
-use Bartlett\Sarif\Property\IdLocation;
-use Bartlett\Sarif\Property\LocationRelationships;
-use Bartlett\Sarif\Property\LogicalLocations;
-use Bartlett\Sarif\Property\MessageString;
-use Bartlett\Sarif\Property\PhysicalArtifactLocation;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * A location within a programming artifact.
@@ -27,37 +21,37 @@ final class Location extends JsonSerializable
     /**
      * Value that distinguishes this location from all other locations within a single result object.
      */
-    use IdLocation;
+    use Property\IdLocation;
 
     /**
      * Identifies the artifact and region.
      */
-    use PhysicalArtifactLocation;
+    use Property\PhysicalArtifactLocation;
 
     /**
      * The logical locations associated with the result.
      */
-    use LogicalLocations;
+    use Property\LogicalLocations;
 
     /**
      * A message relevant to the location.
      */
-    use MessageString;
+    use Property\MessageString;
 
     /**
      * A set of regions relevant to the location.
      */
-    use Annotations;
+    use Property\Annotations;
 
     /**
      * An array of objects that describe relationships between this location and others.
      */
-    use LocationRelationships;
+    use Property\LocationRelationships;
 
     /**
      * Key/value pairs that provide additional information about the location.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

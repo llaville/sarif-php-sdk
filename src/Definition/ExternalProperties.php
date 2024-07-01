@@ -8,27 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Addresses;
-use Bartlett\Sarif\Property\Artifacts;
-use Bartlett\Sarif\Property\ConversionProcess;
-use Bartlett\Sarif\Property\Driver;
-use Bartlett\Sarif\Property\Extensions;
-use Bartlett\Sarif\Property\ExternalizedProperties;
-use Bartlett\Sarif\Property\Graphs;
-use Bartlett\Sarif\Property\Guid;
-use Bartlett\Sarif\Property\Invocations;
-use Bartlett\Sarif\Property\LogicalLocations;
-use Bartlett\Sarif\Property\Policies;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Results;
-use Bartlett\Sarif\Property\RunGuid;
-use Bartlett\Sarif\Property\Schema;
-use Bartlett\Sarif\Property\Taxonomies;
-use Bartlett\Sarif\Property\ThreadFlowLocations;
-use Bartlett\Sarif\Property\Translations;
-use Bartlett\Sarif\Property\Version;
-use Bartlett\Sarif\Property\WebRequests;
-use Bartlett\Sarif\Property\WebResponses;
+use Bartlett\Sarif\Property;
 
 use function sprintf;
 
@@ -44,107 +24,107 @@ final class ExternalProperties extends JsonSerializable
     /**
      * The URI of the JSON schema corresponding to the version.
      */
-    use Schema;
+    use Property\Schema;
 
     /**
      * The SARIF format version of this external properties object.
      */
-    use Version;
+    use Property\Version;
 
     /**
      * A stable, unique identifier for this external properties object, in the form of a GUID.
      */
-    use Guid;
+    use Property\Guid;
 
     /**
      * A stable, unique identifier for the run associated with this external properties object, in the form of a GUID.
      */
-    use RunGuid;
+    use Property\RunGuid;
 
     /**
      * A conversion object that will be merged with a separate run.
      */
-    use ConversionProcess;
+    use Property\ConversionProcess;
 
     /**
      * An array of graph objects that will be merged with a separate run.
      */
-    use Graphs;
+    use Property\Graphs;
 
     /**
      * Key/value pairs that provide additional information that will be merged with a separate run.
      */
-    use ExternalizedProperties;
+    use Property\ExternalizedProperties;
 
     /**
      * An array of artifact objects that will be merged with a separate run.
      */
-    use Artifacts;
+    use Property\Artifacts;
 
     /**
      * Describes the invocation of the analysis tool that will be merged with a separate run.
      */
-    use Invocations;
+    use Property\Invocations;
 
     /**
      * An array of logical locations such as namespaces, types or functions that will be merged with a separate run.
      */
-    use LogicalLocations;
+    use Property\LogicalLocations;
 
     /**
      * An array of threadFlowLocation objects that will be merged with a separate run.
      */
-    use ThreadFlowLocations;
+    use Property\ThreadFlowLocations;
 
     /**
      * An array of result objects that will be merged with a separate run.
      */
-    use Results;
+    use Property\Results;
 
     /**
      * Tool taxonomies that will be merged with a separate run.
      */
-    use Taxonomies;
+    use Property\Taxonomies;
 
     /**
      * The analysis tool object that will be merged with a separate run.
      */
-    use Driver;
+    use Property\Driver;
 
     /**
      * Tool extensions that will be merged with a separate run.
      */
-    use Extensions;
+    use Property\Extensions;
 
     /**
      * Tool policies that will be merged with a separate run.
      */
-    use Policies;
+    use Property\Policies;
 
     /**
      * Tool translations that will be merged with a separate run.
      */
-    use Translations;
+    use Property\Translations;
 
     /**
      * Addresses that will be merged with a separate run.
      */
-    use Addresses;
+    use Property\Addresses;
 
     /**
      * Requests that will be merged with a separate run.
      */
-    use WebRequests;
+    use Property\WebRequests;
 
     /**
      * Responses that will be merged with a separate run.
      */
-    use WebResponses;
+    use Property\WebResponses;
 
     /**
      * Key/value pairs that provide additional information about the external properties.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param string $version

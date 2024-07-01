@@ -8,10 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Description;
-use Bartlett\Sarif\Property\Edges;
-use Bartlett\Sarif\Property\Nodes;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * A network of nodes and directed edges that describes some aspect of the structure of the code (for example, a call graph).
@@ -25,22 +22,22 @@ final class Graph extends JsonSerializable
     /**
      * A description of the graph.
      */
-    use Description;
+    use Property\Description;
 
     /**
      * An array of node objects representing the nodes of the graph.
      */
-    use Nodes;
+    use Property\Nodes;
 
     /**
      * An array of edge objects representing the edges of the graph.
      */
-    use Edges;
+    use Property\Edges;
 
     /**
      * Key/value pairs that provide additional information about the graph.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

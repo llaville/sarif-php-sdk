@@ -8,10 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Description;
-use Bartlett\Sarif\Property\Kinds;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\TargetLocation;
+use Bartlett\Sarif\Property;
 
 /**
  * Information about the relation of one location to another.
@@ -25,23 +22,23 @@ final class LocationRelationship extends JsonSerializable
     /**
      * A reference to the related location.
      */
-    use TargetLocation;
+    use Property\TargetLocation;
 
     /**
      * A set of distinct strings that categorize the relationship.
      * Well-known kinds include 'includes', 'isIncludedBy' and 'relevant'.
      */
-    use Kinds;
+    use Property\Kinds;
 
     /**
      * A description of the location relationship.
      */
-    use Description;
+    use Property\Description;
 
     /**
      * Key/value pairs that provide additional information about the location relationship.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(int $target)
     {

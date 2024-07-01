@@ -8,37 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\AnalysisTarget;
-use Bartlett\Sarif\Property\Attachments;
-use Bartlett\Sarif\Property\BaselineState;
-use Bartlett\Sarif\Property\CodeFlows;
-use Bartlett\Sarif\Property\CorrelationGuid;
-use Bartlett\Sarif\Property\Fingerprints;
-use Bartlett\Sarif\Property\Fixes;
-use Bartlett\Sarif\Property\Graphs;
-use Bartlett\Sarif\Property\GraphTraversals;
-use Bartlett\Sarif\Property\Guid;
-use Bartlett\Sarif\Property\HostedViewerUri;
-use Bartlett\Sarif\Property\Kind;
-use Bartlett\Sarif\Property\Level;
-use Bartlett\Sarif\Property\Locations;
-use Bartlett\Sarif\Property\MessageString;
-use Bartlett\Sarif\Property\OccurrenceCount;
-use Bartlett\Sarif\Property\PartialFingerprints;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Provenance;
-use Bartlett\Sarif\Property\Rank;
-use Bartlett\Sarif\Property\RelatedLocations;
-use Bartlett\Sarif\Property\Rule;
-use Bartlett\Sarif\Property\RuleId;
-use Bartlett\Sarif\Property\RuleIndex;
-use Bartlett\Sarif\Property\Stacks;
-use Bartlett\Sarif\Property\Suppressions;
-use Bartlett\Sarif\Property\Taxa;
-use Bartlett\Sarif\Property\TaxaReferences;
-use Bartlett\Sarif\Property\WebRequestDetails;
-use Bartlett\Sarif\Property\WebResponseDetails;
-use Bartlett\Sarif\Property\WorkItemUris;
+use Bartlett\Sarif\Property;
 
 /**
  * A result produced by an analysis tool.
@@ -52,157 +22,157 @@ final class Result extends JsonSerializable
     /**
      * The stable, unique identifier of the rule, if any, to which this result is relevant.
      */
-    use RuleId;
+    use Property\RuleId;
 
     /**
      * The index within the tool component rules array of the rule object associated with this result.
      */
-    use RuleIndex;
+    use Property\RuleIndex;
 
     /**
      * A reference used to locate the rule descriptor relevant to this result.
      */
-    use Rule;
+    use Property\Rule;
 
     /**
      * A value that categorizes results by evaluation state.
      */
-    use Kind;
+    use Property\Kind;
 
     /**
      * A value specifying the severity level of the result.
      */
-    use Level;
+    use Property\Level;
 
     /**
      * A message that describes the result.
      * The first sentence of the message only will be displayed when visible space is limited.
      */
-    use MessageString;
+    use Property\MessageString;
 
     /**
      * Identifies the artifact that the analysis tool was instructed to scan.
      * This need not be the same as the artifact where the result actually occurred.
      */
-    use AnalysisTarget;
+    use Property\AnalysisTarget;
 
     /**
      * The set of locations where the result was detected.
      * Specify only one location unless the problem indicated by the result can only be corrected
      * by making a change at every specified location.
      */
-    use Locations;
+    use Property\Locations;
 
     /**
      * A stable, unique identifier for the result in the form of a GUID.
      */
-    use Guid;
+    use Property\Guid;
 
     /**
      * A stable, unique identifier for the equivalence class of logically identical results to which this result belongs,
      * in the form of a GUID.
      */
-    use CorrelationGuid;
+    use Property\CorrelationGuid;
 
     /**
      * A positive integer specifying the number of times this logically unique result was observed in this run.
      */
-    use OccurrenceCount;
+    use Property\OccurrenceCount;
 
     /**
      * A set of strings that contribute to the stable, unique identity of the result.
      */
-    use PartialFingerprints;
+    use Property\PartialFingerprints;
 
     /**
      * A set of strings each of which individually defines a stable, unique identity for the result.
      */
-    use Fingerprints;
+    use Property\Fingerprints;
 
     /**
      * An array of 'stack' objects relevant to the result.
      */
-    use Stacks;
+    use Property\Stacks;
 
     /**
      * An array of 'codeFlow' objects relevant to the result.
      */
-    use CodeFlows;
+    use Property\CodeFlows;
 
     /**
      * An array of zero or more unique graph objects associated with the result.
      */
-    use Graphs;
+    use Property\Graphs;
 
     /**
      * An array of one or more unique 'graphTraversal' objects.
      */
-    use GraphTraversals;
+    use Property\GraphTraversals;
 
     /**
      * A set of locations relevant to this result.
      */
-    use RelatedLocations;
+    use Property\RelatedLocations;
 
     /**
      * A set of suppressions relevant to this result.
      */
-    use Suppressions;
+    use Property\Suppressions;
 
     /**
      * The state of a result relative to a baseline of a previous run.
      */
-    use BaselineState;
+    use Property\BaselineState;
 
     /**
      * A number representing the priority or importance of the result.
      */
-    use Rank;
+    use Property\Rank;
 
     /**
      * A set of artifacts relevant to the result.
      */
-    use Attachments;
+    use Property\Attachments;
 
     /**
      * An absolute URI at which the result can be viewed.
      */
-    use HostedViewerUri;
+    use Property\HostedViewerUri;
 
     /**
      * The URIs of the work items associated with this result.
      */
-    use WorkItemUris;
+    use Property\WorkItemUris;
 
     /**
      * Information about how and when the result was detected.
      */
-    use Provenance;
+    use Property\Provenance;
 
     /**
      * An array of 'fix' objects, each of which represents a proposed fix to the problem indicated by the result.
      */
-    use Fixes;
+    use Property\Fixes;
 
     /**
      * An array of references to taxonomy reporting descriptors that are applicable to the result.
      */
-    use TaxaReferences;
+    use Property\TaxaReferences;
 
     /**
      * A web request associated with this result.
      */
-    use WebRequestDetails;
+    use Property\WebRequestDetails;
 
     /**
      * A web response associated with this result.
      */
-    use WebResponseDetails;
+    use Property\WebResponseDetails;
 
     /**
      * Key/value pairs that provide additional information about the result.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param Message $message

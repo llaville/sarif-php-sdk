@@ -8,9 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\MessageString;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\ThreadFlows;
+use Bartlett\Sarif\Property;
 
 /**
  * A set of threadFlows which together describe a pattern of code execution relevant to detecting a result.
@@ -24,18 +22,18 @@ final class CodeFlow extends JsonSerializable
     /**
      * A message relevant to the code flow.
      */
-    use MessageString;
+    use Property\MessageString;
 
     /**
      * An array of one or more unique threadFlow objects,
      * each of which describes the progress of a program through a thread of execution.
      */
-    use ThreadFlows;
+    use Property\ThreadFlows;
 
     /**
      * Key/value pairs that provide additional information about the code flow.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param ThreadFlow[] $threadFlows

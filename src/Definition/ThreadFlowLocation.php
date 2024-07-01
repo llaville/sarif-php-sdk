@@ -8,20 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\CallStack;
-use Bartlett\Sarif\Property\CodeLocation;
-use Bartlett\Sarif\Property\ExecutionOrder;
-use Bartlett\Sarif\Property\ExecutionTimeUtc;
-use Bartlett\Sarif\Property\Importance;
-use Bartlett\Sarif\Property\Index;
-use Bartlett\Sarif\Property\Kinds;
-use Bartlett\Sarif\Property\Module;
-use Bartlett\Sarif\Property\NestingLevel;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\State;
-use Bartlett\Sarif\Property\TaxaReferences;
-use Bartlett\Sarif\Property\WebRequestDetails;
-use Bartlett\Sarif\Property\WebResponseDetails;
+use Bartlett\Sarif\Property;
 
 /**
  * A location visited by an analysis tool while simulating or monitoring the execution of a program.
@@ -35,17 +22,17 @@ final class ThreadFlowLocation extends JsonSerializable
     /**
      * The index within the run threadFlowLocations array.
      */
-    use Index;
+    use Property\Index;
 
     /**
      * The code location.
      */
-    use CodeLocation;
+    use Property\CodeLocation;
 
     /**
      * The call stack leading to this location.
      */
-    use CallStack;
+    use Property\CallStack;
 
     /**
      * A set of distinct strings that categorize the thread flow location.
@@ -54,17 +41,17 @@ final class ThreadFlowLocation extends JsonSerializable
      * 'caution', 'danger', 'unknown', 'unreachable', 'taint', 'function', 'handler', 'lock', 'memory', 'resource',
      * 'scope' and 'value'.
      */
-    use Kinds;
+    use Property\Kinds;
 
     /**
      * An array of references to rule or taxonomy reporting descriptors that are applicable to the thread flow location.
      */
-    use TaxaReferences;
+    use Property\TaxaReferences;
 
     /**
      * The name of the module that contains the code that is executing.
      */
-    use Module;
+    use Property\Module;
 
     /**
      * A dictionary, each of whose keys specify a variable or expression,
@@ -72,43 +59,43 @@ final class ThreadFlowLocation extends JsonSerializable
      * For an annotation of kind 'continuation', for example, this dictionary might hold the current assumed values
      * of a set of global variables.
      */
-    use State;
+    use Property\State;
 
     /**
      * An integer representing a containment hierarchy within the thread flow.
      */
-    use NestingLevel;
+    use Property\NestingLevel;
 
     /**
      * An integer representing the temporal order in which execution reached this location.
      */
-    use ExecutionOrder;
+    use Property\ExecutionOrder;
 
     /**
      * The Coordinated Universal Time (UTC) date and time at which this location was executed.
      */
-    use ExecutionTimeUtc;
+    use Property\ExecutionTimeUtc;
 
     /**
      * Specifies the importance of this location in understanding the code flow in which it occurs.
      * The order from most to least important is "essential", "important", "unimportant". Default: "important".
      */
-    use Importance;
+    use Property\Importance;
 
     /**
      * A web request associated with this thread flow location.
      */
-    use WebRequestDetails;
+    use Property\WebRequestDetails;
 
     /**
      * A web response associated with this thread flow location.
      */
-    use WebResponseDetails;
+    use Property\WebResponseDetails;
 
     /**
      * Key/value pairs that provide additional information about the thread flow location.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

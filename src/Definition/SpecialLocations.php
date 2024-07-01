@@ -8,8 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\DisplayBase;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * Defines locations of special significance to SARIF consumers.
@@ -23,12 +22,12 @@ final class SpecialLocations extends JsonSerializable
     /**
      * Provides a suggestion to SARIF consumers to display file paths relative to the specified location.
      */
-    use DisplayBase;
+    use Property\DisplayBase;
 
     /**
      * Key/value pairs that provide additional information about the special locations.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

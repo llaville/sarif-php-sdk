@@ -8,9 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\LocationArtifact;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Replacements;
+use Bartlett\Sarif\Property;
 
 /**
  * A change to a single artifact.
@@ -24,18 +22,18 @@ final class ArtifactChange extends JsonSerializable
     /**
      * The location of the artifact to change.
      */
-    use LocationArtifact;
+    use Property\LocationArtifact;
 
     /**
      * An array of replacement objects,
      * each of which represents the replacement of a single region in a single artifact specified by 'artifactLocation'.
      */
-    use Replacements;
+    use Property\Replacements;
 
     /**
      * Key/value pairs that provide additional information about the change.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param ArtifactLocation $artifactLocation

@@ -8,16 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Body;
-use Bartlett\Sarif\Property\Headers;
-use Bartlett\Sarif\Property\Index;
-use Bartlett\Sarif\Property\Method;
-use Bartlett\Sarif\Property\Parameters;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Protocol;
-use Bartlett\Sarif\Property\RequestParameters;
-use Bartlett\Sarif\Property\Target;
-use Bartlett\Sarif\Property\Version;
+use Bartlett\Sarif\Property;
 
 /**
  * Describes an HTTP request.
@@ -31,47 +22,47 @@ final class WebRequest extends JsonSerializable
     /**
      * The index within the run.webRequests array of the request object associated with this result.
      */
-    use Index;
+    use Property\Index;
 
     /**
      * The request protocol. Example: 'http'.
      */
-    use Protocol;
+    use Property\Protocol;
 
     /**
      * The request version. Example: '1.1'.
      */
-    use Version;
+    use Property\Version;
 
     /**
      * The target of the request.
      */
-    use Target;
+    use Property\Target;
 
     /**
      * The HTTP method. Well-known values are
      * 'GET', 'PUT', 'POST', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS', 'TRACE', 'CONNECT'.
      */
-    use Method;
+    use Property\Method;
 
     /**
      * Headers:           The request headers.
      * RequestParameters: The request parameters.
      */
-    use Headers, RequestParameters {
-        Headers::addAdditionalProperties as addAdditionalPropertiesHeaders;
-        RequestParameters::addAdditionalProperties insteadof Headers;
+    use Property\Headers, Property\RequestParameters {
+        Property\Headers::addAdditionalProperties as addAdditionalPropertiesHeaders;
+        Property\RequestParameters::addAdditionalProperties insteadof Property\Headers;
     }
 
     /**
      * The body of the request.
      */
-    use Body;
+    use Property\Body;
 
     /**
      * Key/value pairs that provide additional information about the request.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

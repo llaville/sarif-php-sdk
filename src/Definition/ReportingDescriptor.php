@@ -8,20 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\DefaultConfiguration;
-use Bartlett\Sarif\Property\DeprecatedGuids;
-use Bartlett\Sarif\Property\DeprecatedIds;
-use Bartlett\Sarif\Property\DeprecatedNames;
-use Bartlett\Sarif\Property\FullDescription;
-use Bartlett\Sarif\Property\Guid;
-use Bartlett\Sarif\Property\Help;
-use Bartlett\Sarif\Property\HelpUri;
-use Bartlett\Sarif\Property\Id;
-use Bartlett\Sarif\Property\MessageStrings;
-use Bartlett\Sarif\Property\Name;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Relationships;
-use Bartlett\Sarif\Property\ShortDescription;
+use Bartlett\Sarif\Property;
 
 /**
  * Metadata that describes a specific report produced by the tool,
@@ -36,45 +23,45 @@ final class ReportingDescriptor extends JsonSerializable
     /**
      * A stable, opaque identifier for the report.
      */
-    use Id;
+    use Property\Id;
 
     /**
      * An array of stable, opaque identifiers by which this report was known in some previous version of the analysis tool.
      */
-    use DeprecatedIds;
+    use Property\DeprecatedIds;
 
     /**
      * A unique identifier for the reporting descriptor in the form of a GUID.
      */
-    use Guid;
+    use Property\Guid;
 
     /**
      * An array of unique identifies in the form of a GUID by which this report was known
      * in some previous version of the analysis tool.
      */
-    use DeprecatedGuids;
+    use Property\DeprecatedGuids;
 
     /**
      * A report identifier that is understandable to an end user.
      */
-    use Name;
+    use Property\Name;
 
     /**
      * An array of readable identifiers by which this report was known in some previous version of the analysis tool.
      */
-    use DeprecatedNames;
+    use Property\DeprecatedNames;
 
     /**
      * A concise description of the report.
      * Should be a single sentence that is understandable when visible space is limited to a single line of text.
      */
-    use ShortDescription;
+    use Property\ShortDescription;
 
     /**
      * A description of the report.
      * Should, as far as possible, provide details sufficient to enable resolution of any problem indicated by the result.
      */
-    use FullDescription;
+    use Property\FullDescription;
 
     /**
      * A set of name/value pairs with arbitrary names.
@@ -82,32 +69,32 @@ final class ReportingDescriptor extends JsonSerializable
      * The strings can include placeholders, which can be used to construct a message
      * in combination with an arbitrary number of additional string arguments.
      */
-    use MessageStrings;
+    use Property\MessageStrings;
 
     /**
      * Default reporting configuration information.
      */
-    use DefaultConfiguration;
+    use Property\DefaultConfiguration;
 
     /**
      * A URI where the primary documentation for the report can be found.
      */
-    use HelpUri;
+    use Property\HelpUri;
 
     /**
      * Provides the primary documentation for the report, useful when there is no online documentation.
      */
-    use Help;
+    use Property\Help;
 
     /**
      * An array of objects that describe relationships between this reporting descriptor and others.
      */
-    use Relationships;
+    use Property\Relationships;
 
     /**
      * Key/value pairs that provide additional information about the report.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(string $id)
     {

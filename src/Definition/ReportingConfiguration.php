@@ -9,11 +9,7 @@ namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
 
-use Bartlett\Sarif\Property\Enabled;
-use Bartlett\Sarif\Property\Level;
-use Bartlett\Sarif\Property\ParameterBag;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Rank;
+use Bartlett\Sarif\Property;
 
 /**
  * Information about a rule or notification that can be configured at runtime.
@@ -27,27 +23,27 @@ final class ReportingConfiguration extends JsonSerializable
     /**
      * Specifies whether the report may be produced during the scan.
      */
-    use Enabled;
+    use Property\Enabled;
 
     /**
      * Specifies the failure level for the report.
      */
-    use Level;
+    use Property\Level;
 
     /**
      * Specifies the relative priority of the report. Used for analysis output only.
      */
-    use Rank;
+    use Property\Rank;
 
     /**
      * Contains configuration information specific to a report.
      */
-    use ParameterBag;
+    use Property\ParameterBag;
 
     /**
      * Key/value pairs that provide additional information about the reporting configuration.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

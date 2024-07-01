@@ -8,13 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\AsOfTimeUtc;
-use Bartlett\Sarif\Property\Branch;
-use Bartlett\Sarif\Property\MappedTo;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\RepositoryUri;
-use Bartlett\Sarif\Property\RevisionId;
-use Bartlett\Sarif\Property\RevisionTag;
+use Bartlett\Sarif\Property;
 
 /**
  * Specifies the information necessary to retrieve a desired revision from a version control system.
@@ -28,38 +22,38 @@ final class VersionControlDetails extends JsonSerializable
     /**
      * The absolute URI of the repository.
      */
-    use RepositoryUri;
+    use Property\RepositoryUri;
 
     /**
      * A string that uniquely and permanently identifies the revision within the repository.
      */
-    use RevisionId;
+    use Property\RevisionId;
 
     /**
      * The name of a branch containing the revision.
      */
-    use Branch;
+    use Property\Branch;
 
     /**
      * A tag that has been applied to the revision.
      */
-    use RevisionTag;
+    use Property\RevisionTag;
 
     /**
      * A Coordinated Universal Time (UTC) date and time that can be used
      * to synchronize an enlistment to the state of the repository at that time.
      */
-    use AsOfTimeUtc;
+    use Property\AsOfTimeUtc;
 
     /**
      * The location in the local file system to which the root of the repository was mapped at the time of the analysis.
      */
-    use MappedTo;
+    use Property\MappedTo;
 
     /**
      * Key/value pairs that provide additional information about the version control details.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(string $repositoryUri)
     {

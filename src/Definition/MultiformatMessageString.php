@@ -8,9 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Markdown;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Text;
+use Bartlett\Sarif\Property;
 
 /**
  * A message string or message format string rendered in multiple formats.
@@ -23,17 +21,17 @@ final class MultiformatMessageString extends JsonSerializable
     /**
      * A plain text message string or format string.
      */
-    use Text;
+    use Property\Text;
 
     /**
      * A Markdown message string or format string.
      */
-    use Markdown;
+    use Property\Markdown;
 
     /**
      * Key/value pairs that provide additional information about the message.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param string $text

@@ -8,15 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Body;
-use Bartlett\Sarif\Property\Headers;
-use Bartlett\Sarif\Property\Index;
-use Bartlett\Sarif\Property\NoResponseReceived;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Protocol;
-use Bartlett\Sarif\Property\ReasonPhrase;
-use Bartlett\Sarif\Property\StatusCode;
-use Bartlett\Sarif\Property\Version;
+use Bartlett\Sarif\Property;
 
 /**
  * Describes the response to an HTTP request.
@@ -30,47 +22,47 @@ final class WebResponse extends JsonSerializable
     /**
      * The index within the run.webResponses array of the response object associated with this result.
      */
-    use Index;
+    use Property\Index;
 
     /**
      * The response protocol. Example: 'http'.
      */
-    use Protocol;
+    use Property\Protocol;
 
     /**
      * The response version. Example: '1.1'.
      */
-    use Version;
+    use Property\Version;
 
     /**
      * The response status code. Example: 451.
      */
-    use StatusCode;
+    use Property\StatusCode;
 
     /**
      * The response reason. Example: 'Not found'.
      */
-    use ReasonPhrase;
+    use Property\ReasonPhrase;
 
     /**
      * The response headers.
      */
-    use Headers;
+    use Property\Headers;
 
     /**
      * The body of the response.
      */
-    use Body;
+    use Property\Body;
 
     /**
      * Specifies whether a response was received from the server.
      */
-    use NoResponseReceived;
+    use Property\NoResponseReceived;
 
     /**
      * Key/value pairs that provide additional information about the response.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

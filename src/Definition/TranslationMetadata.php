@@ -8,13 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\DownloadUri;
-use Bartlett\Sarif\Property\FullDescription;
-use Bartlett\Sarif\Property\FullName;
-use Bartlett\Sarif\Property\InformationUri;
-use Bartlett\Sarif\Property\Name;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\ShortDescription;
+use Bartlett\Sarif\Property;
 
 /**
  * Provides additional metadata related to translation.
@@ -28,37 +22,37 @@ final class TranslationMetadata extends JsonSerializable
     /**
      * The name associated with the translation metadata.
      */
-    use Name;
+    use Property\Name;
 
     /**
      * The full name associated with the translation metadata.
      */
-    use FullName;
+    use Property\FullName;
 
     /**
      * A brief description of the translation metadata.
      */
-    use ShortDescription;
+    use Property\ShortDescription;
 
     /**
      * A comprehensive description of the translation metadata.
      */
-    use FullDescription;
+    use Property\FullDescription;
 
     /**
      * The absolute URI from which the translation metadata can be downloaded.
      */
-    use DownloadUri;
+    use Property\DownloadUri;
 
     /**
      * The absolute URI from which information related to the translation metadata can be downloaded.
      */
-    use InformationUri;
+    use Property\InformationUri;
 
     /**
      * Key/value pairs that provide additional information about the translation metadata.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(string $name)
     {

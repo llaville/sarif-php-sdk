@@ -8,12 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Guid;
-use Bartlett\Sarif\Property\Justification;
-use Bartlett\Sarif\Property\KindSuppression;
-use Bartlett\Sarif\Property\LocationSuppression;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\StatusSuppression;
+use Bartlett\Sarif\Property;
 
 /**
  * A suppression that is relevant to a result.
@@ -27,32 +22,32 @@ final class Suppression extends JsonSerializable
     /**
      * A stable, unique identifier for the suppression in the form of a GUID.
      */
-    use Guid;
+    use Property\Guid;
 
     /**
      * A string that indicates where the suppression is persisted.
      */
-    use KindSuppression;
+    use Property\KindSuppression;
 
     /**
      * A string that indicates the review status of the suppression.
      */
-    use StatusSuppression;
+    use Property\StatusSuppression;
 
     /**
      * A string representing the justification for the suppression.
      */
-    use Justification;
+    use Property\Justification;
 
     /**
      * Identifies the location associated with the suppression.
      */
-    use LocationSuppression;
+    use Property\LocationSuppression;
 
     /**
      * Key/value pairs that provide additional information about the suppression.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(string $kind)
     {

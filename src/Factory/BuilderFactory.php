@@ -2,59 +2,7 @@
 
 namespace Bartlett\Sarif\Factory;
 
-use Bartlett\Sarif\Builder\Address;
-use Bartlett\Sarif\Builder\Artifact;
-use Bartlett\Sarif\Builder\ArtifactChange;
-use Bartlett\Sarif\Builder\ArtifactContent;
-use Bartlett\Sarif\Builder\ArtifactLocation;
-use Bartlett\Sarif\Builder\Attachment;
-use Bartlett\Sarif\Builder\AutomationDetails;
-use Bartlett\Sarif\Builder\CodeFlow;
-use Bartlett\Sarif\Builder\Configuration;
-use Bartlett\Sarif\Builder\ConfigurationOverride;
-use Bartlett\Sarif\Builder\Conversion;
-use Bartlett\Sarif\Builder\Descriptor;
-use Bartlett\Sarif\Builder\DescriptorReference;
-use Bartlett\Sarif\Builder\Driver;
-use Bartlett\Sarif\Builder\Edge;
-use Bartlett\Sarif\Builder\EdgeTraversal;
-use Bartlett\Sarif\Builder\Exception;
-use Bartlett\Sarif\Builder\Extension;
-use Bartlett\Sarif\Builder\ExternalProperties;
-use Bartlett\Sarif\Builder\ExternalPropertyFileReference;
-use Bartlett\Sarif\Builder\ExternalPropertyFileReferences;
-use Bartlett\Sarif\Builder\Fix;
-use Bartlett\Sarif\Builder\Graph;
-use Bartlett\Sarif\Builder\GraphTraversal;
-use Bartlett\Sarif\Builder\Invocation;
-use Bartlett\Sarif\Builder\Location;
-use Bartlett\Sarif\Builder\LocationRelationship;
-use Bartlett\Sarif\Builder\LogicalLocation;
-use Bartlett\Sarif\Builder\Node;
-use Bartlett\Sarif\Builder\Notification;
-use Bartlett\Sarif\Builder\PhysicalLocation;
-use Bartlett\Sarif\Builder\PropertyBag;
-use Bartlett\Sarif\Builder\Rectangle;
-use Bartlett\Sarif\Builder\Region;
-use Bartlett\Sarif\Builder\Relationship;
-use Bartlett\Sarif\Builder\Replacement;
-use Bartlett\Sarif\Builder\Result;
-use Bartlett\Sarif\Builder\ResultProvenance;
-use Bartlett\Sarif\Builder\Rule;
-use Bartlett\Sarif\Builder\Run;
-use Bartlett\Sarif\Builder\SpecialLocations;
-use Bartlett\Sarif\Builder\Specification;
-use Bartlett\Sarif\Builder\Stack;
-use Bartlett\Sarif\Builder\StackFrame;
-use Bartlett\Sarif\Builder\Suppression;
-use Bartlett\Sarif\Builder\ThreadFlow;
-use Bartlett\Sarif\Builder\ThreadFlowLocation;
-use Bartlett\Sarif\Builder\Tool;
-use Bartlett\Sarif\Builder\ToolComponent;
-use Bartlett\Sarif\Builder\TranslationMetadata;
-use Bartlett\Sarif\Builder\VersionControlDetails;
-use Bartlett\Sarif\Builder\WebRequest;
-use Bartlett\Sarif\Builder\WebResponse;
+use Bartlett\Sarif\Builder;
 use Bartlett\Sarif\Contract\BuilderFactoryInterface;
 
 /**
@@ -63,268 +11,268 @@ use Bartlett\Sarif\Contract\BuilderFactoryInterface;
  */
 final class BuilderFactory implements BuilderFactoryInterface
 {
-    public function address(): Address
+    public function address(): Builder\Address
     {
-        return new Address();
+        return new Builder\Address();
     }
 
-    public function artifact(): Artifact
+    public function artifact(): Builder\Artifact
     {
-        return new Artifact();
+        return new Builder\Artifact();
     }
 
-    public function artifactChange(): ArtifactChange
+    public function artifactChange(): Builder\ArtifactChange
     {
-        return new ArtifactChange();
+        return new Builder\ArtifactChange();
     }
 
-    public function artifactContent(): ArtifactContent
+    public function artifactContent(): Builder\ArtifactContent
     {
-        return new ArtifactContent();
+        return new Builder\ArtifactContent();
     }
 
-    public function artifactLocation(): ArtifactLocation
+    public function artifactLocation(): Builder\ArtifactLocation
     {
-        return new ArtifactLocation();
+        return new Builder\ArtifactLocation();
     }
 
-    public function automationDetails(): AutomationDetails
+    public function automationDetails(): Builder\AutomationDetails
     {
-        return new AutomationDetails();
+        return new Builder\AutomationDetails();
     }
 
-    public function attachment(): Attachment
+    public function attachment(): Builder\Attachment
     {
-        return new Attachment();
+        return new Builder\Attachment();
     }
 
-    public function configuration(): Configuration
+    public function configuration(): Builder\Configuration
     {
-        return new Configuration();
+        return new Builder\Configuration();
     }
 
-    public function configurationOverride(): ConfigurationOverride
+    public function configurationOverride(): Builder\ConfigurationOverride
     {
-        return new ConfigurationOverride();
+        return new Builder\ConfigurationOverride();
     }
 
-    public function conversion(): Conversion
+    public function conversion(): Builder\Conversion
     {
-        return new Conversion();
+        return new Builder\Conversion();
     }
 
-    public function codeFlow(): CodeFlow
+    public function codeFlow(): Builder\CodeFlow
     {
-        return new CodeFlow();
+        return new Builder\CodeFlow();
     }
 
-    public function descriptor(): Descriptor
+    public function descriptor(): Builder\Descriptor
     {
-        return new Descriptor();
+        return new Builder\Descriptor();
     }
 
-    public function descriptorReference(): DescriptorReference
+    public function descriptorReference(): Builder\DescriptorReference
     {
-        return new DescriptorReference();
+        return new Builder\DescriptorReference();
     }
 
-    public function driver(): Driver
+    public function driver(): Builder\Driver
     {
-        return new Driver();
+        return new Builder\Driver();
     }
 
-    public function exception(): Exception
+    public function exception(): Builder\Exception
     {
-        return new Exception();
+        return new Builder\Exception();
     }
 
-    public function edge(): Edge
+    public function edge(): Builder\Edge
     {
-        return new Edge();
+        return new Builder\Edge();
     }
 
-    public function edgeTraversal(): EdgeTraversal
+    public function edgeTraversal(): Builder\EdgeTraversal
     {
-        return new EdgeTraversal();
+        return new Builder\EdgeTraversal();
     }
 
-    public function extension(): Extension
+    public function extension(): Builder\Extension
     {
-        return new Extension();
+        return new Builder\Extension();
     }
 
-    public function externalProperties(): ExternalProperties
+    public function externalProperties(): Builder\ExternalProperties
     {
-        return new ExternalProperties();
+        return new Builder\ExternalProperties();
     }
 
-    public function externalPropertyFileReference(): ExternalPropertyFileReference
+    public function externalPropertyFileReference(): Builder\ExternalPropertyFileReference
     {
-        return new ExternalPropertyFileReference();
+        return new Builder\ExternalPropertyFileReference();
     }
 
-    public function externalPropertyFileReferences(): ExternalPropertyFileReferences
+    public function externalPropertyFileReferences(): Builder\ExternalPropertyFileReferences
     {
-        return new ExternalPropertyFileReferences();
+        return new Builder\ExternalPropertyFileReferences();
     }
 
-    public function fix(): Fix
+    public function fix(): Builder\Fix
     {
-        return new Fix();
+        return new Builder\Fix();
     }
 
-    public function graph(): Graph
+    public function graph(): Builder\Graph
     {
-        return new Graph();
+        return new Builder\Graph();
     }
 
-    public function graphTraversal(): GraphTraversal
+    public function graphTraversal(): Builder\GraphTraversal
     {
-        return new GraphTraversal();
+        return new Builder\GraphTraversal();
     }
 
-    public function invocation(): Invocation
+    public function invocation(): Builder\Invocation
     {
-        return new Invocation();
+        return new Builder\Invocation();
     }
 
-    public function location(): Location
+    public function location(): Builder\Location
     {
-        return new Location();
+        return new Builder\Location();
     }
 
-    public function logicalLocation(): LogicalLocation
+    public function logicalLocation(): Builder\LogicalLocation
     {
-        return new LogicalLocation();
+        return new Builder\LogicalLocation();
     }
 
-    public function locationRelationship(): LocationRelationship
+    public function locationRelationship(): Builder\LocationRelationship
     {
-        return new LocationRelationship();
+        return new Builder\LocationRelationship();
     }
 
-    public function node(): Node
+    public function node(): Builder\Node
     {
-        return new Node();
+        return new Builder\Node();
     }
 
-    public function notification(): Notification
+    public function notification(): Builder\Notification
     {
-        return new Notification();
+        return new Builder\Notification();
     }
 
-    public function physicalLocation(): PhysicalLocation
+    public function physicalLocation(): Builder\PhysicalLocation
     {
-        return new PhysicalLocation();
+        return new Builder\PhysicalLocation();
     }
 
-    public function propertyBag(): PropertyBag
+    public function propertyBag(): Builder\PropertyBag
     {
-        return new PropertyBag();
+        return new Builder\PropertyBag();
     }
 
-    public function rectangle(): Rectangle
+    public function rectangle(): Builder\Rectangle
     {
-        return new Rectangle();
+        return new Builder\Rectangle();
     }
 
-    public function region(): Region
+    public function region(): Builder\Region
     {
-        return new Region();
+        return new Builder\Region();
     }
 
-    public function relationship(): Relationship
+    public function relationship(): Builder\Relationship
     {
-        return new Relationship();
+        return new Builder\Relationship();
     }
 
-    public function replacement(): Replacement
+    public function replacement(): Builder\Replacement
     {
-        return new Replacement();
+        return new Builder\Replacement();
     }
 
-    public function result(string $messageText, string $messageId = '', array $arguments = []): Result
+    public function result(string $messageText, string $messageId = '', array $arguments = []): Builder\Result
     {
-        return new Result($messageText, $messageId, $arguments);
+        return new Builder\Result($messageText, $messageId, $arguments);
     }
 
-    public function resultProvenance(): ResultProvenance
+    public function resultProvenance(): Builder\ResultProvenance
     {
-        return new ResultProvenance();
+        return new Builder\ResultProvenance();
     }
 
-    public function rule(): Rule
+    public function rule(): Builder\Rule
     {
-        return new Rule();
+        return new Builder\Rule();
     }
 
-    public function run(): Run
+    public function run(): Builder\Run
     {
-        return new Run();
+        return new Builder\Run();
     }
 
-    public function stack(): Stack
+    public function stack(): Builder\Stack
     {
-        return new Stack();
+        return new Builder\Stack();
     }
 
-    public function stackFrame(): StackFrame
+    public function stackFrame(): Builder\StackFrame
     {
-        return new StackFrame();
+        return new Builder\StackFrame();
     }
 
-    public function suppression(): Suppression
+    public function suppression(): Builder\Suppression
     {
-        return new Suppression();
+        return new Builder\Suppression();
     }
 
-    public function specialLocations(): SpecialLocations
+    public function specialLocations(): Builder\SpecialLocations
     {
-        return new SpecialLocations();
+        return new Builder\SpecialLocations();
     }
 
-    public function specification(string $version): Specification
+    public function specification(string $version): Builder\Specification
     {
-        return new Specification($version);
+        return new Builder\Specification($version);
     }
 
-    public function threadFlow(): ThreadFlow
+    public function threadFlow(): Builder\ThreadFlow
     {
-        return new ThreadFlow();
+        return new Builder\ThreadFlow();
     }
 
-    public function threadFlowLocation(): ThreadFlowLocation
+    public function threadFlowLocation(): Builder\ThreadFlowLocation
     {
-        return new ThreadFlowLocation();
+        return new Builder\ThreadFlowLocation();
     }
 
-    public function tool(): Tool
+    public function tool(): Builder\Tool
     {
-        return new Tool();
+        return new Builder\Tool();
     }
 
-    public function toolComponent(): ToolComponent
+    public function toolComponent(): Builder\ToolComponent
     {
-        return new ToolComponent();
+        return new Builder\ToolComponent();
     }
 
-    public function translationMetadata(): TranslationMetadata
+    public function translationMetadata(): Builder\TranslationMetadata
     {
-        return new TranslationMetadata();
+        return new Builder\TranslationMetadata();
     }
 
-    public function versionControlDetails(): VersionControlDetails
+    public function versionControlDetails(): Builder\VersionControlDetails
     {
-        return new VersionControlDetails();
+        return new Builder\VersionControlDetails();
     }
 
-    public function webRequest(): WebRequest
+    public function webRequest(): Builder\WebRequest
     {
-        return new WebRequest();
+        return new Builder\WebRequest();
     }
 
-    public function webResponse(): WebResponse
+    public function webResponse(): Builder\WebResponse
     {
-        return new WebResponse();
+        return new Builder\WebResponse();
     }
 }

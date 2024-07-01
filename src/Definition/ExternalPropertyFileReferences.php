@@ -8,23 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceAddresses;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceConversion;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceDriver;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceExtensions;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceInvocations;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceLogicalLocations;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferencePolicies;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceProperties;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceArtifacts;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceGraphs;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceRequests;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceResponses;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceResults;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceTaxonomies;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceThreadFlowLocations;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferenceTranslations;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * An externalPropertyFileReferences object contains information that enables a SARIF consumer
@@ -39,87 +23,87 @@ final class ExternalPropertyFileReferences extends JsonSerializable
     /**
      * An external property file containing a run.conversion object to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceConversion;
+    use Property\ExternalPropertyFileReferenceConversion;
 
     /**
      * An array of external property files containing a run.graphs object to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceGraphs;
+    use Property\ExternalPropertyFileReferenceGraphs;
 
     /**
      * An external property file containing a run.properties object to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceProperties;
+    use Property\ExternalPropertyFileReferenceProperties;
 
     /**
      * An array of external property files containing run.artifacts arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceArtifacts;
+    use Property\ExternalPropertyFileReferenceArtifacts;
 
     /**
      * An array of external property files containing run.invocations arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceInvocations;
+    use Property\ExternalPropertyFileReferenceInvocations;
 
     /**
      * An array of external property files containing run.logicalLocations arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceLogicalLocations;
+    use Property\ExternalPropertyFileReferenceLogicalLocations;
 
     /**
      * An array of external property files containing run.threadFlowLocations arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceThreadFlowLocations;
+    use Property\ExternalPropertyFileReferenceThreadFlowLocations;
 
     /**
      * An array of external property files containing run.results arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceResults;
+    use Property\ExternalPropertyFileReferenceResults;
 
     /**
      * An array of external property files containing run.taxonomies arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceTaxonomies;
+    use Property\ExternalPropertyFileReferenceTaxonomies;
 
     /**
      * An array of external property files containing run.addresses arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceAddresses;
+    use Property\ExternalPropertyFileReferenceAddresses;
 
     /**
      * An external property file containing a run.driver object to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceDriver;
+    use Property\ExternalPropertyFileReferenceDriver;
 
     /**
      * An array of external property files containing run.extensions arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceExtensions;
+    use Property\ExternalPropertyFileReferenceExtensions;
 
     /**
      * An array of external property files containing run.policies arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferencePolicies;
+    use Property\ExternalPropertyFileReferencePolicies;
 
     /**
      * An array of external property files containing run.translations arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceTranslations;
+    use Property\ExternalPropertyFileReferenceTranslations;
 
     /**
      * An array of external property files containing run.requests arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceRequests;
+    use Property\ExternalPropertyFileReferenceRequests;
 
     /**
      * An array of external property files containing run.responses arrays to be merged with the root log file.
      */
-    use ExternalPropertyFileReferenceResponses;
+    use Property\ExternalPropertyFileReferenceResponses;
 
     /**
      * Key/value pairs that provide additional information about the external property files.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

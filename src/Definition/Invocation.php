@@ -8,31 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Account;
-use Bartlett\Sarif\Property\Arguments;
-use Bartlett\Sarif\Property\CommandLine;
-use Bartlett\Sarif\Property\EndTimeUtc;
-use Bartlett\Sarif\Property\EnvironmentVariables;
-use Bartlett\Sarif\Property\ExecutableLocation;
-use Bartlett\Sarif\Property\ExecutionSuccessful;
-use Bartlett\Sarif\Property\ExitCode;
-use Bartlett\Sarif\Property\ExitCodeDescription;
-use Bartlett\Sarif\Property\ExitSignalName;
-use Bartlett\Sarif\Property\ExitSignalNumber;
-use Bartlett\Sarif\Property\Machine;
-use Bartlett\Sarif\Property\NotificationConfigurationOverrides;
-use Bartlett\Sarif\Property\ProcessId;
-use Bartlett\Sarif\Property\ProcessStartFailureMessage;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\ResponseFiles;
-use Bartlett\Sarif\Property\RuleConfigurationOverrides;
-use Bartlett\Sarif\Property\StartTimeUtc;
-use Bartlett\Sarif\Property\Stderr;
-use Bartlett\Sarif\Property\Stdin;
-use Bartlett\Sarif\Property\Stdout;
-use Bartlett\Sarif\Property\StdoutStderr;
-use Bartlett\Sarif\Property\ToolExecutionNotifications;
-use Bartlett\Sarif\Property\WorkingDirectory;
+use Bartlett\Sarif\Property;
 
 /**
  * The runtime environment of the analysis tool run.
@@ -46,129 +22,129 @@ final class Invocation extends JsonSerializable
     /**
      * The command line used to invoke the tool.
      */
-    use CommandLine;
+    use Property\CommandLine;
 
     /**
      * An array of strings, containing in order the command line arguments passed to the tool from the operating system.
      */
-    use Arguments;
+    use Property\Arguments;
 
     /**
      * The locations of any response files specified on the tool's command line.
      */
-    use ResponseFiles;
+    use Property\ResponseFiles;
 
     /**
      * The Coordinated Universal Time (UTC) date and time at which the invocation started.
      * See "Date/time properties" in the SARIF spec for the required format.
      */
-    use StartTimeUtc;
+    use Property\StartTimeUtc;
 
     /**
      * The Coordinated Universal Time (UTC) date and time at which the invocation ended.
      * See "Date/time properties" in the SARIF spec for the required format.
      */
-    use EndTimeUtc;
+    use Property\EndTimeUtc;
 
     /**
      * The process exit code.
      */
-    use ExitCode;
+    use Property\ExitCode;
 
     /**
      * An array of configurationOverride objects that describe rules related runtime overrides.
      */
-    use RuleConfigurationOverrides;
+    use Property\RuleConfigurationOverrides;
 
     /**
      * An array of configurationOverride objects that describe notifications related runtime overrides.
      */
-    use NotificationConfigurationOverrides;
+    use Property\NotificationConfigurationOverrides;
 
     /**
      * A list of runtime conditions detected by the tool during the analysis.
      */
-    use ToolExecutionNotifications;
+    use Property\ToolExecutionNotifications;
 
     /**
      * The reason for the process exit.
      */
-    use ExitCodeDescription;
+    use Property\ExitCodeDescription;
 
     /**
      * The name of the signal that caused the process to exit.
      */
-    use ExitSignalName;
+    use Property\ExitSignalName;
 
     /**
      * The numeric value of the signal that caused the process to exit.
      */
-    use ExitSignalNumber;
+    use Property\ExitSignalNumber;
 
     /**
      * The reason given by the operating system that the process failed to start.
      */
-    use ProcessStartFailureMessage;
+    use Property\ProcessStartFailureMessage;
 
     /**
      * Specifies whether the tool's execution completed successfully.
      */
-    use ExecutionSuccessful;
+    use Property\ExecutionSuccessful;
 
     /**
      * The machine on which the invocation occurred.
      */
-    use Machine;
+    use Property\Machine;
 
     /**
      * The account under which the invocation occurred.
      */
-    use Account;
+    use Property\Account;
 
     /**
      * The id of the process in which the invocation occurred.
      */
-    use ProcessId;
+    use Property\ProcessId;
 
     /**
      * An absolute URI specifying the location of the executable that was invoked.
      */
-    use ExecutableLocation;
+    use Property\ExecutableLocation;
 
     /**
      * The working directory for the invocation.
      */
-    use WorkingDirectory;
+    use Property\WorkingDirectory;
 
     /**
      * The environment variables associated with the analysis tool process, expressed as key/value pairs.
      */
-    use EnvironmentVariables;
+    use Property\EnvironmentVariables;
 
     /**
      * A file containing the standard input stream to the process that was invoked.
      */
-    use Stdin;
+    use Property\Stdin;
 
     /**
      * A file containing the standard output stream from the process that was invoked.
      */
-    use Stdout;
+    use Property\Stdout;
 
     /**
      * A file containing the standard error stream from the process that was invoked.
      */
-    use Stderr;
+    use Property\Stderr;
 
     /**
      * A file containing the interleaved standard output and standard error stream from the process that was invoked.
      */
-    use StdoutStderr;
+    use Property\StdoutStderr;
 
     /**
      * Key/value pairs that provide additional information about the invocation.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param bool $executionSuccessful

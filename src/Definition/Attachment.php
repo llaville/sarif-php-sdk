@@ -8,11 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Description;
-use Bartlett\Sarif\Property\LocationAttachment;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Rectangles;
-use Bartlett\Sarif\Property\Regions;
+use Bartlett\Sarif\Property;
 
 /**
  * An artifact relevant to a result.
@@ -26,27 +22,27 @@ final class Attachment extends JsonSerializable
     /**
      * A message describing the role played by the attachment.
      */
-    use Description;
+    use Property\Description;
 
     /**
      * The location of the attachment.
      */
-    use LocationAttachment;
+    use Property\LocationAttachment;
 
     /**
      * An array of regions of interest within the attachment.
      */
-    use Regions;
+    use Property\Regions;
 
     /**
      * An array of rectangles specifying areas of interest within the image.
      */
-    use Rectangles;
+    use Property\Rectangles;
 
     /**
      * Key/value pairs that provide additional information about the attachment.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

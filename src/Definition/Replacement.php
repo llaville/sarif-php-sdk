@@ -8,9 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\DeletedRegion;
-use Bartlett\Sarif\Property\InsertedContent;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * The replacement of a single region of an artifact.
@@ -24,17 +22,17 @@ final class Replacement extends JsonSerializable
     /**
      * The region of the artifact to delete.
      */
-    use DeletedRegion;
+    use Property\DeletedRegion;
 
     /**
      * The content to insert at the location specified by the 'deletedRegion' property.
      */
-    use InsertedContent;
+    use Property\InsertedContent;
 
     /**
      * Key/value pairs that provide additional information about the replacement.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param Region $deletedRegion

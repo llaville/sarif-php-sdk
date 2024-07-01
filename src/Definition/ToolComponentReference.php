@@ -8,10 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Guid;
-use Bartlett\Sarif\Property\Index;
-use Bartlett\Sarif\Property\Name;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * Identifies a particular toolComponent object, either the driver or an extension.
@@ -25,22 +22,22 @@ final class ToolComponentReference extends JsonSerializable
     /**
      * The 'name' property of the referenced toolComponent.
      */
-    use Name;
+    use Property\Name;
 
     /**
      * An index into the referenced toolComponent in tool.extensions.
      */
-    use Index;
+    use Property\Index;
 
     /**
      * The 'guid' property of the referenced toolComponent.
      */
-    use Guid;
+    use Property\Guid;
 
     /**
      * Key/value pairs that provide additional information about the toolComponentReference.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

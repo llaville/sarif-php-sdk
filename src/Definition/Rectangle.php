@@ -8,12 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Bottom;
-use Bartlett\Sarif\Property\Left;
-use Bartlett\Sarif\Property\MessageString;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Right;
-use Bartlett\Sarif\Property\Top;
+use Bartlett\Sarif\Property;
 
 /**
  * An area within an image.
@@ -27,32 +22,32 @@ final class Rectangle extends JsonSerializable
     /**
      * The Y coordinate of the top edge of the rectangle, measured in the image's natural units.
      */
-    use Top;
+    use Property\Top;
 
     /**
      * The X coordinate of the left edge of the rectangle, measured in the image's natural units.
      */
-    use Left;
+    use Property\Left;
 
     /**
      * The Y coordinate of the bottom edge of the rectangle, measured in the image's natural units.
      */
-    use Bottom;
+    use Property\Bottom;
 
     /**
      * The X coordinate of the right edge of the rectangle, measured in the image's natural units.
      */
-    use Right;
+    use Property\Right;
 
     /**
      * A message relevant to the rectangle.
      */
-    use MessageString;
+    use Property\MessageString;
 
     /**
      * Key/value pairs that provide additional information about the rectangle.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

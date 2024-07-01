@@ -8,11 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Arguments;
-use Bartlett\Sarif\Property\Id;
-use Bartlett\Sarif\Property\Markdown;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\Text;
+use Bartlett\Sarif\Property;
 
 /**
  * Encapsulates a message intended to be read by the end user.
@@ -26,27 +22,27 @@ final class Message extends JsonSerializable
     /**
      * A plain text message string.
      */
-    use Text;
+    use Property\Text;
 
     /**
      * A Markdown message string.
      */
-    use Markdown;
+    use Property\Markdown;
 
     /**
      * The identifier for this message.
      */
-    use Id;
+    use Property\Id;
 
     /**
      * An array of strings to substitute into the message string.
      */
-    use Arguments;
+    use Property\Arguments;
 
     /**
      * Key/value pairs that provide additional information about the message.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(string $text = '', string $id = '')
     {

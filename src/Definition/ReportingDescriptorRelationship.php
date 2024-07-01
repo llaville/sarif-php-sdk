@@ -8,10 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Description;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\RelationshipKinds;
-use Bartlett\Sarif\Property\ReportingDescriptorTarget;
+use Bartlett\Sarif\Property;
 
 /**
  * Information about the relation of one reporting descriptor to another.
@@ -25,7 +22,7 @@ final class ReportingDescriptorRelationship extends JsonSerializable
     /**
      * A reference to the related reporting descriptor.
      */
-    use ReportingDescriptorTarget;
+    use Property\ReportingDescriptorTarget;
 
     /**
      * A set of distinct strings that categorize the relationship.
@@ -33,17 +30,17 @@ final class ReportingDescriptorRelationship extends JsonSerializable
      * 'canPrecede', 'canFollow', 'willPrecede', 'willFollow', 'superset', 'subset', 'equal', 'disjoint', 'relevant',
      * and 'incomparable'.
      */
-    use RelationshipKinds;
+    use Property\RelationshipKinds;
 
     /**
      * A description of the reporting descriptor relationship.
      */
-    use Description;
+    use Property\Description;
 
     /**
      * Key/value pairs that provide additional information about the reporting descriptor reference.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(ReportingDescriptorReference $target)
     {

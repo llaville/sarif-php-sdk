@@ -8,11 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\AddressLocation;
-use Bartlett\Sarif\Property\ContextRegion;
-use Bartlett\Sarif\Property\LocationArtifact;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\RegionArtifact;
+use Bartlett\Sarif\Property;
 
 use LogicException;
 
@@ -29,34 +25,34 @@ final class PhysicalLocation extends JsonSerializable
     /**
      * The address of the location.
      */
-    use AddressLocation;
+    use Property\AddressLocation;
 
     /**
      * The location of the artifact.
      */
-    use LocationArtifact;
+    use Property\LocationArtifact;
 
     /**
      * Specifies a portion of the artifact.
      */
-    use RegionArtifact;
+    use Property\RegionArtifact;
 
     /**
      * Specifies a portion of the artifact that encloses the region.
      * Allows a viewer to display additional context around the region.
      */
-    use ContextRegion;
+    use Property\ContextRegion;
 
     /**
      * Key/value pairs that provide additional information about the physical location.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param ArtifactLocation|null $artifactLocation
      * @param Address|null $address
      */
-    public function __construct(ArtifactLocation $artifactLocation = null, Address $address = null)
+    public function __construct(?ArtifactLocation $artifactLocation = null, ?Address $address = null)
     {
         if ($artifactLocation instanceof ArtifactLocation) {
             $this->artifactLocation = $artifactLocation;

@@ -8,9 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\ConfigurationAtRuntime;
-use Bartlett\Sarif\Property\Descriptor;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * Information about how a specific rule or notification was reconfigured at runtime.
@@ -24,17 +22,17 @@ final class ConfigurationOverride extends JsonSerializable
     /**
      * Specifies how the rule or notification was configured during the scan.
      */
-    use ConfigurationAtRuntime;
+    use Property\ConfigurationAtRuntime;
 
     /**
      * A reference used to locate the descriptor whose configuration was overridden.
      */
-    use Descriptor;
+    use Property\Descriptor;
 
     /**
      * Key/value pairs that provide additional information about the configuration override.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

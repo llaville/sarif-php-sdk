@@ -8,11 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\CodeLocation;
-use Bartlett\Sarif\Property\Module;
-use Bartlett\Sarif\Property\Parameters;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\ThreadId;
+use Bartlett\Sarif\Property;
 
 /**
  * A function call within a stack trace.
@@ -26,27 +22,27 @@ final class StackFrame extends JsonSerializable
     /**
      * The location to which this stack frame refers.
      */
-    use CodeLocation;
+    use Property\CodeLocation;
 
     /**
      * The name of the module that contains the code of this stack frame.
      */
-    use Module;
+    use Property\Module;
 
     /**
      * The thread identifier of the stack frame.
      */
-    use ThreadId;
+    use Property\ThreadId;
 
     /**
      * The parameters of the call that is executing.
      */
-    use Parameters;
+    use Property\Parameters;
 
     /**
      * Key/value pairs that provide additional information about the stack frame.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

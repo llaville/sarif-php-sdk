@@ -8,13 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Description;
-use Bartlett\Sarif\Property\EdgeTraversals;
-use Bartlett\Sarif\Property\ImmutableState;
-use Bartlett\Sarif\Property\InitialState;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\ResultGraphIndex;
-use Bartlett\Sarif\Property\RunGraphIndex;
+use Bartlett\Sarif\Property;
 
 use function is_int;
 
@@ -30,17 +24,17 @@ final class GraphTraversal extends JsonSerializable
     /**
      * The index within the run.graphs to be associated with the result.
      */
-    use RunGraphIndex;
+    use Property\RunGraphIndex;
 
     /**
      * The index within the result.graphs to be associated with the result.
      */
-    use ResultGraphIndex;
+    use Property\ResultGraphIndex;
 
     /**
      * A description of this graph traversal.
      */
-    use Description;
+    use Property\Description;
 
     /**
      * InitialState:
@@ -48,20 +42,20 @@ final class GraphTraversal extends JsonSerializable
      * ImmutableState:
      * Values of relevant expressions at the start of the graph traversal that remain constant for the graph traversal.
      */
-    use InitialState, ImmutableState {
-        InitialState::addAdditionalProperties as addAdditionalPropertiesInitialState;
-        ImmutableState::addAdditionalProperties insteadof InitialState;
+    use Property\InitialState, Property\ImmutableState {
+        Property\InitialState::addAdditionalProperties as addAdditionalPropertiesInitialState;
+        Property\ImmutableState::addAdditionalProperties insteadof Property\InitialState;
     }
 
     /**
      * The sequences of edges traversed by this graph traversal.
      */
-    use EdgeTraversals;
+    use Property\EdgeTraversals;
 
     /**
      * Key/value pairs that provide additional information about the graph traversal.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param int|null $runGraphIndex

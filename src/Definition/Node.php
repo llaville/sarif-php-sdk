@@ -8,11 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Children;
-use Bartlett\Sarif\Property\CodeLocation;
-use Bartlett\Sarif\Property\Id;
-use Bartlett\Sarif\Property\Label;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * Represents a node in a graph.
@@ -26,27 +22,27 @@ final class Node extends JsonSerializable
     /**
      * A string that uniquely identifies the node within its graph.
      */
-    use Id;
+    use Property\Id;
 
     /**
      * A short description of the node.
      */
-    use Label;
+    use Property\Label;
 
     /**
      * A code location associated with the node.
      */
-    use CodeLocation;
+    use Property\CodeLocation;
 
     /**
      * Array of child nodes.
      */
-    use Children;
+    use Property\Children;
 
     /**
      * Key/value pairs that provide additional information about the node.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(string $id)
     {

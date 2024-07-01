@@ -8,9 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Frames;
-use Bartlett\Sarif\Property\MessageString;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * A call stack that is relevant to a result.
@@ -24,18 +22,18 @@ final class Stack extends JsonSerializable
     /**
      * A message relevant to this call stack.
      */
-    use MessageString;
+    use Property\MessageString;
 
     /**
      * An array of stack frames that represents a sequence of calls, rendered in reverse chronological order,
      * that comprise the call stack.
      */
-    use Frames;
+    use Property\Frames;
 
     /**
      * Key/value pairs that provide additional information about the stack.
      */
-    use Properties;
+    use Property\Properties;
 
     /**
      * @param StackFrame[] $frames

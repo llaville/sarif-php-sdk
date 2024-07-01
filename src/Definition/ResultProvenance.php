@@ -8,13 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\ConversionSources;
-use Bartlett\Sarif\Property\FirstDetectionRunGuid;
-use Bartlett\Sarif\Property\FirstDetectionTimeUtc;
-use Bartlett\Sarif\Property\InvocationIndex;
-use Bartlett\Sarif\Property\LastDetectionRunGuid;
-use Bartlett\Sarif\Property\LastDetectionTimeUtc;
-use Bartlett\Sarif\Property\Properties;
+use Bartlett\Sarif\Property;
 
 /**
  * Contains information about how and when a result was detected.
@@ -29,42 +23,42 @@ final class ResultProvenance extends JsonSerializable
      * The Coordinated Universal Time (UTC) date and time at which the result was first detected.
      * See "Date/time properties" in the SARIF spec for the required format.
      */
-    use FirstDetectionTimeUtc;
+    use Property\FirstDetectionTimeUtc;
 
     /**
      * The Coordinated Universal Time (UTC) date and time at which the result was most recently detected.
      * See "Date/time properties" in the SARIF spec for the required format.
      */
-    use LastDetectionTimeUtc;
+    use Property\LastDetectionTimeUtc;
 
     /**
      * A GUID-valued string equal to the automationDetails.guid property of the run
      * in which the result was first detected.
      */
-    use FirstDetectionRunGuid;
+    use Property\FirstDetectionRunGuid;
 
     /**
      * A GUID-valued string equal to the automationDetails.guid property of the run
      * in which the result was most recently detected.
      */
-    use LastDetectionRunGuid;
+    use Property\LastDetectionRunGuid;
 
     /**
      * The index within the run.invocations array of the invocation object
      * which describes the tool invocation that detected the result.
      */
-    use InvocationIndex;
+    use Property\InvocationIndex;
 
     /**
      * An array of physicalLocation objects which specify the portions of an analysis tool's output
      * that a converter transformed into the result.
      */
-    use ConversionSources;
+    use Property\ConversionSources;
 
     /**
      * Key/value pairs that provide additional information about the result.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct()
     {

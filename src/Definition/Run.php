@@ -8,35 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\Addresses;
-use Bartlett\Sarif\Property\Artifacts;
-use Bartlett\Sarif\Property\AutomationDetails;
-use Bartlett\Sarif\Property\BaselineGuid;
-use Bartlett\Sarif\Property\ColumnKind;
-use Bartlett\Sarif\Property\ConversionProcess;
-use Bartlett\Sarif\Property\DefaultEncoding;
-use Bartlett\Sarif\Property\DefaultSourceLanguage;
-use Bartlett\Sarif\Property\ExternalPropertyFileReferencesInlined;
-use Bartlett\Sarif\Property\Graphs;
-use Bartlett\Sarif\Property\Invocations;
-use Bartlett\Sarif\Property\Language;
-use Bartlett\Sarif\Property\LogicalLocations;
-use Bartlett\Sarif\Property\NewlineSequences;
-use Bartlett\Sarif\Property\OriginalUriBaseIds;
-use Bartlett\Sarif\Property\Policies;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\RedactionTokens;
-use Bartlett\Sarif\Property\Results;
-use Bartlett\Sarif\Property\RunAggregates;
-use Bartlett\Sarif\Property\SpecialSignificanceLocations;
-use Bartlett\Sarif\Property\Taxonomies;
-use Bartlett\Sarif\Property\ThreadFlowLocations;
-use Bartlett\Sarif\Property\ToolPipeline;
-use Bartlett\Sarif\Property\Translations;
-use Bartlett\Sarif\Property\VersionControlProvenance;
-use Bartlett\Sarif\Property\WebRequests;
-use Bartlett\Sarif\Property\WebResponses;
-use function array_merge;
+use Bartlett\Sarif\Property;
 
 /**
  * Describes a single run of an analysis tool, and contains the reported output of that run.
@@ -53,18 +25,18 @@ final class Run extends JsonSerializable
      * A run can aggregate results from multiple log files,
      * as long as context around the tool run (tool command-line arguments and the like) is identical for all aggregated files.
      */
-    use ToolPipeline;
+    use Property\ToolPipeline;
 
     /**
      * Describes the invocation of the analysis tool.
      */
-    use Invocations;
+    use Property\Invocations;
 
     /**
      * A conversion object that describes how a converter transformed an analysis tool's native reporting format
      * into the SARIF format.
      */
-    use ConversionProcess;
+    use Property\ConversionProcess;
 
     /**
      * The language of the messages emitted into the log file during this run
@@ -73,132 +45,132 @@ final class Run extends JsonSerializable
      * (expressed as an ISO 3166-1 two-letter uppercase subculture code associated with a country or region).
      * The casing is recommended but not required (in order for this data to conform to RFC5646).
      */
-    use Language;
+    use Property\Language;
 
     /**
      * Specifies the revision in version control of the artifacts that were scanned.
      */
-    use VersionControlProvenance;
+    use Property\VersionControlProvenance;
 
     /**
      * The artifact location specified by each uriBaseId symbol on the machine where the tool originally ran.
      */
-    use OriginalUriBaseIds;
+    use Property\OriginalUriBaseIds;
 
     /**
      * An array of artifact objects relevant to the run.
      */
-    use Artifacts;
+    use Property\Artifacts;
 
     /**
      * An array of logical locations such as namespaces, types or functions.
      */
-    use LogicalLocations;
+    use Property\LogicalLocations;
 
     /**
      * An array of zero or more unique graph objects associated with the run.
      */
-    use Graphs;
+    use Property\Graphs;
 
     /**
      * The set of results contained in an SARIF log.
      * The results array can be omitted when a run is solely exporting rules metadata.
      * It must be present (but may be empty) if a log file represents an actual scan.
      */
-    use Results;
+    use Property\Results;
 
     /**
      * Automation details that describe this run.
      */
-    use AutomationDetails;
+    use Property\AutomationDetails;
 
     /**
      * Automation details that describe the aggregate of runs to which this run belongs.
      */
-    use RunAggregates;
+    use Property\RunAggregates;
 
     /**
      * The 'guid' property of a previous SARIF 'run' that comprises the baseline that was used
      * to compute result 'baselineState' properties for the run.
      */
-    use BaselineGuid;
+    use Property\BaselineGuid;
 
     /**
      * An array of strings used to replace sensitive information in a redaction-aware property.
      */
-    use RedactionTokens;
+    use Property\RedactionTokens;
 
     /**
      * Specifies the default encoding for any artifact object that refers to a text file.
      */
-    use DefaultEncoding;
+    use Property\DefaultEncoding;
 
     /**
      * Specifies the default source language for any artifact object that refers to a text file that contains source code.
      */
-    use DefaultSourceLanguage;
+    use Property\DefaultSourceLanguage;
 
     /**
      * An ordered list of character sequences that were treated as line breaks when computing region information for the run.
      */
-    use NewlineSequences;
+    use Property\NewlineSequences;
 
     /**
      * Specifies the unit in which the tool measures columns.
      */
-    use ColumnKind;
+    use Property\ColumnKind;
 
     /**
      * References to external property files that should be inlined with the content of a root log file.
      */
-    use ExternalPropertyFileReferencesInlined;
+    use Property\ExternalPropertyFileReferencesInlined;
 
     /**
      * An array of threadFlowLocation objects cached at run level.
      */
-    use ThreadFlowLocations;
+    use Property\ThreadFlowLocations;
 
     /**
      * An array of toolComponent objects relevant to a taxonomy in which results are categorized.
      */
-    use Taxonomies;
+    use Property\Taxonomies;
 
     /**
      * Addresses associated with this run instance, if any.
      */
-    use Addresses;
+    use Property\Addresses;
 
     /**
      * The set of available translations of the localized data provided by the tool.
      */
-    use Translations;
+    use Property\Translations;
 
     /**
      * Contains configurations that may potentially override both
      * reportingDescriptor.defaultConfiguration (the tool's default severities)
      * and invocation.configurationOverrides (severities established at run-time from the command line).
      */
-    use Policies;
+    use Property\Policies;
 
     /**
      * An array of request objects cached at run level.
      */
-    use WebRequests;
+    use Property\WebRequests;
 
     /**
      * An array of response objects cached at run level.
      */
-    use WebResponses;
+    use Property\WebResponses;
 
     /**
      * A specialLocations object that defines locations of special significance to SARIF consumers.
      */
-    use SpecialSignificanceLocations;
+    use Property\SpecialSignificanceLocations;
 
     /**
      * Key/value pairs that provide additional information about the run.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(Tool $tool)
     {

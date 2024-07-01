@@ -8,15 +8,7 @@
 namespace Bartlett\Sarif\Definition;
 
 use Bartlett\Sarif\Internal\JsonSerializable;
-use Bartlett\Sarif\Property\AssociatedRule;
-use Bartlett\Sarif\Property\Descriptor;
-use Bartlett\Sarif\Property\Level;
-use Bartlett\Sarif\Property\Locations;
-use Bartlett\Sarif\Property\MessageString;
-use Bartlett\Sarif\Property\Properties;
-use Bartlett\Sarif\Property\RuntimeException;
-use Bartlett\Sarif\Property\ThreadId;
-use Bartlett\Sarif\Property\TimeUtc;
+use Bartlett\Sarif\Property;
 
 /**
  * Describes a condition relevant to the tool itself, as opposed to being relevant to a target being analyzed by the tool.
@@ -30,47 +22,47 @@ final class Notification extends JsonSerializable
     /**
      * The locations relevant to this notification.
      */
-    use Locations;
+    use Property\Locations;
 
     /**
      * A message that describes the condition that was encountered.
      */
-    use MessageString;
+    use Property\MessageString;
 
     /**
      * A value specifying the severity level of the notification.
      */
-    use Level;
+    use Property\Level;
 
     /**
      * The thread identifier of the code that generated the notification.
      */
-    use ThreadId;
+    use Property\ThreadId;
 
     /**
      * The Coordinated Universal Time (UTC) date and time at which the analysis tool generated the notification.
      */
-    use TimeUtc;
+    use Property\TimeUtc;
 
     /**
      * The runtime exception, if any, relevant to this notification.
      */
-    use RuntimeException;
+    use Property\RuntimeException;
 
     /**
      * A reference used to locate the descriptor relevant to this notification.
      */
-    use Descriptor;
+    use Property\Descriptor;
 
     /**
      * A reference used to locate the rule descriptor associated with this notification.
      */
-    use AssociatedRule;
+    use Property\AssociatedRule;
 
     /**
      * Key/value pairs that provide additional information about the notification.
      */
-    use Properties;
+    use Property\Properties;
 
     public function __construct(Message $message)
     {
