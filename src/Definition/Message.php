@@ -14,8 +14,6 @@ use Bartlett\Sarif\Property\Markdown;
 use Bartlett\Sarif\Property\Properties;
 use Bartlett\Sarif\Property\Text;
 
-use DomainException;
-
 /**
  * Encapsulates a message intended to be read by the end user.
  *
@@ -52,11 +50,6 @@ final class Message extends JsonSerializable
 
     public function __construct(string $text = '', string $id = '')
     {
-        // Any of "id", "text" are required
-        if (empty($id) && empty($text)) {
-            throw new DomainException('Either "id" or "text" are required. Nothing provided.');
-        }
-
         $this->id = $id;
         $this->text = $text;
 

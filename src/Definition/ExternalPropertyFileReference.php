@@ -13,8 +13,6 @@ use Bartlett\Sarif\Property\ItemCount;
 use Bartlett\Sarif\Property\LocationArtifact;
 use Bartlett\Sarif\Property\Properties;
 
-use DomainException;
-
 /**
  * An externalPropertyFileReference object contains information that enables a SARIF consumer
  * to locate the external property files that contain the values of all externalized properties associated with theRun.
@@ -49,7 +47,7 @@ final class ExternalPropertyFileReference extends JsonSerializable
      * @param ArtifactLocation|null $location
      * @param string $guid
      */
-    public function __construct(ArtifactLocation $location = null, string $guid = '')
+    public function __construct(?ArtifactLocation $location = null, string $guid = '')
     {
         if ($location instanceof ArtifactLocation) {
             $this->location = $location;

@@ -15,7 +15,7 @@ use Bartlett\Sarif\Definition;
  */
 final class ArtifactChange extends Declaration
 {
-    protected \Bartlett\Sarif\Definition\ArtifactLocation $artifactLocation;
+    protected Definition\ArtifactLocation $artifactLocation;
     /**
      * @var Definition\Replacement[] $replacements
      */

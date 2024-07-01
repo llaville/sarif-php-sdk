@@ -16,9 +16,7 @@ use Bartlett\Sarif\Property\Properties;
 use Bartlett\Sarif\Property\ResultGraphIndex;
 use Bartlett\Sarif\Property\RunGraphIndex;
 
-use DomainException;
 use function is_int;
-use function is_numeric;
 
 /**
  * Represents a path through a graph.
