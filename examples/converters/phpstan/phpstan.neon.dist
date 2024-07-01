@@ -1,8 +1,0 @@
-parameters:
-    level: 9
-    paths:
-        - ../fixtures/
-
-services:
-    errorFormatter.sarif:
-        class: Bartlett\Sarif\Converter\PhpStanConverter

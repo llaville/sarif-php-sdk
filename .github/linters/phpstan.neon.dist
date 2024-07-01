@@ -6,9 +6,6 @@ parameters:
     excludePaths:
         - ../../src/Factory/SymfonySerializerFactory.php
         - ../../src/Serializer/Encoder/SymfonyJsonEncoder.php
-        - ../../src/Converter/AbstractConverter.php
-        - ../../src/Converter/Php*Converter.php
-        - ../../examples/converters/
         - ../../examples/builder/message/
         - ../../examples/builder/run
     treatPhpDocTypesAsCertain: false
@@ -16,5 +13,3 @@ parameters:
         -
             message: "#^Unreachable statement \\- code above always terminates\\.$#"
             path: ../../src/SarifLog.php
-    scanDirectories:
-        - ../../vendor-bin/phpmd/vendor/phpmd/phpmd/src
