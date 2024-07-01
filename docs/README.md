@@ -25,9 +25,3 @@ See [Reference Guide](reference/README.md)
 > Discover all fluent builders with each one at least an example of how to generate a SARIF report.
 
 See [Builder Guide](builder/README.md)
-
-## GitHub Code Scanning
-
-> Discover how to integrate SARIF reports with GH Code Scanning features.
-
-See [GitHub Code Scanning Guide](github-code-scanning/README.md)
