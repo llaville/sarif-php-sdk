@@ -18,12 +18,16 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
-$run = new Run($tool);
+$tool = new Tool();
+$tool->setDriver($driver);
+
+$run = new Run();
+$run->setTool($tool);
 $logsDir = new ArtifactLocation();
 $logsDir->setUri('file:///C:/logs/');
 $run->addAdditionalProperties([
@@ -33,18 +37,24 @@ $run->addAdditionalProperties([
 $location = new ArtifactLocation();
 $location->setUri('scantool.conversion.sarif-external-properties');
 $location->setUriBaseId('LOGSDIR');
-$conversion = new ExternalPropertyFileReference($location, '11111111-1111-1111-8888-111111111111');
+$conversion = new ExternalPropertyFileReference();
+$conversion->setLocation($location);
+$conversion->setGuid('11111111-1111-1111-8888-111111111111');
 
 $location = new ArtifactLocation();
 $location->setUri('scantool.results-1.sarif-external-properties');
 $location->setUriBaseId('LOGSDIR');
-$resultRef1 = new ExternalPropertyFileReference($location, '22222222-2222-1111-8888-222222222222');
+$resultRef1 = new ExternalPropertyFileReference();
+$resultRef1->setLocation($location);
+$resultRef1->setGuid('22222222-2222-1111-8888-222222222222');
 $resultRef1->setItemCount(1000);
 
 $location = new ArtifactLocation();
 $location->setUri('scantool.results-2.sarif-external-properties');
 $location->setUriBaseId('LOGSDIR');
-$resultRef2 = new ExternalPropertyFileReference($location, '33333333-3333-1111-8888-333333333333');
+$resultRef2 = new ExternalPropertyFileReference();
+$resultRef2->setLocation($location);
+$resultRef2->setGuid('33333333-3333-1111-8888-333333333333');
 $resultRef2->setItemCount(4277);
 
 $externalPropertyFileReferences = new ExternalPropertyFileReferences();

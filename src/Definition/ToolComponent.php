@@ -171,11 +171,8 @@ final class ToolComponent extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(string $name)
+    public function __construct()
     {
-        $this->name = $name;
-        $this->rules = [];
-
         $required = ['name'];
         $optional = [
             'guid',

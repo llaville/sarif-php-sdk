@@ -33,13 +33,8 @@ final class MultiformatMessageString extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param string $text
-     */
-    public function __construct(string $text)
+    public function __construct()
     {
-        $this->text = $text;
-
         $required = ['text'];
         $optional = [
             'markdown',

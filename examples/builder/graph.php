@@ -30,7 +30,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('Have a look on this graph')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Have a look on this graph')
+                    )
                     ->addGraph(
                         $factory->graph()
                             ->addNode(

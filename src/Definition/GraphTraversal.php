@@ -57,19 +57,8 @@ final class GraphTraversal extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param int|null $runGraphIndex
-     * @param int|null $resultGraphIndex
-     */
-    public function __construct(?int $runGraphIndex = null, ?int $resultGraphIndex = null)
+    public function __construct()
     {
-        if (is_int($runGraphIndex)) {
-            $this->runGraphIndex = $runGraphIndex;
-        }
-        if (is_int($resultGraphIndex)) {
-            $this->resultGraphIndex = $resultGraphIndex;
-        }
-
         $required = [];
         $optional = [
             'runGraphIndex',

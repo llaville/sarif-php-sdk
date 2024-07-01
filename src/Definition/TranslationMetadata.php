@@ -54,10 +54,8 @@ final class TranslationMetadata extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(string $name)
+    public function __construct()
     {
-        $this->name = $name;
-
         $required = ['name'];
         $optional = [
             'fullName',

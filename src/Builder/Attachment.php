@@ -30,7 +30,8 @@ final class Attachment extends Declaration
 
     public function description(string $text): self
     {
-        $this->description = new Definition\Message($text);
+        $this->description = new Definition\Message();
+        $this->description->setText($text);
         return $this;
     }
 

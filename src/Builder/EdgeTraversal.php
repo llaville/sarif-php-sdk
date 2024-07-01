@@ -21,11 +21,6 @@ final class EdgeTraversal extends Declaration
      */
     protected array $finalState;
 
-    public function __construct()
-    {
-        $this->finalState = [];
-    }
-
     public function edgeId(string $id): self
     {
         $this->edgeId = $id;
@@ -34,7 +29,9 @@ final class EdgeTraversal extends Declaration
 
     public function addFinalState(string $key, string $value): self
     {
-        $this->finalState[$key] = new Definition\MultiformatMessageString($value);
+        $state = new Definition\MultiformatMessageString();
+        $state->setText($value);
+        $this->finalState[$key] = $state;
         return $this;
     }
 
@@ -43,7 +40,7 @@ final class EdgeTraversal extends Declaration
      */
     public function build(): Definition\EdgeTraversal
     {
-        $edgeTraversal = new Definition\EdgeTraversal($this->edgeId);
+        $edgeTraversal = new Definition\EdgeTraversal();
         $this->populate($edgeTraversal);
         $edgeTraversal->addAdditionalProperties($this->finalState);
         return $edgeTraversal;

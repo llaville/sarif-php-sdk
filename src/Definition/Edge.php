@@ -44,17 +44,8 @@ final class Edge extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param string $id
-     * @param string $sourceNodeId
-     * @param string $targetNodeId
-     */
-    public function __construct(string $id, string $sourceNodeId, string $targetNodeId)
+    public function __construct()
     {
-        $this->id = $id;
-        $this->sourceNodeId = $sourceNodeId;
-        $this->targetNodeId = $targetNodeId;
-
         $required = [
             'id',
             'sourceNodeId',

@@ -64,10 +64,8 @@ final class Notification extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(Message $message)
+    public function __construct()
     {
-        $this->message = $message;
-
         $required = ['message'];
         $optional = [
             'locations',

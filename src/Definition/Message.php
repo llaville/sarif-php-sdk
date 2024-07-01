@@ -44,11 +44,8 @@ final class Message extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(string $text = '', string $id = '')
+    public function __construct()
     {
-        $this->id = $id;
-        $this->text = $text;
-
         $required = [];
         $optional = [
             'text',

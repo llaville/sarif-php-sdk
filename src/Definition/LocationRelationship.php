@@ -40,10 +40,8 @@ final class LocationRelationship extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(int $target)
+    public function __construct()
     {
-        $this->target = $target;
-
         $required = ['target'];
         $optional = [
             'kinds',

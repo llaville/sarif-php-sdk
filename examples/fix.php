@@ -23,26 +23,44 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
+
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('src/a.c');
-$replacement = new Replacement(new Region(1, 1, 1));
+
+$replacement = new Replacement();
+$region = new Region();
+$region->setStartLine(1);
+$region->setEndLine(1);
+$region->setStartColumn(1);
+$replacement->setDeletedRegion($region);
 $insertedContent = new ArtifactContent();
 $insertedContent->setText('// ');
 $replacement->setInsertedContent($insertedContent);
-$artifactChange = new ArtifactChange($artifactLocation, [$replacement]);
 
-$fix = new Fix([$artifactChange]);
+$artifactChange = new ArtifactChange();
+$artifactChange->setArtifactLocation($artifactLocation);
+$artifactChange->addReplacements([$replacement]);
 
-$result = new Result(new Message('...'));
+$fix = new Fix();
+$fix->addArtifactChanges([$artifactChange]);
+
+$message = new Message();
+$message->setText('...');
+
+$result = new Result();
+$result->setMessage($message);
 $result->setRuleId('CA1001');
 $result->addFixes([$fix]);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

@@ -15,7 +15,7 @@ use Bartlett\Sarif\Definition;
  */
 final class Run extends Declaration
 {
-    protected Tool $tool;
+    protected Definition\Tool $tool;
     protected Definition\Conversion $conversion;
     /**
      * @var Definition\Address[] $addresses
@@ -69,7 +69,7 @@ final class Run extends Declaration
      */
     public function tool(Tool $tool): self
     {
-        $this->tool = $tool;
+        $this->tool = $tool->build();
         return $this;
     }
 
@@ -150,8 +150,7 @@ final class Run extends Declaration
      */
     public function build(): Definition\Run
     {
-        $tool = $this->tool->build();
-        $run = new Definition\Run($tool);
+        $run = new Definition\Run();
         $this->populate($run);
         $run->addAdditionalProperties($this->originalUriBaseIds ?? []);
         $run->addVersionControlDetails($this->versionControlProvenance ?? []);

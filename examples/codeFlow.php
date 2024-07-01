@@ -25,39 +25,68 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
+
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $threadFlowLocation = new ThreadFlowLocation();
 $location = new Location();
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('ui/window.c');
 $artifactLocation->setUriBaseId('SRCROOT');
-$physicalLocation = new PhysicalLocation($artifactLocation);
-$physicalLocation->setRegion(new Region(42));
+$physicalLocation = new PhysicalLocation();
+$physicalLocation->setArtifactLocation($artifactLocation);
+$region = new Region();
+$region->setStartLine(42);
+$physicalLocation->setRegion($region);
 $location->setPhysicalLocation($physicalLocation);
 $threadFlowLocation->setLocation($location);
+
+$x = new MultiformatMessageString();
+$x->setText('42');
+
+$y = new MultiformatMessageString();
+$y->setText('54');
+
+$xy = new MultiformatMessageString();
+$xy->setText('96');
+
 $threadFlowLocation->addAdditionalProperties([
-    'x' => new MultiformatMessageString('42'),
-    'y' => new MultiformatMessageString('54'),
-    'x+y' => new MultiformatMessageString('96'),
+    'x' => $x,
+    'y' => $y,
+    'x+y' => $xy,
 ]);
 $threadFlowLocation->setNestingLevel(0);
 $threadFlowLocation->setExecutionOrder(2);
 
-$threadFlow = new ThreadFlow([$threadFlowLocation]);
+$message = new Message();
+$message->setText('A threadFlow object');
+
+$threadFlow = new ThreadFlow();
 $threadFlow->setId('thread-123');
-$threadFlow->setMessage(new Message('A threadFlow object'));
+$threadFlow->setMessage($message);
+$threadFlow->addLocations([$threadFlowLocation]);
 
-$codeFlow = new CodeFlow([$threadFlow]);
-$codeFlow->setMessage(new Message('A codeFlow object'));
+$message = new Message();
+$message->setText('A codeFlow object');
 
-$result = new Result(new Message('A result object'));
+$codeFlow = new CodeFlow();
+$codeFlow->setMessage($message);
+$codeFlow->addThreadFlows([$threadFlow]);
+
+$message = new Message();
+$message->setText('A result object');
+
+$result = new Result();
+$result->setMessage($message);
 $result->addCodeFlows([$codeFlow]);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

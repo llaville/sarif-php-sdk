@@ -19,24 +19,34 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setFullName('CodeScanner 1.1, Developer Preview (en-US)');
 $driver->setSemanticVersion('1.1.2-beta.12');
 $driver->setVersion('1.1.2b12');
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
+
+$desc = new Message();
+$desc->setText('Screen shot');
 
 $attachment = new Attachment();
-$attachment->setDescription(new Message('Screen shot'));
+$attachment->setDescription($desc);
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('file:///C:/ScanOutput/image001.png');
 $attachment->setArtifactLocation($artifactLocation);
 
-$result = new Result(new Message('Have a look on screen shot provided'));
+$message = new Message();
+$message->setText('Have a look on screen shot provided');
+
+$result = new Result();
+$result->setMessage($message);
 $result->addAttachments([$attachment]);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

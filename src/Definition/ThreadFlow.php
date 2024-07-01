@@ -52,13 +52,8 @@ final class ThreadFlow extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param ThreadFlowLocation[] $locations
-     */
-    public function __construct(array $locations)
+    public function __construct()
     {
-        $this->addLocations($locations);
-
         $required = ['locations'];
         $optional = [
             'id',

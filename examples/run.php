@@ -16,15 +16,19 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('Psalm');
+$driver = new ToolComponent();
+$driver->setName('Psalm');
 $driver->setInformationUri('https://psalm.de');
 $driver->setVersion('4.x-dev');
-$tool = new Tool($driver);
+
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $propertyBag = new PropertyBag();
 $propertyBag->addProperty('stableId', 'Nightly static analysis run');
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->setProperties($propertyBag);
 
 $log = new SarifLog([$run]);

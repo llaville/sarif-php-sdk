@@ -19,10 +19,13 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
+
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $apple = new Artifact();
 $location = new ArtifactLocation();
@@ -39,7 +42,8 @@ $banana->setMimeType('image/png');
 $propertyBag = new PropertyBag();
 $propertyBag->addProperty('team', 'Security Assurance Team');
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 
 $log = new SarifLog([$run]);
 $externalProperties = new ExternalProperties();

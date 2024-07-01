@@ -38,7 +38,7 @@ final class LocationRelationship extends Declaration
      */
     public function build(): Definition\LocationRelationship
     {
-        $locationRelationship = new Definition\LocationRelationship($this->target);
+        $locationRelationship = new Definition\LocationRelationship();
         $this->populate($locationRelationship);
         return $locationRelationship;
     }

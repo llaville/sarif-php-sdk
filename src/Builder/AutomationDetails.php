@@ -25,7 +25,9 @@ final class AutomationDetails extends Declaration
      */
     public function description(string $text, string $id = '', array $arguments = []): self
     {
-        $message = new Definition\Message($text, $id);
+        $message = new Definition\Message();
+        $message->setText($text);
+        $message->setId($id);
         $message->addArguments($arguments);
         $this->description = $message;
         return $this;

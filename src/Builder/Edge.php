@@ -42,7 +42,7 @@ final class Edge extends Declaration
      */
     public function build(): Definition\Edge
     {
-        $edge = new Definition\Edge($this->id, $this->sourceNodeId, $this->targetNodeId);
+        $edge = new Definition\Edge();
         $this->populate($edge);
         return $edge;
     }

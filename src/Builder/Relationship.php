@@ -38,7 +38,7 @@ final class Relationship extends Declaration
      */
     public function build(): Definition\ReportingDescriptorRelationship
     {
-        $relationship = new Definition\ReportingDescriptorRelationship($this->target);
+        $relationship = new Definition\ReportingDescriptorRelationship();
         $this->populate($relationship);
         return $relationship;
     }

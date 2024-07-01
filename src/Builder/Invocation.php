@@ -55,7 +55,7 @@ final class Invocation extends Declaration
      */
     public function build(): Definition\Invocation
     {
-        $invocation = new Definition\Invocation($this->executionSuccessful);
+        $invocation = new Definition\Invocation();
         $this->populate($invocation);
         return $invocation;
     }

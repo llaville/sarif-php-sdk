@@ -28,7 +28,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('Request to suppress a result')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Request to suppress a result')
+                    )
                     ->addSuppression(
                         $factory->suppression()
                             ->kind('inSource')

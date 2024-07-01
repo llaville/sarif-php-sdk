@@ -58,13 +58,10 @@ final class Result extends Declaration
      */
     protected array $stacks;
 
-    /**
-     * @param string[] $arguments
-     */
-    public function __construct(string $messageText, string $messageId = '', array $arguments = [])
+    public function message(Message $message): self
     {
-        $this->message = new Definition\Message($messageText, $messageId);
-        $this->message->addArguments($arguments);
+        $this->message = $message->build();
+        return $this;
     }
 
     public function ruleId(string $id): self
@@ -156,7 +153,7 @@ final class Result extends Declaration
      */
     public function build(): Definition\Result
     {
-        $result = new Definition\Result($this->message);
+        $result = new Definition\Result();
         $this->populate($result);
         return $result;
     }

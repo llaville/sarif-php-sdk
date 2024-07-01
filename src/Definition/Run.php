@@ -172,10 +172,8 @@ final class Run extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(Tool $tool)
+    public function __construct()
     {
-        $this->tool = $tool;
-
         $required = ['tool'];
         $optional = [
             'invocations',

@@ -28,7 +28,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('Identify a physical location where a result was detected.')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Identify a physical location where a result was detected.')
+                    )
                     ->addLocation(
                         $factory->location()
                             ->physicalLocation(

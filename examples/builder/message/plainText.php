@@ -37,7 +37,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result("'x' is assigned a value but never used.")
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text("'x' is assigned a value but never used.")
+                    )
                     ->ruleId('no-unused-vars')
                     ->ruleIndex(0)
                     ->level('error')

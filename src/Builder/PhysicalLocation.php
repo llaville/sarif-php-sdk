@@ -43,7 +43,7 @@ final class PhysicalLocation extends Declaration
      */
     public function build(): Definition\PhysicalLocation
     {
-        $location = new Definition\PhysicalLocation($this->artifactLocation, $this->address);
+        $location = new Definition\PhysicalLocation();
         $this->populate($location);
         return $location;
     }

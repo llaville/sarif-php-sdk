@@ -17,11 +17,13 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $artifact1 = new Artifact();
 $artifactLocation1 = new ArtifactLocation();
@@ -42,7 +44,8 @@ $artifact3->setLength(4050);
 $artifact3->setMimeType('application/x-contoso-animation');
 $artifact3->setParentIndex(1);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addArtifacts([$artifact1, $artifact2, $artifact3]);
 
 $log = new SarifLog([$run]);

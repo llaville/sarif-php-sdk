@@ -23,7 +23,9 @@ final class CodeFlow extends Declaration
 
     public function message(string $messageText, string $messageId = ''): self
     {
-        $this->message = new Definition\Message($messageText, $messageId);
+        $this->message = new Definition\Message();
+        $this->message->setText($messageText);
+        $this->message->setId($messageId);
         return $this;
     }
 
@@ -38,7 +40,7 @@ final class CodeFlow extends Declaration
      */
     public function build(): Definition\CodeFlow
     {
-        $codeFlow = new Definition\CodeFlow($this->threadFlows);
+        $codeFlow = new Definition\CodeFlow();
         $this->populate($codeFlow);
         return $codeFlow;
     }

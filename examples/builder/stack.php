@@ -28,7 +28,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('Uninitialized variable.')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Uninitialized variable.')
+                    )
                     ->ruleId('TUT1001')
                     ->addLocation(
                         $factory->location()

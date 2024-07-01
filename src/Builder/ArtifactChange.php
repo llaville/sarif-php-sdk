@@ -37,10 +37,7 @@ final class ArtifactChange extends Declaration
      */
     public function build(): Definition\ArtifactChange
     {
-        $artifactChange = new Definition\ArtifactChange(
-            $this->artifactLocation,
-            $this->replacements ?? []
-        );
+        $artifactChange = new Definition\ArtifactChange();
         $this->populate($artifactChange);
         return $artifactChange;
     }

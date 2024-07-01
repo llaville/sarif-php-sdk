@@ -38,7 +38,7 @@ final class Node extends Declaration
      */
     public function build(): Definition\Node
     {
-        $node = new Definition\Node($this->id);
+        $node = new Definition\Node();
         $this->populate($node);
         return $node;
     }

@@ -16,10 +16,13 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('Psalm');
+$driver = new ToolComponent();
+$driver->setName('Psalm');
 $driver->setInformationUri('https://psalm.de');
 $driver->setVersion('4.x-dev');
-$tool = new Tool($driver);
+
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $nsLocation = new LogicalLocation();
 $nsLocation->setName('Hook');
@@ -31,7 +34,8 @@ $funcLocation->setName('afterAnalysis');
 $funcLocation->setFullyQualifiedName('Psalm\Plugin\Hook\AfterAnalysisInterface\afterAnalysis');
 $funcLocation->setKind('function');
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addLogicalLocations([$nsLocation, $funcLocation]);
 
 $log = new SarifLog([$run]);

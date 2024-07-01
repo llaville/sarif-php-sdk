@@ -44,10 +44,8 @@ final class Node extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(string $id)
+    public function __construct()
     {
-        $this->id = $id;
-
         $required = ['id'];
         $optional = [
             'label',

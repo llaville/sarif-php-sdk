@@ -19,32 +19,44 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
 
-$rule1 = new ReportingDescriptor('CA1001');
+$rule1 = new ReportingDescriptor();
+$rule1->setId('CA1001');
 $rule1->addDeprecatedIds(['CA1000']);
-$rule2 = new ReportingDescriptor('CA1002');
+$rule2 = new ReportingDescriptor();
+$rule2->setId('CA1002');
 $rule2->addDeprecatedIds(['CA1000']);
 $driver->addRules([$rule1, $rule2]);
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
+
+$message = new Message();
+$message->setText('...');
 
 $results = [];
-$results[0] = new Result(new Message('...'));
+$results[0] = new Result();
+$results[0]->setMessage($message);
 $results[0]->setRuleId('CA1001');
 $results[0]->setBaselineState('unchanged');
-$suppression = new Suppression('inSource');
+$suppression = new Suppression();
+$suppression->setKind('inSource');
 $results[0]->addSuppressions([$suppression]);
 
-$results[1] = new Result(new Message('...'));
+$results[1] = new Result();
+$results[1]->setMessage($message);
 $results[1]->setRuleId('CA1002');
 $results[1]->setBaselineState('updated');
-$suppression = new Suppression('inSource');
+$suppression = new Suppression();
+$suppression->setKind('inSource');
 $results[1]->addSuppressions([$suppression]);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults($results);
 
 $log = new SarifLog([$run]);

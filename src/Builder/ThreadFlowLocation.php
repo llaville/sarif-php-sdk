@@ -48,7 +48,9 @@ final class ThreadFlowLocation extends Declaration
 
     public function addAdditionalProperty(string $key, string $value): self
     {
-        $this->additionalProperties[$key] = new Definition\MultiformatMessageString($value);
+        $property = new Definition\MultiformatMessageString();
+        $property->setText($value);
+        $this->additionalProperties[$key] = $property;
         return $this;
     }
 

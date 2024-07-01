@@ -20,11 +20,6 @@ final class PropertyBag
      */
     protected array $tags;
 
-    public function __construct()
-    {
-        $this->tags = [];
-    }
-
     public function addProperty(string $key, string $value): self
     {
         $this->tags[$key] = $value;
@@ -36,6 +31,8 @@ final class PropertyBag
      */
     public function build(): Definition\PropertyBag
     {
-        return new Definition\PropertyBag($this->tags);
+        $bag = new Definition\PropertyBag();
+        $bag->addProperties($this->tags);
+        return $bag;
     }
 }

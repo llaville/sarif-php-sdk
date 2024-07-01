@@ -26,7 +26,7 @@ final class PropertyBag implements JsonSerializable
     /**
      * @param array<string, mixed> $properties
      */
-    public function __construct(array $properties = [])
+    public function addProperties(array $properties): void
     {
         $this->tags = $properties;
     }

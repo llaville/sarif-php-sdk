@@ -40,13 +40,8 @@ final class Conversion extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param Tool $tool
-     */
-    public function __construct(Tool $tool)
+    public function __construct()
     {
-        $this->tool = $tool;
-
         $required = ['tool'];
         $optional = [
             'invocation',

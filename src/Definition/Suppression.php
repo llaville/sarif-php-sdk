@@ -49,10 +49,8 @@ final class Suppression extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(string $kind)
+    public function __construct()
     {
-        $this->kind = $kind;
-
         $required = ['kind'];
         $optional = [
             'guid',

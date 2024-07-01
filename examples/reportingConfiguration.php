@@ -19,13 +19,17 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
 
-$rule = new ReportingDescriptor('SA2707');
+$rule = new ReportingDescriptor();
+$rule->setId('SA2707');
 $rule->setName('LimitSourceLineLength');
-$rule->setShortDescription(new MultiformatMessageString('Limit source line length for readability.'));
+$desc = new MultiformatMessageString();
+$desc->setText('Limit source line length for readability.');
+$rule->setShortDescription($desc);
 $reportingConf = new ReportingConfiguration();
 $propertyBag = new PropertyBag();
 $propertyBag->addProperty('maxLength', 120);
@@ -33,8 +37,10 @@ $reportingConf->setParameters($propertyBag);
 $rule->setDefaultConfiguration($reportingConf);
 $driver->addRules([$rule]);
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 
 $log = new SarifLog([$run]);

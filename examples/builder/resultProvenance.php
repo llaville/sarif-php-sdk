@@ -28,7 +28,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('Assertions are unreliable.')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Assertions are unreliable.')
+                    )
                     ->ruleId('Assertions')
                     ->provenance(
                         $factory->resultProvenance()

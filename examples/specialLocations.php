@@ -17,11 +17,13 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $webHost = new ArtifactLocation();
 $webHost->setUri('http://www.example.com/');
@@ -41,7 +43,8 @@ $src = new ArtifactLocation();
 $src->setUri('src/');
 $src->setUriBaseId('PACKAGE');
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addAdditionalProperties([
     'WEBHOST' => $webHost,
     'ROOT' => $root,

@@ -28,7 +28,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('A result object')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('A result object')
+                    )
                     ->addCodeFlow(
                         $factory->codeFlow()
                             ->threadFlow(

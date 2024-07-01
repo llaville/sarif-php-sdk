@@ -80,31 +80,8 @@ final class Region extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param int|null $startLine
-     * @param int|null $startColumn
-     * @param int|null $endLine
-     * @param int|null $endColumn
-     */
-    public function __construct(
-        ?int $startLine = null,
-        ?int $startColumn = null,
-        ?int $endLine = null,
-        ?int $endColumn = null
-    ) {
-        if (is_int($startLine)) {
-            $this->startLine = $startLine;
-        }
-        if (is_int($startColumn)) {
-            $this->startColumn = $startColumn;
-        }
-        if (is_int($endLine)) {
-            $this->endLine = $endLine;
-        }
-        if (is_int($endColumn)) {
-            $this->endColumn = $endColumn;
-        }
-
+    public function __construct()
+    {
         $required = [];
         $optional = [
             'startLine',

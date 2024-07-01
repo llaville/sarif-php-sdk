@@ -80,7 +80,7 @@ final class Driver extends Declaration
      */
     public function build(): Definition\ToolComponent
     {
-        $driver = new Definition\ToolComponent($this->name);
+        $driver = new Definition\ToolComponent();
         $this->populate($driver);
         return $driver;
     }

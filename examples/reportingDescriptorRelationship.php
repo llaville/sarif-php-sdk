@@ -19,25 +19,33 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
 
-$rule = new ReportingDescriptor('CA1000');
+$rule = new ReportingDescriptor();
+$rule->setId('CA1000');
 
-$target = new ReportingDescriptorReference(0, '327', '33333333-0000-1111-8888-111111111111');
+$target = new ReportingDescriptorReference();
+$target->setIndex(0);
+$target->setId('327');
+$target->setGuid('33333333-0000-1111-8888-111111111111');
 $toolComponent = new ToolComponentReference();
 $toolComponent->setName('CWE');
 $toolComponent->setGuid('33333333-0000-1111-8888-000000000000');
 $target->setToolComponent($toolComponent);
 
-$relationship = new ReportingDescriptorRelationship($target);
+$relationship = new ReportingDescriptorRelationship();
+$relationship->setTarget($target);
 $relationship->addKinds(['superset']);
 $rule->addRelationships([$relationship]);
 $driver->addRules([$rule]);
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 
 $log = new SarifLog([$run]);

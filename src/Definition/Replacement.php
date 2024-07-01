@@ -34,13 +34,8 @@ final class Replacement extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param Region $deletedRegion
-     */
-    public function __construct(Region $deletedRegion)
+    public function __construct()
     {
-        $this->deletedRegion = $deletedRegion;
-
         $required = ['deletedRegion'];
         $optional = [
             'insertedContent',

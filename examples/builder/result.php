@@ -38,17 +38,29 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('Result on rule 0')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Result on rule 0')
+                    )
                     ->ruleId('CA2101')
                     ->ruleIndex(0)
             )
             ->addResult(
-                $factory->result('Result on rule 1')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Result on rule 1')
+                    )
                     ->ruleId('CA5350/md5')
                     ->ruleIndex(1)
             )
             ->addResult(
-                $factory->result('Another result on rule 1')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Another result on rule 1')
+                    )
                     ->ruleId('CA5350/sha-1')
                     ->ruleIndex(1)
             )

@@ -28,7 +28,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('Tainted data was used. The data came from [here](3).')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Tainted data was used. The data came from [here](3).')
+                    )
                     ->ruleId('TNT0001')
                     ->addRelatedLocation(
                         $factory->location()

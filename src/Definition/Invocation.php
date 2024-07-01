@@ -146,13 +146,8 @@ final class Invocation extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param bool $executionSuccessful
-     */
-    public function __construct(bool $executionSuccessful)
+    public function __construct()
     {
-        $this->executionSuccessful = $executionSuccessful;
-
         $required = ['executionSuccessful'];
         $optional = [
             'commandLine',

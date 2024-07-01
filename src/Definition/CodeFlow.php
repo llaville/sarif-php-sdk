@@ -35,13 +35,8 @@ final class CodeFlow extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param ThreadFlow[] $threadFlows
-     */
-    public function __construct(array $threadFlows)
+    public function __construct()
     {
-        $this->addThreadFlows($threadFlows);
-
         $required = ['threadFlows'];
         $optional = [
             'message',

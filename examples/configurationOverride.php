@@ -20,30 +20,36 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
 
-$rule = new ReportingDescriptor('CA2101');
+$rule = new ReportingDescriptor();
+$rule->setId('CA2101');
 $reportingConf = new ReportingConfiguration();
 $reportingConf->setLevel('error');
 $rule->setDefaultConfiguration($reportingConf);
 $driver->addRules([$rule]);
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $ruleConf = new ReportingConfiguration();
 $ruleConf->setLevel('warning');
 
 $confOverrides = new ConfigurationOverride();
-$descriptor = new ReportingDescriptorReference(0);
+$descriptor = new ReportingDescriptorReference();
+$descriptor->setIndex(0);
 $confOverrides->setDescriptor($descriptor);
 $confOverrides->setConfiguration($ruleConf);
 
-$invocation = new Invocation(true);
+$invocation = new Invocation();
+$invocation->setExecutionSuccessful(true);
 $invocation->addRuleConfigurationOverrides([$confOverrides]);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addInvocations([$invocation]);
 
 $log = new SarifLog([$run]);

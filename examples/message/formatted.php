@@ -17,17 +17,24 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
-$message = new Message("Variable '{0}' is uninitialized.");
+$tool = new Tool();
+$tool->setDriver($driver);
+
+$message = new Message();
+$message->setText("Variable '{0}' is uninitialized.");
 $message->addArguments(['pBuffer']);
-$result = new Result($message);
+
+$result = new Result();
+$result->setMessage($message);
 $result->setRuleId('CA2101');
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

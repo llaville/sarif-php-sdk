@@ -28,7 +28,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('A result object with locationRelationship object')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('A result object with locationRelationship object')
+                    )
                     ->addLocation(
                         $factory->location()
                             ->id(0)

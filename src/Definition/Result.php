@@ -174,13 +174,8 @@ final class Result extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param Message $message
-     */
-    public function __construct(Message $message)
+    public function __construct()
     {
-        $this->message = $message;
-
         $required = ['message'];
         $optional = [
             'ruleId',

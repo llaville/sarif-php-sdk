@@ -151,6 +151,11 @@ final class BuilderFactory implements BuilderFactoryInterface
         return new Builder\LocationRelationship();
     }
 
+    public function message(): Builder\Message
+    {
+        return new Builder\Message();
+    }
+
     public function node(): Builder\Node
     {
         return new Builder\Node();
@@ -191,9 +196,9 @@ final class BuilderFactory implements BuilderFactoryInterface
         return new Builder\Replacement();
     }
 
-    public function result(string $messageText, string $messageId = '', array $arguments = []): Builder\Result
+    public function result(): Builder\Result
     {
-        return new Builder\Result($messageText, $messageId, $arguments);
+        return new Builder\Result();
     }
 
     public function resultProvenance(): Builder\ResultProvenance

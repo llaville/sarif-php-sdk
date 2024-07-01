@@ -35,15 +35,8 @@ final class ArtifactChange extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param ArtifactLocation $artifactLocation
-     * @param Replacement[] $replacements
-     */
-    public function __construct(ArtifactLocation $artifactLocation, array $replacements)
+    public function __construct()
     {
-        $this->artifactLocation = $artifactLocation;
-        $this->addReplacements($replacements);
-
         $required = [
             'artifactLocation',
             'replacements',

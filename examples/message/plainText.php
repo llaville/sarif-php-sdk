@@ -20,27 +20,36 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('ESLint');
+$driver = new ToolComponent();
+$driver->setName('ESLint');
 $driver->setInformationUri('https://eslint.org');
 $driver->setSemanticVersion('8.1.0');
 
-$rule = new ReportingDescriptor('no-unused-vars');
-$rule->setShortDescription(new MultiformatMessageString('disallow unused variables'));
+$rule = new ReportingDescriptor();
+$rule->setId('no-unused-vars');
+$desc = new MultiformatMessageString();
+$desc->setText('disallow unused variables');
+$rule->setShortDescription($desc);
 $rule->setHelpUri('https://eslint.org/docs/rules/no-unused-vars');
 $properties = new PropertyBag();
 $properties->addProperty('category', 'Variables');
 $rule->setProperties($properties);
 $driver->addRules([$rule]);
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
-$message = new Message("'x' is assigned a value but never used.");
-$result = new Result($message);
+$message = new Message();
+$message->setText("'x' is assigned a value but never used.");
+
+$result = new Result();
+$result->setMessage($message);
 $result->setLevel('error');
 $result->setRuleId('no-unused-vars');
 $result->setRuleIndex(0);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

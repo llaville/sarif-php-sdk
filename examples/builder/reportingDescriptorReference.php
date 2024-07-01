@@ -52,7 +52,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('...')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('...')
+                    )
                     ->ruleId('CTN9999')
             )
     )

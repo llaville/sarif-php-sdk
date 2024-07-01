@@ -23,53 +23,106 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $nodes = [];
-$nodes[1] = new Node('n1');
-$nodes[2] = new Node('n2');
-$nodes[3] = new Node('n3');
-$nodes[4] = new Node('n4');
+foreach ([1 => 'n1', 2 => 'n2', 3 => 'n3', 4 => 'n4'] as $idx => $nodeId) {
+    $node = new Node();
+    $node->setId($nodeId);
+    $nodes[$idx] = $node;
+}
 
 $edges = [];
-$edges[1] = new Edge('e1', 'n1', 'n2');
-$edges[2] = new Edge('e2', 'n2', 'n3');
-$edges[3] = new Edge('e3', 'n2', 'n4');
+
+$edges[1] = new Edge();
+$edges[1]->setId('e1');
+$edges[1]->setSourceNodeId('n1');
+$edges[1]->setTargetNodeId('n2');
+
+$edges[2] = new Edge();
+$edges[2]->setId('e2');
+$edges[2]->setSourceNodeId('n2');
+$edges[2]->setTargetNodeId('n3');
+
+$edges[3] = new Edge();
+$edges[3]->setId('e3');
+$edges[3]->setSourceNodeId('n2');
+$edges[3]->setTargetNodeId('n4');
 
 $graph = new Graph();
 $graph->addNodes($nodes);
 $graph->addEdges($edges);
 
-$graphTraversal = new GraphTraversal(null, 0);
+$graphTraversal = new GraphTraversal();
+$graphTraversal->setResultGraphIndex(0);
+
+$x = new MultiformatMessageString();
+$x->setText('1');
+
+$y = new MultiformatMessageString();
+$y->setText('2');
+
+$xy = new MultiformatMessageString();
+$xy->setText('3');
+
 $graphTraversal->addAdditionalPropertiesInitialState([
-    'x' => new MultiformatMessageString('1'),
-    'y' => new MultiformatMessageString('2'),
-    'x+y' => new MultiformatMessageString('3'),
+    'x' => $x,
+    'y' => $y,
+    'x+y' => $xy,
 ]);
 
-$edgeTraversal1 = new EdgeTraversal('e1');
+$edgeTraversal1 = new EdgeTraversal();
+$edgeTraversal1->setEdgeId('e1');
+
+$x = new MultiformatMessageString();
+$x->setText('4');
+
+$y = new MultiformatMessageString();
+$y->setText('2');
+
+$xy = new MultiformatMessageString();
+$xy->setText('6');
+
 $edgeTraversal1->addAdditionalProperties([
-    'x' => new MultiformatMessageString('4'),
-    'y' => new MultiformatMessageString('2'),
-    'x+y' => new MultiformatMessageString('6'),
+    'x' => $x,
+    'y' => $y,
+    'x+y' => $xy,
 ]);
-$edgeTraversal3 = new EdgeTraversal('e3');
+$edgeTraversal3 = new EdgeTraversal();
+$edgeTraversal3->setEdgeId('e3');
+
+$x = new MultiformatMessageString();
+$x->setText('4');
+
+$y = new MultiformatMessageString();
+$y->setText('7');
+
+$xy = new MultiformatMessageString();
+$xy->setText('11');
+
 $edgeTraversal3->addAdditionalProperties([
-    'x' => new MultiformatMessageString('4'),
-    'y' => new MultiformatMessageString('7'),
-    'x+y' => new MultiformatMessageString('11'),
+    'x' => $x,
+    'y' => $y,
+    'x+y' => $xy,
 ]);
 $graphTraversal->addEdgeTraversals([$edgeTraversal1, $edgeTraversal3]);
 
-$result = new Result(new Message('A graph and edge traversal objects'));
+$message = new Message();
+$message->setText('A graph and edge traversal objects');
+
+$result = new Result();
+$result->setMessage($message);
 $result->addGraphs([$graph]);
 $result->addGraphTraversals([$graphTraversal]);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

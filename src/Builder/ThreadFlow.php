@@ -35,7 +35,9 @@ final class ThreadFlow extends Declaration
 
     public function message(string $messageText, string $messageId = ''): self
     {
-        $this->message = new Definition\Message($messageText, $messageId);
+        $this->message = new Definition\Message();
+        $this->message->setText($messageText);
+        $this->message->setId($messageId);
         return $this;
     }
 
@@ -50,7 +52,7 @@ final class ThreadFlow extends Declaration
      */
     public function build(): Definition\ThreadFlow
     {
-        $threadFlow = new Definition\ThreadFlow($this->locations);
+        $threadFlow = new Definition\ThreadFlow();
         $this->populate($threadFlow);
         return $threadFlow;
     }

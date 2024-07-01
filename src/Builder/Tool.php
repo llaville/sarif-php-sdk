@@ -13,18 +13,13 @@ use Bartlett\Sarif\Definition;
  * @author Laurent Laville
  * @since Release 1.5.0
  */
-final class Tool
+final class Tool extends Declaration
 {
     protected Definition\ToolComponent $driver;
     /**
      * @var Definition\ToolComponent[] $extensions
      */
     protected array $extensions;
-
-    public function __construct()
-    {
-        $this->extensions = [];
-    }
 
     public function driver(Driver $driver): self
     {
@@ -43,8 +38,8 @@ final class Tool
      */
     public function build(): Definition\Tool
     {
-        $tool = new Definition\Tool($this->driver);
-        $tool->addExtensions($this->extensions);
+        $tool = new Definition\Tool();
+        $this->populate($tool);
         return $tool;
     }
 }

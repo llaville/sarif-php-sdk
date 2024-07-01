@@ -55,10 +55,8 @@ final class VersionControlDetails extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(string $repositoryUri)
+    public function __construct()
     {
-        $this->repositoryUri = $repositoryUri;
-
         $required = ['repositoryUri'];
         $optional = [
             'revisionId',

@@ -156,6 +156,11 @@ interface BuilderFactoryInterface
     public function locationRelationship(): Builder\LocationRelationship;
 
     /**
+     * Creates a message builder.
+     */
+    public function message(): Builder\Message;
+
+    /**
      * Creates a node builder.
      */
     public function node(): Builder\Node;
@@ -197,10 +202,8 @@ interface BuilderFactoryInterface
 
     /**
      * Creates a result builder.
-     *
-     * @param string[] $arguments
      */
-    public function result(string $messageText, string $messageId = '', array $arguments = []): Builder\Result;
+    public function result(): Builder\Result;
 
     /**
      * Creates a result provenance builder.

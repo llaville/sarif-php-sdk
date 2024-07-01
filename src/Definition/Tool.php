@@ -34,10 +34,8 @@ final class Tool extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(ToolComponent $driver)
+    public function __construct()
     {
-        $this->driver = $driver;
-
         $required = ['driver'];
         $optional = [
             'extensions',

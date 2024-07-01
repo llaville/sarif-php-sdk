@@ -24,11 +24,13 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('SarifSamples');
+$driver = new ToolComponent();
+$driver->setName('SarifSamples');
 $driver->setInformationUri('https://github.com/microsoft/sarif-tutorials/');
 $driver->setVersion('1.0');
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $frame = new StackFrame();
 
@@ -36,21 +38,34 @@ $location = new Location();
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('collections/list.h');
 $artifactLocation->setUriBaseId('SRCROOT');
-$physicalLocation = new PhysicalLocation($artifactLocation);
-$physicalLocation->setRegion(new Region(110, 15));
+$physicalLocation = new PhysicalLocation();
+$physicalLocation->setArtifactLocation($artifactLocation);
+$region = new Region();
+$region->setStartLine(110);
+$region->setStartColumn(15);
+$physicalLocation->setRegion($region);
 $location->setPhysicalLocation($physicalLocation);
 $logicalLocation = new LogicalLocation();
 $logicalLocation->setFullyQualifiedName('collections::list::add_core');
 $location->addLogicalLocations([$logicalLocation]);
+
 $frame->setLocation($location);
 $frame->setModule('platform');
 $frame->setThreadId(52);
 $frame->addParameters(['null', '0', '14']);
 
-$stack = new Stack([$frame]);
-$stack->setMessage(new Message('Call stack resulting from usage of uninitialized variable.'));
+$message = new Message();
+$message->setText('Call stack resulting from usage of uninitialized variable.');
 
-$result = new Result(new Message('Uninitialized variable.'));
+$stack = new Stack();
+$stack->setMessage($message);
+$stack->addFrames([$frame]);
+
+$message = new Message();
+$message->setText('Uninitialized variable.');
+
+$result = new Result();
+$result->setMessage($message);
 $result->addStacks([$stack]);
 $result->setRuleId('TUT1001');
 
@@ -58,15 +73,19 @@ $location = new Location();
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('collections/list.h');
 $artifactLocation->setUriBaseId('SRCROOT');
-$physicalLocation = new PhysicalLocation($artifactLocation);
-$physicalLocation->setRegion(new Region(15));
+$physicalLocation = new PhysicalLocation();
+$physicalLocation->setArtifactLocation($artifactLocation);
+$region = new Region();
+$region->setStartLine(15);
+$physicalLocation->setRegion($region);
 $location->setPhysicalLocation($physicalLocation);
 $logicalLocation = new LogicalLocation();
 $logicalLocation->setFullyQualifiedName('collections::list::add');
 $location->addLogicalLocations([$logicalLocation]);
 $result->addLocations([$location]);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

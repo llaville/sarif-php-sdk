@@ -17,26 +17,30 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
 $driver->setLanguage('fr-FR');
 
-$translationMetadata = new TranslationMetadata('CodeScanner translation for fr-FR');
+$translationMetadata = new TranslationMetadata();
+$translationMetadata->setName('CodeScanner translation for fr-FR');
 $translationMetadata->setFullName('CodeScanner translation for fr-FR by Example Corp.');
-$translationMetadata->setShortDescription(
-    new MultiformatMessageString('A good translation')
-);
-$translationMetadata->setFullDescription(
-    new MultiformatMessageString('A good translation performed by native en-US speakers.')
-);
+$desc = new MultiformatMessageString();
+$desc->setText('A good translation');
+$translationMetadata->setShortDescription($desc);
+$desc = new MultiformatMessageString();
+$desc->setText('A good translation performed by native en-US speakers.');
+$translationMetadata->setFullDescription($desc);
 $driver->setTranslationMetadata($translationMetadata);
 
 $driver->setName('(fr-FR translation)');
 $driver->setFullName('(fr-FR translation of translated component’s full name)');
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 
 $log = new SarifLog([$run]);

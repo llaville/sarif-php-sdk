@@ -21,24 +21,35 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
-$tool = new Tool($driver);
 
-$message = new Message('Tainted data was used. The data came from [here](3).');
-$result = new Result($message);
+$tool = new Tool();
+$tool->setDriver($driver);
+
+$message = new Message();
+$message->setText('Tainted data was used. The data came from [here](3).');
+
+$result = new Result();
+$result->setMessage($message);
 $result->setRuleId('TNT0001');
 $location = new Location();
 $location->setId(3);
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('file:///C:/code/input.c');
-$physicalLocation = new PhysicalLocation($artifactLocation);
-$physicalLocation->setRegion(new Region(25, 19));
+$physicalLocation = new PhysicalLocation();
+$physicalLocation->setArtifactLocation($artifactLocation);
+$region = new Region();
+$region->setStartLine(25);
+$region->setStartColumn(19);
+$physicalLocation->setRegion($region);
 $location->setPhysicalLocation($physicalLocation);
 $result->addRelatedLocations([$location]);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

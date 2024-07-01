@@ -42,7 +42,7 @@ final class VersionControlDetails extends Declaration
      */
     public function build(): Definition\VersionControlDetails
     {
-        $vcd = new Definition\VersionControlDetails($this->repositoryUri);
+        $vcd = new Definition\VersionControlDetails();
         $this->populate($vcd);
         return $vcd;
     }

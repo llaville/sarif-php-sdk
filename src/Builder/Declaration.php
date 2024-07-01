@@ -15,6 +15,7 @@ use LogicException;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionObject;
+use function array_push;
 use function get_class;
 use function is_numeric;
 use function method_exists;
@@ -31,7 +32,8 @@ abstract class Declaration implements BuilderDeclarationInterface
     public function setProperties(array $properties): self
     {
         if (!empty($properties)) {
-            $this->properties = new Definition\PropertyBag($properties);
+            $this->properties = new Definition\PropertyBag();
+            $this->properties->addProperties($properties);
         }
         return $this;
     }
@@ -46,21 +48,18 @@ abstract class Declaration implements BuilderDeclarationInterface
             throw new LogicException(get_class($object) . ' must inherit from ' . Internal\JsonSerializable::class);
         }
 
+        $attributes = [];
+
         try {
             $reflectionClass = new ReflectionClass(Internal\JsonSerializable::class);
+
             $reflectionProperty = $reflectionClass->getProperty('required');
-            $requirements = $reflectionProperty->getValue($object);
-            /**
-             * @var string[] $requirements
-             */
-            foreach ($requirements as $requirement) {
-                if (!isset($this->$requirement)) {
-                    throw new LogicException('"' . $requirement . '" is required, but not defined.');
-                }
-            }
+            $required = (array) $reflectionProperty->getValue($object);
+            array_push($attributes, ...$required);
 
             $reflectionProperty = $reflectionClass->getProperty('optional');
-            $attributes = $reflectionProperty->getValue($object);
+            $optional = (array) $reflectionProperty->getValue($object);
+            array_push($attributes, ...$optional);
         } catch (ReflectionException $exception) {
             $attributes = [];
         }

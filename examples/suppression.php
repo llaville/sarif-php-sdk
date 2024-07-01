@@ -18,20 +18,29 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('Psalm');
+$driver = new ToolComponent();
+$driver->setName('Psalm');
 $driver->setInformationUri('https://psalm.de');
 $driver->setVersion('4.x-dev');
-$tool = new Tool($driver);
 
-$suppression = new Suppression('inSource');
+$tool = new Tool();
+$tool->setDriver($driver);
+
+$suppression = new Suppression();
+$suppression->setKind('inSource');
 $suppression->setGuid('11111111-1111-1111-8888-111111111111');
 $suppression->setStatus('underReview');
 $suppression->setJustification('result outdated');
 
-$result = new Result(new Message('Request to suppress a result'));
+$message = new Message();
+$message->setText('Request to suppress a result');
+
+$result = new Result();
+$result->setMessage($message);
 $result->addSuppressions([$suppression]);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

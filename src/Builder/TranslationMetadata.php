@@ -34,13 +34,15 @@ final class TranslationMetadata extends Declaration
 
     public function shortDescription(string $text): self
     {
-        $this->shortDescription = new Definition\MultiformatMessageString($text);
+        $this->shortDescription = new Definition\MultiformatMessageString();
+        $this->shortDescription->setText($text);
         return $this;
     }
 
     public function fullDescription(string $text): self
     {
-        $this->fullDescription = new Definition\MultiformatMessageString($text);
+        $this->fullDescription = new Definition\MultiformatMessageString();
+        $this->fullDescription->setText($text);
         return $this;
     }
 
@@ -49,7 +51,7 @@ final class TranslationMetadata extends Declaration
      */
     public function build(): Definition\TranslationMetadata
     {
-        $meta = new Definition\TranslationMetadata($this->name);
+        $meta = new Definition\TranslationMetadata();
         $this->populate($meta);
         return $meta;
     }

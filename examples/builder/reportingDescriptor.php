@@ -38,7 +38,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('...')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('...')
+                    )
                     ->ruleId('CA1001')
                     ->addSuppression(
                         $factory->suppression()
@@ -47,7 +51,11 @@ $spec = $factory->specification('2.1.0')
                     ->baselineState('unchanged')
             )
             ->addResult(
-                $factory->result('...')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('...')
+                    )
                     ->ruleId('CA1002')
                     ->addSuppression(
                         $factory->suppression()

@@ -22,7 +22,9 @@ final class Notification extends Declaration
 
     public function message(string $messageText, string $messageId = ''): self
     {
-        $this->message = new Definition\Message($messageText, $messageId);
+        $this->message = new Definition\Message();
+        $this->message->setText($messageText);
+        $this->message->setId($messageId);
         return $this;
     }
 
@@ -49,7 +51,7 @@ final class Notification extends Declaration
      */
     public function build(): Definition\Notification
     {
-        $notification = new Definition\Notification($this->message);
+        $notification = new Definition\Notification();
         $this->populate($notification);
         return $notification;
     }

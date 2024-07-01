@@ -45,7 +45,7 @@ final class Conversion extends Declaration
      */
     public function build(): Definition\Conversion
     {
-        $conversion = new Definition\Conversion($this->tool);
+        $conversion = new Definition\Conversion();
         $this->populate($conversion);
         return $conversion;
     }

@@ -33,7 +33,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('', 'default')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->id('default')
+                    )
                     ->ruleId('CS0001')
                     ->ruleIndex(0)
             )

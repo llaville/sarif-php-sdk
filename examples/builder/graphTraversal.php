@@ -28,7 +28,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('A graph and edge traversal objects')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('A graph and edge traversal objects')
+                    )
                     ->addGraph(
                         $factory->graph()
                             ->addNode(

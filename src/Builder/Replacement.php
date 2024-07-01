@@ -35,7 +35,7 @@ final class Replacement extends Declaration
      */
     public function build(): Definition\Replacement
     {
-        $replacement = new Definition\Replacement($this->deletedRegion);
+        $replacement = new Definition\Replacement();
         $this->populate($replacement);
         return $replacement;
     }

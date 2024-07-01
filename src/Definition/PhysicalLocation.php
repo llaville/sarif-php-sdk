@@ -46,19 +46,8 @@ final class PhysicalLocation extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param ArtifactLocation|null $artifactLocation
-     * @param Address|null $address
-     */
-    public function __construct(?ArtifactLocation $artifactLocation = null, ?Address $address = null)
+    public function __construct()
     {
-        if ($artifactLocation instanceof ArtifactLocation) {
-            $this->artifactLocation = $artifactLocation;
-        }
-        if ($address instanceof Address) {
-            $this->address = $address;
-        }
-
         $required = [];
         $optional = [
             'address',

@@ -36,7 +36,7 @@ final class Fix extends Declaration
      */
     public function build(): Definition\Fix
     {
-        $fix = new Definition\Fix($this->artifactChanges);
+        $fix = new Definition\Fix();
         $this->populate($fix);
         return $fix;
     }

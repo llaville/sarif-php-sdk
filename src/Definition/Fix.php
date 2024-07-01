@@ -36,13 +36,8 @@ final class Fix extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param ArtifactChange[] $artifactChanges
-     */
-    public function __construct(array $artifactChanges)
+    public function __construct()
     {
-        $this->addArtifactChanges($artifactChanges);
-
         $required = ['artifactChanges'];
         $optional = [
             'description,',

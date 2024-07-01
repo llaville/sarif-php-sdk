@@ -49,7 +49,7 @@ final class Suppression extends Declaration
      */
     public function build(): Definition\Suppression
     {
-        $suppression = new Definition\Suppression($this->kind);
+        $suppression = new Definition\Suppression();
         $this->populate($suppression);
         return $suppression;
     }

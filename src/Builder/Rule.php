@@ -53,7 +53,8 @@ final class Rule extends Declaration
 
     public function shortDescription(string $description): self
     {
-        $this->shortDescription = new Definition\MultiformatMessageString($description);
+        $this->shortDescription = new Definition\MultiformatMessageString();
+        $this->shortDescription->setText($description);
         return $this;
     }
 
@@ -71,7 +72,9 @@ final class Rule extends Declaration
 
     public function addMessageString(string $key, string $value): self
     {
-        $this->messageStrings[$key] = new Definition\MultiformatMessageString($value);
+        $messageString = new Definition\MultiformatMessageString();
+        $messageString->setText($value);
+        $this->messageStrings[$key] = $messageString;
         return $this;
     }
 
@@ -86,7 +89,7 @@ final class Rule extends Declaration
      */
     public function build(): Definition\ReportingDescriptor
     {
-        $rule = new Definition\ReportingDescriptor($this->id);
+        $rule = new Definition\ReportingDescriptor();
         $this->populate($rule);
         return $rule;
     }

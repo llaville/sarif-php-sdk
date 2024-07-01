@@ -18,25 +18,34 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('AndroidStudio');
+$driver = new ToolComponent();
+$driver->setName('AndroidStudio');
 $driver->setInformationUri('https://android-studion.dev');
 $driver->setSemanticVersion('1.0.0-beta.1');
-$tool = new Tool($driver);
 
-$converter = new Tool(new ToolComponent('SARIF SDK Multitool'));
+$tool = new Tool();
+$tool->setDriver($driver);
+
+$converter = new Tool();
+$sdk = new ToolComponent();
+$sdk->setName('SARIF SDK Multitool');
+$converter->setDriver($sdk);
 
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('northwind.log');
 $artifactLocation->setUriBaseId('$LOG_DIR$');
 
-$invocation = new Invocation(true);
+$invocation = new Invocation();
+$invocation->setExecutionSuccessful(true);
 $invocation->setCommandLine('Sarif.Multitool.exe convert -t AndroidStudio northwind.log');
 
-$conversion = new Conversion($converter);
+$conversion = new Conversion();
+$conversion->setTool($converter);
 $conversion->addAnalysisToolLogFiles([$artifactLocation]);
 $conversion->setInvocation($invocation);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->setConversion($conversion);
 
 $log = new SarifLog([$run]);

@@ -40,7 +40,9 @@ final class GraphTraversal extends Declaration
 
     public function addInitialState(string $key, string $value): self
     {
-        $this->initialState[$key] = new Definition\MultiformatMessageString($value);
+        $state = new Definition\MultiformatMessageString();
+        $state->setText($value);
+        $this->initialState[$key] = $state;
         return $this;
     }
 

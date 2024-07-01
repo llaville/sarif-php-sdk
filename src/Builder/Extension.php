@@ -35,7 +35,7 @@ final class Extension extends Declaration
      */
     public function build(): Definition\ToolComponent
     {
-        $extension = new Definition\ToolComponent($this->name);
+        $extension = new Definition\ToolComponent();
         $this->populate($extension);
         return $extension;
     }

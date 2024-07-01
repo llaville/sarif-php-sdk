@@ -35,13 +35,8 @@ final class Stack extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param StackFrame[] $frames
-     */
-    public function __construct(array $frames)
+    public function __construct()
     {
-        $this->addFrames($frames);
-
         $required = ['frames'];
         $optional = [
             'message',

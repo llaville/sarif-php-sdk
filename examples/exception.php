@@ -23,33 +23,58 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('CodeScanner');
+$driver = new ToolComponent();
+$driver->setName('CodeScanner');
 $driver->setInformationUri('https://codeScanner.dev');
 $driver->setSemanticVersion('1.1.2-beta.12');
 
-$ruleV1 = new ReportingDescriptor('CTN9999');
-$ruleV1->setShortDescription(new MultiformatMessageString('First version of rule.'));
-$ruleV2 = new ReportingDescriptor('CTN9999');
-$ruleV2->setShortDescription(new MultiformatMessageString('Second version of rule.'));
+$ruleV1 = new ReportingDescriptor();
+$ruleV1->setId('CTN9999');
+$desc = new MultiformatMessageString();
+$desc->setText('First version of rule.');
+$ruleV1->setShortDescription($desc);
+
+$ruleV2 = new ReportingDescriptor();
+$ruleV2->setId('CTN9999');
+$desc = new MultiformatMessageString();
+$desc->setText('Second version of rule.');
+$ruleV2->setShortDescription($desc);
 
 $driver->addRules([$ruleV1, $ruleV2]);
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
-$notification = new Notification(new Message("Exception evaluating rule 'C2001'. Rule configuration is missing."));
-$notification->setAssociatedRule(new ReportingDescriptorReference(0, 'C2001'));
-$notification->setDescriptor(new ReportingDescriptorReference(1, 'CTN9999'));
+$message = new Message();
+$message->setText("Exception evaluating rule 'C2001'. Rule configuration is missing.");
+
+$notification = new Notification();
+$notification->setMessage($message);
+$associatedRule = new ReportingDescriptorReference();
+$associatedRule->setIndex(0);
+$associatedRule->setId('C2001');
+$notification->setAssociatedRule($associatedRule);
+$descriptor = new ReportingDescriptorReference();
+$descriptor->setIndex(1);
+$descriptor->setId('CTN9999');
+$notification->setDescriptor($descriptor);
 $notification->setLevel('error');
 $exception = new Exception();
 $exception->setMessage("Exception evaluating rule 'C2001'");
 $notification->setException($exception);
-$invocation = new Invocation(true);
+$invocation = new Invocation();
+$invocation->setExecutionSuccessful(true);
 $invocation->addToolExecutionNotifications([$notification]);
 
-$result = new Result(new Message('...'));
+$message = new Message();
+$message->setText('...');
+
+$result = new Result();
+$result->setMessage($message);
 $result->setRuleId('CTN9999');
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 $run->addInvocations([$invocation]);
 

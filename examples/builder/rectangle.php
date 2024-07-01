@@ -30,7 +30,11 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result('Have a look on screen shot provided')
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text('Have a look on screen shot provided')
+                    )
                     ->addAttachment(
                         $factory->attachment()
                             ->artifactLocation(

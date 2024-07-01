@@ -43,7 +43,8 @@ final class Configuration extends Declaration
      */
     public function parameters(array $params): self
     {
-        $this->parameters = new Definition\PropertyBag($params);
+        $this->parameters = new Definition\PropertyBag();
+        $this->parameters->addProperties($params);
         return $this;
     }
 

@@ -22,19 +22,26 @@ use Bartlett\Sarif\SarifLog;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$driver = new ToolComponent('SarifSamples');
+$driver = new ToolComponent();
+$driver->setName('SarifSamples');
 $driver->setInformationUri('https://github.com/microsoft/sarif-tutorials/');
 $driver->setVersion('1.0');
 
-$tool = new Tool($driver);
+$tool = new Tool();
+$tool->setDriver($driver);
 
 $provenance = new ResultProvenance();
 $fromSources = [];
 $artifactLocation = new ArtifactLocation();
 $artifactLocation->setUri('CodeScanner.log');
 $artifactLocation->setUriBaseId('LOGSROOT');
-$fromSources[0] = new PhysicalLocation($artifactLocation);
-$region = new Region(3, 3, 12, 13);
+$fromSources[0] = new PhysicalLocation();
+$fromSources[0]->setArtifactLocation($artifactLocation);
+$region = new Region();
+$region->setStartLine(3);
+$region->setEndLine(12);
+$region->setStartColumn(3);
+$region->setEndColumn(13);
 $snippet = new ArtifactContent();
 $snippet->setText('<problem>...</problem>');
 $region->setSnippet($snippet);
@@ -42,11 +49,16 @@ $fromSources[0]->setRegion($region);
 
 $provenance->addConversionSources($fromSources);
 
-$result = new Result(new Message('Assertions are unreliable.'));
+$message = new Message();
+$message->setText('Assertions are unreliable.');
+
+$result = new Result();
+$result->setMessage($message);
 $result->setRuleId('Assertions');
 $result->setProvenance($provenance);
 
-$run = new Run($tool);
+$run = new Run();
+$run->setTool($tool);
 $run->addResults([$result]);
 
 $log = new SarifLog([$run]);

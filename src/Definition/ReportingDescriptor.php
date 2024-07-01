@@ -96,14 +96,8 @@ final class ReportingDescriptor extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(string $id)
+    public function __construct()
     {
-        $this->id = $id;
-        $this->deprecatedIds = [];
-        $this->deprecatedGuids = [];
-        $this->messageStrings = [];
-        $this->relationships = [];
-
         $required = ['id'];
         $optional = [
             'deprecatedIds',

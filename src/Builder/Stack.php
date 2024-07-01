@@ -23,7 +23,9 @@ final class Stack extends Declaration
 
     public function message(string $text, string $id = ''): self
     {
-        $this->message = new Definition\Message($text, $id);
+        $this->message = new Definition\Message();
+        $this->message->setText($text);
+        $this->message->setId($id);
         return $this;
     }
 
@@ -38,7 +40,7 @@ final class Stack extends Declaration
      */
     public function build(): Definition\Stack
     {
-        $stack = new Definition\Stack($this->frames);
+        $stack = new Definition\Stack();
         $this->populate($stack);
         return $stack;
     }

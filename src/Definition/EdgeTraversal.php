@@ -44,10 +44,8 @@ final class EdgeTraversal extends JsonSerializable
      */
     use Property\Properties;
 
-    public function __construct(string $edgeId)
+    public function __construct()
     {
-        $this->edgeId = $edgeId;
-
         $required = ['edgeId'];
         $optional = [
             'message',

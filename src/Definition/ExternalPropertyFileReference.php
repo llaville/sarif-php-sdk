@@ -40,17 +40,8 @@ final class ExternalPropertyFileReference extends JsonSerializable
      */
     use Property\Properties;
 
-    /**
-     * @param ArtifactLocation|null $location
-     * @param string $guid
-     */
-    public function __construct(?ArtifactLocation $location = null, string $guid = '')
+    public function __construct()
     {
-        if ($location instanceof ArtifactLocation) {
-            $this->location = $location;
-        }
-        $this->setGuid($guid);
-
         $required = [];
         $optional = [
             'location',

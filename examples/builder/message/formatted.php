@@ -28,7 +28,12 @@ $spec = $factory->specification('2.1.0')
                     )
             )
             ->addResult(
-                $factory->result("Variable '{0}' is uninitialized.", '', ['pBuffer'])
+                $factory->result()
+                    ->message(
+                        $factory->message()
+                            ->text("Variable '{0}' is uninitialized.")
+                            ->addArgument('pBuffer')
+                    )
                     ->ruleId('CA2101')
             )
             ->setProperties([])
