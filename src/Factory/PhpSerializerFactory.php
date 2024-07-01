@@ -12,9 +12,6 @@ use Bartlett\Sarif\Serializer\Encoder\PhpJsonEncoder;
 use Bartlett\Sarif\Serializer\JsonSerializer;
 use Bartlett\Sarif\Serializer\SerializerInterface;
 
-use const JSON_PRETTY_PRINT;
-use const JSON_UNESCAPED_SLASHES;
-
 /**
  * @author Laurent Laville
  * @since Release 1.2.0

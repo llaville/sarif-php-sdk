@@ -10,8 +10,6 @@ namespace Bartlett\Sarif\Definition;
 use Bartlett\Sarif\Internal\JsonSerializable;
 use Bartlett\Sarif\Property;
 
-use LogicException;
-
 /**
  * A physical location relevant to a result.
  * Specifies a reference to a programming artifact together with a range of bytes or characters within that artifact.
@@ -59,10 +57,6 @@ final class PhysicalLocation extends JsonSerializable
         }
         if ($address instanceof Address) {
             $this->address = $address;
-        }
-
-        if (empty($address) && empty($artifactLocation)) {
-            throw new LogicException('Either "address" or "artifactLocation" are required. Nothing provided.');
         }
 
         $required = [];
