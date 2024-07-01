@@ -1,4 +1,4 @@
-changesDir: .changes/1.x
+changesDir: .changes/2.x
 unreleasedDir: unreleased
 headerPath: header.tpl.md
 changelogPath: CHANGELOG.md
