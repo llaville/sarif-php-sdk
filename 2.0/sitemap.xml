@@ -16,11 +16,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://llaville.github.io/sarif-php-sdk/github-code-scanning/</loc>
-         <lastmod>2024-07-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://llaville.github.io/sarif-php-sdk/reference/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
