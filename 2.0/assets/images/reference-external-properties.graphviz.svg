@@ -53,7 +53,7 @@
 <text text-anchor="start" x="21" y="-555.1" font-family="Verdana" font-size="8.00"># webResponses : mixed</text>
 <text text-anchor="start" x="21" y="-542.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-242.5 16,-534.5 417,-534.5 417,-242.5 16,-242.5"/>
-<text text-anchor="start" x="21" y="-523.1" font-family="Verdana" font-size="8.00">+ __construct(version : string = &#39;2\.1\.0&#39;, schemaUri : string = «unknown»)</text>
+<text text-anchor="start" x="21" y="-523.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-510.1" font-family="Verdana" font-size="8.00">+ setSchema(schema : string) : void</text>
 <text text-anchor="start" x="21" y="-497.1" font-family="Verdana" font-size="8.00">+ setVersion(version : string) : void</text>
 <text text-anchor="start" x="21" y="-484.1" font-family="Verdana" font-size="8.00">+ setGuid(guid : string) : void</text>

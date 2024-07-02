@@ -60,7 +60,7 @@
 <text text-anchor="start" x="21" y="-659.6" font-family="Verdana" font-size="8.00"># specialLocations</text>
 <text text-anchor="start" x="21" y="-646.6" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-243 16,-639 566,-639 566,-243 16,-243"/>
-<text text-anchor="start" x="21" y="-627.6" font-family="Verdana" font-size="8.00">+ __construct(tool : Bartlett\Sarif\Definition\Tool)</text>
+<text text-anchor="start" x="21" y="-627.6" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-614.6" font-family="Verdana" font-size="8.00">+ jsonSerialize() : array</text>
 <text text-anchor="start" x="21" y="-601.6" font-family="Verdana" font-size="8.00">+ setTool(tool : Bartlett\Sarif\Definition\Tool) : void</text>
 <text text-anchor="start" x="21" y="-588.6" font-family="Verdana" font-size="8.00">+ addInvocations(invocations : array) : void</text>

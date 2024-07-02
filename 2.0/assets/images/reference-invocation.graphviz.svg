@@ -57,7 +57,7 @@
 <text text-anchor="start" x="21" y="-607.1" font-family="Verdana" font-size="8.00"># stdoutStderr</text>
 <text text-anchor="start" x="21" y="-594.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-242.5 16,-586.5 410,-586.5 410,-242.5 16,-242.5"/>
-<text text-anchor="start" x="21" y="-575.1" font-family="Verdana" font-size="8.00">+ __construct(executionSuccessful : bool)</text>
+<text text-anchor="start" x="21" y="-575.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-562.1" font-family="Verdana" font-size="8.00">+ setCommandLine(commandLine : string) : void</text>
 <text text-anchor="start" x="21" y="-549.1" font-family="Verdana" font-size="8.00">+ addArguments(arguments : array) : void</text>
 <text text-anchor="start" x="21" y="-536.1" font-family="Verdana" font-size="8.00">+ addResponseFiles(responseFiles : array) : void</text>

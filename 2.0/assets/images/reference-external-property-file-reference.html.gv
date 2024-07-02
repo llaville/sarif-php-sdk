@@ -16,7 +16,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(location : Bartlett\\Sarif\\Definition\\ArtifactLocation = «unknown», guid : string = '')</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setLocation(location : Bartlett\\Sarif\\Definition\\ArtifactLocation) : void</td></tr>
     <tr><td align="left">+ setArtifactLocation(artifactLocation : Bartlett\\Sarif\\Definition\\ArtifactLocation) : void</td></tr>
     <tr><td align="left">+ setGuid(guid : string) : void</td></tr>

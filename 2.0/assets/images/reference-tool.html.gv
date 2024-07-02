@@ -14,7 +14,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(driver : Bartlett\\Sarif\\Definition\\ToolComponent)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setDriver(driver : Bartlett\\Sarif\\Definition\\ToolComponent) : void</td></tr>
     <tr><td align="left">+ addExtensions(extensions : array) : void</td></tr>
     <tr><td align="left">+ setProperties(propertyBag : Bartlett\\Sarif\\Definition\\PropertyBag) : void</td></tr>

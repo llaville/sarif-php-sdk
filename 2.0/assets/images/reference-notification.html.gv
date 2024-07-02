@@ -20,7 +20,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(message : Bartlett\\Sarif\\Definition\\Message)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ addLocations(locations : array) : void</td></tr>
     <tr><td align="left">+ setMessage(message : Bartlett\\Sarif\\Definition\\Message) : void</td></tr>
     <tr><td align="left">+ setLevel(level : string = 'warning') : void</td></tr>

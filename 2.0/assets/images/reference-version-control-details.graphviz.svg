@@ -39,7 +39,7 @@
 <text text-anchor="start" x="22" y="-373.1" font-family="Verdana" font-size="8.00"># mappedTo</text>
 <text text-anchor="start" x="22" y="-360.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="17,-242.5 17,-352.5 334,-352.5 334,-242.5 17,-242.5"/>
-<text text-anchor="start" x="22" y="-341.1" font-family="Verdana" font-size="8.00">+ __construct(repositoryUri : string)</text>
+<text text-anchor="start" x="22" y="-341.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="22" y="-328.1" font-family="Verdana" font-size="8.00">+ setRepositoryUri(repositoryUri : string) : void</text>
 <text text-anchor="start" x="22" y="-315.1" font-family="Verdana" font-size="8.00">+ setRevisionId(revisionId : string) : void</text>
 <text text-anchor="start" x="22" y="-302.1" font-family="Verdana" font-size="8.00">+ setBranch(branch : string) : void</text>

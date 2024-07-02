@@ -41,7 +41,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(message : Bartlett\\Sarif\\Definition\\Message)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setRuleId(ruleId : string) : void</td></tr>
     <tr><td align="left">+ setRuleIndex(ruleIndex : int = -1) : void</td></tr>
     <tr><td align="left">+ setRule(rule : Bartlett\\Sarif\\Definition\\ReportingDescriptorReference) : void</td></tr>

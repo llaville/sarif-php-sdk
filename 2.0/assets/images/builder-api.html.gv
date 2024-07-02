@@ -38,6 +38,7 @@ digraph {
     <tr><td align="left">+ «abstract» location() : Bartlett\\Sarif\\Builder\\Location</td></tr>
     <tr><td align="left">+ «abstract» logicalLocation() : Bartlett\\Sarif\\Builder\\LogicalLocation</td></tr>
     <tr><td align="left">+ «abstract» locationRelationship() : Bartlett\\Sarif\\Builder\\LocationRelationship</td></tr>
+    <tr><td align="left">+ «abstract» message() : Bartlett\\Sarif\\Builder\\Message</td></tr>
     <tr><td align="left">+ «abstract» node() : Bartlett\\Sarif\\Builder\\Node</td></tr>
     <tr><td align="left">+ «abstract» notification() : Bartlett\\Sarif\\Builder\\Notification</td></tr>
     <tr><td align="left">+ «abstract» physicalLocation() : Bartlett\\Sarif\\Builder\\PhysicalLocation</td></tr>
@@ -46,7 +47,7 @@ digraph {
     <tr><td align="left">+ «abstract» region() : Bartlett\\Sarif\\Builder\\Region</td></tr>
     <tr><td align="left">+ «abstract» relationship() : Bartlett\\Sarif\\Builder\\Relationship</td></tr>
     <tr><td align="left">+ «abstract» replacement() : Bartlett\\Sarif\\Builder\\Replacement</td></tr>
-    <tr><td align="left">+ «abstract» result(messageText : string, messageId : string = '', arguments : array = []) : Bartlett\\Sarif\\Builder\\Result</td></tr>
+    <tr><td align="left">+ «abstract» result() : Bartlett\\Sarif\\Builder\\Result</td></tr>
     <tr><td align="left">+ «abstract» resultProvenance() : Bartlett\\Sarif\\Builder\\ResultProvenance</td></tr>
     <tr><td align="left">+ «abstract» rule() : Bartlett\\Sarif\\Builder\\Rule</td></tr>
     <tr><td align="left">+ «abstract» run() : Bartlett\\Sarif\\Builder\\Run</td></tr>
@@ -102,6 +103,7 @@ digraph {
     <tr><td align="left">+ location() : Bartlett\\Sarif\\Builder\\Location</td></tr>
     <tr><td align="left">+ logicalLocation() : Bartlett\\Sarif\\Builder\\LogicalLocation</td></tr>
     <tr><td align="left">+ locationRelationship() : Bartlett\\Sarif\\Builder\\LocationRelationship</td></tr>
+    <tr><td align="left">+ message() : Bartlett\\Sarif\\Builder\\Message</td></tr>
     <tr><td align="left">+ node() : Bartlett\\Sarif\\Builder\\Node</td></tr>
     <tr><td align="left">+ notification() : Bartlett\\Sarif\\Builder\\Notification</td></tr>
     <tr><td align="left">+ physicalLocation() : Bartlett\\Sarif\\Builder\\PhysicalLocation</td></tr>
@@ -110,7 +112,7 @@ digraph {
     <tr><td align="left">+ region() : Bartlett\\Sarif\\Builder\\Region</td></tr>
     <tr><td align="left">+ relationship() : Bartlett\\Sarif\\Builder\\Relationship</td></tr>
     <tr><td align="left">+ replacement() : Bartlett\\Sarif\\Builder\\Replacement</td></tr>
-    <tr><td align="left">+ result(messageText : string, messageId : string = '', arguments : array = []) : Bartlett\\Sarif\\Builder\\Result</td></tr>
+    <tr><td align="left">+ result() : Bartlett\\Sarif\\Builder\\Result</td></tr>
     <tr><td align="left">+ resultProvenance() : Bartlett\\Sarif\\Builder\\ResultProvenance</td></tr>
     <tr><td align="left">+ rule() : Bartlett\\Sarif\\Builder\\Rule</td></tr>
     <tr><td align="left">+ run() : Bartlett\\Sarif\\Builder\\Run</td></tr>

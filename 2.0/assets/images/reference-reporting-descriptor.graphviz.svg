@@ -46,7 +46,7 @@
 <text text-anchor="start" x="21" y="-464.1" font-family="Verdana" font-size="8.00"># relationships : mixed</text>
 <text text-anchor="start" x="21" y="-451.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-242.5 16,-443.5 450,-443.5 450,-242.5 16,-242.5"/>
-<text text-anchor="start" x="21" y="-432.1" font-family="Verdana" font-size="8.00">+ __construct(id : string)</text>
+<text text-anchor="start" x="21" y="-432.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-419.1" font-family="Verdana" font-size="8.00">+ setId(id : string) : void</text>
 <text text-anchor="start" x="21" y="-406.1" font-family="Verdana" font-size="8.00">+ addDeprecatedIds(deprecatedIds : array) : void</text>
 <text text-anchor="start" x="21" y="-393.1" font-family="Verdana" font-size="8.00">+ setGuid(guid : string) : void</text>

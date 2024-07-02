@@ -14,7 +14,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(artifactChanges : array)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setDescription(description : Bartlett\\Sarif\\Definition\\Message) : void</td></tr>
     <tr><td align="left">+ addArtifactChanges(artifactChanges : array) : void</td></tr>
     <tr><td align="left">+ setProperties(propertyBag : Bartlett\\Sarif\\Definition\\PropertyBag) : void</td></tr>

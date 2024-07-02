@@ -18,7 +18,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(runGraphIndex : int = «unknown», resultGraphIndex : int = «unknown»)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setRunGraphIndex(runGraphIndex : int = -1) : void</td></tr>
     <tr><td align="left">+ setResultGraphIndex(resultGraphIndex : int = -1) : void</td></tr>
     <tr><td align="left">+ setDescription(description : Bartlett\\Sarif\\Definition\\Message) : void</td></tr>

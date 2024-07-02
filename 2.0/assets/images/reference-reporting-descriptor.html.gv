@@ -25,7 +25,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(id : string)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setId(id : string) : void</td></tr>
     <tr><td align="left">+ addDeprecatedIds(deprecatedIds : array) : void</td></tr>
     <tr><td align="left">+ setGuid(guid : string) : void</td></tr>

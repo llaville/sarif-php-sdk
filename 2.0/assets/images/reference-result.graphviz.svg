@@ -62,7 +62,7 @@
 <text text-anchor="start" x="22" y="-672.1" font-family="Verdana" font-size="8.00"># webResponse</text>
 <text text-anchor="start" x="22" y="-659.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="17,-242.5 17,-651.5 368,-651.5 368,-242.5 17,-242.5"/>
-<text text-anchor="start" x="22" y="-640.1" font-family="Verdana" font-size="8.00">+ __construct(message : Bartlett\Sarif\Definition\Message)</text>
+<text text-anchor="start" x="22" y="-640.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="22" y="-627.1" font-family="Verdana" font-size="8.00">+ setRuleId(ruleId : string) : void</text>
 <text text-anchor="start" x="22" y="-614.1" font-family="Verdana" font-size="8.00">+ setRuleIndex(ruleIndex : int = &#45;1) : void</text>
 <text text-anchor="start" x="22" y="-601.1" font-family="Verdana" font-size="8.00">+ setRule(rule : Bartlett\Sarif\Definition\ReportingDescriptorReference) : void</text>

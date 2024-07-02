@@ -18,7 +18,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(name : string)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setName(name : string) : void</td></tr>
     <tr><td align="left">+ setFullName(fullName : string) : void</td></tr>
     <tr><td align="left">+ setShortDescription(shortDescription : Bartlett\\Sarif\\Definition\\MultiformatMessageString) : void</td></tr>

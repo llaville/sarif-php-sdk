@@ -35,7 +35,7 @@
 <text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># insertedContent</text>
 <text text-anchor="start" x="21" y="-308.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-242.5 16,-300.5 378,-300.5 378,-242.5 16,-242.5"/>
-<text text-anchor="start" x="21" y="-289.1" font-family="Verdana" font-size="8.00">+ __construct(deletedRegion : Bartlett\Sarif\Definition\Region)</text>
+<text text-anchor="start" x="21" y="-289.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-276.1" font-family="Verdana" font-size="8.00">+ setDeletedRegion(deletedRegion : Bartlett\Sarif\Definition\Region) : void</text>
 <text text-anchor="start" x="21" y="-263.1" font-family="Verdana" font-size="8.00">+ setInsertedContent(insertedContent : Bartlett\Sarif\Definition\ArtifactContent) : void</text>
 <text text-anchor="start" x="21" y="-250.1" font-family="Verdana" font-size="8.00">+ setProperties(propertyBag : Bartlett\Sarif\Definition\PropertyBag) : void</text>

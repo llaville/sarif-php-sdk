@@ -35,7 +35,7 @@
 <text text-anchor="start" x="21" y="-321.1" font-family="Verdana" font-size="8.00"># extensions : mixed</text>
 <text text-anchor="start" x="21" y="-308.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="16,-242.5 16,-300.5 325,-300.5 325,-242.5 16,-242.5"/>
-<text text-anchor="start" x="21" y="-289.1" font-family="Verdana" font-size="8.00">+ __construct(driver : Bartlett\Sarif\Definition\ToolComponent)</text>
+<text text-anchor="start" x="21" y="-289.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="21" y="-276.1" font-family="Verdana" font-size="8.00">+ setDriver(driver : Bartlett\Sarif\Definition\ToolComponent) : void</text>
 <text text-anchor="start" x="21" y="-263.1" font-family="Verdana" font-size="8.00">+ addExtensions(extensions : array) : void</text>
 <text text-anchor="start" x="21" y="-250.1" font-family="Verdana" font-size="8.00">+ setProperties(propertyBag : Bartlett\Sarif\Definition\PropertyBag) : void</text>

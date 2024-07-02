@@ -39,7 +39,7 @@
 <text text-anchor="start" x="22" y="-373.1" font-family="Verdana" font-size="8.00"># informationUri</text>
 <text text-anchor="start" x="22" y="-360.1" font-family="Verdana" font-size="8.00"># properties</text>
 <polygon fill="none" stroke="black" points="17,-242.5 17,-352.5 428,-352.5 428,-242.5 17,-242.5"/>
-<text text-anchor="start" x="22" y="-341.1" font-family="Verdana" font-size="8.00">+ __construct(name : string)</text>
+<text text-anchor="start" x="22" y="-341.1" font-family="Verdana" font-size="8.00">+ __construct()</text>
 <text text-anchor="start" x="22" y="-328.1" font-family="Verdana" font-size="8.00">+ setName(name : string) : void</text>
 <text text-anchor="start" x="22" y="-315.1" font-family="Verdana" font-size="8.00">+ setFullName(fullName : string) : void</text>
 <text text-anchor="start" x="22" y="-302.1" font-family="Verdana" font-size="8.00">+ setShortDescription(shortDescription : Bartlett\Sarif\Definition\MultiformatMessageString) : void</text>

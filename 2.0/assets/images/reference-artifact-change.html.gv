@@ -15,7 +15,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(artifactLocation : Bartlett\\Sarif\\Definition\\ArtifactLocation, replacements : array)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setLocation(location : Bartlett\\Sarif\\Definition\\ArtifactLocation) : void</td></tr>
     <tr><td align="left">+ setArtifactLocation(artifactLocation : Bartlett\\Sarif\\Definition\\ArtifactLocation) : void</td></tr>
     <tr><td align="left">+ addReplacements(replacements : array) : void</td></tr>

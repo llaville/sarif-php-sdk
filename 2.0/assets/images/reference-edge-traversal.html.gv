@@ -16,7 +16,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(edgeId : string)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setEdgeId(edgeId : string) : void</td></tr>
     <tr><td align="left">+ setMessage(message : Bartlett\\Sarif\\Definition\\Message) : void</td></tr>
     <tr><td align="left">+ addAdditionalProperties(additionalProperties : array) : void</td></tr>

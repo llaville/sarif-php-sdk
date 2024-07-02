@@ -16,7 +16,7 @@ digraph {
     <tr><td align="left"># properties</td></tr>
 </table></td></tr>
     <tr><td><table border="0" cellspacing="0" cellpadding="2">
-    <tr><td align="left">+ __construct(id : string)</td></tr>
+    <tr><td align="left">+ __construct()</td></tr>
     <tr><td align="left">+ setId(id : string) : void</td></tr>
     <tr><td align="left">+ setLabel(label : Bartlett\\Sarif\\Definition\\Message) : void</td></tr>
     <tr><td align="left">+ setLocation(location : Bartlett\\Sarif\\Definition\\Location) : void</td></tr>
