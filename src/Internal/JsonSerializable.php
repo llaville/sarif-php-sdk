@@ -8,7 +8,9 @@
 namespace Bartlett\Sarif\Internal;
 
 use LogicException;
+use function get_class;
 use function is_numeric;
+use function sprintf;
 
 /**
  * @author Laurent Laville
@@ -48,7 +50,9 @@ abstract class JsonSerializable implements \JsonSerializable
         $properties = [];
         foreach ($this->required as $requirement) {
             if (!isset($this->$requirement)) {
-                throw new LogicException('"' . $requirement . '" is required, but not defined.');
+                throw new LogicException(
+                    sprintf('"%s.%s" is required, but not defined.', get_class($this), $requirement)
+                );
             }
             $properties[$requirement] = $this->$requirement;
         }
