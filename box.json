@@ -1,6 +1,9 @@
 {
     "main": false,
     "output": "sarif-php-sdk.phar",
-    "directories": ["src", "vendor"],
+    "directories": [
+        "src",
+        "vendor"
+    ],
     "compression": "GZ"
 }
