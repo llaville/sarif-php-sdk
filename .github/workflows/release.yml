@@ -67,7 +67,7 @@ jobs:
                 name: Build Release Artifact
                 run: |
                     box-manifest make build stub configure -r console-table.txt -r plain.txt -r sbom.json --output-stub stub.php --output-conf box.json.dist -vvv --ansi
-                    box compile --ansi -vv -c box.json.dist
+                    box compile -c box.json.dist -vvv --ansi
 
             -   # https://github.com/softprops/action-gh-release
                 name: Create Release from current tag
