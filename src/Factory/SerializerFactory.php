@@ -16,7 +16,7 @@ use Bartlett\Sarif\Serializer\SerializerInterface;
  */
 interface SerializerFactory
 {
-    public function createEncoder($realEncoder = null): EncoderInterface;  // @phpstan-ignore-line
+    public function createEncoder(?EncoderInterface $realEncoder = null): EncoderInterface;
 
     public function createSerializer(?EncoderInterface $realEncoder = null): SerializerInterface;
 }

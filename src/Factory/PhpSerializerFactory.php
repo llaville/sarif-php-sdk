@@ -21,7 +21,7 @@ class PhpSerializerFactory implements SerializerFactory
     /**
      * @param EncoderInterface|null $realEncoder
      */
-    public function createEncoder($realEncoder = null): EncoderInterface
+    public function createEncoder(?EncoderInterface $realEncoder = null): EncoderInterface
     {
         if ($realEncoder instanceof EncoderInterface) {
             return $realEncoder;
