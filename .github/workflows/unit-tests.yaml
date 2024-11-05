@@ -24,16 +24,22 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                os:
-                    - "ubuntu-22.04"
-                php:
-                    - "7.4"
-                    - "8.0"
-                    - "8.1"
-                    - "8.2"
-                    - "8.3"
-                tools:
-                    - phpunit:10.5
+                include:
+                    -   os: ubuntu-20.04
+                        php: 7.4
+                        continue-on-error: false
+                    -   os: ubuntu-20.04
+                        php: 8.0
+                        continue-on-error: false
+                    -   os: ubuntu-22.04
+                        php: 8.1
+                        continue-on-error: false
+                    -   os: ubuntu-22.04
+                        php: 8.2
+                        continue-on-error: false
+                    -   os: ubuntu-22.04
+                        php: 8.3
+                        continue-on-error: false
 
         name: Unit Tests
 
@@ -47,16 +53,16 @@ jobs:
                 uses: shivammathur/setup-php@v2
                 with:
                     php-version: ${{ matrix.php }}
-                    tools: ${{ matrix.tools }}
 
             -   # https://github.com/ramsey/composer-install
                 name: Install Composer dependencies
-                uses: ramsey/composer-install@v2
+                uses: ramsey/composer-install@v3
                 with:
                     dependency-versions: "highest"
-                    composer-options: "--prefer-dist --no-scripts"
+                    composer-options: "--prefer-dist"
 
             -   # https://github.com/sebastianbergmann/phpunit/tree/10.5
                 name: Unit tests with PHPUnit 10
-                if: matrix.tools == 'phpunit:10.5' && matrix.php >= '8.1'
-                run: phpunit --do-not-cache-result --no-progress
+                if: matrix.php >= '8.1'
+                run: vendor/bin/phpunit --do-not-cache-result --no-progress
+                continue-on-error: ${{ matrix.continue-on-error }}
