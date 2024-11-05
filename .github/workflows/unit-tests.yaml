@@ -14,7 +14,7 @@ on:
             composer-options:
                 description: "Composer options for ramsey/composer-install GitHub Action"
                 required: false
-                default: "--prefer-dist --no-dev --no-scripts"
+                default: "--prefer-dist --no-scripts"
                 type: string
 
 jobs:
