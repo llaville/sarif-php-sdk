@@ -8,6 +8,13 @@ on:
         paths-ignore:
             - 'docs/**'
     workflow_call:
+        # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_callinputs
+        inputs:
+            composer-options:
+                description: "Composer options for ramsey/composer-install GitHub Action"
+                required: false
+                default: "--prefer-dist --no-dev"
+                type: string
     workflow_dispatch:
 
 jobs:
@@ -15,6 +22,7 @@ jobs:
         uses: llaville/.github/.github/workflows/mega-linter.yml@master
         with:
             repository: ${{ github.repository }}
+            composer-options: ${{ inputs.composer-options }}
 
     unit_tests:
         needs: lint_files
@@ -53,16 +61,17 @@ jobs:
                 uses: shivammathur/setup-php@v2
                 with:
                     php-version: ${{ matrix.php }}
+                    tools: phpunit:10.5
 
             -   # https://github.com/ramsey/composer-install
                 name: Install Composer dependencies
                 uses: ramsey/composer-install@v3
                 with:
                     dependency-versions: "highest"
-                    composer-options: "--prefer-dist"
+                    composer-options: ${{ inputs.composer-options }}
 
             -   # https://github.com/sebastianbergmann/phpunit/tree/10.5
                 name: Unit tests with PHPUnit 10
                 if: matrix.php >= '8.1'
-                run: vendor/bin/phpunit --do-not-cache-result --no-progress
+                run: phpunit --do-not-cache-result --no-progress
                 continue-on-error: ${{ matrix.continue-on-error }}
