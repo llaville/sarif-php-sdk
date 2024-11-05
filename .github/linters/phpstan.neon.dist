@@ -13,3 +13,4 @@ parameters:
         -
             message: "#^Unreachable statement \\- code above always terminates\\.$#"
             path: ../../src/SarifLog.php
+    reportUnmatchedIgnoredErrors: true
