@@ -9,6 +9,7 @@ Here are the links to the documentation for versions that are still supported :
 - [SARIF PHP SDK 1.4](https://llaville.github.io/sarif-php-sdk/1.4/)
 - [SARIF PHP SDK 1.5](https://llaville.github.io/sarif-php-sdk/1.5/)
 - [SARIF PHP SDK 2.0](https://llaville.github.io/sarif-php-sdk/2.0/)
+- [SARIF PHP SDK 2.1](https://llaville.github.io/sarif-php-sdk/2.1/)
 
 Full documentation may be found in `docs` folder into this repository, and may be read online without to do anything else.
 
