@@ -59,7 +59,7 @@ jobs:
                 with:
                     composer-options: ${{ inputs.composer-options }}
                 env: # https://github.com/ramsey/composer-install?tab=readme-ov-file#fork-and-private-repositories
-                    COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.COMPOSER_AUTH }}"}}'
+                    COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.GITHUB_TOKEN }}"}}'
 
             -   # https://github.com/llaville/box-manifest
                 name: Download BOX Manifest Artifact
