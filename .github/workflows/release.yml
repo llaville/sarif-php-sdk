@@ -6,6 +6,12 @@ on:
         tags:
             - "[0-9]+.[0-9]+.[0-9]+"
     workflow_dispatch:
+        inputs:
+            composer-options:
+                description: "Composer options for ramsey/composer-install GitHub Action"
+                required: false
+                default: "--prefer-dist --no-scripts"
+                type: string
 
 permissions:
     contents: write
@@ -51,7 +57,7 @@ jobs:
                 name: Install Composer dependencies
                 uses: ramsey/composer-install@v3
                 with:
-                    composer-options: "--prefer-dist"
+                    composer-options: ${{ inputs.composer-options }}
                 env: # https://github.com/ramsey/composer-install?tab=readme-ov-file#fork-and-private-repositories
                     COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.COMPOSER_AUTH }}"}}'
 
