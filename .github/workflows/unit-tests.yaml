@@ -9,13 +9,13 @@ on:
             - 'docs/**'
     workflow_call:
         # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_callinputs
+    workflow_dispatch:
         inputs:
             composer-options:
                 description: "Composer options for ramsey/composer-install GitHub Action"
                 required: false
                 default: "--prefer-dist --no-dev --no-scripts"
                 type: string
-    workflow_dispatch:
 
 jobs:
     lint_files:
