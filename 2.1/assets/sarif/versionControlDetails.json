@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "AndroidStudio",
+                    "semanticVersion": "1.0.0-beta.1",
+                    "informationUri": "https://android-studion.dev"
+                }
+            },
+            "versionControlProvenance": [
+                {
+                    "repositoryUri": "https://github.com/example-corp/package",
+                    "revisionId": "b87c4e9",
+                    "mappedTo": {
+                        "uriBaseId": "PACKAGE_ROOT"
+                    }
+                },
+                {
+                    "repositoryUri": "https://github.com/example-corp/plugin1",
+                    "revisionId": "cafdac7",
+                    "mappedTo": {
+                        "uri": "plugin1",
+                        "uriBaseId": "PACKAGE_ROOT"
+                    }
+                },
+                {
+                    "repositoryUri": "https://github.com/example-corp/plugin2",
+                    "revisionId": "d0dc2c0",
+                    "mappedTo": {
+                        "uri": "plugin2",
+                        "uriBaseId": "PACKAGE_ROOT"
+                    }
+                }
+            ],
+            "results": []
+        }
+    ]
+}
