@@ -1761,12 +1761,12 @@
 <h2 id="phar">PHAR</h2>
 <p>The preferred method of installation is to use the PHAR version which can be downloaded from the most recent
 <a href="https://github.com/llaville/sarif-php-sdk/releases/">Github Release</a>. This method ensures you will not have any dependency conflict issue.</p>
-<blockquote>
-<p>[!TIP]
-When you want to use, load autoloader as follows :</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When you want to use, load autoloader as follows :</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">require_once &#39;phar://&#39; . &#39;/absolute/path/to&#39; . &#39;/sarif-php-sdk.phar/vendor/autoload.php&#39;;</span>
 </span></code></pre></div>
-</blockquote>
+</div>
 <h2 id="phive">Phive</h2>
 <p>You can install application globally with <a href="https://github.com/phar-io/phive">Phive</a></p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>phive<span class="w"> </span>install<span class="w"> </span>llaville/sarif-php-sdk<span class="w"> </span>--force-accept-unsigned
