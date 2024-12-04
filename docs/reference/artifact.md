@@ -3,87 +3,31 @@
 
 An `artifact` object represents a single artifact.
 
-![artifact object](../assets/images/reference-artifact.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![artifact object](../assets/images/reference-artifact.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "artifacts": [
-                {
-                    "location": {
-                        "uri": "file:///C:/Code/app.zip"
-                    },
-                    "mimeType": "application/zip"
-                },
-                {
-                    "location": {
-                        "uri": "docs/intro.docx"
-                    },
-                    "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                },
-                {
-                    "parentIndex": 1,
-                    "offset": 17522,
-                    "length": 4050,
-                    "mimeType": "application/x-contoso-animation"
-                }
-            ],
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php artifact docs/assets/sarif 192`
 
-See full [`examples/artifact.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/artifact.json"
+    --8<-- "docs/assets/sarif/artifact.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/artifact.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/artifact.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/artifact.php
+    ```php title="examples/artifact.php"
+    --8<-- "examples/artifact.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Artifact;
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Run;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$artifact1 = new Artifact();
-$artifactLocation1 = new ArtifactLocation();
-$artifactLocation1->setUri('file:///C:/Code/app.zip');
-$artifact1->setLocation($artifactLocation1);
-$artifact1->setMimeType('application/zip');
-
-$artifact2 = new Artifact();
-$artifactLocation2 = new ArtifactLocation();
-$artifactLocation2->setUri('docs/intro.docx');
-$artifact2->setLocation($artifactLocation2);
-$artifact2->setMimeType('application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-$artifact2->setParentIndex(0);
-
-$artifact3 = new Artifact();
-$artifact3->setOffset(17522);
-$artifact3->setLength(4050);
-$artifact3->setMimeType('application/x-contoso-animation');
-$artifact3->setParentIndex(1);
-
-$run = new Run($tool);
-$run->addArtifacts([$artifact1, $artifact2, $artifact3]);
-
-```
+    ```php title="examples/builder/artifact.php"
+    --8<-- "examples/builder/artifact.php"
+    ```

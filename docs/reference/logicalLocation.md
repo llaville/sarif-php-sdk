@@ -5,69 +5,31 @@ A `logicalLocation` object describes a logical location.
 A logical location is a location specified by a programmatic construct such as a namespace, a type, or a method,
 without regard to the physical location where the construct occurs.
 
-![logicalLocation object](../assets/images/reference-logical-location.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![logicalLocation object](../assets/images/reference-logical-location.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "Psalm",
-                    "version": "4.x-dev",
-                    "informationUri": "https://psalm.de"
-                }
-            },
-            "logicalLocations": [
-                {
-                    "name": "Hook",
-                    "fullyQualifiedName": "Psalm\\Plugin\\Hook",
-                    "kind": "namespace"
-                },
-                {
-                    "name": "afterAnalysis",
-                    "fullyQualifiedName": "Psalm\\Plugin\\Hook\\AfterAnalysisInterface\\afterAnalysis",
-                    "kind": "function"
-                }
-            ],
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php logicalLocation docs/assets/sarif 192`
 
-See full [`examples/logicalLocation.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/logicalLocation.json"
+    --8<-- "docs/assets/sarif/logicalLocation.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/logicalLocation.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/logicalLocation.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/logicalLocation.php
+    ```php title="examples/logicalLocation.php"
+    --8<-- "examples/logicalLocation.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\LogicalLocation;
-use Bartlett\Sarif\Definition\Run;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$nsLocation = new LogicalLocation();
-$nsLocation->setName('Hook');
-$nsLocation->setFullyQualifiedName('Psalm\Plugin\Hook');
-$nsLocation->setKind('namespace');
-
-$funcLocation = new LogicalLocation();
-$funcLocation->setName('afterAnalysis');
-$funcLocation->setFullyQualifiedName('Psalm\Plugin\Hook\AfterAnalysisInterface\afterAnalysis');
-$funcLocation->setKind('function');
-
-$run = new Run($tool);
-$run->addLogicalLocations([$nsLocation, $funcLocation]);
-
-```
+    ```php title="examples/builder/logicalLocation.php"
+    --8<-- "examples/builder/logicalLocation.php"
+    ```

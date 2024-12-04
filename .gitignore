@@ -3,6 +3,7 @@
 ######################################
 
 docs/assets/images/
+docs/assets/sarif/
 site/
 
 ###### Composer dependencies ######

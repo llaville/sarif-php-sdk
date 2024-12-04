@@ -4,77 +4,31 @@
 A `conversion` object describes how a converter transformed the output of an analysis tool
 from the analysis tool’s native output format into the SARIF format.
 
-![conversion object](../assets/images/reference-conversion.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![conversion object](../assets/images/reference-conversion.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "AndroidStudio",
-                    "semanticVersion": "1.0.0-beta.1",
-                    "informationUri": "https://android-studion.dev"
-                }
-            },
-            "conversion": {
-                "tool": {
-                    "driver": {
-                        "name": "SARIF SDK Multitool"
-                    }
-                },
-                "invocation": {
-                    "executionSuccessful": true,
-                    "commandLine": "Sarif.Multitool.exe convert -t AndroidStudio northwind.log"
-                },
-                "analysisToolLogFiles": [
-                    {
-                        "uri": "northwind.log",
-                        "uriBaseId": "$LOG_DIR$"
-                    }
-                ]
-            },
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php conversion docs/assets/sarif 192`
 
-See full [`examples/conversion.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/conversion.json"
+    --8<-- "docs/assets/sarif/conversion.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/conversion.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/conversion.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/conversion.php
+    ```php title="examples/conversion.php"
+    --8<-- "examples/conversion.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Conversion;
-use Bartlett\Sarif\Definition\Invocation;
-use Bartlett\Sarif\Definition\Run;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$artifactLocation = new ArtifactLocation();
-$artifactLocation->setUri('northwind.log');
-$artifactLocation->setUriBaseId('$LOG_DIR$');
-
-$invocation = new Invocation(true);
-$invocation->setCommandLine('Sarif.Multitool.exe convert -t AndroidStudio northwind.log');
-
-$conversion = new Conversion($converter);
-$conversion->addAnalysisToolLogFiles([$artifactLocation]);
-$conversion->setInvocation($invocation);
-
-$run = new Run($tool);
-$run->setConversion($conversion);
-
-```
+    ```php title="examples/builder/conversion.php"
+    --8<-- "examples/builder/conversion.php"
+    ```

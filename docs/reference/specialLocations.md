@@ -3,87 +3,31 @@
 
 A `specialLocations` object defines locations of special significance to SARIF consumers.
 
-![specialLocations object](../assets/images/reference-special-locations.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![specialLocations object](../assets/images/reference-special-locations.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "originalUriBaseIds": {
-                "WEBHOST": {
-                    "uri": "http://www.example.com/"
-                },
-                "ROOT": {
-                    "uri": "file:///"
-                },
-                "HOME": {
-                    "uri": "home/user/",
-                    "uriBaseId": "ROOT"
-                },
-                "PACKAGE": {
-                    "uri": "mySoftware/",
-                    "uriBaseId": "HOME"
-                },
-                "SRC": {
-                    "uri": "src/",
-                    "uriBaseId": "PACKAGE"
-                }
-            },
-            "specialLocations": {
-                "displayBase": {
-                    "uriBaseId": "PACKAGE"
-                }
-            },
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php specialLocations docs/assets/sarif 192`
 
-See full [`examples/specialLocations.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/specialLocations.json"
+    --8<-- "docs/assets/sarif/specialLocations.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/specialLocations.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/specialLocations.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/specialLocations.php
+    ```php title="examples/specialLocations.php"
+    --8<-- "examples/specialLocations.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\SpecialLocations;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$package = new ArtifactLocation();
-$package->setUri('mySoftware/');
-$package->setUriBaseId('HOME');
-
-$run = new Run($tool);
-$run->addAdditionalProperties([
-    'PACKAGE' => $package,
-]);
-
-$specialLocations = new SpecialLocations();
-$artifactLocation = new ArtifactLocation();
-$artifactLocation->setUri('');
-$artifactLocation->setUriBaseId('PACKAGE');
-$specialLocations->setDisplayBase($artifactLocation);
-
-$run->setSpecialLocations($specialLocations);
-
-```
+    ```php title="examples/builder/specialLocations.php"
+    --8<-- "examples/builder/specialLocations.php"
+    ```

@@ -3,96 +3,31 @@
 
 A `result` object describes a single result detected by an analysis tool.
 
-![result object](../assets/images/reference-result.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![result object](../assets/images/reference-result.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev",
-                    "rules": [
-                        {
-                            "id": "CA2101",
-                            "shortDescription": {
-                                "text": "Specify marshaling for P/Invoke string arguments."
-                            }
-                        },
-                        {
-                            "id": "CA5350",
-                            "shortDescription": {
-                                "text": "Do not use weak cryptographic algorithms."
-                            }
-                        }
-                    ]
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "Result on rule 0"
-                    },
-                    "ruleId": "CA2101",
-                    "ruleIndex": 0
-                },
-                {
-                    "message": {
-                        "text": "Result on rule 1"
-                    },
-                    "ruleId": "CA5350/md5",
-                    "ruleIndex": 1
-                },
-                {
-                    "message": {
-                        "text": "Another result on rule 1"
-                    },
-                    "ruleId": "CA5350/sha-1",
-                    "ruleIndex": 1
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php result docs/assets/sarif 192`
 
-See full [`examples/result.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/result.json"
+    --8<-- "docs/assets/sarif/result.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/result.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/result.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/result.php
+    ```php title="examples/result.php"
+    --8<-- "examples/result.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Run;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$result1 = new Result(new Message('Result on rule 0'));
-$result1->setRuleId('CA2101');
-$result1->setRuleIndex(0);
-
-$result2 = new Result(new Message('Result on rule 1'));
-$result2->setRuleId('CA5350/md5');
-$result2->setRuleIndex(1);
-
-$result3 = new Result(new Message('Another result on rule 1'));
-$result3->setRuleId('CA5350/sha-1');
-$result3->setRuleIndex(1);
-
-$run = new Run($tool);
-$run->addResults([$result1, $result2, $result3]);
-
-```
+    ```php title="examples/builder/result.php"
+    --8<-- "examples/builder/result.php"
+    ```

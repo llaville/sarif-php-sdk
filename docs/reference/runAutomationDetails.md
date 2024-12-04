@@ -3,83 +3,31 @@
 
 A `runAutomationDetails` object contains information that specifies theRun’s identity and role within an engineering system.
 
-![runAutomationDetails object](../assets/images/reference-run-automation-details.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![runAutomationDetails object](../assets/images/reference-run-automation-details.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "fullName": "CodeScanner 1.1, Developer Preview (en-US)",
-                    "version": "1.1.2b12",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "automationDetails": {
-                "description": {
-                    "text": "This is the {0} nightly run of the Credential Scanner tool on all product binaries in the '{1}' branch of the '{2}' repo. The scanned binaries are architecture '{3}' and build type '{4}'.",
-                    "arguments": [
-                        "October 10, 2018",
-                        "master",
-                        "sarif-sdk",
-                        "x86",
-                        "debug"
-                    ]
-                },
-                "id": "Nightly CredScan run for sarif-sdk/master/x86/debug/2018-10-05",
-                "guid": "11111111-1111-1111-8888-111111111111",
-                "correlationGuid": "22222222-2222-1111-8888-222222222222"
-            },
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php runAutomationDetails docs/assets/sarif 192`
 
-See full [`examples/runAutomationDetails.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/runAutomationDetails.json"
+    --8<-- "docs/assets/sarif/runAutomationDetails.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/runAutomationDetails.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/runAutomationDetails.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/runAutomationDetails.php
+    ```php title="examples/runAutomationDetails.php"
+    --8<-- "examples/runAutomationDetails.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\RunAutomationDetails;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$automationDetails = new RunAutomationDetails();
-
-$text = "This is the {0} nightly run of the Credential Scanner tool on" .
-    " all product binaries in the '{1}' branch of the '{2}' repo.".
-    " The scanned binaries are architecture '{3}' and build type '{4}'.";
-$description = new Message($text);
-$description->addArguments([
-    "October 10, 2018",
-    "master",
-    "sarif-sdk",
-    "x86",
-    "debug",
-]);
-$automationDetails->setDescription($description);
-$automationDetails->setId('Nightly CredScan run for sarif-sdk/master/x86/debug/2018-10-05');
-$automationDetails->setGuid('11111111-1111-1111-8888-111111111111');
-$automationDetails->setCorrelationGuid('22222222-2222-1111-8888-222222222222');
-
-$run = new Run($tool);
-$run->setAutomationDetails($automationDetails);
-
-```
+    ```php title="examples/builder/runAutomationDetails.php"
+    --8<-- "examples/builder/runAutomationDetails.php"
+    ```

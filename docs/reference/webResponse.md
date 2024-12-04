@@ -3,96 +3,31 @@
 
 A `webResponse` object describes the response to an HTTP request (RFC7230)
 
-![webResponse object](../assets/images/reference-web-response.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![webResponse object](../assets/images/reference-web-response.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "webRequests": [
-                {
-                    "protocol": "http",
-                    "version": "1.1",
-                    "target": "httpbin.org/bearer",
-                    "method": "GET",
-                    "headers": {
-                        "accept": "application/json",
-                        "Authorization": "none"
-                    }
-                }
-            ],
-            "webResponses": [
-                {
-                    "protocol": "http",
-                    "version": "1.1",
-                    "statusCode": 401,
-                    "reasonPhrase": "Error: UNAUTHORIZED",
-                    "headers": {
-                        "access-control-allow-credentials": "true",
-                        "access-control-allow-origin": "*",
-                        "connection": "keep-alive",
-                        "content-length": "0",
-                        "content-type": "text/html; charset=utf-8",
-                        "date": "Sun, 07 Nov 2021 08:59:53 GMT",
-                        "server": "gunicorn/19.9.0",
-                        "www-authenticate": "Bearer"
-                    }
-                }
-            ],
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php webRequest docs/assets/sarif 192`
 
-See full [`examples/webRequest.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/webRequest.json"
+    --8<-- "docs/assets/sarif/webRequest.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/webRequest.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/webRequest.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/webRequest.php
+    ```php title="examples/webRequest.php"
+    --8<-- "examples/webRequest.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\WebResponse;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$tool = new Tool($driver);
-
-$webResponse = new WebResponse();
-$webResponse->setProtocol('http');
-$webResponse->setVersion('1.1');
-$webResponse->setStatusCode(401);
-$webResponse->setReasonPhrase('Error: UNAUTHORIZED');
-$webResponse->addAdditionalProperties([
-    'access-control-allow-credentials' => 'true',
-    'access-control-allow-origin' => '*',
-    'connection' => 'keep-alive',
-    'content-length' => '0',
-    'content-type' => 'text/html; charset=utf-8',
-    'date' => 'Sun, 07 Nov 2021 08:59:53 GMT',
-    'server' => 'gunicorn/19.9.0',
-    'www-authenticate' => 'Bearer',
-]);
-
-$run = new Run($tool);
-$run->addWebResponses([$webResponse]);
-
-```
+    ```php title="examples/builder/webRequest.php"
+    --8<-- "examples/builder/webRequest.php"
+    ```

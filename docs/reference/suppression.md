@@ -3,67 +3,31 @@
 
 A `suppression` object describes a request to suppress a result.
 
-![suppression object](../assets/images/reference-suppression.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![suppression object](../assets/images/reference-suppression.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "Psalm",
-                    "version": "4.x-dev",
-                    "informationUri": "https://psalm.de"
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "Request to suppress a result"
-                    },
-                    "suppressions": [
-                        {
-                            "kind": "inSource",
-                            "guid": "11111111-1111-1111-8888-111111111111",
-                            "status": "underReview",
-                            "justification": "result outdated"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php suppression docs/assets/sarif 192`
 
-See full [`examples/suppression.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/suppression.json"
+    --8<-- "docs/assets/sarif/suppression.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/suppression.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/suppression.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/suppression.php
+    ```php title="examples/suppression.php"
+    --8<-- "examples/suppression.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\Suppression;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$suppression = new Suppression('inSource');
-$suppression->setGuid('11111111-1111-1111-8888-111111111111');
-$suppression->setStatus('underReview');
-$suppression->setJustification('result outdated');
-
-$result = new Result(new Message('Request to suppress a result'));
-$result->addSuppressions([$suppression]);
-
-```
+    ```php title="examples/builder/suppression.php"
+    --8<-- "examples/builder/suppression.php"
+    ```

@@ -3,92 +3,31 @@
 
 A `resultProvenance` object contains information about the how and when theResult was detected.
 
-![resultProvenance object](../assets/images/reference-result-provenance.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![resultProvenance object](../assets/images/reference-result-provenance.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "SarifSamples",
-                    "version": "1.0",
-                    "informationUri": "https://github.com/microsoft/sarif-tutorials/"
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "Assertions are unreliable."
-                    },
-                    "ruleId": "Assertions",
-                    "provenance": {
-                        "conversionSources": [
-                            {
-                                "artifactLocation": {
-                                    "uri": "CodeScanner.log",
-                                    "uriBaseId": "LOGSROOT"
-                                },
-                                "region": {
-                                    "startLine": 3,
-                                    "startColumn": 3,
-                                    "endLine": 12,
-                                    "endColumn": 13,
-                                    "snippet": {
-                                        "text": "<problem>...</problem>"
-                                    }
-                                }
-                            }
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php resultProvenance docs/assets/sarif 192`
 
-See full [`examples/resultProvenance.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/resultProvenance.json"
+    --8<-- "docs/assets/sarif/resultProvenance.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/resultProvenance.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/resultProvenance.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/resultProvenance.php
+    ```php title="examples/resultProvenance.php"
+    --8<-- "examples/resultProvenance.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\ArtifactContent;
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\PhysicalLocation;
-use Bartlett\Sarif\Definition\Region;
-use Bartlett\Sarif\Definition\Result;
-use Bartlett\Sarif\Definition\ResultProvenance;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$provenance = new ResultProvenance();
-$fromSources = [];
-$artifactLocation = new ArtifactLocation();
-$artifactLocation->setUri('CodeScanner.log');
-$artifactLocation->setUriBaseId('LOGSROOT');
-$fromSources[0] = new PhysicalLocation($artifactLocation);
-$region = new Region(3, 3, 12, 13);
-$snippet = new ArtifactContent();
-$snippet->setText('<problem>...</problem>');
-$region->setSnippet($snippet);
-$fromSources[0]->setRegion($region);
-
-$provenance->addConversionSources($fromSources);
-
-$result = new Result(new Message('Assertions are unreliable.'));
-$result->setProvenance($provenance);
-
-```
+    ```php title="examples/builder/resultProvenance.php"
+    --8<-- "examples/builder/resultProvenance.php"
+    ```

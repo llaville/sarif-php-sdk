@@ -5,88 +5,31 @@ A `rectangle` object specifies a rectangular area within an image.
 When a SARIF viewer displays an image, it MAY indicate the presence of these areas,
 for example, by highlighting them or surrounding them with a border.
 
-![rectangle object](../assets/images/reference-rectangle.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![rectangle object](../assets/images/reference-rectangle.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "fullName": "CodeScanner 1.1, Developer Preview (en-US)",
-                    "version": "1.1.2b12",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "Have a look on screen shot provided"
-                    },
-                    "attachments": [
-                        {
-                            "artifactLocation": {
-                                "uri": "file:///C:/ScanOutput/image001.png"
-                            },
-                            "description": {
-                                "text": "Screen shot"
-                            },
-                            "rectangles": [
-                                {
-                                    "top": 80,
-                                    "left": 10,
-                                    "bottom": 5,
-                                    "right": 90
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php rectangle docs/assets/sarif 192`
 
-See full [`examples/rectangle.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/rectangle.json"
+    --8<-- "docs/assets/sarif/rectangle.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/rectangle.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/rectangle.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/rectangle.php
+    ```php title="examples/rectangle.php"
+    --8<-- "examples/rectangle.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Attachment;
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\Rectangle;
-use Bartlett\Sarif\Definition\Result;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$attachment = new Attachment();
-$attachment->setDescription(new Message('Screen shot'));
-$artifactLocation = new ArtifactLocation();
-$artifactLocation->setUri('file:///C:/ScanOutput/image001.png');
-$attachment->setArtifactLocation($artifactLocation);
-$rectangle = new Rectangle();
-$rectangle->setTop(80);
-$rectangle->setLeft(10);
-$rectangle->setBottom(5);
-$rectangle->setRight(90);
-$attachment->addRectangles([$rectangle]);
-
-$result = new Result(new Message('Have a look on screen shot provided'));
-$result->addAttachments([$attachment]);
-
-```
+    ```php title="examples/builder/rectangle.php"
+    --8<-- "examples/builder/rectangle.php"
+    ```

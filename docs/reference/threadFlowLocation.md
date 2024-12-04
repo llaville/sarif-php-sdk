@@ -4,114 +4,31 @@
 A `threadFlowLocation` object represents a location visited by an analysis tool
 in the course of simulating or monitoring the execution of a program.
 
-![threadFlowLocation object](../assets/images/reference-thread-flow-location.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![threadFlowLocation object](../assets/images/reference-thread-flow-location.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "A result object"
-                    },
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "ui/window.c",
-                                                        "uriBaseId": "SRCROOT"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 42
-                                                    }
-                                                }
-                                            },
-                                            "state": {
-                                                "x": {
-                                                    "text": "42"
-                                                },
-                                                "y": {
-                                                    "text": "54"
-                                                },
-                                                "x+y": {
-                                                    "text": "96"
-                                                }
-                                            },
-                                            "nestingLevel": 0,
-                                            "executionOrder": 2
-                                        }
-                                    ],
-                                    "id": "thread-123",
-                                    "message": {
-                                        "text": "A threadFlow object"
-                                    }
-                                }
-                            ],
-                            "message": {
-                                "text": "A codeFlow object"
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php codeFlow docs/assets/sarif 192`
 
-See full [`examples/codeFlow.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/codeFlow.json"
+    --8<-- "docs/assets/sarif/codeFlow.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/codeFlow.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/codeFlow.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/codeFlow.php
+    ```php title="examples/codeFlow.php"
+    --8<-- "examples/codeFlow.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Location;
-use Bartlett\Sarif\Definition\MultiformatMessageString;
-use Bartlett\Sarif\Definition\PhysicalLocation;
-use Bartlett\Sarif\Definition\Region;
-use Bartlett\Sarif\Definition\ThreadFlowLocation;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$threadFlowLocation = new ThreadFlowLocation();
-$location = new Location();
-$artifactLocation = new ArtifactLocation();
-$artifactLocation->setUri('ui/window.c');
-$artifactLocation->setUriBaseId('SRCROOT');
-$physicalLocation = new PhysicalLocation($artifactLocation);
-$physicalLocation->setRegion(new Region(42));
-$location->setPhysicalLocation($physicalLocation);
-$threadFlowLocation->setLocation($location);
-$threadFlowLocation->addAdditionalProperties([
-    'x' => new MultiformatMessageString('42'),
-    'y' => new MultiformatMessageString('54'),
-    'x+y' => new MultiformatMessageString('96'),
-]);
-$threadFlowLocation->setNestingLevel(0);
-$threadFlowLocation->setExecutionOrder(2);
-
-```
+    ```php title="examples/builder/codeFlow.php"
+    --8<-- "examples/builder/codeFlow.php"
+    ```

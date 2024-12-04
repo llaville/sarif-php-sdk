@@ -3,56 +3,31 @@
 
 A `tool` object describes the analysis tool or converter that was run.
 
-![tool object](../assets/images/reference-tool.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![tool object](../assets/images/reference-tool.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "fullName": "CodeScanner 1.1, Developer Preview (en-US)",
-                    "version": "1.1.2b12",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                },
-                "extensions": [
-                    {
-                        "name": "CodeScanner Security Rules",
-                        "version": "3.1"
-                    }
-                ]
-            },
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php tool docs/assets/sarif 192`
 
-See full [`examples/tool.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/tool.json"
+    --8<-- "docs/assets/sarif/tool.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/tool.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/tool.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/tool.php
+    ```php title="examples/tool.php"
+    --8<-- "examples/tool.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$driver = new ToolComponent('CodeScanner');
-
-$tool = new Tool($driver);
-
-```
+    ```php title="examples/builder/tool.php"
+    --8<-- "examples/builder/tool.php"
+    ```

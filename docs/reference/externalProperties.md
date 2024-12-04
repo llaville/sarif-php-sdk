@@ -3,98 +3,31 @@
 
 The top-level element of an external property file SHALL be an object which we refer to as an `externalProperties` object.
 
-![externalProperties object](../assets/images/reference-external-properties.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![externalProperties object](../assets/images/reference-external-properties.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "results": []
-        }
-    ],
-    "inlineExternalProperties": [
-        {
-            "schema": "https://json.schemastore.org/sarif-2.1.0.json",
-            "version": "2.1.0",
-            "guid": "00001111-2222-1111-8888-555566667777",
-            "runGuid": "88889999-AAAA-1111-8888-DDDDEEEEFFFF",
-            "externalizedProperties": {
-                "team": "Security Assurance Team"
-            },
-            "artifacts": [
-                {
-                    "location": {
-                        "uri": "apple.png"
-                    },
-                    "mimeType": "image/png"
-                },
-                {
-                    "location": {
-                        "uri": "banana.png"
-                    },
-                    "mimeType": "image/png"
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php externalProperties docs/assets/sarif 192`
 
-See full [`examples/externalProperties.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/externalProperties.json"
+    --8<-- "docs/assets/sarif/externalProperties.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/externalProperties.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/externalProperties.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/externalProperties.php
+    ```php title="examples/externalProperties.php"
+    --8<-- "examples/externalProperties.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Artifact;
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\ExternalProperties;
-use Bartlett\Sarif\Definition\PropertyBag;
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\SarifLog;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$apple = new Artifact();
-$location = new ArtifactLocation();
-$location->setUri('apple.png');
-$apple->setLocation($location);
-$apple->setMimeType('image/png');
-
-$banana = new Artifact();
-$location = new ArtifactLocation();
-$location->setUri('banana.png');
-$banana->setLocation($location);
-$banana->setMimeType('image/png');
-
-$propertyBag = new PropertyBag();
-$propertyBag->addProperty('team', 'Security Assurance Team');
-
-$run = new Run($tool);
-
-$log = new SarifLog([$run]);
-$externalProperties = new ExternalProperties();
-$externalProperties->setGuid('00001111-2222-1111-8888-555566667777');
-$externalProperties->setRunGuid('88889999-AAAA-1111-8888-DDDDEEEEFFFF');
-$externalProperties->addArtifacts([$apple, $banana]);
-$externalProperties->setExternalizedProperties($propertyBag);
-$log->addInlineExternalProperties([$externalProperties]);
-
-```
+    ```php title="examples/builder/externalProperties.php"
+    --8<-- "examples/builder/externalProperties.php"
+    ```

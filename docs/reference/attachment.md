@@ -3,71 +3,31 @@
 
 An `attachment` object describes an artifact relevant to the detection of a result.
 
-![attachment object](../assets/images/reference-attachment.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![attachment object](../assets/images/reference-attachment.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "fullName": "CodeScanner 1.1, Developer Preview (en-US)",
-                    "version": "1.1.2b12",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "Have a look on screen shot provided"
-                    },
-                    "attachments": [
-                        {
-                            "artifactLocation": {
-                                "uri": "file:///C:/ScanOutput/image001.png"
-                            },
-                            "description": {
-                                "text": "Screen shot"
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php attachment docs/assets/sarif 192`
 
-See full [`examples/attachment.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/attachment.json"
+    --8<-- "docs/assets/sarif/attachment.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/attachment.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/attachment.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/attachment.php
+    ```php title="examples/attachment.php"
+    --8<-- "examples/attachment.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Attachment;
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\Result;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$attachment = new Attachment();
-$attachment->setDescription(new Message('Screen shot'));
-$attachment->setArtifactLocation(new ArtifactLocation('file:///C:/ScanOutput/image001.png'));
-
-$result = new Result(new Message('Have a look on screen shot provided'));
-$result->addAttachments([$attachment]);
-
-```
+    ```php title="examples/builder/attachment.php"
+    --8<-- "examples/builder/attachment.php"
+    ```

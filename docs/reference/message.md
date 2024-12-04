@@ -13,268 +13,108 @@ SARIF represents such a message with a `message` object, which offers the follow
 
 ## PlainText Example
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "ESLint",
-                    "semanticVersion": "8.1.0",
-                    "informationUri": "https://eslint.org",
-                    "rules": [
-                        {
-                            "id": "no-unused-vars",
-                            "shortDescription": {
-                                "text": "disallow unused variables"
-                            },
-                            "helpUri": "https://eslint.org/docs/rules/no-unused-vars",
-                            "properties": {
-                                "category": "Variables"
-                            }
-                        }
-                    ]
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "'x' is assigned a value but never used."
-                    },
-                    "ruleId": "no-unused-vars",
-                    "ruleIndex": 0,
-                    "level": "error"
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
+
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php message/plainText docs/assets/sarif 192`
+
+    ```json title="docs/assets/sarif/message/plainText.json"
+    --8<-- "docs/assets/sarif/message/plainText.json"
+    ```
+
+=== ":simple-php: Simple API"
+
+    ```php title="examples/message/plainText.php"
+    --8<-- "examples/message/plainText.php"
+    ```
+
+=== ":simple-php: Fluent Builder API"
+
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
+
+    ```php title="examples/builder/message/plainText.php"
+    --8<-- "examples/builder/message/plainText.php"
+    ```
 
 ## Formatted Example
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "Variable '{0}' is uninitialized.",
-                        "arguments": [
-                            "pBuffer"
-                        ]
-                    },
-                    "ruleId": "CA2101"
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
+
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php message/formatted docs/assets/sarif 192`
+
+    ```json title="docs/assets/sarif/message/formatted.json"
+    --8<-- "docs/assets/sarif/message/formatted.json"
+    ```
+
+=== ":simple-php: Simple API"
+
+    ```php title="examples/message/formatted.php"
+    --8<-- "examples/message/formatted.php"
+    ```
+
+=== ":simple-php: Fluent Builder API"
+
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
+
+    ```php title="examples/builder/message/formatted.php"
+    --8<-- "examples/builder/message/formatted.php"
+    ```
 
 ## Embedded links Example
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "Tainted data was used. The data came from [here](3)."
-                    },
-                    "ruleId": "TNT0001",
-                    "relatedLocations": [
-                        {
-                            "id": 3,
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "file:///C:/code/input.c"
-                                },
-                                "region": {
-                                    "startLine": 25,
-                                    "startColumn": 19
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
+
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php message/embeddedLinks docs/assets/sarif 192`
+
+    ```json title="docs/assets/sarif/message/embeddedLinks.json"
+    --8<-- "docs/assets/sarif/message/embeddedLinks.json"
+    ```
+
+=== ":simple-php: Simple API"
+
+    ```php title="examples/message/embeddedLinks.php"
+    --8<-- "examples/message/embeddedLinks.php"
+    ```
+
+=== ":simple-php: Fluent Builder API"
+
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
+
+    ```php title="examples/builder/message/embeddedLinks.php"
+    --8<-- "examples/builder/message/embeddedLinks.php"
+    ```
 
 ## String lookup Example
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev",
-                    "rules": [
-                        {
-                            "id": "CS0001",
-                            "messageStrings": {
-                                "default": {
-                                    "text": "This is the message text. It might be very long."
-                                }
-                            }
-                        }
-                    ]
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "id": "default"
-                    },
-                    "ruleId": "CS0001",
-                    "ruleIndex": 0
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php message/stringLookup docs/assets/sarif 192`
 
-See full [`examples/message/plainText.php`][example-script-1] script into repository.
+    ```json title="docs/assets/sarif/message/stringLookup.json"
+    --8<-- "docs/assets/sarif/message/stringLookup.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/plainText.php`][example-builder-1] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script-1]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/plainText.php
-[example-builder-1]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/plainText.php
+    ```php title="examples/message/stringLookup.php"
+    --8<-- "examples/message/stringLookup.php"
+    ```
 
-```php
-<?php
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\Result;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$message = new Message("'x' is assigned a value but never used.");
-$result = new Result($message);
-$result->setLevel('error');
-$result->setRuleId('no-unused-vars');
-$result->setRuleIndex(0);
-
-```
-
-See full [`examples/message/formatted.php`][example-script-2] script into repository.
-
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/formatted.php`][example-builder-2] script into repository.
-
-[example-script-2]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/formatted.php
-[example-builder-2]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/formatted.php
-
-```php
-<?php
-
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\Result;
-
-$message = new Message("Variable '{0}' is uninitialized.");
-$message->addArguments(['pBuffer']);
-$result = new Result($message);
-$result->setRuleId('CA2101');
-
-```
-
-See full [`examples/message/embeddedLinks.php`][example-script-3] script into repository.
-
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/embeddedLinks.php`][example-builder-3] script into repository.
-
-[example-script-3]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/embeddedLinks.php
-[example-builder-3]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/embeddedLinks.php
-
-```php
-<?php
-
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Location;
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\PhysicalLocation;
-use Bartlett\Sarif\Definition\Region;
-use Bartlett\Sarif\Definition\Result;
-
-$message = new Message('Tainted data was used. The data came from [here](3).');
-$result = new Result($message);
-$result->setRuleId('TNT0001');
-$location = new Location();
-$location->setId('3');
-$artifactLocation = new ArtifactLocation();
-$artifactLocation->setUri('file:///C:/code/input.c');
-$physicalLocation = new PhysicalLocation($artifactLocation);
-$physicalLocation->setRegion(new Region(25, 19));
-$location->setPhysicalLocation($physicalLocation);
-$result->addRelatedLocations([$location]);
-
-```
-
-See full [`examples/message/stringLookup.php`][example-script-4] script into repository.
-
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/stringLookup.php`][example-builder-4] script into repository.
-
-[example-script-4]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/message/stringLookup.php
-[example-builder-4]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/stringLookup.php
-
-```php
-<?php
-
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\MultiformatMessageString;
-use Bartlett\Sarif\Definition\ReportingDescriptor;
-use Bartlett\Sarif\Definition\Result;
-
-$rule = new ReportingDescriptor('no-unused-vars');
-$rule->setId('CS0001');
-$rule->addMessageStrings([
-    'default' => new MultiformatMessageString('This is the message text. It might be very long.'),
-]);
-
-$message = new Message(
-    'A message object can directly contain message strings in its text and markdown properties.'
-    . ' It can also indirectly refer to message strings through its id property.'
-);
-$result = new Result($message);
-$result->setRuleId('CS0001');
-$result->setRuleIndex(0);
-$result->setMessage(new Message('', 'default'));
-
-```
+    ```php title="examples/builder/message/stringLookup.php"
+    --8<-- "examples/builder/message/stringLookup.php"
+    ```

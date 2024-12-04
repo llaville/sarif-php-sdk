@@ -3,72 +3,31 @@
 
 A `translationMetadata` object defines locations of special significance to SARIF consumers.
 
-![translationMetadata object](../assets/images/reference-translation-metadata.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![translationMetadata object](../assets/images/reference-translation-metadata.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "(fr-FR translation)",
-                    "fullName": "(fr-FR translation of translated component\u2019s full name)",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev",
-                    "language": "fr-FR",
-                    "translationMetadata": {
-                        "name": "CodeScanner translation for fr-FR",
-                        "fullName": "CodeScanner translation for fr-FR by Example Corp.",
-                        "shortDescription": {
-                            "text": "A good translation"
-                        },
-                        "fullDescription": {
-                            "text": "A good translation performed by native en-US speakers."
-                        }
-                    }
-                }
-            },
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php translationMetadata docs/assets/sarif 192`
 
-See full [`examples/translationMetadata.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/translationMetadata.json"
+    --8<-- "docs/assets/sarif/translationMetadata.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/translationMetadata.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/translationMetadata.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/translationMetadata.php
+    ```php title="examples/translationMetadata.php"
+    --8<-- "examples/translationMetadata.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\MultiformatMessageString;
-use Bartlett\Sarif\Definition\ToolComponent;
-use Bartlett\Sarif\Definition\TranslationMetadata;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$driver = new ToolComponent('CodeScanner');
-
-$translationMetadata = new TranslationMetadata('CodeScanner translation for fr-FR');
-$translationMetadata->setFullName('CodeScanner translation for fr-FR by Example Corp.');
-$translationMetadata->setShortDescription(
-    new MultiformatMessageString('A good translation')
-);
-$translationMetadata->setFullDescription(
-    new MultiformatMessageString('A good translation performed by native en-US speakers.')
-);
-$driver->setTranslationMetadata($translationMetadata);
-
-$driver->setName('(fr-FR translation)');
-$driver->setFullName('(fr-FR translation of translated component’s full name)');
-
-```
+    ```php title="examples/builder/translationMetadata.php"
+    --8<-- "examples/builder/translationMetadata.php"
+    ```

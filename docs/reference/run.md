@@ -3,53 +3,31 @@
 
 A `run` object describes a single run of an analysis tool and contains the output of that run.
 
-![run object](../assets/images/reference-run.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![run object](../assets/images/reference-run.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "Psalm",
-                    "version": "4.x-dev",
-                    "informationUri": "https://psalm.de"
-                }
-            },
-            "properties": {
-                "stableId": "Nightly static analysis run"
-            },
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php run docs/assets/sarif 192`
 
-See full [`examples/run.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/run.json"
+    --8<-- "docs/assets/sarif/run.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/run.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/run.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/run.php
+    ```php title="examples/run.php"
+    --8<-- "examples/run.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Run;
-use Bartlett\Sarif\Definition\Tool;
-use Bartlett\Sarif\Definition\ToolComponent;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$driver = new ToolComponent('Psalm');
-$tool = new Tool($driver);
-
-$run = new Run($tool);
-
-```
+    ```php title="examples/builder/run.php"
+    --8<-- "examples/builder/run.php"
+    ```

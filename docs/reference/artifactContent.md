@@ -5,85 +5,31 @@ Certain properties in this document represent the contents of portions of artifa
 for example, artifacts that were scanned by an analysis tool. SARIF represents such content with an `artifactContent` object.
 Depending on the circumstances, the SARIF log file might need to represent this content as readable text, raw bytes, or both.
 
-![artifactContent object](../assets/images/reference-artifact-content.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![artifactContent object](../assets/images/reference-artifact-content.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev"
-                }
-            },
-            "results": [
-                {
-                    "message": {
-                        "text": "..."
-                    },
-                    "ruleId": "CA1001",
-                    "fixes": [
-                        {
-                            "artifactChanges": [
-                                {
-                                    "artifactLocation": {
-                                        "uri": "src/a.c"
-                                    },
-                                    "replacements": [
-                                        {
-                                            "deletedRegion": {
-                                                "startLine": 1,
-                                                "startColumn": 1,
-                                                "endLine": 1
-                                            },
-                                            "insertedContent": {
-                                                "text": "// "
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php fix docs/assets/sarif 192`
 
-See full [`examples/fix.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/fix.json"
+    --8<-- "docs/assets/sarif/fix.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/fix.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/fix.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/fix.php
+    ```php title="examples/fix.php"
+    --8<-- "examples/fix.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\ArtifactChange;
-use Bartlett\Sarif\Definition\ArtifactContent;
-use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Region;
-use Bartlett\Sarif\Definition\Replacement;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$artifactLocation = new ArtifactLocation();
-$artifactLocation->setUri('src/a.c');
-$replacement = new Replacement(new Region(1, 1, 1));
-$insertedContent = new ArtifactContent();
-$insertedContent->setText('// ');
-$replacement->setInsertedContent($insertedContent);
-$artifactChange = new ArtifactChange($artifactLocation, [$replacement]);
-
-```
+    ```php title="examples/builder/fix.php"
+    --8<-- "examples/builder/fix.php"
+    ```

@@ -4,72 +4,31 @@
 A `reportingConfiguration` object contains the information in a `reportingDescriptor` that a SARIF producer can modify
 at runtime, before executing its scan.
 
-![reportingConfiguration object](../assets/images/reference-reporting-configuration.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![reportingConfiguration object](../assets/images/reference-reporting-configuration.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev",
-                    "rules": [
-                        {
-                            "id": "SA2707",
-                            "name": "LimitSourceLineLength",
-                            "shortDescription": {
-                                "text": "Limit source line length for readability."
-                            },
-                            "defaultConfiguration": {
-                                "enabled": true,
-                                "level": "warning",
-                                "rank": -1,
-                                "parameters": {
-                                    "maxLength": 120
-                                }
-                            }
-                        }
-                    ]
-                }
-            },
-            "results": []
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php reportingConfiguration docs/assets/sarif 192`
 
-See full [`examples/reportingConfiguration.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/reportingConfiguration.json"
+    --8<-- "docs/assets/sarif/reportingConfiguration.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/reportingConfiguration.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/reportingConfiguration.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/reportingConfiguration.php
+    ```php title="examples/reportingConfiguration.php"
+    --8<-- "examples/reportingConfiguration.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\MultiformatMessageString;
-use Bartlett\Sarif\Definition\PropertyBag;
-use Bartlett\Sarif\Definition\ReportingConfiguration;
-use Bartlett\Sarif\Definition\ReportingDescriptor;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$rule = new ReportingDescriptor('SA2707');
-$rule->setName('LimitSourceLineLength');
-$rule->setShortDescription(new MultiformatMessageString('Limit source line length for readability.'));
-$reportingConf = new ReportingConfiguration();
-$propertyBag = new PropertyBag();
-$propertyBag->addProperty('maxLength', 120);
-$reportingConf->setParameters($propertyBag);
-$rule->setDefaultConfiguration($reportingConf);
-
-```
+    ```php title="examples/builder/reportingConfiguration.php"
+    --8<-- "examples/builder/reportingConfiguration.php"
+    ```

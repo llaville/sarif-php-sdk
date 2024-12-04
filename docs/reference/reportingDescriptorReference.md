@@ -5,91 +5,31 @@ A `reportingDescriptorReference` object identifies a particular `reportingDescri
 which we refer to as theDescriptor, among all `reportingDescriptor` objects defined by theTool,
 including those defined by theTool.driver and theTool.extensions.
 
-![reportingDescriptorReference object](../assets/images/reference-reporting-descriptor-reference.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![reportingDescriptorReference object](../assets/images/reference-reporting-descriptor-reference.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": [
-        {
-            "tool": {
-                "driver": {
-                    "name": "CodeScanner",
-                    "semanticVersion": "1.1.2-beta.12",
-                    "informationUri": "https://codeScanner.dev",
-                    "rules": [
-                        {
-                            "id": "CTN9999",
-                            "shortDescription": {
-                                "text": "First version of rule."
-                            }
-                        },
-                        {
-                            "id": "CTN9999",
-                            "shortDescription": {
-                                "text": "Second version of rule."
-                            }
-                        }
-                    ]
-                }
-            },
-            "invocations": [
-                {
-                    "executionSuccessful": true,
-                    "toolExecutionNotifications": [
-                        {
-                            "message": {
-                                "text": "Exception evaluating rule 'C2001'. Rule configuration is missing."
-                            },
-                            "level": "error",
-                            "descriptor": {
-                                "index": 1,
-                                "id": "CTN9999"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "results": [
-                {
-                    "message": {
-                        "text": "..."
-                    },
-                    "ruleId": "CTN9999"
-                }
-            ]
-        }
-    ]
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php reportingDescriptorReference docs/assets/sarif 192`
 
-See full [`examples/reportingDescriptorReference.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/reportingDescriptorReference.json"
+    --8<-- "docs/assets/sarif/reportingDescriptorReference.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/reportingDescriptorReference.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/reportingDescriptorReference.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/reportingDescriptorReference.php
+    ```php title="examples/reportingDescriptorReference.php"
+    --8<-- "examples/reportingDescriptorReference.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\Definition\Invocation;
-use Bartlett\Sarif\Definition\Message;
-use Bartlett\Sarif\Definition\Notification;
-use Bartlett\Sarif\Definition\ReportingDescriptorReference;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$notification = new Notification(new Message("Exception evaluating rule 'C2001'. Rule configuration is missing."));
-$notification->setAssociatedRule(new ReportingDescriptorReference(0, 'C2001'));
-$notification->setDescriptor(new ReportingDescriptorReference(1, 'CTN9999'));
-$notification->setLevel('error');
-$invocation = new Invocation(true);
-$invocation->addToolExecutionNotifications([$notification]);
-
-```
+    ```php title="examples/builder/reportingDescriptorReference.php"
+    --8<-- "examples/builder/reportingDescriptorReference.php"
+    ```

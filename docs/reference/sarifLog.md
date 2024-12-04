@@ -3,34 +3,31 @@
 
 A `sarifLog` object specifies the version of the file format and contains the output from one or more runs.
 
-![sarifLog object](../assets/images/reference-sarif-log.graphviz.svg)
+=== ":simple-uml: Graph"
 
-## Example
+    ![sarifLog object](../assets/images/reference-sarif-log.graphviz.svg)
 
-```json
-{
-    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
-    "version": "2.1.0",
-    "runs": []
-}
-```
+=== ":octicons-file-code-16: sarif.json"
 
-## How to generate
+    > [!TIP]
+    >
+    > Generated with following command : `php ./resources/serialize.php sarifLog docs/assets/sarif 192`
 
-See full [`examples/sarifLog.php`][example-script] script into repository.
+    ```json title="docs/assets/sarif/sarifLog.json"
+    --8<-- "docs/assets/sarif/sarifLog.json"
+    ```
 
-> [!NOTE]
-> Since release 1.5.0, you may use fluent builders API as alternative.
-> See full [`examples/builder/sarifLog.php`][example-builder] script into repository.
+=== ":simple-php: Simple API"
 
-[example-script]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/sarifLog.php
-[example-builder]: https://github.com/llaville/sarif-php-sdk/blob/master/examples/builder/sarifLog.php
+    ```php title="examples/sarifLog.php"
+    --8<-- "examples/sarifLog.php"
+    ```
 
-```php
-<?php declare(strict_types=1);
+=== ":simple-php: Fluent Builder API"
 
-use Bartlett\Sarif\SarifLog;
+    > [!NOTE]
+    > This alternative API is available since release 1.5.0
 
-$log = new SarifLog();
-
-```
+    ```php title="examples/builder/sarifLog.php"
+    --8<-- "examples/builder/sarifLog.php"
+    ```
