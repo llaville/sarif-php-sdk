@@ -26,6 +26,7 @@ PHP_PHPCS_CLI_LINT_MODE: project
 PHP_PHPCS_CONFIG_FILE: ".phpcs.xml.dist"
 PHP_PHPCS_ARGUMENTS: "-n"
 PHP_PHPSTAN_CONFIG_FILE: "phpstan.neon.dist"
+PHP_PHPSTAN_DISABLE_ERRORS: true # because this project is not yet compatible with PHPStan 2.0 embedded with MegaLinter 8.2.0 or greater
 PHP_PSALM_CLI_LINT_MODE: project
 PHP_PHPLINT_CLI_LINT_MODE: project
 YAML_PRETTIER_FILTER_REGEX_EXCLUDE: "(\\.github|\\.changie\\.yaml)" # As it cannot be added in .gitignore for ML actionlint linter
