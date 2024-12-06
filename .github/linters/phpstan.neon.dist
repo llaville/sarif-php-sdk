@@ -7,7 +7,7 @@ parameters:
         - ../../src/Factory/SymfonySerializerFactory.php
         - ../../src/Serializer/Encoder/SymfonyJsonEncoder.php
         - ../../examples/builder/message/
-        - ../../examples/builder/run
+        - ../../examples/builder/run.php
     treatPhpDocTypesAsCertain: false
     ignoreErrors:
         -
