@@ -46,9 +46,9 @@
 
 [Branch_201x-img]: https://img.shields.io/badge/branch-2.1-orange
 [Branch_201x]: https://github.com/llaville/sarif-php-sdk/tree/2.1
-[PHPVersion_201x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk/2.1.0
+[PHPVersion_201x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk/2.1.1
 [PHPVersion_201x]: https://www.php.net/supported-versions.php
-[Packagist_201x-img]: https://img.shields.io/badge/packagist-v2.1.0-blue
+[Packagist_201x-img]: https://img.shields.io/badge/packagist-v2.1.1-blue
 [Packagist_201x]: https://packagist.org/packages/bartlett/sarif-php-sdk
 [License_201x-img]: https://img.shields.io/packagist/l/bartlett/sarif-php-sdk
 [License_201x]: https://github.com/llaville/sarif-php-sdk/blob/2.1/LICENSE
@@ -84,6 +84,12 @@ And also
 
 - [Study the tutorials][sarif-tutorials] from GitHub's Microsoft account.
 
+## Add support to SARIF report into your application
+
+Please have a look on project [Sarif-PHP-Converters][sarif-php-converters] that already gave support to 9 converters,
+and learn how to build your own one !
+
 [sarif-specs]: https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html
 [sarif-validator]: https://sarifweb.azurewebsites.net/Validation
 [sarif-tutorials]: https://github.com/microsoft/sarif-tutorials
+[sarif-php-converters]: https://github.com/llaville/sarif-php-converters
