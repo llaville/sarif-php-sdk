@@ -16,7 +16,7 @@ use Bartlett\Sarif\Definition\WebResponse;
 trait WebResponses
 {
     /**
-     * @var WebResponse[];
+     * @var WebResponse[]
      */
     protected array $webResponses;
 

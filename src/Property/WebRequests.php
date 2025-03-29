@@ -16,7 +16,7 @@ use Bartlett\Sarif\Definition\WebRequest;
 trait WebRequests
 {
     /**
-     * @var WebRequest[];
+     * @var WebRequest[]
      */
     protected array $webRequests;
 
