@@ -86,21 +86,10 @@ class SarifLog extends JsonSerializable
 
     public function __toString(): string
     {
-        try {
-            if (empty($this->runs)) {
-                throw new DomainException('"runs" are required. None provided.');
-            }
-            return json_encode($this, JSON_PRETTY_PRINT) ? : '';
-        } catch (Throwable $e) {
-            if (PHP_VERSION_ID >= 70400) {
-                throw $e;
-            }
-            trigger_error(
-                sprintf('%s::__toString exception: %s', self::class, (string) $e),
-                E_USER_ERROR
-            );
-            return '';
+        if (empty($this->runs)) {
+            throw new DomainException('"runs" are required. None provided.');
         }
+        return json_encode($this, JSON_PRETTY_PRINT) ? : '';
     }
 
     /**

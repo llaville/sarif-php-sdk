@@ -9,8 +9,4 @@ parameters:
         - ../../examples/builder/message/
         - ../../examples/builder/run.php
     treatPhpDocTypesAsCertain: false
-    ignoreErrors:
-        -
-            message: "#^Unreachable statement \\- code above always terminates\\.$#"
-            path: ../../src/SarifLog.php
     reportUnmatchedIgnoredErrors: true
