@@ -9,6 +9,7 @@ namespace Bartlett\Sarif\Internal;
 
 use LogicException;
 use function get_class;
+use function is_bool;
 use function is_numeric;
 use function sprintf;
 
@@ -57,7 +58,7 @@ abstract class JsonSerializable implements \JsonSerializable
             $properties[$requirement] = $this->$requirement;
         }
         foreach ($this->optional as $optional) {
-            if (isset($this->$optional) && (is_numeric($this->$optional) || !empty($this->$optional))) {
+            if (isset($this->$optional) && (is_bool($this->$optional) || is_numeric($this->$optional) || !empty($this->$optional))) {
                 $properties[$optional] = $this->$optional;
             }
         }
