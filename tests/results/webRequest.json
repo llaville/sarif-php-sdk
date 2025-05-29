@@ -24,7 +24,6 @@
             ],
             "webResponses": [
                 {
-                    "noResponseReceived": false,
                     "protocol": "http",
                     "version": "1.1",
                     "statusCode": 401,
@@ -38,7 +37,8 @@
                         "date": "Sun, 07 Nov 2021 08:59:53 GMT",
                         "server": "gunicorn/19.9.0",
                         "www-authenticate": "Bearer"
-                    }
+                    },
+                    "noResponseReceived": false
                 }
             ],
             "results": []
