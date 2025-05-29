@@ -17,6 +17,9 @@ on:
                 default: "--prefer-dist --no-scripts"
                 type: string
 
+permissions:
+    contents: read
+
 jobs:
     lint_files:
         uses: llaville/.github/.github/workflows/mega-linter.yml@master
