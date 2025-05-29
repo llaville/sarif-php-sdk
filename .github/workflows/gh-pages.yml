@@ -2,8 +2,7 @@
 name: GitHub-Pages
 
 permissions:
-    contents: read
-    pages: write
+    contents: write
 
 on:
     push:
