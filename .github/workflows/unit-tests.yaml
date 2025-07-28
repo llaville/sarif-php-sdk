@@ -10,12 +10,7 @@ on:
     workflow_call:
         # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_callinputs
     workflow_dispatch:
-        inputs:
-            composer-options:
-                description: "Composer options for ramsey/composer-install GitHub Action"
-                required: false
-                default: "--prefer-dist --no-scripts"
-                type: string
+        # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onworkflow_dispatchinputs
 
 permissions:
     contents: read
@@ -25,8 +20,8 @@ jobs:
         uses: llaville/.github/.github/workflows/mega-linter.yml@master
         with:
             repository: ${{ github.repository }}
-            composer-options: ${{ inputs.composer-options }}
             php-version: "8.2"
+            composer-options: "--prefer-dist --no-scripts"
 
     unit_tests:
         needs: lint_files
@@ -66,7 +61,7 @@ jobs:
                 uses: ramsey/composer-install@v3
                 with:
                     dependency-versions: "highest"
-                    composer-options: ${{ inputs.composer-options }}
+                    composer-options: "--prefer-dist --no-scripts"
 
             -   # https://github.com/sebastianbergmann/phpunit/tree/11.5
                 name: Unit tests with PHPUnit 11

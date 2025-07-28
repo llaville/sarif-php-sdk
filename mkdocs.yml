@@ -1,6 +1,6 @@
 ---
 site_name: Sarif PHP SDK
-site_url: https://llaville.github.io/sarif-php-sdk/2.1
+site_url: https://llaville.github.io/sarif-php-sdk/2.2
 repo_url: https://github.com/llaville/sarif-php-sdk # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository
 site_author: Laurent Laville
 edit_uri: "" # hide edit button -- https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#edit-button
