@@ -21,4 +21,3 @@ jobs:
             destination-dir: "2.2"
             force-orphan: false
             hook-script: "resources/gh-pages-hook.sh"
-            composer-options: "--prefer-dist"
