@@ -1,5 +1,5 @@
 {
     "require-dev": {
-        "symfony/serializer": "^6.4 || ^7.0"
+        "symfony/serializer": "^7.0"
     }
 }
