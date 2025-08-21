@@ -58,9 +58,9 @@
 
 [Branch_202x-img]: https://img.shields.io/badge/branch-2.2-orange
 [Branch_202x]: https://github.com/llaville/sarif-php-sdk/tree/2.2
-[PHPVersion_202x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk/2.2.0
+[PHPVersion_202x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk/2.2.1
 [PHPVersion_202x]: https://www.php.net/supported-versions.php
-[Packagist_202x-img]: https://img.shields.io/badge/packagist-v2.2.0-blue
+[Packagist_202x-img]: https://img.shields.io/badge/packagist-v2.2.1-blue
 [Packagist_202x]: https://packagist.org/packages/bartlett/sarif-php-sdk
 [License_202x-img]: https://img.shields.io/packagist/l/bartlett/sarif-php-sdk
 [License_202x]: https://github.com/llaville/sarif-php-sdk/blob/2.2/LICENSE
@@ -97,7 +97,7 @@ And also
 
 ## Add support to SARIF report into your application
 
-Please have a look on project [Sarif-PHP-Converters][sarif-php-converters] that already gave support to 9 converters,
+Please have a look on project [Sarif-PHP-Converters][sarif-php-converters] that already gave support to 9 and more converters,
 and learn how to build your own one !
 
 [sarif-specs]: https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html
