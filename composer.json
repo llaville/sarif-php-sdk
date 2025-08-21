@@ -53,6 +53,9 @@
     },
     "scripts": {
         "bin": "echo 'bin not installed'",
-        "post-autoload-dump": "vendor/bin/captainhook install --configuration=captainhook.json --only-enabled"
+        "post-autoload-dump": [
+            "@composer bin captainhook update",
+            "vendor/bin/captainhook install --configuration=captainhook.json --only-enabled"
+        ]
     }
 }
