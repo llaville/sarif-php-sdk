@@ -7,7 +7,7 @@
  */
 namespace Bartlett\Sarif\Property;
 
-use function array_push;
+use function is_string;
 
 /**
  * @author Laurent Laville
@@ -25,6 +25,10 @@ trait DeprecatedNames
      */
     public function addDeprecatedNames(array $deprecatedNames): void
     {
-        array_push($this->deprecatedNames, $deprecatedNames);
+        foreach ($deprecatedNames as $deprecatedName) {
+            if (is_string($deprecatedName)) {
+                $this->deprecatedNames[] = $deprecatedName;
+            }
+        }
     }
 }
