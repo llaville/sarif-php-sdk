@@ -5,11 +5,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bartlett\Sarif\Tests\unit\Serializer;
+namespace Bartlett\Sarif\Tests\Unit;
 
 use Bartlett\Sarif\Factory\PhpSerializerFactory;
 use Bartlett\Sarif\SarifLog;
 use Bartlett\Sarif\Tests\TestCase;
+
+use Codeception\Attribute\DataProvider as CodeceptionDataProvider;
 
 use PHPUnit\Framework\Attributes\DataProvider;
 
@@ -64,13 +66,13 @@ final class NativeJsonSerializerTest extends TestCase
 
         foreach ($examples as $example) {
             /** Should provide SarifLog instance referenced by $log variable  */
-            require_once dirname(__DIR__, 3) . '/examples/' . $example . '.php';
+            require_once dirname(__DIR__, 2) . '/examples/' . $example . '.php';
             $description = 'examples/' . $example;
             yield $description => [$example, $log];
         }
     }
 
-    #[DataProvider('sarifLogDataProvider')]
+    #[DataProvider('sarifLogDataProvider'), CodeceptionDataProvider('sarifLogDataProvider')]
     public function testBuildReport(string $example, SarifLog $sarifLog): void
     {
         $factory = new PhpSerializerFactory();
@@ -79,7 +81,7 @@ final class NativeJsonSerializerTest extends TestCase
         $jsonString = $serializer->serialize($sarifLog, 'json');
 
         $this->assertJsonStringEqualsJsonFile(
-            dirname(__DIR__, 2) . '/results/' . $example . '.json',
+            dirname(__DIR__) . '/results/' . $example . '.json',
             $jsonString
         );
     }
