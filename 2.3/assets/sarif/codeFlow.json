@@ -1,0 +1,65 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "A result object"
+                    },
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "ui/window.c",
+                                                        "uriBaseId": "SRCROOT"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 42
+                                                    }
+                                                }
+                                            },
+                                            "state": {
+                                                "x": {
+                                                    "text": "42"
+                                                },
+                                                "y": {
+                                                    "text": "54"
+                                                },
+                                                "x+y": {
+                                                    "text": "96"
+                                                }
+                                            },
+                                            "nestingLevel": 0,
+                                            "executionOrder": 2
+                                        }
+                                    ],
+                                    "id": "thread-123",
+                                    "message": {
+                                        "text": "A threadFlow object"
+                                    }
+                                }
+                            ],
+                            "message": {
+                                "text": "A codeFlow object"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

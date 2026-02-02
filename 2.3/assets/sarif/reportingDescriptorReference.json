@@ -1,0 +1,54 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev",
+                    "rules": [
+                        {
+                            "id": "CTN9999",
+                            "shortDescription": {
+                                "text": "First version of rule."
+                            }
+                        },
+                        {
+                            "id": "CTN9999",
+                            "shortDescription": {
+                                "text": "Second version of rule."
+                            }
+                        }
+                    ]
+                }
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "toolExecutionNotifications": [
+                        {
+                            "message": {
+                                "text": "Exception evaluating rule 'C2001'. Rule configuration is missing."
+                            },
+                            "level": "error",
+                            "descriptor": {
+                                "index": 1,
+                                "id": "CTN9999"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "results": [
+                {
+                    "message": {
+                        "text": "..."
+                    },
+                    "ruleId": "CTN9999"
+                }
+            ]
+        }
+    ]
+}

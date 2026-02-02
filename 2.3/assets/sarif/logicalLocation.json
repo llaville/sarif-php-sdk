@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "Psalm",
+                    "version": "4.x-dev",
+                    "informationUri": "https://psalm.de"
+                }
+            },
+            "logicalLocations": [
+                {
+                    "name": "Hook",
+                    "fullyQualifiedName": "Psalm\\Plugin\\Hook",
+                    "kind": "namespace"
+                },
+                {
+                    "name": "afterAnalysis",
+                    "fullyQualifiedName": "Psalm\\Plugin\\Hook\\AfterAnalysisInterface\\afterAnalysis",
+                    "kind": "function"
+                }
+            ],
+            "results": []
+        }
+    ]
+}

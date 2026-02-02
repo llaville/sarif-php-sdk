@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev"
+                }
+            },
+            "originalUriBaseIds": {
+                "WEBHOST": {
+                    "uri": "http://www.example.com/"
+                },
+                "ROOT": {
+                    "uri": "file:///"
+                },
+                "HOME": {
+                    "uri": "home/user/",
+                    "uriBaseId": "ROOT"
+                },
+                "PACKAGE": {
+                    "uri": "mySoftware/",
+                    "uriBaseId": "HOME"
+                },
+                "SRC": {
+                    "uri": "src/",
+                    "uriBaseId": "PACKAGE"
+                }
+            },
+            "specialLocations": {
+                "displayBase": {
+                    "uriBaseId": "PACKAGE"
+                }
+            },
+            "results": []
+        }
+    ]
+}

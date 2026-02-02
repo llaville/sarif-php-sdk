@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev",
+                    "rules": [
+                        {
+                            "id": "CA2101",
+                            "defaultConfiguration": {
+                                "enabled": true,
+                                "level": "error",
+                                "rank": -1
+                            }
+                        }
+                    ]
+                }
+            },
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "ruleConfigurationOverrides": [
+                        {
+                            "configuration": {
+                                "enabled": true,
+                                "level": "warning",
+                                "rank": -1
+                            },
+                            "descriptor": {
+                                "index": 0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "results": []
+        }
+    ]
+}
