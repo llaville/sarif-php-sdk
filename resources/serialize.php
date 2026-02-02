@@ -32,6 +32,12 @@ if (empty($script) || !$available) {
 
 require_once $example;
 
+$sfSerializerAutoloader = dirname(__DIR__) . '/vendor-bin/sf-serializer/vendor/autoload.php';
+
+if (file_exists($sfSerializerAutoloader)) {
+    require_once $sfSerializerAutoloader;
+}
+
 if (!isset($log) || !$log instanceof \Bartlett\Sarif\SarifLog) {
     throw new LogicException(sprintf('Example script "%s" does not provide a SarifLog object', $script));
 }
