@@ -7,6 +7,9 @@
  */
 namespace Bartlett\Sarif\Property;
 
+use DomainException;
+use function in_array;
+
 /**
  * @author Laurent Laville
  * @since Release 1.0.0
@@ -23,7 +26,14 @@ trait Contents
      */
     public function setContents(array $contents): void
     {
-        // FIXME -- enum values : localizedData, nonLocalizedData
+        $enum = ["localizedData", "nonLocalizedData"];
+
+        foreach ($contents as $content) {
+            if (!in_array($content, $enum, true)) {
+                throw new DomainException($content . ' "contents" is not allowed.');
+            }
+        }
+
         $this->contents = $contents;
     }
 }
