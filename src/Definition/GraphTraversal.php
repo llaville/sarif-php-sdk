@@ -10,8 +10,6 @@ namespace Bartlett\Sarif\Definition;
 use Bartlett\Sarif\Internal\JsonSerializable;
 use Bartlett\Sarif\Property;
 
-use function is_int;
-
 /**
  * Represents a path through a graph.
  *

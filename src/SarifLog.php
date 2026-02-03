@@ -16,14 +16,10 @@ use Bartlett\Sarif\Property\Schema;
 use Bartlett\Sarif\Property\Version;
 
 use DomainException;
-use Throwable;
 use function array_merge;
 use function json_encode;
 use function sprintf;
-use function trigger_error;
-use const E_USER_ERROR;
 use const JSON_PRETTY_PRINT;
-use const PHP_VERSION_ID;
 
 /**
  * Static Analysis Results Format (SARIF)

@@ -10,8 +10,6 @@ namespace Bartlett\Sarif\Definition;
 use Bartlett\Sarif\Internal\JsonSerializable;
 use Bartlett\Sarif\Property;
 
-use function is_int;
-
 /**
  * A region within an artifact where a result was detected.
  *
