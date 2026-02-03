@@ -21,7 +21,7 @@ trait Language
     public function setLanguage(string $language): void
     {
         $pattern = "^[a-zA-Z]{2}|^[a-zA-Z]{2}-[a-zA-Z]{2}]?$";
-        if (preg_match_all("/$pattern/", $language) === false) {
+        if (preg_match_all("/{$pattern}/", $language) === false) {
             throw new DomainException('"language" does not satisfy pattern "' . $pattern . '"');
         }
         $this->language = $language;

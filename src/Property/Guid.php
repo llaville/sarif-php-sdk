@@ -21,7 +21,7 @@ trait Guid
     public function setGuid(string $guid): void
     {
         $pattern = "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$";
-        if (preg_match_all("/$pattern/", $guid) === false) {
+        if (preg_match_all("/{$pattern}/", $guid) === false) {
             throw new DomainException('"guid" does not satisfy pattern "' . $pattern . '"');
         }
         $this->guid = $guid;

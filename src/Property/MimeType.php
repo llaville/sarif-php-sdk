@@ -21,7 +21,7 @@ trait MimeType
     public function setMimeType(string $mimeType): void
     {
         $pattern = "[^/]+/.+";
-        if (preg_match_all("`$pattern`", $mimeType) === false) {
+        if (preg_match_all("`{$pattern}`", $mimeType) === false) {
             throw new DomainException('"mimeType" does not satisfy pattern "' . $pattern . '"');
         }
         $this->mimeType = $mimeType;

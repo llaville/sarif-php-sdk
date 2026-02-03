@@ -21,7 +21,7 @@ trait DottedQuadFileVersion
     public function setDottedQuadFileVersion(string $dottedQuadFileVersion): void
     {
         $pattern = "[0-9]+(\\.[0-9]+){3}";
-        if (preg_match_all("/$pattern/", $dottedQuadFileVersion) === false) {
+        if (preg_match_all("/{$pattern}/", $dottedQuadFileVersion) === false) {
             throw new DomainException('"dottedQuadFileVersion" does not satisfy pattern "' . $pattern . '"');
         }
         $this->dottedQuadFileVersion = $dottedQuadFileVersion;
