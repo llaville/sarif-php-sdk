@@ -26,7 +26,7 @@
 <title>bartlett/sarif&#45;php&#45;sdk&#45;&gt;php</title>
 <path fill="none" stroke="#1a2833" d="M130.11,-170.92C159.87,-196.41 218.83,-242.14 278.38,-261 489.5,-327.87 761.72,-302.38 858.65,-290.1"/>
 <polygon fill="#1a2833" stroke="#1a2833" points="859.33,-293.54 868.8,-288.78 858.43,-286.6 859.33,-293.54"/>
-<text text-anchor="middle" x="456.88" y="-308" font-family="Times,serif" font-size="10.00" fill="#767676">^8.2</text>
+<text text-anchor="middle" x="456.88" y="-308" font-family="Times,serif" font-size="10.00" fill="#767676">^7.4 || ^8.0</text>
 </g>
 <!-- ext&#45;json -->
 <g id="node3" class="node">
