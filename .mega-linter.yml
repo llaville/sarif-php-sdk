@@ -17,3 +17,4 @@ DISABLE_LINTERS:
     - PHP_PHPCSFIXER
     - YAML_V8R
 YAML_YAMLLINT_FILTER_REGEX_EXCLUDE: "(\\.github|tests)"
+YAML_PRETTIER_FILTER_REGEX_EXCLUDE: "(\\.suite.yml|\\.github/workflows|\\.changie\\.yaml)"

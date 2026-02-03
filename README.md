@@ -11,6 +11,7 @@
 | Stable v2.0.x | [![Branch 2.0][Branch_200x-img]][Branch_200x] | [![Minimum PHP Version)][PHPVersion_200x-img]][PHPVersion_200x] | [![Stable Version 2.0][Packagist_200x-img]][Packagist_200x] | [![License 2.0][License_200x-img]][License_200x] | [![Documentation 2.0][Documentation_200x-img]][Documentation_200x] |
 | Stable v2.1.x | [![Branch 2.1][Branch_201x-img]][Branch_201x] | [![Minimum PHP Version)][PHPVersion_201x-img]][PHPVersion_201x] | [![Stable Version 2.1][Packagist_201x-img]][Packagist_201x] | [![License 2.1][License_201x-img]][License_201x] | [![Documentation 2.1][Documentation_201x-img]][Documentation_201x] |
 | Stable v2.2.x | [![Branch 2.2][Branch_202x-img]][Branch_202x] | [![Minimum PHP Version)][PHPVersion_202x-img]][PHPVersion_202x] | [![Stable Version 2.2][Packagist_202x-img]][Packagist_202x] | [![License 2.2][License_202x-img]][License_202x] | [![Documentation 2.2][Documentation_202x-img]][Documentation_202x] |
+| Stable v2.3.x | [![Branch 2.3][Branch_203x-img]][Branch_203x] | [![Minimum PHP Version)][PHPVersion_203x-img]][PHPVersion_203x] | [![Stable Version 2.3][Packagist_203x-img]][Packagist_203x] | [![License 2.3][License_203x-img]][License_203x] | [![Documentation 2.3][Documentation_203x-img]][Documentation_203x] |
 
 [Branch_100x-img]: https://img.shields.io/badge/branch-1.0-orange
 [Branch_100x]: https://github.com/llaville/sarif-php-sdk/tree/1.0
@@ -67,6 +68,17 @@
 [Documentation_202x-img]: https://img.shields.io/badge/documentation-v2.2-green
 [Documentation_202x]: https://github.com/llaville/sarif-php-sdk/tree/2.2/docs
 
+[Branch_203x-img]: https://img.shields.io/badge/branch-2.3-orange
+[Branch_203x]: https://github.com/llaville/sarif-php-sdk/tree/2.3
+[PHPVersion_203x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk/2.3.0
+[PHPVersion_203x]: https://www.php.net/supported-versions.php
+[Packagist_203x-img]: https://img.shields.io/badge/packagist-v2.3.0-blue
+[Packagist_203x]: https://packagist.org/packages/bartlett/sarif-php-sdk
+[License_203x-img]: https://img.shields.io/packagist/l/bartlett/sarif-php-sdk
+[License_203x]: https://github.com/llaville/sarif-php-sdk/blob/2.3/LICENSE
+[Documentation_203x-img]: https://img.shields.io/badge/documentation-v2.3-green
+[Documentation_203x]: https://github.com/llaville/sarif-php-sdk/tree/2.3/docs
+
 ## Introduction
 
 SARIF, the Static Analysis Results Interchange Format, defines a standard format for the output of static analysis tools.
@@ -82,8 +94,8 @@ Read the specification document for the Static Analysis Results Interchange Form
 
 ## Documentation
 
-All the documentation is available on [website](https://llaville.github.io/sarif-php-sdk/2.2),
-generated from the [docs](https://github.com/llaville/sarif-php-sdk/tree/2.2/docs) folder.
+All the documentation is available on [website](https://llaville.github.io/sarif-php-sdk/2.3),
+generated from the [docs](https://github.com/llaville/sarif-php-sdk/tree/2.3/docs) folder.
 
 - API [Reference](docs/reference/README.md) describes all SARIF objects with examples.
 
