@@ -53,7 +53,7 @@ trait Roles
         ];
 
         foreach ($roles as $role) {
-            if (!in_array($role, $rolesAllowed)) {
+            if (!in_array($role, $rolesAllowed, true)) {
                 throw new DomainException($role . ' "role" is not allowed.');
             }
             $this->roles[] = $role;

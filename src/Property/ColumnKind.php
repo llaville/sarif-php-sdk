@@ -21,7 +21,7 @@ trait ColumnKind
     public function setColumnKind(string $columnKind): void
     {
         $enum = ["utf16CodeUnits", "unicodeCodePoints"];
-        if (!in_array($columnKind, $enum)) {
+        if (!in_array($columnKind, $enum, true)) {
             throw new DomainException($columnKind . ' "columnKind" is not allowed.');
         }
         $this->columnKind = $columnKind;

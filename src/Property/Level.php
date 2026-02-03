@@ -21,7 +21,7 @@ trait Level
     public function setLevel(string $level = 'warning'): void
     {
         $enum = ["none", "note", "warning", "error"];
-        if (!in_array($level, $enum)) {
+        if (!in_array($level, $enum, true)) {
             throw new DomainException('Level "' . $level . '" is not allowed.');
         }
         $this->level = $level;

@@ -21,7 +21,7 @@ trait StatusSuppression
     public function setStatus(string $status): void
     {
         $enum = ['accepted', 'underReview', 'rejected'];
-        if (!in_array($status, $enum)) {
+        if (!in_array($status, $enum, true)) {
             throw new DomainException($status . ' "status" is not allowed.');
         }
         $this->status = $status;

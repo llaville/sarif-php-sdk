@@ -21,7 +21,7 @@ trait Kind
     public function setKind(string $kind = 'fail'): void
     {
         $enum = ["notApplicable", "pass", "fail", "review", "open", "informational"];
-        if (!in_array($kind, $enum)) {
+        if (!in_array($kind, $enum, true)) {
             throw new DomainException($kind . ' "kind" is not allowed.');
         }
         $this->kind = $kind;

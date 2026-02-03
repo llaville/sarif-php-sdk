@@ -22,7 +22,7 @@ trait Importance
     {
         $enum = ["essential", "important", "unimportant"];
 
-        if (!in_array($importance, $enum)) {
+        if (!in_array($importance, $enum, true)) {
             throw new DomainException($importance . ' "importance" is not allowed.');
         }
         $this->importance = $importance;

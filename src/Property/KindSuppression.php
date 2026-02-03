@@ -21,7 +21,7 @@ trait KindSuppression
     public function setKind(string $kind): void
     {
         $enum = ['inSource', 'external'];
-        if (!in_array($kind, $enum)) {
+        if (!in_array($kind, $enum, true)) {
             throw new DomainException($kind . ' "kind" is not allowed.');
         }
         $this->kind = $kind;

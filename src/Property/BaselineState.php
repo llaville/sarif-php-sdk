@@ -21,7 +21,7 @@ trait BaselineState
     public function setBaselineState(string $baselineState): void
     {
         $enum = ["new", "unchanged", "updated", "absent"];
-        if (!in_array($baselineState, $enum)) {
+        if (!in_array($baselineState, $enum, true)) {
             throw new DomainException($baselineState . ' "baselineState" is not allowed.');
         }
         $this->baselineState = $baselineState;
