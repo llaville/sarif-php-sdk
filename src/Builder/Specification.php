@@ -16,15 +16,15 @@ use Bartlett\Sarif\SarifLog;
  */
 final class Specification
 {
-    protected string $version;
+    private string $version;
     /**
      * @var Run[] $runs
      */
-    protected array $runs;
+    private array $runs;
     /**
      * @var Definition\ExternalProperties[] $externalProperties
      */
-    protected array $externalProperties;
+    private array $externalProperties;
 
     public function __construct(string $version)
     {
