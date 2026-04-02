@@ -1,3 +1,4 @@
+bootstrap: ../vendor/autoload.php
 namespace: Tests
 support_namespace: Support
 paths:
