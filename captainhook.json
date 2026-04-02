@@ -13,6 +13,7 @@
                     "binary-directory": "{$ENV|value-of:VENDOR_BIN_DIR|default:vendor/bin}",
                     "config-directory": ".github/linters",
                     "ansi-colors-flag": "--ansi",
+                    "colors-flag": "--colors",
                     "auto-colors-flag": "--colors=auto",
                     "always-colors-flag": "--colors=always",
                     "never-colors-flag": "--colors=never"
@@ -23,6 +24,7 @@
             ".config/captainhook/pre-commit.phpcs.json",
             ".config/captainhook/pre-commit.phpcs-fixer.json",
             ".config/captainhook/pre-commit.phplint.json",
+            ".config/captainhook/pre-push.codeception.json",
             ".config/captainhook/pre-push.phpstan.json",
             ".config/captainhook/pre-push.phpunit.json"
         ]

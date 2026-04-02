@@ -1,0 +1,24 @@
+{
+    "pre-push": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": [
+                    "{$ENV|value-of:XDG_BIN_HOME}codecept",
+                    "run",
+                    "--config {$ENV|value-of:XDG_CONFIG_HOME|cache:false|default:codeception.yml}",
+                    "{$CONFIG|value-of:plugin>>\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.colors-flag}"
+                ],
+                "config": {
+                    "label": "Unit Tests (with Codeception)"
+                },
+                "options": {
+                    "package-require": [
+                        "codeception/codeception",
+                        "^5"
+                    ]
+                }
+            }
+        ]
+    }
+}
