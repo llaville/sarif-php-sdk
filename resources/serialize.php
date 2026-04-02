@@ -58,7 +58,7 @@ try {
     $jsonString = $serializer->serialize($log, 'json', ['json_encode_options' => (int) $jsonEncodeOptions]);
     $target = rtrim($folder, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $script . '.json';
     file_put_contents($target, $jsonString);
-    echo (empty($target) ? 'no' : $target) . ' file generated' . PHP_EOL;
+    echo "[info] " . (empty($target) ? 'no' : $target) . ' file generated' . PHP_EOL;
 } catch (Exception $e) {
-    echo "Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
+    echo "[error] Unable to produce SARIF report due to following error: " . $e->getMessage(), PHP_EOL;
 }
