@@ -21,7 +21,7 @@ use Symfony\Component\Console\Output\NullOutput;
 require_once dirname(__DIR__) . '/autoload.php';
 
 $umlWriter = dirname(__DIR__) . '/vendor-bin/umlwriter/vendor/autoload.php';
-if (!file_exists($umlWriter)) {
+if (!file_exists($umlWriter) || !class_exists(GeneratorFactory::class)) {
     echo sprintf("[warning] Unable to produce UML graph: %s, package 'bartlett/umlwriter' is not installed", $_SERVER['argv'][1] ?? ''), PHP_EOL;
     exit(1);
 }
