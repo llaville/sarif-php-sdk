@@ -21,6 +21,7 @@
             }
         ],
         "includes": [
+            ".config/captainhook/pre-commit.ecs.json",
             ".config/captainhook/pre-commit.phpcs.json",
             ".config/captainhook/pre-commit.phpcs-fixer.json",
             ".config/captainhook/pre-commit.phplint.json",
