@@ -11,6 +11,7 @@
         "console-table.txt",
         "plain.txt",
         "sbom.json",
+        "pkg.composer.txt",
         ".box.manifests.bin"
     ],
     "map": [
@@ -22,6 +23,9 @@
         },
         {
             "sbom.json": ".box.manifests/sbom.json"
+        },
+        {
+            "pkg.composer.txt": ".box.manifests/pkg.composer.txt"
         }
     ],
     "stub": "stub.php"
