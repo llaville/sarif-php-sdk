@@ -8,7 +8,7 @@ on:
             operating-system:
                 description: "OS name and version runtime"
                 required: false
-                default: "ubuntu-22.04"
+                default: "ubuntu-24.04"
                 type: string
             composer-options:
                 description: "Composer options for ramsey/composer-install GitHub Action"
@@ -48,14 +48,14 @@ jobs:
 
             -   # https://github.com/shivammathur/setup-php
                 name: Setup PHP runtime
-                uses: shivammathur/setup-php@2.36.0
+                uses: shivammathur/setup-php@2.37.0
                 with:
                     php-version: ${{ matrix.php }}
                     tools: ${{ matrix.tools }}
 
             -   # https://github.com/ramsey/composer-install
                 name: Install Composer dependencies
-                uses: ramsey/composer-install@3.1.1
+                uses: ramsey/composer-install@4.0.0
                 with:
                     dependency-versions: "highest"
                     composer-options: ${{ inputs.composer-options }}
@@ -66,4 +66,4 @@ jobs:
 
             -   # https://github.com/Codeception/Codeception
                 name: Unit tests with Codeception
-                run: codecept run Unit --bootstrap vendor/autoload.php
+                run: codecept run Unit --config ${{ github.workspace }}/.github/linters/codeception.yml

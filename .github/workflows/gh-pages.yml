@@ -8,7 +8,7 @@ on:
             operating-system:
                 description: "OS name and version runtime"
                 required: false
-                default: "ubuntu-22.04"
+                default: "ubuntu-24.04"
                 type: string
             php-version:
                 description: "PHP runtime version in format Major.minor"
@@ -23,7 +23,7 @@ on:
             destination-dir:
                 description: "Path where to store documentation on gh-pages branch"
                 required: false
-                default: "2.3"
+                default: "2.4"
                 type: string
             force-orphan:
                 description: "Allows you to make your publish branch with only the latest commit"
@@ -76,11 +76,11 @@ jobs:
                 name: Setup Libraries
                 run: |
                     sudo apt-get update
-                    sudo apt-fast install graphviz -y
+                    sudo apt-get install graphviz -y
 
             -   # https://github.com/shivammathur/setup-php
                 name: Setup PHP runtime
-                uses: shivammathur/setup-php@2.36.0
+                uses: shivammathur/setup-php@2.37.0
                 with:
                     php-version: ${{ matrix.php }}
                     extensions: ${{ matrix.extensions }}
@@ -94,7 +94,7 @@ jobs:
 
             -   # https://github.com/ramsey/composer-install
                 name: Install Composer dependencies
-                uses: ramsey/composer-install@3.1.1
+                uses: ramsey/composer-install@4.0.0
                 with:
                     dependency-versions: "highest"
                     composer-options: ${{ inputs.composer-options }}
