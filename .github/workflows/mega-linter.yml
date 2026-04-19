@@ -3,6 +3,9 @@
 # More info at https://github.com/oxsecurity/megalinter
 name: Mega-Linter
 
+permissions:
+    contents: read
+
 on:
     workflow_call:
         # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_callinputs
