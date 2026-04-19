@@ -5,15 +5,16 @@
             {
                 "action": [
                     "{$ENV|value-of:XDG_BIN_HOME}phpunit",
-                    "--config {$ENV|value-of:XDG_CONFIG_HOME|cache:false|default:./phpunit.xml.dist}",
+                    "--config {$ENV|value-of:\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.config-file|cache:false}",
                     "--do-not-fail-on-phpunit-warning",
                     "--no-progress",
-                    "{$CONFIG|value-of:plugin>>\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.always-colors-flag}"
+                    "{$ENV|value-of:\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.colors-flag|cache:false}"
                 ],
                 "config": {
                     "label": "Unit Tests (with PHPUnit)"
                 },
                 "options": {
+                    "colors": "always",
                     "config-file": "phpunit.xml.dist",
                     "package-require": [
                         "phpunit/phpunit",

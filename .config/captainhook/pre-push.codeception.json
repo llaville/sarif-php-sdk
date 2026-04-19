@@ -6,13 +6,15 @@
                 "action": [
                     "{$ENV|value-of:XDG_BIN_HOME}codecept",
                     "run",
-                    "--config {$ENV|value-of:XDG_CONFIG_HOME|cache:false|default:codeception.yml}",
-                    "{$CONFIG|value-of:plugin>>\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.colors-flag}"
+                    "--config {$ENV|value-of:\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.config-file|cache:false}",
+                    "{$ENV|value-of:\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.colors-flag|cache:false}"
                 ],
                 "config": {
                     "label": "Unit Tests (with Codeception)"
                 },
                 "options": {
+                    "colors": "ansi",
+                    "config-file": "{$ENV|value-of:XDG_CONFIG_HOME}/codeception.yml",
                     "package-require": [
                         "codeception/codeception",
                         "^5"
