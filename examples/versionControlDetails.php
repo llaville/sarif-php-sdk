@@ -9,8 +9,6 @@
  */
 
 use Bartlett\Sarif\Definition\ArtifactLocation;
-use Bartlett\Sarif\Definition\Conversion;
-use Bartlett\Sarif\Definition\Invocation;
 use Bartlett\Sarif\Definition\Run;
 use Bartlett\Sarif\Definition\Tool;
 use Bartlett\Sarif\Definition\ToolComponent;

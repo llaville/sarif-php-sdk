@@ -4,25 +4,23 @@
         "actions": [
             {
                 "action": [
-                    "{$ENV|value-of:XDG_BIN_HOME}php-cs-fixer",
-                    "fix",
-                    "--dry-run",
+                    "{$ENV|value-of:XDG_BIN_HOME}ecs",
+                    "check",
                     "--config={$ENV|value-of:\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.config-file|cache:false}",
-                    "--using-cache=no",
-                    "--show-progress=none",
-                    "--verbose",
+                    "--no-diffs",
+                    "--no-progress-bar",
                     "{$ENV|value-of:\\Bartlett\\CaptainHookBinPlugin\\BinPlugin.colors-flag|cache:false}",
                     "{$STAGED_FILES|of-type:php|separated-by: }"
                 ],
                 "config": {
-                    "label": "Checks Coding Standard (with PHP-CS-Fixer)"
+                    "label": "Checks Coding Standard (with ECS)"
                 },
                 "options": {
                     "colors": "ansi",
-                    "config-file": "{$ENV|value-of:XDG_CONFIG_HOME}/.php-cs-fixer.dist.php",
+                    "config-file": "{$ENV|value-of:XDG_CONFIG_HOME}/ecs.php",
                     "package-require": [
-                        "friendsofphp/php-cs-fixer",
-                        "^3.5"
+                        "symplify/easy-coding-standard",
+                        "^12.3.1 || ^13.0"
                     ]
                 }
             }
