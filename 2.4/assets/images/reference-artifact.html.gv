@@ -1,0 +1,73 @@
+digraph {
+  graph [name="G" overlap="false" rankdir="TB" bgcolor="transparent"]
+  node [fontname="Verdana" fontsize=8 shape="none" margin=0 fillcolor="#FEFECE" style="filled"]
+  edge [fontname="Verdana" fontsize=8]
+  subgraph cluster_0 {
+    graph [bgcolor="BurlyWood"]
+    label = "Bartlett\\Sarif\\Definition"
+    "Bartlett\\Sarif\\Definition\\Artifact" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b><br/>Artifact</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left"># description</td></tr>
+    <tr><td align="left"># location</td></tr>
+    <tr><td align="left"># artifactLocation</td></tr>
+    <tr><td align="left"># parentIndex</td></tr>
+    <tr><td align="left"># offset</td></tr>
+    <tr><td align="left"># length</td></tr>
+    <tr><td align="left"># roles : mixed</td></tr>
+    <tr><td align="left"># mimeType</td></tr>
+    <tr><td align="left"># contents</td></tr>
+    <tr><td align="left"># encoding</td></tr>
+    <tr><td align="left"># sourceLanguage</td></tr>
+    <tr><td align="left"># hashes : mixed</td></tr>
+    <tr><td align="left"># properties</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct()</td></tr>
+    <tr><td align="left">+ setDescription(description : Bartlett\\Sarif\\Definition\\Message) : void</td></tr>
+    <tr><td align="left">+ setLocation(location : Bartlett\\Sarif\\Definition\\ArtifactLocation) : void</td></tr>
+    <tr><td align="left">+ setArtifactLocation(artifactLocation : Bartlett\\Sarif\\Definition\\ArtifactLocation) : void</td></tr>
+    <tr><td align="left">+ setParentIndex(parentIndex : int = -1) : void</td></tr>
+    <tr><td align="left">+ setOffset(offset : int) : void</td></tr>
+    <tr><td align="left">+ setLength(length : int = -1) : void</td></tr>
+    <tr><td align="left">+ addRoles(roles : array) : void</td></tr>
+    <tr><td align="left">+ setMimeType(mimeType : string) : void</td></tr>
+    <tr><td align="left">+ setContents(contents : Bartlett\\Sarif\\Definition\\ArtifactContent) : void</td></tr>
+    <tr><td align="left">+ setEncoding(encoding : string) : void</td></tr>
+    <tr><td align="left">+ setSourceLanguage(sourceLanguage : string) : void</td></tr>
+    <tr><td align="left">+ addHashes(hashes : array) : void</td></tr>
+    <tr><td align="left">+ setProperties(propertyBag : Bartlett\\Sarif\\Definition\\PropertyBag) : void</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_1 {
+    graph [bgcolor="Bisque"]
+    label = "Bartlett\\Sarif\\Internal"
+    "Bartlett\\Sarif\\Internal\\JsonSerializable" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«abstract»<br/>JsonSerializable</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">– required : mixed</td></tr>
+    <tr><td align="left">– optional : mixed</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct(required : array = [], optional : array = [])</td></tr>
+    <tr><td align="left">+ jsonSerialize() : array</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_2 {
+    label = 0
+    "JsonSerializable" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>JsonSerializable</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» jsonSerialize()</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  "Bartlett\\Sarif\\Internal\\JsonSerializable" -> "JsonSerializable" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Definition\\Artifact" -> "Bartlett\\Sarif\\Internal\\JsonSerializable" [arrowhead="empty" style="filled"]
+}

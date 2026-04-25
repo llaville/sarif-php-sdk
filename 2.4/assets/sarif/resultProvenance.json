@@ -1,0 +1,42 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "SarifSamples",
+                    "version": "1.0",
+                    "informationUri": "https://github.com/microsoft/sarif-tutorials/"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "Assertions are unreliable."
+                    },
+                    "ruleId": "Assertions",
+                    "provenance": {
+                        "conversionSources": [
+                            {
+                                "artifactLocation": {
+                                    "uri": "CodeScanner.log",
+                                    "uriBaseId": "LOGSROOT"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 3,
+                                    "endLine": 12,
+                                    "endColumn": 13,
+                                    "snippet": {
+                                        "text": "<problem>...</problem>"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

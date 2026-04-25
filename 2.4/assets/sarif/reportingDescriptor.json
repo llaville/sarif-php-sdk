@@ -1,0 +1,55 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev",
+                    "rules": [
+                        {
+                            "id": "CA1001",
+                            "deprecatedIds": [
+                                "CA1000"
+                            ]
+                        },
+                        {
+                            "id": "CA1002",
+                            "deprecatedIds": [
+                                "CA1000"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "..."
+                    },
+                    "ruleId": "CA1001",
+                    "suppressions": [
+                        {
+                            "kind": "inSource"
+                        }
+                    ],
+                    "baselineState": "unchanged"
+                },
+                {
+                    "message": {
+                        "text": "..."
+                    },
+                    "ruleId": "CA1002",
+                    "suppressions": [
+                        {
+                            "kind": "inSource"
+                        }
+                    ],
+                    "baselineState": "updated"
+                }
+            ]
+        }
+    ]
+}

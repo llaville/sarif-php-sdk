@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev"
+                }
+            },
+            "results": []
+        }
+    ],
+    "inlineExternalProperties": [
+        {
+            "schema": "https://json.schemastore.org/sarif-2.1.0.json",
+            "version": "2.1.0",
+            "guid": "00001111-2222-1111-8888-555566667777",
+            "runGuid": "88889999-AAAA-1111-8888-DDDDEEEEFFFF",
+            "externalizedProperties": {
+                "team": "Security Assurance Team"
+            },
+            "artifacts": [
+                {
+                    "location": {
+                        "uri": "apple.png"
+                    },
+                    "mimeType": "image/png"
+                },
+                {
+                    "location": {
+                        "uri": "banana.png"
+                    },
+                    "mimeType": "image/png"
+                }
+            ]
+        }
+    ]
+}

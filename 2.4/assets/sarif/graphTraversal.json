@@ -1,0 +1,103 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev"
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "A graph and edge traversal objects"
+                    },
+                    "graphs": [
+                        {
+                            "nodes": [
+                                {
+                                    "id": "n1"
+                                },
+                                {
+                                    "id": "n2"
+                                },
+                                {
+                                    "id": "n3"
+                                },
+                                {
+                                    "id": "n4"
+                                }
+                            ],
+                            "edges": [
+                                {
+                                    "id": "e1",
+                                    "sourceNodeId": "n1",
+                                    "targetNodeId": "n2"
+                                },
+                                {
+                                    "id": "e2",
+                                    "sourceNodeId": "n2",
+                                    "targetNodeId": "n3"
+                                },
+                                {
+                                    "id": "e3",
+                                    "sourceNodeId": "n2",
+                                    "targetNodeId": "n4"
+                                }
+                            ]
+                        }
+                    ],
+                    "graphTraversals": [
+                        {
+                            "resultGraphIndex": 0,
+                            "initialState": {
+                                "x": {
+                                    "text": "1"
+                                },
+                                "y": {
+                                    "text": "2"
+                                },
+                                "x+y": {
+                                    "text": "3"
+                                }
+                            },
+                            "edgeTraversals": [
+                                {
+                                    "edgeId": "e1",
+                                    "finalState": {
+                                        "x": {
+                                            "text": "4"
+                                        },
+                                        "y": {
+                                            "text": "2"
+                                        },
+                                        "x+y": {
+                                            "text": "6"
+                                        }
+                                    }
+                                },
+                                {
+                                    "edgeId": "e3",
+                                    "finalState": {
+                                        "x": {
+                                            "text": "4"
+                                        },
+                                        "y": {
+                                            "text": "7"
+                                        },
+                                        "x+y": {
+                                            "text": "11"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "CodeScanner",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev",
+                    "rules": [
+                        {
+                            "id": "CA2101",
+                            "shortDescription": {
+                                "text": "Specify marshaling for P/Invoke string arguments."
+                            }
+                        },
+                        {
+                            "id": "CA5350",
+                            "shortDescription": {
+                                "text": "Do not use weak cryptographic algorithms."
+                            }
+                        }
+                    ]
+                }
+            },
+            "results": [
+                {
+                    "message": {
+                        "text": "Result on rule 0"
+                    },
+                    "ruleId": "CA2101",
+                    "ruleIndex": 0
+                },
+                {
+                    "message": {
+                        "text": "Result on rule 1"
+                    },
+                    "ruleId": "CA5350/md5",
+                    "ruleIndex": 1
+                },
+                {
+                    "message": {
+                        "text": "Another result on rule 1"
+                    },
+                    "ruleId": "CA5350/sha-1",
+                    "ruleIndex": 1
+                }
+            ]
+        }
+    ]
+}

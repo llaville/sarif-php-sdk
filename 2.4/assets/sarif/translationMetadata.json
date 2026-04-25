@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "(fr-FR translation)",
+                    "fullName": "(fr-FR translation of translated component\u2019s full name)",
+                    "semanticVersion": "1.1.2-beta.12",
+                    "informationUri": "https://codeScanner.dev",
+                    "language": "fr-FR",
+                    "translationMetadata": {
+                        "name": "CodeScanner translation for fr-FR",
+                        "fullName": "CodeScanner translation for fr-FR by Example Corp.",
+                        "shortDescription": {
+                            "text": "A good translation"
+                        },
+                        "fullDescription": {
+                            "text": "A good translation performed by native en-US speakers."
+                        }
+                    }
+                }
+            },
+            "results": []
+        }
+    ]
+}

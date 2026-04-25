@@ -1,0 +1,57 @@
+digraph {
+  graph [name="G" overlap="false" rankdir="TB" bgcolor="transparent"]
+  node [fontname="Verdana" fontsize=8 shape="none" margin=0 fillcolor="#FEFECE" style="filled"]
+  edge [fontname="Verdana" fontsize=8]
+  subgraph cluster_0 {
+    graph [bgcolor="BurlyWood"]
+    label = "Bartlett\\Sarif\\Definition"
+    "Bartlett\\Sarif\\Definition\\StackFrame" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b><br/>StackFrame</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left"># location</td></tr>
+    <tr><td align="left"># module</td></tr>
+    <tr><td align="left"># threadId</td></tr>
+    <tr><td align="left"># parameters : mixed</td></tr>
+    <tr><td align="left"># properties</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct()</td></tr>
+    <tr><td align="left">+ setLocation(location : Bartlett\\Sarif\\Definition\\Location) : void</td></tr>
+    <tr><td align="left">+ setModule(module : string) : void</td></tr>
+    <tr><td align="left">+ setThreadId(threadId : int) : void</td></tr>
+    <tr><td align="left">+ addParameters(parameters : array) : void</td></tr>
+    <tr><td align="left">+ setProperties(propertyBag : Bartlett\\Sarif\\Definition\\PropertyBag) : void</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_1 {
+    graph [bgcolor="Bisque"]
+    label = "Bartlett\\Sarif\\Internal"
+    "Bartlett\\Sarif\\Internal\\JsonSerializable" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«abstract»<br/>JsonSerializable</b></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">– required : mixed</td></tr>
+    <tr><td align="left">– optional : mixed</td></tr>
+</table></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ __construct(required : array = [], optional : array = [])</td></tr>
+    <tr><td align="left">+ jsonSerialize() : array</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  subgraph cluster_2 {
+    label = 0
+    "JsonSerializable" [shape="none" label=<
+<table cellspacing="0" border="0" cellborder="1">
+    <tr><td bgcolor="#eeeeee"><b>«interface»<br/>JsonSerializable</b></td></tr>
+    <tr><td></td></tr>
+    <tr><td><table border="0" cellspacing="0" cellpadding="2">
+    <tr><td align="left">+ «abstract» jsonSerialize()</td></tr>
+</table></td></tr>
+</table>>]
+  }
+  "Bartlett\\Sarif\\Internal\\JsonSerializable" -> "JsonSerializable" [arrowhead="empty" style="dashed"]
+  "Bartlett\\Sarif\\Definition\\StackFrame" -> "Bartlett\\Sarif\\Internal\\JsonSerializable" [arrowhead="empty" style="filled"]
+}
