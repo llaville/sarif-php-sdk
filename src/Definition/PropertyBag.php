@@ -21,7 +21,7 @@ final class PropertyBag implements JsonSerializable
      * A set of distinct strings that provide additional information.
      * @var array<string, mixed>
      */
-    private array $tags;
+    private array $tags = [];
 
     /**
      * @param array<string, mixed> $properties

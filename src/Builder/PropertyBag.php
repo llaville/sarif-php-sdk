@@ -18,7 +18,7 @@ final class PropertyBag
     /**
      * @var array<string, string>
      */
-    private array $tags;
+    private array $tags = [];
 
     public function addProperty(string $key, string $value): self
     {
