@@ -9,6 +9,8 @@ namespace Bartlett\Sarif\Definition;
 
 use JsonSerializable;
 
+use stdClass;
+
 /**
  * Key/value pairs that provide additional information about the object.
  *
@@ -40,10 +42,10 @@ final class PropertyBag implements JsonSerializable
     }
 
     /**
-     * @return array<string, mixed>
+     * @return stdClass
      */
-    public function jsonSerialize(): array
+    public function jsonSerialize(): stdClass
     {
-        return $this->tags;
+        return (object) $this->tags;
     }
 }

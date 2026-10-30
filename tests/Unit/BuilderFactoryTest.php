@@ -47,6 +47,7 @@ final class BuilderFactoryTest extends TestCase
             'physicalLocation',
             'rectangle',
             'reportingConfiguration',
+            'reportingConfigurationWithoutRuleParameters',
             'reportingDescriptor',
             'reportingDescriptorReference',
             'reportingDescriptorRelationship',
