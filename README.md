@@ -82,9 +82,9 @@
 
 [Branch_204x-img]: https://img.shields.io/badge/branch-2.4-orange
 [Branch_204x]: https://github.com/llaville/sarif-php-sdk/tree/2.4
-[PHPVersion_204x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk/2.4.0
+[PHPVersion_204x-img]: https://img.shields.io/packagist/php-v/bartlett/sarif-php-sdk/2.4.1
 [PHPVersion_204x]: https://www.php.net/supported-versions.php
-[Packagist_204x-img]: https://img.shields.io/badge/packagist-v2.4.0-blue
+[Packagist_204x-img]: https://img.shields.io/badge/packagist-v2.4.1-blue
 [Packagist_204x]: https://packagist.org/packages/bartlett/sarif-php-sdk
 [License_204x-img]: https://img.shields.io/packagist/l/bartlett/sarif-php-sdk
 [License_204x]: https://github.com/llaville/sarif-php-sdk/blob/2.4/LICENSE
